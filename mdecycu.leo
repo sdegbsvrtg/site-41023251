@@ -87,7 +87,6 @@ make.start()</t>
 <t tx="leo.20200520153540.1">@language xml
 @tabwidth -4
 @others
-
 </t>
 <t tx="leo.20200520153540.2">&lt;!doctype html&gt;
 &lt;html lang="en"&gt;
@@ -96,76 +95,56 @@ make.start()</t>
 </t>
 <t tx="leo.20200520153540.3">&lt;head&gt;
     &lt;meta charset="utf-8"&gt;
-&lt;title&gt;
-國立虎尾科技大學 機械設計工程系 KMOLab
-&lt;/title&gt;
-    &lt;meta name="description" content="國立虎尾科技大學 機械設計工程系 KMOLab 課程網站"&gt;
+
+    &lt;title&gt;KMOLab&lt;/title&gt;
+
+    &lt;meta name="description" content="KMOLab"&gt;
     &lt;meta name="author" content="KMOLab"&gt;
-    
+
     &lt;meta name="apple-mobile-web-app-capable" content="yes"&gt;
     &lt;meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"&gt;
-    
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"&gt;
-    
-    &lt;link rel="stylesheet" href="reveal/css/reveal.css"&gt;
-    &lt;link rel="stylesheet" href="reveal/css/theme/black.css" id="theme"&gt;
-    
+
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+
+    &lt;link rel="stylesheet" href="reveal/dist/reset.css"&gt;
+    &lt;link rel="stylesheet" href="reveal/dist/reveal.css"&gt;
+    &lt;link rel="stylesheet" href="reveal/dist/theme/black.css" id="theme"&gt;
+
     &lt;!-- Theme used for syntax highlighting of code --&gt;
-    &lt;link rel="stylesheet" href="reveal/lib/css/zenburn.css"&gt;
-
-    &lt;!-- Printing and PDF exports --&gt;
-    &lt;script&gt;
-        var link = document.createElement( 'link' );
-        link.rel = 'stylesheet';
-        link.type = 'text/css';
-        link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal/css/print/pdf.css' : 'reveal/css/print/paper.css';
-        document.getElementsByTagName( 'head' )[0].appendChild( link );
-    &lt;/script&gt;
-
-    &lt;!--[if lt IE 9]&gt;
-    &lt;script src="lib/js/html5shiv.js"&gt;&lt;/script&gt;
-    &lt;![endif]--&gt;
+    &lt;link rel="stylesheet" href="reveal/plugin/highlight/monokai.css" id="highlight-theme"&gt;
 &lt;/head&gt;
-
 </t>
 <t tx="leo.20200520153540.4">&lt;body&gt;
 @others
-&lt;script src="reveal/lib/js/head.min.js"&gt;&lt;/script&gt;
-&lt;script src="reveal/js/reveal.js"&gt;&lt;/script&gt;
-&lt;script&gt;
-        // More info https://github.com/hakimel/reveal.js#configuration
         Reveal.initialize({
             controls: true,
             progress: true,
-            history: true,
             center: true,
+            hash: true,
 
-            transition: 'slide', // none/fade/slide/convex/concave/zoom
-
-            // More info https://github.com/hakimel/reveal.js#dependencies
-            dependencies: [
-                { src: 'reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-                { src: 'reveal/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-                { src: 'reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-                { src: 'reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-                { src: 'reveal/plugin/zoom-js/zoom.js', async: true },
-                { src: 'reveal/plugin/notes/notes.js', async: true },
-                { src: 'reveal/plugin/math/math.js', async: true }
-            ]
+            // Learn about plugins: https://revealjs.com/plugins/
+            plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
         });
-&lt;/script&gt;
-&lt;/body&gt;
 
+    &lt;/script&gt;
+&lt;/body&gt;
 </t>
 <t tx="leo.20200520153540.5">&lt;div class="reveal"&gt;
 @others
-&lt;/div&gt;
-
+        // Also available as an ES module, see:
+        // https://revealjs.com/initialization/
 </t>
-<t tx="leo.20200520153540.6">&lt;!-- Any section element inside of this container is displayed as a slide --&gt;
-&lt;div class="slides"&gt;
+<t tx="leo.20200520153540.6">    &lt;!-- Any section element inside of this container is displayed as a slide --&gt;
+    &lt;div class="slides"&gt;
 @others
 &lt;/div&gt;
+    &lt;script src="reveal/dist/reveal.js"&gt;&lt;/script&gt;
+    &lt;script src="reveal/plugin/zoom/zoom.js"&gt;&lt;/script&gt;
+    &lt;script src="reveal/plugin/notes/notes.js"&gt;&lt;/script&gt;
+    &lt;script src="reveal/plugin/search/search.js"&gt;&lt;/script&gt;
+    &lt;script src="reveal/plugin/markdown/markdown.js"&gt;&lt;/script&gt;
+    &lt;script src="reveal/plugin/highlight/highlight.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
 
 </t>
 <t tx="yen.20161112105128.1"></t>
@@ -244,22 +223,21 @@ QLineEdit#editorLabel {
 }</t>
 <t tx="yen.20161112105128.3">horizontal: body pane to the left
 vertical: body pane on the botton</t>
-<t tx="yen.20220118074727.1">&lt;section data-markdown&gt;
-    &lt;script type="text/template"&gt;
+<t tx="yen.20220118074727.1">        &lt;section data-markdown&gt;
+            &lt;script type="text/template"&gt;
 @others
-    &lt;/script&gt;
-&lt;/section&gt;
+            &lt;/script&gt;
+        &lt;/section&gt;
 
 
-						
+        						
+    &lt;/div&gt;
 </t>
-<t tx="yen.20220118074727.2">## 國立虎尾科技大學
+<t tx="yen.20220118074727.2">        ## KMOLab
 
-### 機械設計工程系 KMOLab
+        ### 2022 Spring
 
-#### 2022 Spring
-
-[wcm2022](https://mde.tw/wcm2022)([Guide](https://mde.tw/wcm2022_guide)) | [cd2022](https://mde.tw/cd2022)([Guide](https://mde.tw/cd2022_guide)) 
+        ### [wcm2022](https://mde.tw/wcm2022)([Guide](https://mde.tw/wcm2022_guide)) | [cd2022](https://mde.tw/cd2022)([Guide](https://mde.tw/cd2022_guide)) 
 
 
 

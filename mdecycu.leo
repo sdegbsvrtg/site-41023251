@@ -17,8 +17,8 @@
 <v t="leo.20200520153540.4"><vh>body</vh>
 <v t="leo.20200520153540.5"><vh>reveal div</vh>
 <v t="leo.20200520153540.6"><vh>slides div</vh>
-<v t="yen.20220118074727.1"><vh>2022 Spring</vh>
-<v t="yen.20220118074727.2"><vh>2022 Spring page</vh></v>
+<v t="yen.20220118074727.1"><vh>2022 Fall</vh>
+<v t="yen.20220118074727.2"><vh>2022 Fall page</vh></v>
 </v>
 </v>
 </v>
@@ -235,9 +235,9 @@ vertical: body pane on the botton</t>
 </t>
 <t tx="yen.20220118074727.2">        ## KMOLab
 
-        ### 2022 Spring
+        ### 2022 Fall
 
-        ### [wcm2022](https://mde.tw/wcm2022)([Guide](https://mde.tw/wcm2022_guide)) | [cd2022](https://mde.tw/cd2022)([Guide](https://mde.tw/cd2022_guide)) 
+        ### [cp2022](https://mde.tw/cp2022) | [cad2022](https://mde.tw/cad2022) 
 
 
 

@@ -233,7 +233,7 @@ vertical: body pane on the botton</t>
         						
     &lt;/div&gt;
 </t>
-<t tx="yen.20220118074727.2">        ## KMOLab
+<t tx="yen.20220118074727.2">        ## MDE.TW
 
         ### 2022 Fall
 

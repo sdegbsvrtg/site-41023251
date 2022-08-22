@@ -235,7 +235,7 @@ vertical: body pane on the botton</t>
 </t>
 <t tx="yen.20220118074727.2">        ## 2022 Fall
 
-        ### [cp2022](https://mde.tw/cp2022) | [cad2022](https://mde.tw/cad2022) 
+        ### [cp2022](https://mde.tw/cp2022/blog) | [cad2022](https://mde.tw/cad2022/blog) 
 
 
 

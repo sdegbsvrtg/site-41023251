@@ -321,7 +321,7 @@ config.pri 設定修改完成後, 執行 C:\acc_430_12\CoppeliaSimLib&gt;qmake -
 下載已經完成 [CoppeliaSimLib] 編譯的檔案: [acc_430_12_compile_Lib.7z] (for @gm users only)
 
 [compile_copsim_cd2022.7z]: https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/yen_gm_nfu_edu_tw/Eb56ldJfZl9CiPU_5sb0-_4B5scF30r6z4FTQT__aWzkEA?e=zE8eVL
-[acc_430_12_compile_Lib]: https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/yen_gm_nfu_edu_tw/EYC3oMxKuoRCoLXauEsjuTwBNuZA1jSFH97wFDjNoCgwVQ?e=FaHKUP
+[acc_430_12_compile_Lib.7z]: https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/yen_gm_nfu_edu_tw/EYC3oMxKuoRCoLXauEsjuTwBNuZA1jSFH97wFDjNoCgwVQ?e=FaHKUP
 
 編譯 coppeliaSimClientApplication
 ====

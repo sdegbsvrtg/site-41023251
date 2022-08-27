@@ -1,0 +1,689 @@
+<!DOCTYPE html><html>
+        <head>
+        <title>mde.tw</title>
+        <meta charset="utf-8">
+<meta property="head" content="H2">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/magnific-popup.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/jquery-ui.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap-datepicker.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/flaticon/font/flaticon.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/aos.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/style.css">
+        <link rel="shortcut icon" href="./../cmsimde/static/favicons.png">
+        
+        <style type='text/css'>
+            .site-section {
+            background-color: #FFFF;
+            padding: 40px 40px;
+            }
+            body > div > div.dropdown.open {
+                display: block;
+            }
+        </style>
+    
+        <!-- <script src="./../cmsimde/static/jquery.js"></script> -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+        <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/normalize.min.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch_set.js"></script>
+        <script src="tipuesearch_content.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/tipuesearch.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch.js"></script>
+        <!-- for Wink3 客製化關閉 -->
+        <!--
+        <link rel="stylesheet" type="text/css" href="./../cmsimde/static/winkPlayer.css" />
+        <script type="text/javascript" src="./../cmsimde/static/winkPlayer.js"></script>
+        -->
+        <script>
+            /* original tipuesearch
+            $(document).ready(function() {
+                 $('#tipue_search_input').tipuesearch();
+            });
+            */
+            // customed doSearch
+            function doSearch() {
+                $('#tipue_search_input').tipuesearch({
+                    newWindow: true, 
+                    minimumLength: 2,
+                    wholeWords: false, // for search 中文
+                });
+            }
+            $(document).ready(doSearch);
+        </script>
+        
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushBash.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDiff.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushHaxe.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPowerShell.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDart.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushRust.js"></script>
+<link type="text/css" rel="stylesheet" href="./../cmsimde/static/syntaxhighlighter/css/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+<!-- 暫時不用
+<script src="./../cmsimde/static/fengari-web.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/Cango-13v08-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/CangoAxes-4v01-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/gearUtils-05.js"></script>
+-->
+<!-- for Brython 暫時不用
+<script src="https://scrum-3.github.io/web/brython/brython.js"></script>
+<script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
+-->
+<style>
+img.add_border {
+    border: 3px solid blue;
+}
+</style>
+
+</head>
+<body>
+<div class='container'><nav>
+        
+    <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    
+            <header class="site-navbar py-4 bg-white" role="banner">
+              <div class="container">
+                <div class="row align-items-center">
+                <h1>mde.tw</h1>
+                <div class="pl-4">
+                    <form>
+                    <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
+                    </form>
+                </div>
+                  <!-- <div class="col-11 col-xl-2">
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">mde.tw</a></h1> 
+                  </div>
+                  -->
+                  <div class="col-12 col-md-10 d-none d-xl-block">
+                    <nav class="site-navigation position-relative text-right" role="navigation">
+    <ul class='site-menu js-clone-nav mr-auto d-none d-lg-block'>
+                        <li class="active has-children"><a href="index.html">Home</a>
+                        <ul class="dropdown">
+                            <li><a href="sitemap.html">Site Map</a></li>
+                            <li><a href="./../reveal/index.html">reveal</a></li>
+                            <li><a href="./../blog/index.html">blog</a></li>
+                        </ul>
+                      </li>
+                     <li class='has-children'><a href='cp2022.html'>cp2022</a><ul class='dropdown'><li><a href='Syllabus-1.html'>Syllabus-1</a><li><a href='Problem solving.html'>Problem solving</a><li class='has-children'><a href='Programming.html'>Programming</a><ul class='dropdown'><li><a href='Computer.html'>Computer</a><li><a href='Program.html'>Program</a><li><a href='Python.html'>Python</a><li><a href='ANSIC.html'>ANSIC</a><li><a href='Rust.html'>Rust</a></li></ul><li class='has-children'><a href='TCExam.html'>TCExam</a><ul class='dropdown'><li><a href='sendmail.html'>sendmail</a></li></ul><li><a href='Three.js.html'>Three.js</a><li><a href='Pandoc.html'>Pandoc</a><li><a href='VSCode.html'>VSCode</a><li><a href='Powershell.html'>Powershell</a></li></ul><li class='has-children'><a href='Brython.html'>Brython</a><ul class='dropdown'><li><a href='Game.html'>Game</a><li><a href='Simulator.html'>Simulator</a><li><a href='Algorithms.html'>Algorithms</a></li></ul><li class='has-children'><a href='CPython.html'>CPython</a><ul class='dropdown'><li><a href='PDF.html'>PDF</a><li class='has-children'><a href='CAD.html'>CAD</a><ul class='dropdown'><li><a href='Python for SW.html'>Python for SW</a><li><a href='Python for INV.html'>Python for INV</a><li><a href='Python for NX.html'>Python for NX</a></li></ul><li><a href='CAE.html'>CAE</a><li><a href='BS4.html'>BS4</a><li class='has-children'><a href='MS Graph.html'>MS Graph</a><ul class='dropdown'><li><a href='MS Teams.html'>MS Teams</a></li></li></ul></ul><li class='has-children'><a href='cmsimde.html'>cmsimde</a><ul class='dropdown'><li><a href='Portable Python.html'>Portable Python</a><li><a href='Token and SSH.html'>Token and SSH</a><li><a href='Bootstrap.html'>Bootstrap</a><li><a href='Bugs.html'>Bugs</a><li><a href='frameworks.html'>frameworks</a></li></ul><li class='has-children'><a href='cad2022.html'>cad2022</a><ul class='dropdown'><li><a href='Syllabus-2.html'>Syllabus-2</a><li class='has-children'><a href='ME.html'>ME</a><ul class='dropdown'><li><a href='Vehicle.html'>Vehicle</a><li><a href='Aircraft.html'>Aircraft</a></li></ul><li class='has-children'><a href='Reference.html'>Reference</a><ul class='dropdown'><li><a href='Portable NX1980.html'>Portable NX1980</a><li><a href='template and SSH.html'>template and SSH</a><li><a href='Pull Requests.html'>Pull Requests</a><li><a href='Resolve Conflicts.html'>Resolve Conflicts</a><li><a href='Revealjs.html'>Revealjs</a><li><a href='cube.html'>cube</a></li></ul><li><a href='Solvespace.html'>Solvespace</a><li><a href='Classroom.html'>Classroom</a><li><a href='Webots.html'>Webots</a><li><a href='Deep RL.html'>Deep RL</a></li></ul><li class='has-children'><a href='NX.html'>NX</a><ul class='dropdown'><li><a href='NX1980_setup.html'>NX1980_setup</a><li><a href='NX2206.html'>NX2206</a><li><a href='NXOpen.html'>NXOpen</a></li></ul><li class='has-children'><a href='CoppeliaSim.html'>CoppeliaSim</a><ul class='dropdown'><li><a href='Foosball.html'>Foosball</a><li><a href='Mujoco.html'>Mujoco</a><li><a href='ROS.html'>ROS</a></li></ul><li><a href='Leo Editor.html'>Leo Editor</a><li><a href='Fossil SCM.html'>Fossil SCM</a></li>
+                      </ul>
+                </nav>
+              </div>
+              <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+              </div>
+
+            </div>
+          </div>
+          
+        </header>
+    <div id="tipue_search_content">NX1980_setup << <a href='NX1980_setup.html'>Previous</a> <a href='NXOpen.html'>Next</a> >> NXOpen<br /><h1>NX2206</h1>
+<p>2022.06.17 正式推出 SiemensNX-2206_wntx64.zip (10.9GB)</p>
+<p>NX2206 完整系統容量為 29.35 GB</p>
+<p>以下列 get_dir_size.py 計算 NX2206 各目錄容量:</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import os
+import math
+ 
+def convert_size(size_bytes):
+    # from https://stackoverflow.com/questions/5194057/better-way-to-convert-file-sizes-in-python
+    if size_bytes == 0:
+        return "0B"
+    size_name = ("B", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB")
+    i = int(math.floor(math.log(size_bytes, 1024)))
+    p = math.pow(1024, i)
+    s = round(size_bytes / p, 2)
+    return "%s %s" % (s, size_name[i])
+    
+def get_dir_size(path='.'):
+    # from https://note.nkmk.me/en/python-os-path-getsize/
+    total = 0
+    with os.scandir(path) as it:
+        for entry in it:
+            if entry.is_file():
+                total += entry.stat().st_size
+            elif entry.is_dir():
+                total += get_dir_size(entry.path)
+    return total
+ 
+#for (root,dirs,files) in os.walk('./', topdown=True):
+    #print (dirs)
+ 
+total = 0
+nx_dir_list = os.listdir('./')
+for i in nx_dir_list:
+    try:
+        # skip files
+        total += get_dir_size(i)
+        print(i, ":", convert_size(get_dir_size(i)))
+    except:
+        #print(i)
+        pass
+print("total:", convert_size(total))</pre>
+<p>執行結果:</p>
+<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">AUTOMATED_TESTING : 3.9 MB
+AUTOMATION_DESIGNER : 276.42 MB
+CAPITALINTEGRATION : 2.04 MB
+CATIAV5 : 763.49 KB
+CLOUDDM : 99.22 KB
+CMM_INSPECTION : 143.32 MB
+DESIGNSPACEEXPLORER : 7.87 KB
+DESIGN_TOOLS : 64.18 MB
+DIAGRAMCORE : 5.77 MB
+DIAGRAMMING : 51.07 MB
+DRAFTING : 123.71 MB
+DXFDWG : 207.4 MB
+IGES : 5.2 MB
+INSTALL : 55.05 KB
+LOCALIZATION : 1.1 GB
+MACH : 1.96 GB
+MANUFACTURING_PLANNING : 136.6 MB
+MBD : 62.8 MB
+MECH : 568.6 MB
+MECHATRONICS : 216.88 MB
+MENDIXREPORTING : 1.04 MB
+MOLDCOOLING : 12.17 KB
+MOLDWIZARD : 230.24 MB
+MPA : 1.5 MB
+NXAECDESIGN : 32.3 MB
+NXASSEMBLY : 127.27 MB
+NXBIN : 5.24 GB
+NXCABLEROUTER : 205.75 KB
+NXCAE_EXTRAS : 3.3 GB
+NXCOATINGS : 645.3 KB
+NXCREO : 6.19 MB
+NXHUMAN : 247.8 MB
+NXJOIN : 18.22 MB
+NXNASTRAN : 2.94 GB
+NXPARTS : 53.28 MB
+NXPLOT : 255.92 MB
+NXPROE : 6.19 MB
+NXREPORTS : 9.45 MB
+NXSHIP : 340.46 MB
+NXSTRUCTUREDESIGN : 121.55 MB
+NXVR : 446.12 MB
+NX_VSA : 13.88 MB
+POSTBUILD : 37.65 MB
+PSTUDIO : 35.5 MB
+PVTRANS : 104.49 KB
+REL_INFO : 36.92 KB
+ROUTING : 324.37 MB
+RULE : 302.85 KB
+SAFETY : 522.78 MB
+SIMULATION : 4.29 GB
+STAGE_MODEL : 3.53 MB
+STAMPING_TOOLS : 93.18 MB
+STEP203UG : 1.28 MB
+STEP214UG : 1.27 MB
+TDP : 237.67 MB
+TOOLING_BASE : 970.12 KB
+TRANSLATORS : 157.99 MB
+UGALLIANCE : 85.09 KB
+UGAUTOMOTIVE : 105.7 MB
+UGCATIA : 6.55 MB
+UGFLEXLM : 31.5 MB
+UGFPCD : 35.19 KB
+UGII : 698.39 MB
+UGIMW : 8.45 MB
+UGMANAGER : 118.83 MB
+UGOPEN : 436.93 MB
+UGOPENPP : 567.28 KB
+UGPCBX : 3.92 MB
+UGPCBXCHANGE : 81.62 MB
+UGPHOTO : 2.99 GB
+UGSTRUCTURES : 789.79 MB
+UGSTUDIO : 14.03 MB
+UGTIPS : 192.46 MB
+UGTO2D : 921.06 KB
+UGWEB : 9.08 MB
+UGWELD : 2.07 MB
+UNFOLD : 71.92 KB
+VDA : 25.43 KB
+VDV : 14.55 KB
+total: 29.35 GB</pre>
+<p>假如只需要 NX2206 Modeling, Drawing, Mechatronic Design Studio, Product Template Studio 等功能, 則只需要下列目錄檔案, 容量為 7.49GB, NX2206_CAD_lite.7z:</p>
+<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">DESIGNSPACEEXPLORER : 7.87 KB
+DESIGN_TOOLS : 64.18 MB
+DIAGRAMCORE : 5.77 MB
+DIAGRAMMING : 51.07 MB
+DRAFTING : 123.71 MB
+DXFDWG : 207.4 MB
+IGES : 5.2 MB
+INSTALL : 55.05 KB
+MECHATRONICS : 216.88 MB
+NXASSEMBLY : 127.27 MB
+NXBIN : 5.24 GB
+NXPARTS : 53.28 MB
+STEP203UG : 1.28 MB
+STEP214UG : 1.27 MB
+Temp : 1.02 KB
+TRANSLATORS : 157.99 MB
+UGFLEXLM : 31.5 MB
+UGII : 698.39 MB
+UGMANAGER : 118.83 MB
+UGOPEN : 436.93 MB
+UGOPENPP : 567.28 KB
+UNFOLD : 71.92 KB
+total: 7.49 GB</pre>
+<p>基本 NX2206 CAD 教育版功能模組:</p>
+<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false"># NX Academic - Core &amp; CAD
+3d_to_2d_flattener
+acis_nx_translator
+adv_assemblies
+adv_sheet_metal_dsgn
+aero_sheet_metal
+assemblies
+cam_additive_1
+cam_additive_2
+cam_additive_post
+cam_robotics_1000
+cam_robotics_1001
+cam_robotics_1002
+cam_robotics_1003
+cam_robotics_1004
+cam_robotics_1006
+cam_robotics_1009
+catv5_nx_sca
+conf_cooling_channel
+des_top_opt
+design_studio
+die_engineering
+drafting
+dxf_to_ug
+dxfdwg
+features_modeling
+free_form_modeling
+gateway
+geometric_tol
+grip_execute
+ifc_to_nx
+iges
+insp_programming
+ld_line_designer
+mrl_connect
+nx_3d_path_planning
+nx_4gd_integration
+nx_access_tcclass
+nx_additive_design
+nx_aero_design
+nx_animationdesigner
+nx_cam_deburr_planar
+nx_cam_deburring3x
+nx_cam_deburring4x
+nx_cam_deburring5x
+nx_cam_rotary_4x
+nx_cam_smks_3x
+nx_cam_smks_4x
+nx_cam_smks_additive
+nx_cam_smks_complex
+nx_cam_turn_prime
+nx_coatings
+nx_design_explorer
+nx_diagramming
+nx_drawing_auto
+nx_electrode_wizard
+nx_flexible_pcb
+nx_freeform_1
+nx_freeform_2
+nx_gc_toolkit
+nx_general_packaging
+nx_issue_mgmt
+nx_isv_mtb
+nx_isv_vm_hmi
+nx_jacktkapi
+nx_join
+nx_lnx_batch
+nx_mc_basic
+nx_mc_full
+nx_mcd_core
+nx_ml_cmd_pred_ui
+nx_onestep_analysis
+nx_penetration_mgmt
+nx_pid_design_author
+nx_pmi_effectivity
+nx_point_cloud_view
+nx_polygon_modeling
+nx_post_config_adv
+nx_post_config_full
+nx_posture
+nx_reuse_cadenas
+nx_samcef_ui
+nx_sdpd_mpm_a
+nx_sdpd_mpm_v
+nx_sdpd_pam_a
+nx_sdpd_pam_v
+nx_sheet_metal
+nx_ship_basic
+nx_ship_concept
+nx_ship_detail
+nx_ship_drafting
+nx_ship_gen_arrange
+nx_ship_mfg_prep
+nx_snap_author
+nx_structure_design
+nx_subdivision
+nx_sysnoise_bem
+nx_to_ifc
+nx_visual_reporting
+nx_wi_authoring
+nx_xr
+pcf_package_file
+proenx
+prog_die_wizard
+pstudio_cons
+pts_author
+pts_consumer
+pv_ugdatagenerator
+routing_advanced
+routing_base
+routing_cabling
+routing_harness
+routing_hvac
+routing_pid
+routing_pipetube
+routing_platform
+sc_des_topol_opt
+sc_fp_sa
+sc_fp_sa_beam
+sc_fp_sa_dyn
+sc_fp_sa_dyn_nl
+sc_fp_sa_opt
+sc_fp_sa_shell
+shape_search
+sinumerik_spline
+sla_3d_systems
+solid_modeling
+std_ug_library
+step_ap203
+step_ap214
+step_ap242
+structure_weld
+student_read
+studio_analyze
+studio_free_form
+studio_render
+studio_visualize
+ug_body_design
+ug_checkmate
+ug_comp_flattener
+ug_comp_pipeline
+ug_die_design
+ug_human
+ug_kf_author
+ug_kf_checker
+ug_kf_execute
+ug_mold_design
+ug_opt_wizard
+ug_prod_des_advisor
+ug_visualize
+ug_web_express
+ugopen_menuscript
+ugweld
+ui_styler
+usr_defined_features
+wave</pre>
+<p>假如要再加上 CAE 與 CAM 功能, 則需要下列目錄, 容量為 21.47GB, NX2206_CAX_lite.7z</p>
+<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">AUTOMATED_TESTING : 3.9 MB
+AUTOMATION_DESIGNER : 276.42 MB
+DESIGNSPACEEXPLORER : 7.87 KB
+DESIGN_TOOLS : 64.18 MB
+DRAFTING : 123.71 MB
+DXFDWG : 207.4 MB
+IGES : 5.2 MB
+INSTALL : 55.05 KB
+MACH : 1.96 GB
+MANUFACTURING_PLANNING : 136.6 MB
+MECHATRONICS : 216.88 MB
+NXASSEMBLY : 127.27 MB
+NXBIN : 5.24 GB
+NXCAE_EXTRAS : 3.3 GB
+NXHUMAN : 247.8 MB
+NXNASTRAN : 2.94 GB
+NXPARTS : 53.28 MB
+NXSTRUCTUREDESIGN : 121.55 MB
+SIMULATION : 4.29 GB
+STEP203UG : 1.28 MB
+STEP214UG : 1.27 MB
+Temp : 0B
+TRANSLATORS : 157.99 MB
+UGFLEXLM : 31.5 MB
+UGII : 698.39 MB
+UGMANAGER : 118.83 MB
+UGOPEN : 436.93 MB
+UGOPENPP : 567.28 KB
+UGSTRUCTURES : 789.79 MB
+UNFOLD : 71.92 KB
+total: 21.47 GB</pre>
+<p>NX2206 基本 CAE + CAM 教育版功能:</p>
+<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false"># NX Academic Perpetual License CAE+CAM
+3d_to_2d_flattener
+appearance_mgmt
+appearance_mgmt_aw
+appearance_mgmt_mgd
+assemblies
+cam_additive_3
+cam_base
+cam_facets
+cavity_milling
+contour_profile
+dmu_markup
+dxf_to_ug
+dxfdwg
+elma
+fbm_author
+fix_axis_surf_mill
+flow_cut
+gateway
+gmc
+graphical_tool_path
+grip_execute
+iges
+mechanisms
+motion_cd_tire
+motion_ext_control
+motion_flex_modal
+motion_std_tire
+motion_swift_tire
+motion_tno_tire
+nc_external_program
+nc_wizard_builder
+nurb_output_enabler
+nx_3d_swept_volume
+nx_abaqus_env
+nx_abaqus_export
+nx_abaqus_export_g
+nx_abaqus_import
+nx_acoustic_modeling
+nx_acoustics_bem_hpc
+nx_adv_durability
+nx_adv_fld_mod_solv
+nx_adv_fluid_mod
+nx_algorithmic
+nx_ansys_env
+nx_ansys_export
+nx_ansys_export_g
+nx_ansys_import
+nx_cam_deburring4x
+nx_cam_rotary_4x
+nx_cam_smks_3x
+nx_cam_smks_4x
+nx_cam_smks_complex
+nx_correl_base
+nx_correl_update
+nx_design_sim
+nx_drafting_plus
+nx_draw_shape
+nx_durability_wiz
+nx_easyfill_advanced
+nx_easyfill_analysis
+nx_esc_solv
+nx_esc_ui
+nx_flow_adv_solv
+nx_flow_adv_ui
+nx_flow_solver
+nx_flow_ui
+nx_general_packaging
+nx_implicit
+nx_isv_mtb
+nx_lam_comp_adv
+nx_lam_composites
+nx_layout
+nx_lsdyna_export
+nx_lsdyna_import
+nx_mach_line_planner
+nx_masterfem
+nx_mbd
+nx_ml_sel_pred_std
+nx_ml_show_hide
+nx_mlp_setup
+nx_mlp_solid
+nx_mscnastran_env
+nx_mu_notifications
+nx_multi_blade_mill
+nx_nas_acous_adv
+nx_nas_aero_dsk
+nx_nas_bn_basic_dsk
+nx_nas_dmap_dsk
+nx_nas_dyn_dsk
+nx_nas_nonlin_dsk
+nx_nas_optim_dsk
+nx_nas_rotdyn_dsk
+nx_nas_supel_dsk
+nx_nas_topol
+nx_nas_uss_dsk
+nx_nastran_export
+nx_nastran_export_g
+nx_post_config_adv
+nx_response_anlys
+nx_ship_super_plate
+nx_space_therm_solv
+nx_space_therm_ui
+nx_spsd_stress
+nx_spsd_vibration
+nx_sysnoisebem_ui
+nx_tdp
+nx_thermal_adv_solv
+nx_thermal_adv_ui
+nx_thermal_solver
+nx_thermal_ui
+nx_tilt_tool_axis
+nx_vr_sudr
+nx_wedm_base
+nx_wedm_extra
+nx_wedm_gear
+nx_wedm_ruled
+nx_wedmp_db
+nx_wedmp_no_db
+nx_wi_authoring
+planar_milling
+probe
+pstudio_auth
+pstudio_cons
+pv_ugdatagenerator
+sequential_milling
+shop_doc
+sla_3d_systems
+stage_model
+step_ap203
+step_ap214
+surface_milling
+sync_mgr
+tol_cavity_milling
+ug_epak
+ug_holemaking
+ug_isv_full
+ug_kf_execute
+ug_library_access
+ug_nas_bn
+ug_nas_des
+ug_pcb_exchange
+ug_pcb_modeler
+ug_post_exe
+ug_post_kinematics
+ug_post_mill
+ug_schematics
+ug_smart_models
+ug_strength_wizard
+ug_to_dxf
+ug_to_vericut
+ug_turning
+ug_visualize
+ugopen_menuscript
+var_axis_surf_mill
+vehicle_des_val
+wire_edm_machining</pre>
+<p></p>
+<br />NX1980_setup << <a href='NX1980_setup.html'>Previous</a> <a href='NXOpen.html'>Next</a> >> NXOpen</div>
+        
+    <!-- footer -->
+      <div class="container">
+        <div class="row pt-3 mx-auto">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div>
+      </div>
+    <!-- for footer -->
+    
+        </div> <!-- for site wrap -->
+            <!-- <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
+            <script src="../cmsimde/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery-ui.js"></script>
+            <script src="../cmsimde/static/chimper/js/popper.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/owl.carousel.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.stellar.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.countdown.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.magnific-popup.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap-datepicker.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/aos.js"></script>
+            <!--
+            <script src="../cmsimde/static/chimper/js/typed.js"></script>
+                    <script>
+                    var typed = new Typed('.typed-words', {
+                    strings: ["Web Apps"," WordPress"," Mobile Apps"],
+                    typeSpeed: 80,
+                    backSpeed: 80,
+                    backDelay: 4000,
+                    startDelay: 1000,
+                    loop: true,
+                    showCursor: true
+                    });
+                    </script>
+            -->
+            <script src="../cmsimde/static/chimper/js/main.js"></script>
+        
+<!-- 啟用 LaTeX equations 編輯 -->
+  <!-- <script>
+  MathJax = {
+    tex: {inlineMath: [['$', '$'], ['\(', '\)']]}
+  };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>-->
+    </body></html>
+        

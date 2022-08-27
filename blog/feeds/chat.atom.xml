@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Mde.tw - chat</title><link href="https://mde.tw/blog/" rel="alternate"></link><link href="https://mde.tw/blog/feeds/chat.atom.xml" rel="self"></link><id>https://mde.tw/blog/</id><updated>2022-08-24T21:45:16+08:00</updated><entry><title>電腦輔助設計室系統更新</title><link href="https://mde.tw/blog/renew-cad-lab-software.html" rel="alternate"></link><published>2022-08-24T11:00:00+08:00</published><updated>2022-08-24T21:45:16+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-08-24:/blog/renew-cad-lab-software.html</id><summary type="html">&lt;p&gt;今天收到通知, 電腦輔助設計室下週要重新更新套件, 管理員問我說: 內容需要更新嗎? 我的回答是: 不用, 只要 Windows 操作系統能正常運作就行, 所有上課的套件都使用可攜模式.&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;今天收到通知, 電腦輔助設計室下週要重新更新套件, 管理員問我說: 內容需要更新嗎? 我的回答是: 不用, 只要 Windows 操作系統能正常運作就行, 所有上課的套件都使用可攜模式.&lt;/p&gt;
+
+
+&lt;h1&gt;Hybrid 模式&lt;/h1&gt;
+&lt;p&gt;雖然記不得是從何時開始在上課採用可攜套件模式, 但 2004 導入 NX3 時就已經採用 Portable 架構, 將程式存入隨身碟, 以 start.bat 啟動, 以 stop.bat 關閉, 所有與個人工作有關的資料與設定都可隨身帶走, 就好像擁有一台虛擬的筆電一樣, 唯一的缺點就是 USB 隨身碟的讀取速度沒有目前 Solid State 硬碟快, 因此從上學期電腦更新後, 就一直採用 Hybrid 的模式啟動套件.&lt;/p&gt;
+&lt;p&gt;2022 Fall 將所使用的 Hybrid 套件可以從 &lt;a href="./../downloads/drive.7z"&gt;drive.7z&lt;/a&gt; 下載, 其中包含 start_ipv6.bat:&lt;/p&gt;
+&lt;pre class="brush: jscript"&gt;
+@echo off
+
+REM 將目前隨身碟所在目錄設為變數 Disk
+set Disk=%cd%\data
+
+REM 將SSD 上的 data 目錄設為 Local
+REM for cadlab
+set Local=C:\2021_cadlab_portable\data
+REM for c1
+REM set Local=C:\compile_copsim_cd2022\data
+
+set HomePath=%Disk%\home_ipv6
+set HomeDrive=%Disk%\home_ipv6
+set Home=%Disk%\home_ipv6
+set USERPROFILE=%Disk%\home_ipv6
+
+REM 將系統 Python 程式的 io 設為 utf-8
+set PYTHONIOENCODING="utf-8"
+
+set PYTHONPATH=%Local%\Python395\DLLs;%Local%\Python395\Lib;%Local%\Python395\Lib\site-packages;
+
+set PYTHONHOME=%Local%\Python395
+
+REM 使用 putty 設定 git ssh 連線
+set GIT_SSH=%Disk%\putty\plink.exe
+
+REM 設定跟 Python 有關的命令搜尋路徑
+set path_python=%Local%\Python395;%Local%\Python395\Scripts;
+set path_portablegit=%Local%\portablegit_2.31.1\bin;
+set path_tcc=%Disk%\tcc;
+
+path=%Disk%;%path_python%;%path_portablegit%;%path_tcc%;%path%;
+
+reg.exe import %Disk%\2022_cdb.reg;
+
+start /MIN cmd.exe
+start /MIN cmd.exe
+start /MIN cmd.exe
+start /MIN cmd.exe
+
+start /MIN %Disk%\wScite\SciTE.exe
+start /MIN %Disk%\wScite\SciTE.exe
+
+Exit
+&lt;/pre&gt;
+
+&lt;p&gt;而 stop.bat 則為:&lt;/p&gt;
+&lt;pre class="brush: jscript"&gt;
+@echo off
+
+taskkill /IM python.exe /F
+taskkill /IM pythonw.exe /F
+taskkill /IM scite.exe /F
+
+REM 關閉 cmd 指令視窗
+taskkill /IM cmd.exe /F
+
+EXIT
+&lt;/pre&gt;
+
+&lt;h1&gt;隨身攜帶的 git 倉儲&lt;/h1&gt;
+&lt;p&gt;由於電腦輔助設計室中的電腦安裝了防寫系統, 因此使用者為了利用 Github 維護個人的倉儲, 除了使用個人的筆電, 最方便的還是隨身攜帶一個 USB 硬碟, 除了帶有常用的可攜的套件外, 還可在任何一台 Windwos 電腦中維護自己的 git 倉儲, 當然前提是, 可能要自帶合用的 portablegit 與 Python, 或者就連 NX2206 與 Coppeliasim 加上 MSYS2 都自己隨身帶著.&lt;/p&gt;</content><category term="chat"></category><category term="電腦輔助設計室"></category></entry></feed>

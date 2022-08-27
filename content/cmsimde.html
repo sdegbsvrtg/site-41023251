@@ -35,9 +35,11 @@
         <script src="tipuesearch_content.js"></script>
         <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/tipuesearch.css">
         <script src="./../cmsimde/static/tipuesearch/tipuesearch.js"></script>
-        <!-- for Wink3 -->
+        <!-- for Wink3 客製化關閉 -->
+        <!--
         <link rel="stylesheet" type="text/css" href="./../cmsimde/static/winkPlayer.css" />
         <script type="text/javascript" src="./../cmsimde/static/winkPlayer.js"></script>
+        -->
         <script>
             /* original tipuesearch
             $(document).ready(function() {
@@ -92,7 +94,7 @@ img.add_border {
 
 </head>
 <body>
-<div class='container-fluid'><nav>
+<div class='container'><nav>
         
     <div class="site-wrap">
 
@@ -106,16 +108,16 @@ img.add_border {
     </div>
     
             <header class="site-navbar py-4 bg-white" role="banner">
-              <div class="container-fluid">
+              <div class="container">
                 <div class="row align-items-center">
-                <h1>KMOLab, MDE, National Formosa University</h1>
+                <h1>mde.tw</h1>
                 <div class="pl-4">
                     <form>
                     <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
                     </form>
                 </div>
                   <!-- <div class="col-11 col-xl-2">
-                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">KMOLab, MDE, National Formosa University</a></h1> 
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">mde.tw</a></h1> 
                   </div>
                   -->
                   <div class="col-12 col-md-10 d-none d-xl-block">
@@ -128,7 +130,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='About.html'>About</a></li>
+                     <li class='has-children'><a href='cp2022.html'>cp2022</a><ul class='dropdown'><li><a href='Syllabus-1.html'>Syllabus-1</a><li><a href='Problem solving.html'>Problem solving</a><li class='has-children'><a href='Programming.html'>Programming</a><ul class='dropdown'><li><a href='Computer.html'>Computer</a><li><a href='Program.html'>Program</a><li><a href='Python.html'>Python</a><li><a href='ANSIC.html'>ANSIC</a><li><a href='Rust.html'>Rust</a></li></ul><li class='has-children'><a href='TCExam.html'>TCExam</a><ul class='dropdown'><li><a href='sendmail.html'>sendmail</a></li></ul><li><a href='Three.js.html'>Three.js</a><li><a href='Pandoc.html'>Pandoc</a><li><a href='VSCode.html'>VSCode</a><li><a href='Powershell.html'>Powershell</a></li></ul><li class='has-children'><a href='Brython.html'>Brython</a><ul class='dropdown'><li><a href='Game.html'>Game</a><li><a href='Simulator.html'>Simulator</a><li><a href='Algorithms.html'>Algorithms</a></li></ul><li class='has-children'><a href='CPython.html'>CPython</a><ul class='dropdown'><li><a href='PDF.html'>PDF</a><li class='has-children'><a href='CAD.html'>CAD</a><ul class='dropdown'><li><a href='Python for SW.html'>Python for SW</a><li><a href='Python for INV.html'>Python for INV</a><li><a href='Python for NX.html'>Python for NX</a></li></ul><li><a href='CAE.html'>CAE</a><li><a href='BS4.html'>BS4</a><li class='has-children'><a href='MS Graph.html'>MS Graph</a><ul class='dropdown'><li><a href='MS Teams.html'>MS Teams</a></li></li></ul></ul><li class='has-children'><a href='cmsimde.html'>cmsimde</a><ul class='dropdown'><li><a href='Portable Python.html'>Portable Python</a><li><a href='Token and SSH.html'>Token and SSH</a><li><a href='Bootstrap.html'>Bootstrap</a><li><a href='Bugs.html'>Bugs</a><li><a href='frameworks.html'>frameworks</a></li></ul><li class='has-children'><a href='cad2022.html'>cad2022</a><ul class='dropdown'><li><a href='Syllabus-2.html'>Syllabus-2</a><li class='has-children'><a href='ME.html'>ME</a><ul class='dropdown'><li><a href='Vehicle.html'>Vehicle</a><li><a href='Aircraft.html'>Aircraft</a></li></ul><li class='has-children'><a href='Reference.html'>Reference</a><ul class='dropdown'><li><a href='Portable NX1980.html'>Portable NX1980</a><li><a href='template and SSH.html'>template and SSH</a><li><a href='Pull Requests.html'>Pull Requests</a><li><a href='Resolve Conflicts.html'>Resolve Conflicts</a><li><a href='Revealjs.html'>Revealjs</a><li><a href='cube.html'>cube</a></li></ul><li><a href='Solvespace.html'>Solvespace</a><li><a href='Classroom.html'>Classroom</a><li><a href='Webots.html'>Webots</a><li><a href='Deep RL.html'>Deep RL</a></li></ul><li class='has-children'><a href='NX.html'>NX</a><ul class='dropdown'><li><a href='NX1980_setup.html'>NX1980_setup</a><li><a href='NX2206.html'>NX2206</a><li><a href='NXOpen.html'>NXOpen</a></li></ul><li class='has-children'><a href='CoppeliaSim.html'>CoppeliaSim</a><ul class='dropdown'><li><a href='Foosball.html'>Foosball</a><li><a href='Mujoco.html'>Mujoco</a><li><a href='ROS.html'>ROS</a></li></ul><li><a href='Leo Editor.html'>Leo Editor</a><li><a href='Fossil SCM.html'>Fossil SCM</a></li>
                       </ul>
                 </nav>
               </div>
@@ -139,8 +141,42 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content"> <br /><h1>About</h1>
-<p><a href="https://mde.tw">https://mde.tw</a></p><br /> </div>
+    <div id="tipue_search_content">MS Teams << <a href='MS Teams.html'>Previous</a> <a href='Portable Python.html'>Next</a> >> Portable Python<br /><h1>cmsimde</h1>
+<p><a href="https://github.com/mdecycu/cmsimde">cmsimde</a> 是一套 Web-based content management system, 也就是基於全球資訊網的內容管理系統.</p>
+<p>由於全球資訊網頁中主要使用 html, css 與 javascript 控制網頁內容, 因此在利用 <a href="https://github.com/mdecycu/cmsimde">cmsimde</a> 管理數位內容時, 必須同時對這三種語言有一定的認識.</p>
+<h4>有關 html (html5) 請參考:</h4>
+<p style="padding-left: 30px;"><a href="https://link.springer.com/book/10.1007/978-1-4302-3862-1">HTML5 Mastery</a></p>
+<h4 style="padding-left: 30px;">假如要在網頁中嵌入 2D 物件, 請參考:</h4>
+<p style="padding-left: 60px;"><a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API</a></p>
+<h4 style="padding-left: 30px;">假如要在網頁中嵌入 3D 物件, 請參考:</h4>
+<p style="padding-left: 60px;"><a href="https://link.springer.com/book/10.1007/978-1-4302-3997-0">Beginning WebGL for HTML5</a></p>
+<h4>有關 css 請參考:</h4>
+<p style="padding-left: 30px;"><a href="https://link.springer.com/book/10.1007/978-1-4842-6294-8">Modern CSS</a></p>
+<h4>有關 Javascript 請參考:</h4>
+<p style="padding-left: 30px;"><a href="https://link.springer.com/book/10.1007/978-1-4842-4395-4">Beginning Javascript</a></p>
+<p>為了 <a href="https://github.com/mdecycu/cmsimde">cmsimde</a> 靜態頁面功能表的簡潔性, 一般建議除了 Home 之外的 H1 標題, 不要超過 9 個. 若善用各分類的 H2 與 H3 子頁面分類至多 9 個子頁面, 9x9x9 合計可以容納 729 個頁面, 應該足以涵蓋中等網站的所有內容.</p>
+<p><a href="https://github.com/mdecycu/cmsimde">https://github.com/mdecycu/cmsimde</a></p>
+<p>目前的課程網站 cmsimde submodule 已經使用 mdecycu 帳號下的倉儲, 準備要將現有分別位於</p>
+<p>get_page2, render_menu2, 以及 sitemap2 函式中, 如下圖所示:</p>
+<p><img caption="false" class="add_border" height="189" src="./../images/bootstrap_container_fluid.png" width="600"/></p>
+<p>的 class='container-fluid' 改為 class='container', 根據 <a href="https://getbootstrap.com/docs/5.0/layout/containers/">bootstrap containers</a> 頁面的說明, 能夠將現有散佈在頁面 100% 的內容, 取用各不同尺寸螢幕的局部大小:</p>
+<p><img alt="" class="add_border" height="254" src="./../images/bootstrap_contener_table.png" width="600"/></p>
+<h4>cmsimde Template:</h4>
+<p style="padding-left: 30px;"><a href="https://github.com/mdecycu/cmsite">https://github.com/mdecycu/cmsite</a></p>
+<h4>cmsimde submodule update:</h4>
+<p style="padding-left: 30px;">使用 cmsimde 作為 submodule 的倉儲, 當發現 cmsimde 倉儲內容已經更新後, 若希望使用更新後的子模組內容, 則可以利用下列指令完成:</p>
+<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">REM 從倉儲更換目錄至 cmsimde
+cd cmsimde
+REM 利用 git 指令中的 pull, 從 origin 代號的網路連結, 取回 master 分支的內容, 在近端進行合併
+git pull origin master
+REM 回到原始倉儲目錄
+cd ..
+REM 利用 acp.bat 中的 git add, git commit 與 git push 將更新資料送到遠端 github 倉儲中
+acp "update cmsimde submodule"</pre>
+<h4>Are we living in a smart city (University, College, Department, Class, Group)?</h4>
+<h4>我們生活在智慧城市 (大學, 學院, 科系, 班級, 團隊) 嗎?</h4>
+<p style="padding-left: 30px;"><a href="https://link.springer.com/referencework/10.1007/978-3-030-69698-6">Handbook of Smart Cities</a></p>
+<br />MS Teams << <a href='MS Teams.html'>Previous</a> <a href='Portable Python.html'>Next</a> >> Portable Python</div>
         
     <!-- footer -->
       <div class="container">

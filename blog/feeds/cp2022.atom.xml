@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Mde.tw - cp2022</title><link href="https://mde.tw/blog/" rel="alternate"></link><link href="https://mde.tw/blog/feeds/cp2022.atom.xml" rel="self"></link><id>https://mde.tw/blog/</id><updated>2022-08-27T13:01:18+08:00</updated><entry><title>建立可攜 Python 系統</title><link href="https://mde.tw/blog/Create-a-portable-python-system.html" rel="alternate"></link><published>2022-08-23T11:00:00+08:00</published><updated>2022-08-27T13:01:18+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-08-23:/blog/Create-a-portable-python-system.html</id><summary type="html">&lt;p&gt;這裡所謂的可攜 Python 系統, 是指能夠放入 USB 隨身碟中的 Python 解譯器. 整個過程分為三個部分. 包括 Python 核心程式, pip 以及安裝常用模組等過程.&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;這裡所謂的可攜 Python 系統, 是指能夠放入 USB 隨身碟中的 Python 解譯器. 整個過程分為三個部分. 包括 Python 核心程式, pip 以及安裝常用模組等過程.&lt;/p&gt;
+
+
+&lt;h1&gt;動機&lt;/h1&gt;
+&lt;p&gt;由於電腦輔助設計室中的電腦配置防寫系統, 大約每半年才更新一次, 為了及時配合不同課程所需,除了使用電腦操作系統中所安裝的 Python 外, 通常建議學員自行建立可直接放入 USB 隨身碟啟動的可攜 Python 解譯系統.&lt;/p&gt;
+&lt;p&gt;使用可攜 Python 解譯系統的好處是, 可以在任何的 64 位元 Windows 操作系統中使用相同配置的 Python 解譯器. 且可同時將 portable git 與 scite 納入可攜系統, 採可攜的方式執行程式編寫, 並維護電腦輔助設計流程中所建立 github 倉儲內容.&lt;/p&gt;
+&lt;h1&gt;建立步驟&lt;/h1&gt;
+&lt;h2&gt;核心程式&lt;/h2&gt;
+&lt;p&gt;已知從 &lt;a href="https://www.python.org/ftp/python/"&gt;https://www.python.org/ftp/python/&lt;/a&gt; 可以下載各版本的 Python .msi 安裝檔案, 且所下載的 .msi 可以直接以 &lt;a href="https://docs.microsoft.com/zh-tw/windows-server/administration/windows-commands/msiexec"&gt;msiexec.exe&lt;/a&gt; 解開內容, 而不需要經過操作系統的套件安裝流程.&lt;/p&gt;
+&lt;p&gt;由於以下 Python 程式可以利用現有舊版的 Python 解譯器執行, 下載並解開最新版的 Python 可攜解譯器, 因此只要進入 cmd 命令視窗, 選擇所要配置 Portable Python 的目錄, 即可直接執行後完成第一階段的 Python 核心程式的配置.&lt;/p&gt;
+&lt;p&gt;這裡以 Python 3.10.6 為例, 下載並解開所需的 Python 核心程式內容:&lt;/p&gt;
+&lt;pre class="brush: python"&gt;
+import urllib.request
+import os
+
+# basic files for Python installation
+py_list = ["core", "dev", "exe", "lib", "tcltk", "tools"]
+# Python version
+version = "3.10.6"
+# location for Portable Python
+path = "c:\\tmp\\Python310"
+# Python msi download URL
+ftp = "https://www.python.org/ftp/python/" + version + "/amd64/"
+extract_path = path + "\\extract"
+# create directory
+try:
+    os.mkdir(path)
+except:
+    # path exists
+    pass
+# get Python installation msi files and extract into target dir
+for i in py_list:
+    filename = i + ".msi"
+    url = ftp + filename
+    # download basic python msi file
+    urllib.request.urlretrieve(url, path+ "\\"+ filename)
+    os.system("msiexec.exe /a " + path + "\\" + i + ".msi /qb targetdir=" + extract_path)
+    # delete msi file
+    os.remove(extract_path + "\\" + i + ".msi")
+&lt;/pre&gt;
+
+&lt;p&gt;執行結束後, path (在上述範例 path 為 "c:/tmp/Python310") 目錄中的 extract 子目錄即為可攜 Python 解譯器檔案. &lt;/p&gt;
+&lt;h2&gt;安裝 pip&lt;/h2&gt;
+&lt;p&gt;從 &lt;a href="https://bootstrap.pypa.io/get-pip.py"&gt;https://bootstrap.pypa.io/get-pip.py&lt;/a&gt; 可以下載 get-pip.py 檔案, 利用前面完成的 Python 核心程式可以在可攜 Python 程式的架構下安裝 pip 工具, 但必須先讓可攜的核心程式得以運作, 這時需要安排 start.bat 與 stop.bat&lt;/p&gt;
+&lt;p&gt;安裝 pip 時, 先以 cmd 進入命令列視窗, 然後更換目錄至 get-pip.py 所在目錄後, 以 python get-pip.py 進行安裝.&lt;/p&gt;
+&lt;pre class="brush: jscript"&gt;
+Microsoft Windows [版本 10.0.19042.1706]
+(c) Microsoft Corporation. 著作權所有，並保留一切權利。
+
+C:\tmp\portable_python_3.10.6&gt;cd tmp
+
+C:\tmp\portable_python_3.10.6\tmp&gt;python get-pip.py
+Collecting pip
+  Downloading pip-22.2.2-py3-none-any.whl (2.0 MB)
+     ---------------------------------------- 2.0/2.0 MB 1.5 MB/s eta 0:00:00
+Collecting setuptools
+  Downloading setuptools-65.2.0-py3-none-any.whl (1.2 MB)
+     ---------------------------------------- 1.2/1.2 MB 2.7 MB/s eta 0:00:00
+Collecting wheel
+  Downloading wheel-0.37.1-py2.py3-none-any.whl (35 kB)
+Installing collected packages: wheel, setuptools, pip
+Successfully installed pip-22.2.2 setuptools-65.2.0 wheel-0.37.1
+&lt;/pre&gt;
+
+&lt;p&gt;可攜 Python 安裝 pip 後, 就可以利用 pip list 列出目前所安裝的模組, 並接著安裝 cmsimde 所需模組.&lt;/p&gt;
+&lt;pre class="brush: jscript"&gt;
+C:\tmp\portable_python_3.10.6\tmp&gt;pip list
+Package    Version
+---------- -------
+pip        22.2.2
+setuptools 65.2.0
+wheel      0.37.1
+
+C:\tmp\portable_python_3.10.6\tmp&gt;pip install flask flask_cors bs4 lxml pelican markdown leo pyopenssl
+&lt;/pre&gt;
+
+&lt;p&gt;以下為用來啟動可攜 Python 的批次檔案:&lt;/p&gt;
+&lt;p&gt;start.bat&lt;/p&gt;
+&lt;pre class="brush: jscript"&gt;
+@echo off
+
+set PATH=%cd%
+
+set HomePath=%cd%\home_ipv6
+set HomeDrive=%cd%\home_ipv6
+set Home=%cd%\home_ipv6
+set USERPROFILE=%cd%\home_ipv6
+
+REM 將系統 Python 程式的 io 設為 utf-8
+set PYTHONIOENCODING="utf-8"
+
+set PYTHONPATH=%cd%\Python310\DLLs;%cd%\Python310\Lib;%cd%\Python310\Lib\site-packages;
+set PYTHONHOME=%cd%\Python310
+
+REM for putty
+set GIT_SSH=%cd%\putty\plink.exe
+
+REM 設定跟 Python 有關的命令搜尋路徑
+set path_python=%cd%\Python310;%cd%\Python310\Scripts;
+REM 設定跟Git 有關的命令搜尋路徑
+set path_git=%cd%\portablegit_2.31.1\bin;
+set path_tcc=%cd%\tcc;
+
+REM for execute scite directly
+set path_scite=%cd%\wScite502\;
+
+path=%cd%;%path_python%;%path_git%;%path_tcc%;%path_scite%;%path%;
+
+start /MIN cmd.exe
+start /MIN cmd.exe
+start /MIN cmd.exe
+start /MIN cmd.exe
+
+start /MIN %cd%\wScite502\SciTE.exe
+start /MIN %cd%\wScite502\SciTE.exe
+
+Exit
+&lt;/pre&gt;
+
+&lt;p&gt;以下為關閉可攜 Python 的批次檔:&lt;/p&gt;
+&lt;p&gt;stop.bat&lt;/p&gt;
+&lt;pre class="brush: jscript"&gt;
+@echo off
+
+taskkill /IM python.exe /F
+taskkill /IM pythonw.exe /F
+taskkill /IM scite.exe /F
+taskkill /IM cmd.exe /F
+
+EXIT
+&lt;/pre&gt;
+
+&lt;h2&gt;安裝模組&lt;/h2&gt;
+&lt;p&gt;pip install flask flask_cors bs4 lxml pelican markdown leo pyopenssl&lt;/p&gt;
+&lt;p&gt;上述配置 pip 與模組&lt;a href="./../downloads/install_get-pip.py_and_cmsimde_modules.txt"&gt;安裝詳細過程紀錄&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/yen_gm_nfu_edu_tw/EeE98pBYWN9CkSCX6CQ4Hc0B3ATux7DfglRSGLBw2AL0cQ?e=ju1KyO"&gt;portable_python_3.10.6.7z&lt;/a&gt; (for @gm users only)&lt;/p&gt;</content><category term="cp2022"></category><category term="portable-Python"></category></entry><entry><title>2022 Fall CP 課程</title><link href="https://mde.tw/blog/2022-Fall-Intro-to-computer-programming.html" rel="alternate"></link><published>2022-08-19T11:00:00+08:00</published><updated>2022-08-27T13:01:18+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-08-19:/blog/2022-Fall-Intro-to-computer-programming.html</id><summary type="html">&lt;p&gt;2022 Fall 計算機程式開場, 這學期的課程進度將放在 Weblog, 並且使用 mdecycu At cycu 登記 disqus. 所有與課程相關的問題, 都希望在各週 Weblog 下方的 disqus 詢答.&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;2022 Fall 計算機程式開場, 這學期的課程進度將放在 Weblog, 並且使用 mdecycu At cycu 登記 disqus. 所有與課程相關的問題, 都希望在各週 Weblog 下方的 disqus 詢答.&lt;/p&gt;
+
+
+&lt;h2&gt;課程評分&lt;/h2&gt;
+&lt;p&gt;cp2022 課程評分項目請參考: &lt;a href="https://mde.tw/cp2022/content/Syllabus.html"&gt;syllabus&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;命令提示字元&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://docs.microsoft.com/zh-tw/windows-server/administration/windows-commands/cmd"&gt;cmd&lt;/a&gt; (Command Line) 指令, 是 &lt;a href="https://docs.microsoft.com/zh-tw/windows-server/administration/windows-commands/windows-commands"&gt;Windows 命令&lt;/a&gt; 中的一種. 常用的命令提示字元視窗中的指令包括:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://docs.microsoft.com/zh-tw/windows-server/administration/windows-commands/echo"&gt;echo&lt;/a&gt;, &lt;a href="https://docs.microsoft.com/zh-tw/windows-server/administration/windows-commands/dir"&gt;dir&lt;/a&gt;, &lt;a href="https://docs.microsoft.com/zh-tw/windows-server/administration/windows-commands/cd"&gt;cd&lt;/a&gt;, &lt;a href="https://docs.microsoft.com/zh-tw/windows-server/administration/windows-commands/ping"&gt;ping&lt;/a&gt;, &lt;a href="https://docs.microsoft.com/zh-tw/windows-server/administration/windows-commands/set_1"&gt;set&lt;/a&gt;, &lt;a href="https://docs.microsoft.com/zh-tw/windows-server/administration/windows-commands/rem"&gt;rem&lt;/a&gt;, &lt;a href="https://docs.microsoft.com/zh-tw/windows-server/administration/windows-commands/start"&gt;start&lt;/a&gt;, &lt;a href="https://docs.microsoft.com/zh-tw/windows-server/administration/windows-commands/path"&gt;path&lt;/a&gt;, &lt;a href="https://docs.microsoft.com/zh-tw/windows-server/administration/windows-commands/reg"&gt;reg&lt;/a&gt;, &lt;a href="https://docs.microsoft.com/zh-tw/windows-server/administration/windows-commands/exit"&gt;exit&lt;/a&gt;, &lt;a href="https://docs.microsoft.com/zh-tw/windows-server/administration/windows-commands/taskkill"&gt;taskkill&lt;/a&gt;, &lt;a href="https://docs.microsoft.com/zh-tw/windows-server/administration/windows-commands/powershell"&gt;powershell&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;網路環境設定&lt;/h2&gt;
+&lt;p&gt;由於希望能夠讓電腦輔助設計室中使用純 &lt;a href="https://en.wikipedia.org/wiki/IPv6"&gt;IPv6&lt;/a&gt; 網路設定上網, 開機啟動後, 可採管理員模式執行下列 batch file 進行&lt;a href="https://www.youtube.com/watch?v=DDIQTTk6HZs"&gt;網路環境設定&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;1_ipv6_network_setup.bat 通常放在隨身碟最外部.&lt;/p&gt;
+&lt;pre class="brush:jscript"&gt;
+REM Get-ExecutionPolicy -List
+REM Set-ExecutionPolicy RemoteSigned
+echo "disable ipv4 and setup proxy for ipv6"
+SET CurrentDir=%~dp0
+%windir%\system32\reg.exe import %CurrentDir%1_2022_cadlab_network_setup.reg
+REM powershell -noexit -executionpolicy bypass -File %CurrentDir%1_disable_ipv4.ps1
+powershell -executionpolicy bypass -File %CurrentDir%1_disable_ipv4.ps1
+exit
+&lt;/pre&gt;
+
+&lt;p&gt;執行時, 需要 1_2022_cadlab_network_setup.reg 與 1_disable_ipv4.ps1 兩個檔案:&lt;/p&gt;
+&lt;p&gt;1_2022_cadlab_network_setup.reg 主要是關閉自動偵測 &lt;a href="https://en.wikipedia.org/wiki/Proxy_server"&gt;proxy server&lt;/a&gt;, 且手動設定代理主機.&lt;/p&gt;
+&lt;pre class="brush:jscript"&gt;
+Windows Registry Editor Version 5.00
+
+ [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings]
+ ; disable AutoDetect
+"AutoDetect"=dword:00000000
+"MigrateProxy"=dword:00000001
+; enable Proxy
+"ProxyEnable"=dword:00000001 
+"ProxyHttp1.1"=dword:00000000 
+"ProxyServer"="http://[2001:288:6004:17::42]:3128"
+"ProxyOverride"="localhost;"
+&lt;/pre&gt;
+
+&lt;p&gt;1_disable_ipv4.ps1 為 &lt;a href="https://docs.microsoft.com/zh-tw/powershell/scripting/learn/ps101/00-introduction?view=powershell-7.2"&gt;Powershell 命令&lt;/a&gt;, 主要將所有網路卡上的 &lt;a href="https://en.wikipedia.org/wiki/IPv4"&gt;IPv4&lt;/a&gt; 網路設定取消 (因為現階段所安裝的某套件會啟動網路攻擊, 透過 &lt;a href="https://en.wikipedia.org/wiki/IPv4"&gt;IPv4&lt;/a&gt; 網路協定嘗試與外部網站連結取得後門權限).&lt;/p&gt;
+&lt;pre class="brush: jscript"&gt;
+Disable-NetAdapterBinding -Name "*" -ComponentID ms_tcpip
+&lt;/pre&gt;
+
+&lt;p&gt;上述相關設定檔案: &lt;a href="./../downloads/cadlab_network_setup.zip"&gt;cadlab_network_setup.zip&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;建立 Github 帳號&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://github.com/join"&gt;https://github.com/join&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;建立 Onedrive 帳號&lt;/h2&gt;
+&lt;p&gt;請各學員登入 @gm 帳號後, 至 &lt;a href="https://www.microsoft.com/zh-tw/education/products/office"&gt;https://www.microsoft.com/zh-tw/education/products/office&lt;/a&gt;, 以 @gm 帳號申請 &lt;a href="https://en.wikipedia.org/wiki/OneDrive"&gt;OneDrive&lt;/a&gt; 5TB 儲存權限. &lt;/p&gt;
+&lt;h2&gt;利用 &lt;a href="https://github.com"&gt;Github&lt;/a&gt; 建立網頁&lt;/h2&gt;
+&lt;p&gt;只要在 &lt;a href="https://github.com"&gt;Github&lt;/a&gt; 倉儲中放入 &lt;a href="https://en.wikipedia.org/wiki/HTML"&gt;HTML&lt;/a&gt;, &lt;a href="https://en.wikipedia.org/wiki/CSS"&gt;css&lt;/a&gt; 與 &lt;a href="https://en.wikipedia.org/wiki/JavaScript"&gt;Javascript&lt;/a&gt;, 並且設定 &lt;a href="https://pages.github.com/"&gt;Github Pages&lt;/a&gt; 對應的分支, &lt;a href="https://github.com"&gt;Github&lt;/a&gt; 就會給定 Github_帳號.github.io 作為網址, 以 WWW 伺服器 server 使用者所提供的網頁內容.&lt;/p&gt;
+&lt;p&gt;登入 &lt;a href="https://github.com"&gt;Github&lt;/a&gt; 後, 利用 &lt;a href="https://github.com/mdecycu/cmsite"&gt;https://github.com/mdecycu/cmsite&lt;/a&gt; 作為 &lt;a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template"&gt;template&lt;/a&gt;, 使用 &lt;a href="https://pages.github.com/"&gt;https://pages.github.com/&lt;/a&gt; 建立個人網頁, 並利用網頁建立個人簡歷 (&lt;a href="https://www.thebalancecareers.com/cv-vs-resume-2058495"&gt;Curriculum Vitae&lt;/a&gt;).&lt;/p&gt;
+&lt;h2&gt;維護 &lt;a href="https://github.com"&gt;Github&lt;/a&gt; 上的網頁&lt;/h2&gt;
+&lt;p&gt;在近端將動態網頁轉為靜態網頁後, &lt;a href="https://github.com/mdecycu/cmsimde/blob/4cf035f4dc75bafc2791b67e630ee34533ae50c4/up_dir/acp.bat"&gt;acp&lt;/a&gt; 至 &lt;a href="https://github.com"&gt;Github&lt;/a&gt; 倉儲.&lt;/p&gt;
+&lt;h2&gt;Computer 簡介&lt;/h2&gt;
+&lt;p&gt;以下資料取自: &lt;a href="https://mde.tw/cp2022/content/Computer.html"&gt;https://mde.tw/cp2022/content/Computer.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;A computer is a digital electronic machine that can be programmed to carry out sequences of arithmetic or logical operations (computation) automatically. Modern computers can perform generic sets of operations known as programs. These programs enable computers to perform a wide range of tasks. A computer system is a "complete" computer that includes the hardware, operating system (main software), and peripheral equipment needed and used for "full" operation. This term may also refer to a group of computers that are linked and function together, such as a computer network or computer cluster.&lt;/p&gt;
+&lt;p&gt;A broad range of industrial and consumer products use computers as control systems. Simple special-purpose devices like microwave ovens and remote controls are included, as are factory devices like industrial robots and computer-aided design, as well as general-purpose devices like personal computers and mobile devices like smartphones. Computers power the Internet, which links billions of other computers and users.&lt;/p&gt;
+&lt;p&gt;Early computers were meant to be used only for calculations. Simple manual instruments like the abacus have aided people in doing calculations since ancient times. Early in the Industrial Revolution, some mechanical devices were built to automate long tedious tasks, such as guiding patterns for looms. More sophisticated electrical machines did specialized analog calculations in the early 20th century. The first digital electronic calculating machines were developed during World War II. The first semiconductor transistors in the late 1940s were followed by the silicon-based MOSFET (MOS transistor) and monolithic integrated circuit (IC) chip technologies in the late 1950s, leading to the microprocessor and the microcomputer revolution in the 1970s. The speed, power and versatility of computers have been increasing dramatically ever since then, with transistor counts increasing at a rapid pace (as predicted by Moore's law), leading to the Digital Revolution during the late 20th to early 21st centuries.&lt;/p&gt;
+&lt;p&gt;Conventionally, a modern computer consists of at least one processing element, typically a central processing unit (CPU) in the form of a microprocessor, along with some type of computer memory, typically semiconductor memory chips. The processing element carries out arithmetic and logical operations, and a sequencing and control unit can change the order of operations in response to stored information. Peripheral devices include input devices (keyboards, mice, joystick, etc.), output devices (monitor screens, printers, etc.), and input/output devices that perform both functions (e.g., the 2000s-era touchscreen). Peripheral devices allow information to be retrieved from an external source and they enable the result of operations to be saved and retrieved. &lt;/p&gt;
+&lt;h2&gt;Program 簡介&lt;/h2&gt;
+&lt;p&gt;以下資料取自: &lt;a href="https://mde.tw/cp2022/content/Program.html"&gt;https://mde.tw/cp2022/content/Program.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;A computer program is a sequence or set of instructions in a programming language for a computer to execute. Computer programs are one component of software, which also includes documentation and other intangible components.&lt;/p&gt;
+&lt;p&gt;A computer program in its human-readable form is called source code. Source code needs another computer program to execute because computers can only execute their native machine instructions. Therefore, source code may be translated to machine instructions using the language's compiler. (Machine language programs are translated using an assembler.) The resulting file is called an executable. Alternatively, source code may execute within the language's interpreter.&lt;/p&gt;
+&lt;p&gt;If the executable is requested for execution, then the operating system loads it into memory and starts a process. The central processing unit will soon switch to this process so it can fetch, decode, and then execute each machine instruction.&lt;/p&gt;
+&lt;p&gt;If the source code is requested for execution, then the operating system loads the corresponding interpreter into memory and starts a process. The interpreter then loads the source code into memory to translate and execute each statement. Running the source code is slower than running an executable. Moreover, the interpreter must be installed on the computer. &lt;/p&gt;
+&lt;h2&gt;Python 簡介&lt;/h2&gt;
+&lt;p&gt;以下資料取自: &lt;a href="https://en.wikipedia.org/wiki/Python_(programming_language)"&gt;https://en.wikipedia.org/wiki/Python_(programming_language)&lt;/a&gt;, 充分了解上述內容後, 可進入 &lt;a href="https://mde.tw/cp2022/content/Python.html"&gt;https://mde.tw/cp2022/content/Python.html&lt;/a&gt; 開始練習如何根據需求編寫 Python 程式.&lt;/p&gt;
+&lt;p&gt;Python is a high-level, interpreted, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation.&lt;/p&gt;
+&lt;p&gt;Python is dynamically-typed and garbage-collected. It supports multiple programming paradigms, including structured (particularly procedural), object-oriented and functional programming. It is often described as a "batteries included" language due to its comprehensive standard library.&lt;/p&gt;
+&lt;p&gt;Guido van Rossum began working on Python in the late 1980s as a successor to the ABC programming language and first released it in 1991 as Python 0.9.0. Python 2.0 was released in 2000 and introduced new features such as list comprehensions, cycle-detecting garbage collection, reference counting, and Unicode support. Python 3.0, released in 2008, was a major revision that is not completely backward-compatible with earlier versions. Python 2 was discontinued with version 2.7.18 in 2020.&lt;/p&gt;
+&lt;p&gt;Python consistently ranks as one of the most popular programming languages.&lt;/p&gt;</content><category term="cp2022"></category><category term="cp2022-Syllabus"></category></entry></feed>

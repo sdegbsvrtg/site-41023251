@@ -34,9 +34,11 @@
         <script src="tipuesearch_content.js"></script>
         <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/tipuesearch.css">
         <script src="./../cmsimde/static/tipuesearch/tipuesearch.js"></script>
-        <!-- for Wink3 -->
+        <!-- for Wink3 客製化關閉 -->
+        <!--
         <link rel="stylesheet" type="text/css" href="./../cmsimde/static/winkPlayer.css" />
         <script type="text/javascript" src="./../cmsimde/static/winkPlayer.js"></script>
+        -->
         <script>
             /* original tipuesearch
             $(document).ready(function() {
@@ -91,7 +93,7 @@ img.add_border {
 
 </head>
 <body>
-<div class='container-fluid'><nav>
+<div class='container'><nav>
         
     <div class="site-wrap">
 
@@ -105,16 +107,16 @@ img.add_border {
     </div>
     
             <header class="site-navbar py-4 bg-white" role="banner">
-              <div class="container-fluid">
+              <div class="container">
                 <div class="row align-items-center">
-                <h1>KMOLab, MDE, National Formosa University</h1>
+                <h1>mde.tw</h1>
                 <div class="pl-4">
                     <form>
                     <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
                     </form>
                 </div>
                   <!-- <div class="col-11 col-xl-2">
-                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">KMOLab, MDE, National Formosa University</a></h1> 
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">mde.tw</a></h1> 
                   </div>
                   -->
                   <div class="col-12 col-md-10 d-none d-xl-block">
@@ -127,7 +129,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='About.html'>About</a></li>
+                     <li class='has-children'><a href='cp2022.html'>cp2022</a><ul class='dropdown'><li><a href='Syllabus-1.html'>Syllabus-1</a><li><a href='Problem solving.html'>Problem solving</a><li class='has-children'><a href='Programming.html'>Programming</a><ul class='dropdown'><li><a href='Computer.html'>Computer</a><li><a href='Program.html'>Program</a><li><a href='Python.html'>Python</a><li><a href='ANSIC.html'>ANSIC</a><li><a href='Rust.html'>Rust</a></li></ul><li class='has-children'><a href='TCExam.html'>TCExam</a><ul class='dropdown'><li><a href='sendmail.html'>sendmail</a></li></ul><li><a href='Three.js.html'>Three.js</a><li><a href='Pandoc.html'>Pandoc</a><li><a href='VSCode.html'>VSCode</a><li><a href='Powershell.html'>Powershell</a></li></ul><li class='has-children'><a href='Brython.html'>Brython</a><ul class='dropdown'><li><a href='Game.html'>Game</a><li><a href='Simulator.html'>Simulator</a><li><a href='Algorithms.html'>Algorithms</a></li></ul><li class='has-children'><a href='CPython.html'>CPython</a><ul class='dropdown'><li><a href='PDF.html'>PDF</a><li class='has-children'><a href='CAD.html'>CAD</a><ul class='dropdown'><li><a href='Python for SW.html'>Python for SW</a><li><a href='Python for INV.html'>Python for INV</a><li><a href='Python for NX.html'>Python for NX</a></li></ul><li><a href='CAE.html'>CAE</a><li><a href='BS4.html'>BS4</a><li class='has-children'><a href='MS Graph.html'>MS Graph</a><ul class='dropdown'><li><a href='MS Teams.html'>MS Teams</a></li></li></ul></ul><li class='has-children'><a href='cmsimde.html'>cmsimde</a><ul class='dropdown'><li><a href='Portable Python.html'>Portable Python</a><li><a href='Token and SSH.html'>Token and SSH</a><li><a href='Bootstrap.html'>Bootstrap</a><li><a href='Bugs.html'>Bugs</a><li><a href='frameworks.html'>frameworks</a></li></ul><li class='has-children'><a href='cad2022.html'>cad2022</a><ul class='dropdown'><li><a href='Syllabus-2.html'>Syllabus-2</a><li class='has-children'><a href='ME.html'>ME</a><ul class='dropdown'><li><a href='Vehicle.html'>Vehicle</a><li><a href='Aircraft.html'>Aircraft</a></li></ul><li class='has-children'><a href='Reference.html'>Reference</a><ul class='dropdown'><li><a href='Portable NX1980.html'>Portable NX1980</a><li><a href='template and SSH.html'>template and SSH</a><li><a href='Pull Requests.html'>Pull Requests</a><li><a href='Resolve Conflicts.html'>Resolve Conflicts</a><li><a href='Revealjs.html'>Revealjs</a><li><a href='cube.html'>cube</a></li></ul><li><a href='Solvespace.html'>Solvespace</a><li><a href='Classroom.html'>Classroom</a><li><a href='Webots.html'>Webots</a><li><a href='Deep RL.html'>Deep RL</a></li></ul><li class='has-children'><a href='NX.html'>NX</a><ul class='dropdown'><li><a href='NX1980_setup.html'>NX1980_setup</a><li><a href='NX2206.html'>NX2206</a><li><a href='NXOpen.html'>NXOpen</a></li></ul><li class='has-children'><a href='CoppeliaSim.html'>CoppeliaSim</a><ul class='dropdown'><li><a href='Foosball.html'>Foosball</a><li><a href='Mujoco.html'>Mujoco</a><li><a href='ROS.html'>ROS</a></li></ul><li><a href='Leo Editor.html'>Leo Editor</a><li><a href='Fossil SCM.html'>Fossil SCM</a></li>
                       </ul>
                 </nav>
               </div>
@@ -138,8 +140,14 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content"> <br /><h1>About</h1>
-<p><a href="https://mde.tw">https://mde.tw</a></p><br /> </div>
+    <div id="tipue_search_content"> <a href='Syllabus-1.html'>Next</a> >> Syllabus-1<br /><h1>cp2022</h1>
+<h4>2022 Fall</h4>
+<p>Introduction to Computer Programming (計算機程式)</p>
+<p><a href="https://www.youtube.com/c/Freecodecamp/search?query=python">https://www.youtube.com/c/Freecodecamp/search?query=python</a></p>
+<p>C -&gt; Brython (Javascript, html5, css) -&gt; CPython -&gt; Rust</p>
+<h4>行事曆</h4>
+<p><a href="https://calendar.google.com/calendar/embed?src=mde.nfu.edu.tw_3439313938333136353439%40resource.calendar.google.com&amp;ctz=Asia%2FTaipei&amp;mode=week&amp;src=mde.nfu.edu.tw_35303530373431313438%40resource.calendar.google.com&amp;ctz=Asia%2FTaipei&amp;src=yen%40gm.nfu.edu.tw&amp;ctz=Asia%2FTaipei">全頁檢視</a></p>
+<p><iframe height="600" src="https://calendar.google.com/calendar/embed?src=mde.nfu.edu.tw_3439313938333136353439%40resource.calendar.google.com&amp;ctz=Asia%2FTaipei&amp;mode=week&amp;src=mde.nfu.edu.tw_35303530373431313438%40resource.calendar.google.com&amp;ctz=Asia%2FTaipei&amp;src=yen%40gm.nfu.edu.tw&amp;ctz=Asia%2FTaipei" width="800"></iframe></p><br /> <a href='Syllabus-1.html'>Next</a> >> Syllabus-1</div>
         
     <!-- footer -->
       <div class="container">

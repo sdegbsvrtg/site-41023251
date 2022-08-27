@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+
+  <title>有關 Fossil SCM</title>
+
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="origin" />
+  <meta name="generator" content="Pelican" />
+  <link href="https://mde.tw/blog/" rel="canonical" />
+
+  <!-- Feed -->
+        <link href="https://mde.tw/blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Mde.tw Full Atom Feed" />
+          <link href="https://mde.tw/blog/feeds/{slug}.atom.xml" type="application/atom+xml" rel="alternate" title="Mde.tw Categories Atom Feed" />
+
+  <link href="https://mde.tw/blog/theme/css/style.css" type="text/css" rel="stylesheet" />
+
+  <!-- Code highlight color scheme -->
+      <link href="https://mde.tw/blog/theme/css/code_blocks/tomorrow_night.css" rel="stylesheet">
+
+  
+    <link href="https://mde.tw/blog/theme/tipuesearch/tipuesearch.css" rel="stylesheet">
+
+  <!-- Custom fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,300' rel='stylesheet' type='text/css' />
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css" />
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+
+    <link href="https://mde.tw/blog/about-fossil-scm.html" rel="canonical" />
+
+        <meta name="description" content="Fossil SCM 是一套 Software Configuration Management 套件, 專門用於 SQLite 的原始碼管理.">
+
+        <meta name="author" content="mdecycu">
+
+        <meta name="tags" content="repository">
+        <meta name="tags" content="scm">
+
+
+
+
+<!-- Open Graph -->
+<meta property="og:site_name" content="Mde.tw"/>
+<meta property="og:title" content="有關 Fossil SCM"/>
+<meta property="og:description" content="Fossil SCM 是一套 Software Configuration Management 套件, 專門用於 SQLite 的原始碼管理."/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://mde.tw/blog/about-fossil-scm.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2022-08-27 13:00:00+08:00"/>
+<meta property="article:modified_time" content="2022-08-27 23:39:56.402085+08:00"/>
+<meta property="article:author" content="https://mde.tw/blog/author/mdecycu.html">
+<meta property="article:section" content="fossil-scm"/>
+<meta property="article:tag" content="repository"/>
+<meta property="article:tag" content="scm"/>
+<meta property="og:image" content="https://mde.tw/blog/theme/images/post-bg.jpg">
+
+<!-- Twitter Card -->
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "name": "有關 Fossil SCM",
+  "headline": "有關 Fossil SCM",
+  "datePublished": "2022-08-27 13:00:00+08:00",
+  "dateModified": "2022-08-27 23:39:56.402085+08:00",
+  "author": {
+    "@type": "Person",
+    "name": "mdecycu",
+    "url": "https://mde.tw/blog/author/mdecycu.html"
+  },
+  "image": "https://mde.tw/blog/theme/images/post-bg.jpg",
+  "url": "https://mde.tw/blog/about-fossil-scm.html",
+  "description": "Fossil SCM 是一套 Software Configuration Management 套件, 專門用於 SQLite 的原始碼管理."
+}
+</script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushBash.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
+<script type='text/javascript'>
+	(function(){
+		var corecss = document.createElement('link');
+		var themecss = document.createElement('link');
+		var corecssurl = "./../cmsimde/static/syntaxhighlighter/css/shCore.css";
+		if ( corecss.setAttribute ) {
+				corecss.setAttribute( "rel", "stylesheet" );
+				corecss.setAttribute( "type", "text/css" );
+				corecss.setAttribute( "href", corecssurl );
+		} else {
+				corecss.rel = "stylesheet";
+				corecss.href = corecssurl;
+		}
+		document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+		var themecssurl = "./../cmsimde/static/syntaxhighlighter/css/shThemeDefault.css?ver=3.0.9b";
+		if ( themecss.setAttribute ) {
+				themecss.setAttribute( "rel", "stylesheet" );
+				themecss.setAttribute( "type", "text/css" );
+				themecss.setAttribute( "href", themecssurl );
+		} else {
+				themecss.rel = "stylesheet";
+				themecss.href = themecssurl;
+		}
+		//document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+		document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+	})();
+	SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+	SyntaxHighlighter.config.strings.help = '?';
+	SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+	SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+	SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+	SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+	SyntaxHighlighter.defaults['toolbar'] = false;
+	SyntaxHighlighter.all();
+</script>
+
+<!-- for LaTeX equations -->
+<script src="https://scrum-3.github.io/web/math/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script>
+<script type="text/javascript">
+init_mathjax = function() {
+    if (window.MathJax) {
+        // MathJax loaded
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+            },
+            displayAlign: 'left', // Change this to 'center' to center equations.
+            "HTML-CSS": {
+                styles: {'.MathJax_Display': {"margin": 0}}
+            }
+        });
+        MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+    }
+}
+init_mathjax();
+</script>
+
+</head>
+<!-- TODO : Body class -->
+<body class="home-template">
+
+<nav id="menu">
+  <a class="close-button">Close</a>
+  <div class="nav-wrapper">
+    <p class="nav-label">Menu</p>
+    <ul>
+    <!--
+
+              <li role="presentation"><a href="https://mde.tw/blog/pages/about/">About</a></li>
+      -->
+
+            <li><a href="https://mde.tw/blog/pages/about/index.html">About</span></a></li>
+            
+            <li><a href="https://mde.tw/blog/archives.html">Archives</span></a></li>
+            
+            <li><a href="https://mde.tw/blog/categories.html">Categories</span></a></li>
+            
+            <li><a href="https://mde.tw/blog/tags.html">Tags</span></a></li>
+
+    </ul>
+  </div>
+</nav>
+    <!-- Progressbar -->
+    <div class="progress-container">
+        <span class="progress-bar"></span>
+    </div>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header id="post-header" class="has-cover">
+      <div class="inner">
+        <nav id="navigation">
+            <span id="home-button" class="nav-button">
+                <a class="home-button" href="https://mde.tw/blog/index.html" title="Home"><i class="ic ic-arrow-left"></i> Home</a>
+            </span>
+          <span id="menu-button" class="nav-button">
+            <a class="menu-button"><i class="ic ic-menu"></i> Menu</a>
+          </span>
+        </nav>
+        <h1 class="post-title">有關 Fossil SCM</h1>
+        <!-- TODO : Proper class for headline -->
+        <span class="post-meta">
+                <a href="https://mde.tw/blog/author/mdecycu.html">Mdecycu</a>
+            | <time datetime="週六 27 八月 2022">週六 27 八月 2022</time>
+        </span>
+        <!-- TODO : Modified check -->
+            <span class="post-meta"> | Updated on 週六 27 八月 2022</span>
+            <div class="post-cover cover" style="background-image: url('https://mde.tw/blog/theme/images/post-bg.jpg')">
+      </div>
+    </header>
+
+  <section id="wrapper">
+    <a class="hidden-close"></a>
+
+<section class="search">
+      <form class="navbar-search" action="https://mde.tw/blog/search.html">
+      <input type="text"  placeholder="Search" name="q" id="tipue_search_input" required>
+    </form>
+</section>
+
+
+    <!-- Post content -->
+    <main class="content" role="main">
+        <article class="post">
+        <div class="inner">
+            <section class="post-content">
+                <p><a href="https://www.fossil-scm.org">Fossil SCM</a> 是一套 Software Configuration Management 套件, 專門用於 <a href="https://sqlite.org">SQLite</a> 的原始碼管理.</p>
+
+
+<p><a href="https://www.fossil-scm.org">Fossil SCM</a> 是一套冷門的系統, 感覺好像沒有太多單位或團體使用, 只是就分散式版次管理系統的角度來看, 其實是一套小而美且功能齊全的 SCM 系統, 接下來將對 <a href="https://www.fossil-scm.org">Fossil SCM</a> 進行初步介紹.</p>
+<h1>fossil init</h1>
+<p>起始一個 Fossil SCM 倉儲之前需要先從 <a href="https://fossil-scm.org/home/uv/download.html">https://fossil-scm.org/home/uv/download.html</a> 下載相應的檔案, 與 Portablegit 相比, Fossil SCM 工具無論在 Windows, Linux 或 Mac 操作系統, 都只有一個檔案, 且大小只有約 9MB.</p>
+<p>而起始 Fossil SCM 倉儲的指令與 Git 相同:</p>
+<p>fossil init</p>
+<p>只不過 Fossil SCM 在倉儲 clone 之後的檔案為一個壓縮檔案, 通常以 .fossil 作為副檔名, 其實這是一個 SQLite 資料庫檔案. 當使用者 clone Fossil SCM 倉儲至近端之後, 必須透過 fossil open 將最新的版本內容展開, 一般會建議, 擺放 .fossil 檔案的目錄中, 建立 working director 目錄, 建議命名為 wd, 然後在 wd 目錄之中, 再根據各倉儲檔案的名稱建立位於 wd 目錄下的子目錄, 而各 .fossil 倉儲的內容則在各自的 "wd\倉儲名稱" 目錄下展開.</p>
+<p>假如要將遠端的倉儲 clone 至遠端, 若採 https 協定, 其命令列語法為:</p>
+<p>fossil clone https://user_name@fossil.kmol.info/repository repository.fossil</p>
+<p>表示要將位於 fossil.kmol.info 主機上的 repository 倉儲, 以 https 協定 clone 至近端且存為 repository.fossil</p>
+<p>以一位於近端檔案架構的 repository.fossil 本身會帶有管理者的密碼設定, 而此一管理者帳號下對應的 local password 與 remote passwors 分屬於兩個不同的 repository.fossil, 當使用者要將近端改版資料推向遠端時, 依據的是遠端的管理者 passwors, 而近端的管理者密碼則在近端倉儲以 fossil web 進行網際啟動時之用. 換言之, 各個 Fossil SCM 倉儲壓縮檔案內所儲存的管理者帳號密碼, 主針對下游啟動服務時採用.</p>
+<p>至於在工作目錄下倉儲資料檔案中的改版資料, 一旦新增提交推送後, 不僅會將版本更新資料註記在近端對應的 .fossil 檔案中, 也會推向遠端對應的 .fossil 倉儲檔案.</p>
+<p>Fossil SCM project documentation: <a href="https://www.fossil-scm.org/home/doc/trunk/www/embeddeddoc.wiki">https://www.fossil-scm.org/home/doc/trunk/www/embeddeddoc.wiki</a>
+Fossil SCM unversioned content: <a href="https://www.fossil-scm.org/home/doc/trunk/www/unvers.wiki">https://www.fossil-scm.org/home/doc/trunk/www/unvers.wiki</a></p>
+<p>在 Fossil SCM 倉儲中, 所謂的 unversioned content 指在改版紀錄中沒有保留改版資料的檔案, 倉儲中的 unversioned 內容只保留最新的版本, 且可以透過網際 /uvlist 列出無改版歷程的檔案列表, 並能透過網際 /uv/檔案名稱 進行下載.</p>
+<p>Fossil SCM 中的帳號必須具備 y capabilities 的權限才能 fossil uv sync -v 對倉儲中先前所加入的無版本檔案送到倉儲資料中.</p>
+<p>Fossil SCM 中的帳號最高管理者必須具備 s capabilities (setup 權限).</p>
+<p>Fossil SCM 倉儲改版時若刪除檔案, 則可以透過 fossil addremove 納入改版內容.</p>
+<p>將 uversioned_file_name 納入或移除倉儲中成為無版本管理內容:</p>
+<p>fossil uv add unversioned_file_name</p>
+<p>fossil uv delete unversioned_file_name</p>
+<p>fossil uv sync -v</p>
+<p>其他參考資料:</p>
+<p><a href="https://fossil-scm.org/home/help?cmd=unversioned">https://fossil-scm.org/home/help?cmd=unversioned</a></p>
+<p><a href="https://mdecourse.blogspot.com/2021/02/fossil-scm.html">Fossil SCM 使用案例</a></p>
+<p><a href="https://mdecourse.blogspot.com/2021/02/fossil-scm-github.html">Fossil SCM 與 Github 整合</a></p>
+<p><a href="https://mdecourse.blogspot.com/2021/02/fossil-scm-on-ubuntu.html">Fossil SCM on Ubuntu</a></p>
+            </section>
+
+            <section class="post-info">
+                <div class="post-share">
+                    <a class="twitter" href="https://twitter.com/share?text=有關 Fossil SCM&amp;url=https://mde.tw/blog/about-fossil-scm.html" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <i class="ic ic-twitter"></i><span class="hidden">Twitter</span>
+                    </a>
+                    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://mde.tw/blog/about-fossil-scm.html" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <i class="ic ic-facebook"></i><span class="hidden">Facebook</span>
+                    </a>
+                    <a class="googleplus" href="https://plus.google.com/share?url=https://mde.tw/blog/about-fossil-scm.html" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <i class="ic ic-googleplus"></i><span class="hidden">Google+</span>
+                    </a>
+                    <div class="clear"></div>
+                </div>
+
+                <aside class="post-tags">
+<a href="https://mde.tw/blog/tag/repository.html">repository</a><a href="https://mde.tw/blog/tag/scm.html">scm</a>                </aside>
+
+                <div class="clear"></div>
+
+
+                </section>
+
+                <script type="text/javascript">
+                    var disqus = 'mdetw';
+                    var disqus_shortname = 'mdetw';
+                    var disqus_identifier = '/about-fossil-scm.html';
+                    var disqus_url = 'https://mde.tw/blog/about-fossil-scm.html';
+                </script>
+                <noscript>Please enable JavaScript to view the comments.</noscript>
+                <section class="post-comments">
+                        <a id="show-disqus" class="post-comments-activate" data-disqus-identifier="/about-fossil-scm.html" >Show Comments</a>
+                    <div id="disqus_thread"></div>
+                </section>
+
+                <aside class="post-nav">
+                    <a class="post-nav-prev" href="https://mde.tw/blog/about-ethercalc.html">
+                        <section class="post-nav-teaser">
+                            <i class="ic ic-arrow-right"></i>
+                                <h2 class="post-nav-title">有關 ethercalc</h2>
+                            <p class="post-nav-excerpt">ethercalc 是一個網頁同步試算表.</p>
+                        </section>
+                    </a>
+                    <div class="clear"></div>
+                </aside>
+
+            </div>
+        </article>
+    </main>
+      <!-- TODO : Body class -->
+    <div id="body-class" style="display: none;" class=""></div>
+
+    <footer id="footer">
+      <div class="inner">
+        <section class="credits">
+
+
+          <span class="credits-theme">Theme <a href="https://github.com/arulrajnet/attila" rel="nofollow">Attila</a></span>
+          <span class="credits-software">Published with <a href="https://github.com/getpelican/pelican" rel="nofollow">Pelican</a></span>
+        </section>
+      </div>
+    </footer>
+  </section>
+  
+  <script type="text/javascript" src="https://mde.tw/blog/theme/js/script.js"></script>
+
+<script type="text/javascript">
+    var disqus_shortname = 'mdetw';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+ 
+
+
+</body>
+</html>

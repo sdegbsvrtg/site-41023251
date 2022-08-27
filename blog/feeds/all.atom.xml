@@ -1,5 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Mde.tw</title><link href="https://mde.tw/blog/" rel="alternate"></link><link href="https://mde.tw/blog/feeds/all.atom.xml" rel="self"></link><id>https://mde.tw/blog/</id><updated>2022-08-27T21:57:37+08:00</updated><entry><title>有關 ethercalc</title><link href="https://mde.tw/blog/about-ethercalc.html" rel="alternate"></link><published>2022-08-27T11:00:00+08:00</published><updated>2022-08-27T21:40:34+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-08-27:/blog/about-ethercalc.html</id><summary type="html">&lt;p&gt;ethercalc 是一個網頁同步試算表.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Mde.tw</title><link href="https://mde.tw/blog/" rel="alternate"></link><link href="https://mde.tw/blog/feeds/all.atom.xml" rel="self"></link><id>https://mde.tw/blog/</id><updated>2022-08-27T23:39:56+08:00</updated><entry><title>有關 Fossil SCM</title><link href="https://mde.tw/blog/about-fossil-scm.html" rel="alternate"></link><published>2022-08-27T13:00:00+08:00</published><updated>2022-08-27T23:39:56+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-08-27:/blog/about-fossil-scm.html</id><summary type="html">&lt;p&gt;&lt;a href="https://www.fossil-scm.org"&gt;Fossil SCM&lt;/a&gt; 是一套 Software Configuration Management 套件, 專門用於 &lt;a href="https://sqlite.org"&gt;SQLite&lt;/a&gt; 的原始碼管理.&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;&lt;a href="https://www.fossil-scm.org"&gt;Fossil SCM&lt;/a&gt; 是一套 Software Configuration Management 套件, 專門用於 &lt;a href="https://sqlite.org"&gt;SQLite&lt;/a&gt; 的原始碼管理.&lt;/p&gt;
+
+
+&lt;p&gt;&lt;a href="https://www.fossil-scm.org"&gt;Fossil SCM&lt;/a&gt; 是一套冷門的系統, 感覺好像沒有太多單位或團體使用, 只是就分散式版次管理系統的角度來看, 其實是一套小而美且功能齊全的 SCM 系統, 接下來將對 &lt;a href="https://www.fossil-scm.org"&gt;Fossil SCM&lt;/a&gt; 進行初步介紹.&lt;/p&gt;
+&lt;h1&gt;fossil init&lt;/h1&gt;
+&lt;p&gt;起始一個 Fossil SCM 倉儲之前需要先從 &lt;a href="https://fossil-scm.org/home/uv/download.html"&gt;https://fossil-scm.org/home/uv/download.html&lt;/a&gt; 下載相應的檔案, 與 Portablegit 相比, Fossil SCM 工具無論在 Windows, Linux 或 Mac 操作系統, 都只有一個檔案, 且大小只有約 9MB.&lt;/p&gt;
+&lt;p&gt;而起始 Fossil SCM 倉儲的指令與 Git 相同:&lt;/p&gt;
+&lt;p&gt;fossil init&lt;/p&gt;
+&lt;p&gt;只不過 Fossil SCM 在倉儲 clone 之後的檔案為一個壓縮檔案, 通常以 .fossil 作為副檔名, 其實這是一個 SQLite 資料庫檔案. 當使用者 clone Fossil SCM 倉儲至近端之後, 必須透過 fossil open 將最新的版本內容展開, 一般會建議, 擺放 .fossil 檔案的目錄中, 建立 working director 目錄, 建議命名為 wd, 然後在 wd 目錄之中, 再根據各倉儲檔案的名稱建立位於 wd 目錄下的子目錄, 而各 .fossil 倉儲的內容則在各自的 "wd\倉儲名稱" 目錄下展開.&lt;/p&gt;
+&lt;p&gt;假如要將遠端的倉儲 clone 至遠端, 若採 https 協定, 其命令列語法為:&lt;/p&gt;
+&lt;p&gt;fossil clone https://user_name@fossil.kmol.info/repository repository.fossil&lt;/p&gt;
+&lt;p&gt;表示要將位於 fossil.kmol.info 主機上的 repository 倉儲, 以 https 協定 clone 至近端且存為 repository.fossil&lt;/p&gt;
+&lt;p&gt;以一位於近端檔案架構的 repository.fossil 本身會帶有管理者的密碼設定, 而此一管理者帳號下對應的 local password 與 remote passwors 分屬於兩個不同的 repository.fossil, 當使用者要將近端改版資料推向遠端時, 依據的是遠端的管理者 passwors, 而近端的管理者密碼則在近端倉儲以 fossil web 進行網際啟動時之用. 換言之, 各個 Fossil SCM 倉儲壓縮檔案內所儲存的管理者帳號密碼, 主針對下游啟動服務時採用.&lt;/p&gt;
+&lt;p&gt;至於在工作目錄下倉儲資料檔案中的改版資料, 一旦新增提交推送後, 不僅會將版本更新資料註記在近端對應的 .fossil 檔案中, 也會推向遠端對應的 .fossil 倉儲檔案.&lt;/p&gt;
+&lt;p&gt;Fossil SCM project documentation: &lt;a href="https://www.fossil-scm.org/home/doc/trunk/www/embeddeddoc.wiki"&gt;https://www.fossil-scm.org/home/doc/trunk/www/embeddeddoc.wiki&lt;/a&gt;
+Fossil SCM unversioned content: &lt;a href="https://www.fossil-scm.org/home/doc/trunk/www/unvers.wiki"&gt;https://www.fossil-scm.org/home/doc/trunk/www/unvers.wiki&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;在 Fossil SCM 倉儲中, 所謂的 unversioned content 指在改版紀錄中沒有保留改版資料的檔案, 倉儲中的 unversioned 內容只保留最新的版本, 且可以透過網際 /uvlist 列出無改版歷程的檔案列表, 並能透過網際 /uv/檔案名稱 進行下載.&lt;/p&gt;
+&lt;p&gt;Fossil SCM 中的帳號必須具備 y capabilities 的權限才能 fossil uv sync -v 對倉儲中先前所加入的無版本檔案送到倉儲資料中.&lt;/p&gt;
+&lt;p&gt;Fossil SCM 中的帳號最高管理者必須具備 s capabilities (setup 權限).&lt;/p&gt;
+&lt;p&gt;Fossil SCM 倉儲改版時若刪除檔案, 則可以透過 fossil addremove 納入改版內容.&lt;/p&gt;
+&lt;p&gt;將 uversioned_file_name 納入或移除倉儲中成為無版本管理內容:&lt;/p&gt;
+&lt;p&gt;fossil uv add unversioned_file_name&lt;/p&gt;
+&lt;p&gt;fossil uv delete unversioned_file_name&lt;/p&gt;
+&lt;p&gt;fossil uv sync -v&lt;/p&gt;
+&lt;p&gt;其他參考資料:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://fossil-scm.org/home/help?cmd=unversioned"&gt;https://fossil-scm.org/home/help?cmd=unversioned&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://mdecourse.blogspot.com/2021/02/fossil-scm.html"&gt;Fossil SCM 使用案例&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://mdecourse.blogspot.com/2021/02/fossil-scm-github.html"&gt;Fossil SCM 與 Github 整合&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://mdecourse.blogspot.com/2021/02/fossil-scm-on-ubuntu.html"&gt;Fossil SCM on Ubuntu&lt;/a&gt;&lt;/p&gt;</content><category term="fossil-scm"></category><category term="repository"></category><category term="scm"></category></entry><entry><title>有關 ethercalc</title><link href="https://mde.tw/blog/about-ethercalc.html" rel="alternate"></link><published>2022-08-27T12:00:00+08:00</published><updated>2022-08-27T23:17:33+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-08-27:/blog/about-ethercalc.html</id><summary type="html">&lt;p&gt;ethercalc 是一個網頁同步試算表.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;ethercalc 是一個網頁同步試算表.&lt;/p&gt;
 
 

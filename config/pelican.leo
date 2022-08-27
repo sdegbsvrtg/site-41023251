@@ -510,7 +510,7 @@ Disable-NetAdapterBinding -Name "*" -ComponentID ms_tcpip
 
 上述相關設定檔案: [cadlab_network_setup.zip]
 
-[syllabus]: https://mde.tw/cp2022/content/Syllabus.html
+[syllabus]: https://mde.tw/content/cp-syllabus.html
 [網路環境設定]: https://www.youtube.com/watch?v=DDIQTTk6HZs
 [cadlab_network_setup.zip]: ./../downloads/cadlab_network_setup.zip
 [cmd]: https://docs.microsoft.com/zh-tw/windows-server/administration/windows-commands/cmd
@@ -554,7 +554,7 @@ Disable-NetAdapterBinding -Name "*" -ComponentID ms_tcpip
 Computer 簡介
 ----
 
-以下資料取自: &lt;https://mde.tw/cp2022/content/Computer.html&gt;
+以下資料取自: &lt;https://mde.tw/content/Computer.html&gt;
 
 A computer is a digital electronic machine that can be programmed to carry out sequences of arithmetic or logical operations (computation) automatically. Modern computers can perform generic sets of operations known as programs. These programs enable computers to perform a wide range of tasks. A computer system is a "complete" computer that includes the hardware, operating system (main software), and peripheral equipment needed and used for "full" operation. This term may also refer to a group of computers that are linked and function together, such as a computer network or computer cluster.
 
@@ -567,7 +567,7 @@ Conventionally, a modern computer consists of at least one processing element, t
 Program 簡介
 ----
 
-以下資料取自: &lt;https://mde.tw/cp2022/content/Program.html&gt;
+以下資料取自: &lt;https://mde.tw/content/Program.html&gt;
 
 A computer program is a sequence or set of instructions in a programming language for a computer to execute. Computer programs are one component of software, which also includes documentation and other intangible components.
 
@@ -580,7 +580,7 @@ If the source code is requested for execution, then the operating system loads t
 Python 簡介
 ----
 
-以下資料取自: &lt;https://en.wikipedia.org/wiki/Python_(programming_language)&gt;, 充分了解上述內容後, 可進入 &lt;https://mde.tw/cp2022/content/Python.html&gt; 開始練習如何根據需求編寫 Python 程式.
+以下資料取自: &lt;https://en.wikipedia.org/wiki/Python_(programming_language)&gt;, 充分了解上述內容後, 可進入 &lt;https://mde.tw/content/Python.html&gt; 開始練習如何根據需求編寫 Python 程式.
 
 Python is a high-level, interpreted, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation.
 

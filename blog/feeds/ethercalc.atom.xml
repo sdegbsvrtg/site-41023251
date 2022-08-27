@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Mde.tw - ethercalc</title><link href="https://mde.tw/blog/" rel="alternate"></link><link href="https://mde.tw/blog/feeds/ethercalc.atom.xml" rel="self"></link><id>https://mde.tw/blog/</id><updated>2022-08-27T21:40:34+08:00</updated><entry><title>有關 ethercalc</title><link href="https://mde.tw/blog/about-ethercalc.html" rel="alternate"></link><published>2022-08-27T11:00:00+08:00</published><updated>2022-08-27T21:40:34+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-08-27:/blog/about-ethercalc.html</id><summary type="html">&lt;p&gt;ethercalc 是一個網頁同步試算表.&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;ethercalc 是一個網頁同步試算表.&lt;/p&gt;
+
+
+&lt;h1&gt;有關 &lt;a href="https://ethercalc.net"&gt;ethercalc&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;若 &lt;a href="https://ethercalc.net"&gt;ethercalc&lt;/a&gt; 與 redis 合用, sheet 資料將會存入 /var/lib/redis/dump.rdb, 此一檔案儲存設定位於 /etc/redis/redis.conf 中的 dbfilename dump.rdb&lt;/p&gt;
+&lt;p&gt;使用者若要以 root 身分檢視 /var/lib/redis/dump.rdb 可以透過 sudo -s 以 root 身分執行命令.&lt;/p&gt;
+&lt;p&gt;若以 /etc/init.d/redis-server stop 關閉 redis, 然後執行 ethercalc, sheet 資料將會存在執行命令目錄下的 dump 目錄中.&lt;/p&gt;
+&lt;p&gt;在結合 redis 使用下的 ethercalc, 若希望 reset /var/lib/redis/dump.rdb 中的資料:&lt;/p&gt;
+&lt;p&gt;sudo -s&lt;/p&gt;
+&lt;p&gt;/etc/init.d/redis-server stop&lt;/p&gt;
+&lt;p&gt;rm /var/lib/redis/dump.rdb&lt;/p&gt;
+&lt;p&gt;/etc/init.d/redis-server start&lt;/p&gt;
+&lt;p&gt;ethercalc&lt;/p&gt;
+&lt;p&gt;則 /var/lib/redis/dump.rdb 中為空資料.&lt;/p&gt;</content><category term="ethercalc"></category><category term="redis"></category><category term="dump"></category></entry></feed>

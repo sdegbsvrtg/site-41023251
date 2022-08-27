@@ -73,6 +73,10 @@
 <v t="leo.20220827124834.8"><vh>@clean 20220826.md</vh>
 <v t="leo.20220827124834.9"><vh>編譯 CoppeliaSim 4.3.0 rev12</vh></v>
 </v>
+<v t="leo.20220827212236.1"><vh>@clean 20220827.md</vh>
+<v t="leo.20220827212257.1"><vh>編譯 Solvespace</vh></v>
+</v>
+<v t="leo.20220827213616.1"><vh>@edit 20220827-1.md</vh></v>
 </v>
 </v>
 <v t="yen.20170108171733.83"><vh>產生 .key 與 .crt 指令</vh></v>
@@ -320,8 +324,11 @@ config.pri 設定修改完成後, 執行 C:\acc_430_12\CoppeliaSimLib&gt;qmake -
 
 下載已經完成 [CoppeliaSimLib] 編譯的檔案: [acc_430_12_compile_Lib.7z] (for @gm users only)
 
+下載啟動 coppeliasim.exe 所需的 dlls 檔案: [dlls_for_coppeliasimlib_430_12.7z] (for @gm users only)
+
 [compile_copsim_cd2022.7z]: https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/yen_gm_nfu_edu_tw/Eb56ldJfZl9CiPU_5sb0-_4B5scF30r6z4FTQT__aWzkEA?e=zE8eVL
 [acc_430_12_compile_Lib.7z]: https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/yen_gm_nfu_edu_tw/EYC3oMxKuoRCoLXauEsjuTwBNuZA1jSFH97wFDjNoCgwVQ?e=FaHKUP
+[dlls_for_coppeliasimlib_430_12.7z]: https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/yen_gm_nfu_edu_tw/ETE26Bc_aipLjwlsoeIwVAsB-jeMPCLVjPLRVnvO_No06w?e=BAL8SC
 
 編譯 coppeliaSimClientApplication
 ====
@@ -777,6 +784,94 @@ pip install flask flask_cors bs4 lxml pelican markdown leo pyopenssl
 [portable_python_3.10.6.7z] (for @gm users only)
 
 [portable_python_3.10.6.7z]: https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/yen_gm_nfu_edu_tw/EeE98pBYWN9CkSCX6CQ4Hc0B3ATux7DfglRSGLBw2AL0cQ?e=ju1KyO</t>
+<t tx="leo.20220827212236.1">@language md
+---
+Title: 編譯 Solvespace
+Date: 2022-08-27 11:00
+Category: compilation
+Tags: Solvespace
+Slug: compile-solvespace
+Author: mdecycu
+---
+
+這裡將利用 [MSYS2] 編譯 [Solvespace].
+
+&lt;!-- PELICAN_END_SUMMARY --&gt;
+
+@others
+</t>
+<t tx="leo.20220827212257.1">編譯 Solvespace
+====
+
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/OHyeZz6XE8A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+
+上列影片採用 [MSYS2]  編譯  [Solvespace] 原始碼.
+
+[MSYS2]: https://www.msys2.org/
+[Solvespace]: https://github.com/solvespace/solvespace
+
+[MSYS2] 套件中名稱帶有 mingw-w64-x86_64 表示用於 MinGW 64 bit 操作系統
+
+更新系統核心組件:
+
+pacman -Syu
+
+安裝基本 C/C++ 編譯與開發工具:
+
+pacman -S mingw-w64-x86_64-toolchain
+
+安裝 CMake:
+
+pacman -S mingw-w64-x86_64-cmake
+
+編譯之前必須 rename Y:\msys64\usr\bin\sh.exe
+
+接著就是 build solvespace.exe
+
+以 git clone --recurse-submodules https://github.com/solvespace/solvespace.git 取下原始碼與子模組.
+
+接下來進入倉儲後執行編譯:
+
+cd solvespace
+
+mkdir build
+
+cd build
+
+cmake .. -G "MinGW Makefiles" -DCMAKE_BUILD_TYPE=Release
+
+mingw32-make
+
+cd bin
+
+solvespace.exe 即可執行.
+
+編譯結束後, 之所以可以直接執行 solvespace.exe 是由於先前已經在啟動可攜程式系統時設定
+
+set path_msys2=%Disk%:\msys64_20210419\mingw64\bin;
+
+且將 path_msys2 納入 path 命令搜尋路徑中, 因此可以直接以命令列執行 solvespace.exe, 但是若要讓 solvespace.exe 獨立執行, 則需要 libwinpthread-1.dll to execute solvespace.exe
+
+編譯 [Range3]
+====
+
+為了 compile [Range3], [MSYS2] 除了mingw-w64-x86_64-toolchain 還必須加裝:
+
+[Range3]: https://github.com/Range-Software/range3
+
+pacman -Sy mingw-w64-x86_64-qt5
+pacman -Sy mingw-w64-x86_64-qt5-static
+pacman -Sy mingw-w64-x86_64-ffmpeg
+
+接著編譯 [Range3]:
+
+start Y:\msys64\mingw64.exe
+
+cd /y/tmp/range3
+
+./scripts/build.sh --clean &amp;&amp; ./scripts/create_package.sh
+
+而為了讓 svg 格式的 icons 能夠正確顯示, 必須納入 Qt5Svg.dll</t>
 <t tx="yen.20170108171605.1"></t>
 <t tx="yen.20170108171605.2">QTreeWidget {
     /* These apply to the selected item, but not to editing items.*/

@@ -729,13 +729,9 @@ console.log( '"customevent" has fired' );
 
 						
 </t>
-<t tx="leo.20220317095049.2">## 國立虎尾科技大學
+<t tx="leo.20220317095049.2">## 2022 Fall
 
-### 機械設計工程系 KMOLab
-
-#### 2022 Spring
-
-[wcm2022](https://mde.tw/wcm2022)([Guide](https://mde.tw/wcm2022_guide)) | [cd2022](https://mde.tw/cd2022)([Guide](https://mde.tw/cd2022_guide)) 
+### [cp2022](https://mde.tw/blog/category/cp2022.html) | [cad2022](https://mde.tw/blog/category/cad2022.html) 
 
 
 

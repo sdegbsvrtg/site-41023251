@@ -425,6 +425,15 @@ C:\acc_430_12\programming\coppeliaSimClientApplication&gt;mingw32-make -f Makefi
 可以在 release 目錄中取得 coppeliaSim.exe
 
 [coppeliaSimClientApplication]: https://github.com/CoppeliaRobotics/coppeliaSimClientApplication
+
+編譯 simExtDynamics
+----
+
+C:\acc_430_12\programming\simExtDynamics\build&gt;cmake .. -G "MinGW Makefiles" -DCMAKE_BUILD_TYPE=Release
+
+再執行:
+
+Y:\tmp\cop410\programming\simExtUI\build&gt;mingw32-make
 </t>
 <t tx="leo.20220827125802.1">@language md
 ---

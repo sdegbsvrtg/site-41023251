@@ -1,6 +1,6 @@
 Title: About
 
-## CMSimfly 內容管理網誌
+## mde.tw
 
 課程倉儲: <a href="https://github.com/mdecycu/mdecycu.github.io">https://github.com/mdecycu/mdecycu.github.io</a>
 

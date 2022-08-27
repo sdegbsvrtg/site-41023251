@@ -1,0 +1,275 @@
+Microsoft Windows [版本 10.0.19042.1706]
+(c) Microsoft Corporation. 著作權所有，並保留一切權利。
+
+C:\tmp\portable_python_3.10.6>cd tmp
+
+C:\tmp\portable_python_3.10.6\tmp>python get-pip.py
+Collecting pip
+  Downloading pip-22.2.2-py3-none-any.whl (2.0 MB)
+     ---------------------------------------- 2.0/2.0 MB 1.5 MB/s eta 0:00:00
+Collecting setuptools
+  Downloading setuptools-65.2.0-py3-none-any.whl (1.2 MB)
+     ---------------------------------------- 1.2/1.2 MB 2.7 MB/s eta 0:00:00
+Collecting wheel
+  Downloading wheel-0.37.1-py2.py3-none-any.whl (35 kB)
+Installing collected packages: wheel, setuptools, pip
+Successfully installed pip-22.2.2 setuptools-65.2.0 wheel-0.37.1
+
+C:\tmp\portable_python_3.10.6\tmp>pip list
+Package    Version
+---------- -------
+pip        22.2.2
+setuptools 65.2.0
+wheel      0.37.1
+
+C:\tmp\portable_python_3.10.6\tmp>pip install flask flask_cors bs4 lxml pelican markdown leo pyopenssl
+Collecting flask
+  Downloading Flask-2.2.2-py3-none-any.whl (101 kB)
+     ---------------------------------------- 101.5/101.5 kB 308.2 kB/s eta 0:00:00
+Collecting flask_cors
+  Downloading Flask_Cors-3.0.10-py2.py3-none-any.whl (14 kB)
+Collecting bs4
+  Downloading bs4-0.0.1.tar.gz (1.1 kB)
+  Preparing metadata (setup.py) ... done
+Collecting lxml
+  Downloading lxml-4.9.1-cp310-cp310-win_amd64.whl (3.6 MB)
+     ---------------------------------------- 3.6/3.6 MB 2.5 MB/s eta 0:00:00
+Collecting pelican
+  Downloading pelican-4.8.0-py3-none-any.whl (1.4 MB)
+     ---------------------------------------- 1.4/1.4 MB 3.4 MB/s eta 0:00:00
+Collecting markdown
+  Downloading Markdown-3.4.1-py3-none-any.whl (93 kB)
+     ---------------------------------------- 93.3/93.3 kB 2.7 MB/s eta 0:00:00
+Collecting leo
+  Downloading leo-6.6.3-py3-none-any.whl (9.8 MB)
+     ---------------------------------------- 9.8/9.8 MB 7.3 MB/s eta 0:00:00
+Collecting pyopenssl
+  Downloading pyOpenSSL-22.0.0-py2.py3-none-any.whl (55 kB)
+     ---------------------------------------- 55.8/55.8 kB 1.4 MB/s eta 0:00:00
+Collecting Jinja2>=3.0
+  Downloading Jinja2-3.1.2-py3-none-any.whl (133 kB)
+     ---------------------------------------- 133.1/133.1 kB 4.0 MB/s eta 0:00:00
+Collecting itsdangerous>=2.0
+  Downloading itsdangerous-2.1.2-py3-none-any.whl (15 kB)
+Collecting Werkzeug>=2.2.2
+  Downloading Werkzeug-2.2.2-py3-none-any.whl (232 kB)
+     ---------------------------------------- 232.7/232.7 kB 4.7 MB/s eta 0:00:00
+Collecting click>=8.0
+  Downloading click-8.1.3-py3-none-any.whl (96 kB)
+     ---------------------------------------- 96.6/96.6 kB 5.8 MB/s eta 0:00:00
+Collecting Six
+  Downloading six-1.16.0-py2.py3-none-any.whl (11 kB)
+Collecting beautifulsoup4
+  Downloading beautifulsoup4-4.11.1-py3-none-any.whl (128 kB)
+     ---------------------------------------- 128.2/128.2 kB 2.5 MB/s eta 0:00:00
+Collecting docutils>=0.16
+  Downloading docutils-0.19-py3-none-any.whl (570 kB)
+     ---------------------------------------- 570.5/570.5 kB 6.0 MB/s eta 0:00:00
+Collecting blinker>=1.4
+  Downloading blinker-1.5-py2.py3-none-any.whl (12 kB)
+Collecting python-dateutil>=2.8
+  Downloading python_dateutil-2.8.2-py2.py3-none-any.whl (247 kB)
+     ---------------------------------------- 247.7/247.7 kB 5.1 MB/s eta 0:00:00
+Collecting pygments>=2.6
+  Downloading Pygments-2.13.0-py3-none-any.whl (1.1 MB)
+     ---------------------------------------- 1.1/1.1 MB 7.0 MB/s eta 0:00:00
+Collecting feedgenerator>=1.9
+  Downloading feedgenerator-2.0.0-py3-none-any.whl (21 kB)
+Collecting rich>=10.1
+  Downloading rich-12.5.1-py3-none-any.whl (235 kB)
+     ---------------------------------------- 235.6/235.6 kB 3.6 MB/s eta 0:00:00
+Collecting pytz>=2020.1
+  Downloading pytz-2022.2.1-py2.py3-none-any.whl (500 kB)
+     ---------------------------------------- 500.6/500.6 kB 6.3 MB/s eta 0:00:00
+Collecting unidecode>=1.1
+  Downloading Unidecode-1.3.4-py3-none-any.whl (235 kB)
+     ---------------------------------------- 235.9/235.9 kB 4.8 MB/s eta 0:00:00
+Collecting pylint
+  Downloading pylint-2.14.5-py3-none-any.whl (488 kB)
+     ---------------------------------------- 488.2/488.2 kB 6.1 MB/s eta 0:00:00
+Collecting asttokens
+  Downloading asttokens-2.0.8-py2.py3-none-any.whl (23 kB)
+Collecting black
+  Downloading black-22.6.0-cp310-cp310-win_amd64.whl (1.2 MB)
+     ---------------------------------------- 1.2/1.2 MB 7.3 MB/s eta 0:00:00
+Collecting pyshortcuts>=1.7
+  Downloading pyshortcuts-1.8.2-py3-none-any.whl (248 kB)
+     ---------------------------------------- 248.9/248.9 kB 5.1 MB/s eta 0:00:00
+Collecting sphinx
+  Downloading Sphinx-5.1.1-py3-none-any.whl (3.2 MB)
+     ---------------------------------------- 3.2/3.2 MB 8.0 MB/s eta 0:00:00
+Collecting tk
+  Downloading tk-0.1.0-py3-none-any.whl (3.9 kB)
+Collecting meta
+  Downloading meta-1.0.2.tar.gz (49 kB)
+     ---------------------------------------- 49.3/49.3 kB 1.2 MB/s eta 0:00:00
+  Preparing metadata (setup.py) ... done
+Collecting PyQt5>=5.12
+  Downloading PyQt5-5.15.7-cp37-abi3-win_amd64.whl (6.8 MB)
+     ---------------------------------------- 6.8/6.8 MB 8.4 MB/s eta 0:00:00
+Collecting pyenchant
+  Downloading pyenchant-3.2.2-py3-none-win_amd64.whl (11.9 MB)
+     ---------------------------------------- 11.9/11.9 MB 8.2 MB/s eta 0:00:00
+Collecting windows-curses
+  Downloading windows_curses-2.3.0-cp310-cp310-win_amd64.whl (88 kB)
+     ---------------------------------------- 88.2/88.2 kB 1.7 MB/s eta 0:00:00
+Collecting nbformat
+  Downloading nbformat-5.4.0-py3-none-any.whl (73 kB)
+     ---------------------------------------- 73.3/73.3 kB 2.0 MB/s eta 0:00:00
+Collecting pyflakes
+  Downloading pyflakes-2.5.0-py2.py3-none-any.whl (66 kB)
+     ---------------------------------------- 66.1/66.1 kB 1.2 MB/s eta 0:00:00
+Collecting PyQtWebEngine
+  Downloading PyQtWebEngine-5.15.6-cp37-abi3-win_amd64.whl (182 kB)
+     ---------------------------------------- 182.7/182.7 kB 2.2 MB/s eta 0:00:00
+Collecting build>=0.6.0
+  Downloading build-0.8.0-py3-none-any.whl (17 kB)
+Collecting flexx
+  Downloading flexx-0.8.4-py2.py3-none-any.whl (351 kB)
+     ---------------------------------------- 351.6/351.6 kB 7.3 MB/s eta 0:00:00
+Collecting cryptography>=35.0
+  Downloading cryptography-37.0.4-cp36-abi3-win_amd64.whl (2.4 MB)
+     ---------------------------------------- 2.4/2.4 MB 8.6 MB/s eta 0:00:00
+Collecting tomli>=1.0.0
+  Downloading tomli-2.0.1-py3-none-any.whl (12 kB)
+Collecting pep517>=0.9.1
+  Downloading pep517-0.13.0-py3-none-any.whl (18 kB)
+Collecting packaging>=19.0
+  Downloading packaging-21.3-py3-none-any.whl (40 kB)
+     ---------------------------------------- 40.8/40.8 kB 953.4 kB/s eta 0:00:00
+Collecting colorama
+  Downloading colorama-0.4.5-py2.py3-none-any.whl (16 kB)
+Collecting cffi>=1.12
+  Downloading cffi-1.15.1-cp310-cp310-win_amd64.whl (179 kB)
+     ---------------------------------------- 179.1/179.1 kB 5.3 MB/s eta 0:00:00
+Collecting MarkupSafe>=2.0
+  Downloading MarkupSafe-2.1.1-cp310-cp310-win_amd64.whl (17 kB)
+Collecting PyQt5-sip<13,>=12.11
+  Downloading PyQt5_sip-12.11.0-cp310-cp310-win_amd64.whl (78 kB)
+     ---------------------------------------- 78.3/78.3 kB 2.2 MB/s eta 0:00:00
+Collecting PyQt5-Qt5>=5.15.0
+  Downloading PyQt5_Qt5-5.15.2-py3-none-win_amd64.whl (50.1 MB)
+     ---------------------------------------- 50.1/50.1 MB 6.7 MB/s eta 0:00:00
+Collecting pywin32
+  Downloading pywin32-304-cp310-cp310-win_amd64.whl (12.1 MB)
+     ---------------------------------------- 12.1/12.1 MB 8.6 MB/s eta 0:00:00
+Collecting commonmark<0.10.0,>=0.9.0
+  Downloading commonmark-0.9.1-py2.py3-none-any.whl (51 kB)
+     ---------------------------------------- 51.1/51.1 kB 868.7 kB/s eta 0:00:00
+Collecting soupsieve>1.2
+  Downloading soupsieve-2.3.2.post1-py3-none-any.whl (37 kB)
+Collecting mypy-extensions>=0.4.3
+  Downloading mypy_extensions-0.4.3-py2.py3-none-any.whl (4.5 kB)
+Collecting platformdirs>=2
+  Downloading platformdirs-2.5.2-py3-none-any.whl (14 kB)
+Collecting pathspec>=0.9.0
+  Downloading pathspec-0.9.0-py2.py3-none-any.whl (31 kB)
+Collecting webruntime>=0.5.6
+  Downloading webruntime-0.5.8-py3-none-any.whl (53 kB)
+     ---------------------------------------- 53.7/53.7 kB 1.4 MB/s eta 0:00:00
+Collecting pscript>=0.7.7
+  Downloading pscript-0.7.7-py3-none-any.whl (126 kB)
+     ---------------------------------------- 126.7/126.7 kB 3.8 MB/s eta 0:00:00
+Collecting dialite>=0.5.2
+  Downloading dialite-0.5.3-py3-none-any.whl (8.8 kB)
+Collecting tornado
+  Downloading tornado-6.2-cp37-abi3-win_amd64.whl (425 kB)
+     ---------------------------------------- 425.3/425.3 kB 6.7 MB/s eta 0:00:00
+Collecting jupyter-core
+  Downloading jupyter_core-4.11.1-py3-none-any.whl (88 kB)
+     ---------------------------------------- 88.4/88.4 kB 1.7 MB/s eta 0:00:00
+Collecting fastjsonschema
+  Downloading fastjsonschema-2.16.1-py3-none-any.whl (22 kB)
+Collecting traitlets>=5.1
+  Downloading traitlets-5.3.0-py3-none-any.whl (106 kB)
+     ---------------------------------------- 106.8/106.8 kB 3.1 MB/s eta 0:00:00
+Collecting jsonschema>=2.6
+  Downloading jsonschema-4.14.0-py3-none-any.whl (82 kB)
+     ---------------------------------------- 82.4/82.4 kB 1.5 MB/s eta 0:00:00
+Collecting dill>=0.2
+  Downloading dill-0.3.5.1-py2.py3-none-any.whl (95 kB)
+     ---------------------------------------- 95.8/95.8 kB 1.9 MB/s eta 0:00:00
+Collecting tomlkit>=0.10.1
+  Downloading tomlkit-0.11.4-py3-none-any.whl (35 kB)
+Collecting astroid<=2.12.0-dev0,>=2.11.6
+  Downloading astroid-2.11.7-py3-none-any.whl (251 kB)
+     ---------------------------------------- 251.2/251.2 kB 5.1 MB/s eta 0:00:00
+Collecting isort<6,>=4.2.5
+  Downloading isort-5.10.1-py3-none-any.whl (103 kB)
+     ---------------------------------------- 103.4/103.4 kB 3.0 MB/s eta 0:00:00
+Collecting mccabe<0.8,>=0.6
+  Downloading mccabe-0.7.0-py2.py3-none-any.whl (7.3 kB)
+Collecting PyQtWebEngine-Qt5>=5.15.0
+  Downloading PyQtWebEngine_Qt5-5.15.2-py3-none-win_amd64.whl (60.0 MB)
+     ---------------------------------------- 60.0/60.0 MB 6.5 MB/s eta 0:00:00
+Collecting sphinxcontrib-htmlhelp>=2.0.0
+  Downloading sphinxcontrib_htmlhelp-2.0.0-py2.py3-none-any.whl (100 kB)
+     ---------------------------------------- 100.5/100.5 kB 1.9 MB/s eta 0:00:00
+Collecting snowballstemmer>=1.1
+  Downloading snowballstemmer-2.2.0-py2.py3-none-any.whl (93 kB)
+     ---------------------------------------- 93.0/93.0 kB 2.7 MB/s eta 0:00:00
+Collecting sphinxcontrib-jsmath
+  Downloading sphinxcontrib_jsmath-1.0.1-py2.py3-none-any.whl (5.1 kB)
+Collecting alabaster<0.8,>=0.7
+  Downloading alabaster-0.7.12-py2.py3-none-any.whl (14 kB)
+Collecting imagesize
+  Downloading imagesize-1.4.1-py2.py3-none-any.whl (8.8 kB)
+Collecting requests>=2.5.0
+  Downloading requests-2.28.1-py3-none-any.whl (62 kB)
+     ---------------------------------------- 62.8/62.8 kB 1.6 MB/s eta 0:00:00
+Collecting sphinxcontrib-serializinghtml>=1.1.5
+  Downloading sphinxcontrib_serializinghtml-1.1.5-py2.py3-none-any.whl (94 kB)
+     ---------------------------------------- 94.0/94.0 kB 1.8 MB/s eta 0:00:00
+Collecting sphinxcontrib-devhelp
+  Downloading sphinxcontrib_devhelp-1.0.2-py2.py3-none-any.whl (84 kB)
+     ---------------------------------------- 84.7/84.7 kB 4.7 MB/s eta 0:00:00
+Collecting sphinxcontrib-applehelp
+  Downloading sphinxcontrib_applehelp-1.0.2-py2.py3-none-any.whl (121 kB)
+     ---------------------------------------- 121.2/121.2 kB 3.6 MB/s eta 0:00:00
+Collecting sphinxcontrib-qthelp
+  Downloading sphinxcontrib_qthelp-1.0.3-py2.py3-none-any.whl (90 kB)
+     ---------------------------------------- 90.6/90.6 kB 2.5 MB/s eta 0:00:00
+Collecting babel>=1.3
+  Downloading Babel-2.10.3-py3-none-any.whl (9.5 MB)
+     ---------------------------------------- 9.5/9.5 MB 7.4 MB/s eta 0:00:00
+Requirement already satisfied: setuptools>=20.0 in c:\tmp\portable_python_3.10.6\python310\lib\site-packages (from astroid<=2.12.0-dev0,>=2.11.6->pylint->leo) (65.2.0)
+Collecting wrapt<2,>=1.11
+  Downloading wrapt-1.14.1-cp310-cp310-win_amd64.whl (35 kB)
+Collecting lazy-object-proxy>=1.4.0
+  Downloading lazy_object_proxy-1.7.1-cp310-cp310-win_amd64.whl (23 kB)
+Collecting pycparser
+  Downloading pycparser-2.21-py2.py3-none-any.whl (118 kB)
+     ---------------------------------------- 118.7/118.7 kB 3.5 MB/s eta 0:00:00
+Collecting attrs>=17.4.0
+  Downloading attrs-22.1.0-py2.py3-none-any.whl (58 kB)
+     ---------------------------------------- 58.8/58.8 kB 1.0 MB/s eta 0:00:00
+Collecting pyrsistent!=0.17.0,!=0.17.1,!=0.17.2,>=0.14.0
+  Downloading pyrsistent-0.18.1-cp310-cp310-win_amd64.whl (61 kB)
+     ---------------------------------------- 61.6/61.6 kB 1.1 MB/s eta 0:00:00
+Collecting pyparsing!=3.0.5,>=2.0.2
+  Downloading pyparsing-3.0.9-py3-none-any.whl (98 kB)
+     ---------------------------------------- 98.3/98.3 kB 1.9 MB/s eta 0:00:00
+Collecting idna<4,>=2.5
+  Downloading idna-3.3-py3-none-any.whl (61 kB)
+     ---------------------------------------- 61.2/61.2 kB 1.6 MB/s eta 0:00:00
+Collecting charset-normalizer<3,>=2
+  Downloading charset_normalizer-2.1.1-py3-none-any.whl (39 kB)
+Collecting certifi>=2017.4.17
+  Downloading certifi-2022.6.15-py3-none-any.whl (160 kB)
+     ---------------------------------------- 160.2/160.2 kB 3.2 MB/s eta 0:00:00
+Collecting urllib3<1.27,>=1.21.1
+  Downloading urllib3-1.26.12-py2.py3-none-any.whl (140 kB)
+     ---------------------------------------- 140.4/140.4 kB 2.8 MB/s eta 0:00:00
+Building wheels for collected packages: bs4, meta
+  Building wheel for bs4 (setup.py) ... done
+  Created wheel for bs4: filename=bs4-0.0.1-py3-none-any.whl size=1257 sha256=c9beba7f2e0898509f6d0e9900fb51ce518a333754da26555f6ca21f1cc5a4cc
+  Stored in directory: c:\tmp\portable_python_3.10.6\tmp\pip\cache\wheels\25\42\45\b773edc52acb16cd2db4cf1a0b47117e2f69bb4eb300ed0e70
+  Building wheel for meta (setup.py) ... done
+  Created wheel for meta: filename=meta-1.0.2-py3-none-any.whl size=60191 sha256=fc545a97932f3c694917f98387de72b14219b4ece7417e007e68bfc6846af59a
+  Stored in directory: c:\tmp\portable_python_3.10.6\tmp\pip\cache\wheels\92\39\0b\1c4852017b6fd8a642c0481ade113ebd0b0d14e3d06d631593
+Successfully built bs4 meta
+Installing collected packages: windows-curses, tk, snowballstemmer, pywin32, pytz, PyQtWebEngine-Qt5, PyQt5-Qt5, pscript, mypy-extensions, meta, fastjsonschema, dialite, commonmark, alabaster, wrapt, webruntime, urllib3, unidecode, traitlets, tornado, tomlkit, tomli, sphinxcontrib-serializinghtml, sphinxcontrib-qthelp, sphinxcontrib-jsmath, sphinxcontrib-htmlhelp, sphinxcontrib-devhelp, sphinxcontrib-applehelp, soupsieve, Six, pyshortcuts, pyrsistent, PyQt5-sip, pyparsing, pygments, pyflakes, pyenchant, pycparser, platformdirs, pathspec, mccabe, MarkupSafe, markdown, lxml, lazy-object-proxy, itsdangerous, isort, imagesize, idna, feedgenerator, docutils, dill, colorama, charset-normalizer, certifi, blinker, babel, attrs, Werkzeug, rich, requests, python-dateutil, PyQt5, pep517, packaging, jupyter-core, jsonschema, Jinja2, flexx, click, cffi, beautifulsoup4, asttokens, astroid, sphinx, PyQtWebEngine, pylint, pelican, nbformat, flask, cryptography, build, bs4, black, pyopenssl, leo, flask_cors
+Successfully installed Jinja2-3.1.2 MarkupSafe-2.1.1 PyQt5-5.15.7 PyQt5-Qt5-5.15.2 PyQt5-sip-12.11.0 PyQtWebEngine-5.15.6 PyQtWebEngine-Qt5-5.15.2 Six-1.16.0 Werkzeug-2.2.2 alabaster-0.7.12 astroid-2.11.7 asttokens-2.0.8 attrs-22.1.0 babel-2.10.3 beautifulsoup4-4.11.1 black-22.6.0 blinker-1.5 bs4-0.0.1 build-0.8.0 certifi-2022.6.15 cffi-1.15.1 charset-normalizer-2.1.1 click-8.1.3 colorama-0.4.5 commonmark-0.9.1 cryptography-37.0.4 dialite-0.5.3 dill-0.3.5.1 docutils-0.19 fastjsonschema-2.16.1 feedgenerator-2.0.0 flask-2.2.2 flask_cors-3.0.10 flexx-0.8.4 idna-3.3 imagesize-1.4.1 isort-5.10.1 itsdangerous-2.1.2 jsonschema-4.14.0 jupyter-core-4.11.1 lazy-object-proxy-1.7.1 leo-6.6.3 lxml-4.9.1 markdown-3.4.1 mccabe-0.7.0 meta-1.0.2 mypy-extensions-0.4.3 nbformat-5.4.0 packaging-21.3 pathspec-0.9.0 pelican-4.8.0 pep517-0.13.0 platformdirs-2.5.2 pscript-0.7.7 pycparser-2.21 pyenchant-3.2.2 pyflakes-2.5.0 pygments-2.13.0 pylint-2.14.5 pyopenssl-22.0.0 pyparsing-3.0.9 pyrsistent-0.18.1 pyshortcuts-1.8.2 python-dateutil-2.8.2 pytz-2022.2.1 pywin32-304 requests-2.28.1 rich-12.5.1 snowballstemmer-2.2.0 soupsieve-2.3.2.post1 sphinx-5.1.1 sphinxcontrib-applehelp-1.0.2 sphinxcontrib-devhelp-1.0.2 sphinxcontrib-htmlhelp-2.0.0 sphinxcontrib-jsmath-1.0.1 sphinxcontrib-qthelp-1.0.3 sphinxcontrib-serializinghtml-1.1.5 tk-0.1.0 tomli-2.0.1 tomlkit-0.11.4 tornado-6.2 traitlets-5.3.0 unidecode-1.3.4 urllib3-1.26.12 webruntime-0.5.8 windows-curses-2.3.0 wrapt-1.14.1
+
+C:\tmp\portable_python_3.10.6\tmp>
+C:\tmp\portable_python_3.10.6\tmp>

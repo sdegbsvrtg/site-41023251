@@ -1,0 +1,23 @@
+NX12 support python 3.6.1
+
+C:\Siemens\NX12.0\NXBIN\python
+
+C:\Siemens\NX12.0\SIMULATION\samcef\Exec\Python365
+
+https://docs.plm.automation.siemens.com/data_services/resources/nx/12/nx_api/custom/en_US/nxopen_python_ref/index.html
+
+https://docs.plm.automation.siemens.com/tdoc/nx/12/release_notes#uid:index_xid920453:xid920496:xid385122
+
+Using external Python distribution
+
+The Python distribution included in NX is Python 3.3.2 with the PLY extension module included. If you use other Python extension modules, you can set up NX to use a Python distribution that you install that includes the other extension modules.
+
+Specify the external Python distribution for NX to use with the UGII_PYTHON_LIBRARY_DIR and UGII_PYTHONPATH environment variables. You can set these environment variables in your site, group, or user environment variable customization in your ugii_env.dat file.
+
+The UGII_PYTHON_LIBRARY_DIR variable specifies the directory that contains the Python shared library. The location of this shared library depends on how Python was installed on the system. For example, if you installed Python 3.3.2 on Windows for all users, the Python shared library (Python33.dll) is in the directory %SystemRoot%\System32. If you installed Python 3.3.2 locally, the Python shared library is in the directory <Python installation path>\DLLs.
+
+The UGII_PYTHONPATH variable specifies the directories that the Python interpreter searches to find Python modules, including the NX Open Python extension modules. When you set this variable, include the location of the NX Open Python extension modules in addition to any other extension modules you are using. For example, if you installed Python 3.3.2 on Windows, UGII_PYTHONPATH should be set as follows:
+
+UGII_PYTHONPATH=<Python installation path>;<Python installation path>\DLLs;<Python installation path>\Lib;<Python installation path>\Lib\site-packages;%UGII_BASE_DIR%\ugii\python;<other Python modules>
+
+You can override the UGII_PYTHONPATH and UGII_PYTHON_LIBRARY_DIR settings by using the Override Python Parameters command in NX. If you override the UGII_PYTHONPATH variable, do not include the Python33.zip file in your UGII_PYTHONPATH setting, since it is not needed and conflicts with your external Python distribution.

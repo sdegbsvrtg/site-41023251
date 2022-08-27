@@ -1,0 +1,106 @@
+'use strict';
+
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
+(function () {
+  'use strict';
+
+  console.log('loaded scripts');
+
+  var scrollState = void 0;
+  // let coverHeading = document.querySelector('.cover-heading');
+  var parallaxHolder = document.querySelectorAll('.article-extension-parallax');
+
+  function cssTransformAutoprefixer(el, value) {
+    var returnTranslate = function returnTranslate() {
+      el.style['-webkit-transform'] = value;
+      el.style['-moz-transform'] = value;
+      el.style['-ms-transform'] = value;
+      el.style['-o-transform'] = value;
+      el.style.transform = value;
+    };
+    window.requestAnimationFrame(returnTranslate);
+  }
+
+  window.addEventListener('scroll', function () {
+    var scrollHeight = document.documentElement.scrollHeight;
+    var documentClientHeight = document.documentElement.clientHeight;
+    var scrollTop = UDN_TOPIC.windowScroll();
+    var totalScroll = scrollTop / (scrollHeight - UDN_TOPIC.height) * 100;
+    var progress = document.querySelector('.progress');
+    var articleItems = document.querySelectorAll('.article-item');
+
+    if (scrollTop > documentClientHeight) {
+      document.body.classList.add('header-fixed');
+    } else {
+      document.body.classList.remove('header-fixed');
+    }
+
+    // if(scrollTop > (coverHeading.offsetHeight / 2) && UDN_TOPIC.width > 767) {
+    //   if(scrollState < scrollTop) {
+    //     document.body.classList.add('scroll-threshold');
+    //   } else {
+    //     document.body.classList.remove('scroll-threshold');
+    //   }
+    // }
+
+
+    if (parallaxHolder.length) {
+
+      [].concat(_toConsumableArray(parallaxHolder)).forEach(function (el) {
+        var limit = el.offsetTop + el.offsetHeight;
+        var titleEl = el.querySelector('.parallax-title');
+        var imgEl = el.querySelector('.parallax-image');
+
+        var depth = el.dataset.depth;
+        var movement = (UDN_TOPIC.windowScroll() - (el.offsetTop - window.innerHeight)) * depth;
+
+        if (scrollTop > el.offsetTop - window.innerHeight && scrollTop <= limit) {
+          // let imgTranslate = (window.innerWidth > 1200) ? 'translateY(calc(-60% + ' + movement + 'px))' : 'translateY(-50%)'; // IE will not work with calc inside translate
+          // let imgTranslate = (window.innerWidth > 1200) ? 'translateY(-60%) translateY('+ movement +'px)' : 'translateY(-50%)';
+          // let titleTranslate = 'translateY(' + ((scrollTop - el.offsetTop) / 1.2) + 'px)';
+          // cssTransformAutoprefixer(imgEl, imgTranslate);
+          // cssTransformAutoprefixer(titleEl, titleTranslate);
+
+          //alternate solution
+          window.innerWidth > 1200 ? el.style.backgroundPositionY = 'calc(50% - ' + ((scrollTop - el.offsetTop) * depth + 'px') + ')' : '';
+          titleEl.style.top = (scrollTop - el.offsetTop) / 1.2 + 'px';
+        } else {
+          // cssTransformAutoprefixer(imgEl, "none");
+          // cssTransformAutoprefixer(titleEl, 'translateY(0px)');
+        }
+      });
+    }
+
+    scrollState = scrollTop;
+
+    if (UDN_TOPIC.width > 767) {
+      [].concat(_toConsumableArray(articleItems)).forEach(function (el, i) {
+        var id = el.id;
+
+        var elOffsetTop = UDN_TOPIC.elOffsetTop('#' + id);
+        var elHeight = el.offsetHeight;
+        var totalView = elOffsetTop + elHeight;
+        var menuItem = document.querySelector('.menu-item[data-scroll="' + id + '"]');
+
+        if (menuItem === null) return;
+
+        if (scrollTop >= elOffsetTop - 50 && scrollTop < totalView) {
+          menuItem.classList.add('active');
+        } else {
+          menuItem.classList.remove('active');
+        }
+      });
+    }
+    //set progress
+    progress.style.width = totalScroll + '%';
+  });
+
+  // menu hamburger
+  // if(menuToggler) {
+  //   menuToggler.addEventListener('click', function(e) {
+  //     window.scroll({ top: headerOffset, left: 0, behavior: 'smooth' });
+  //   });
+  // }
+
+})();

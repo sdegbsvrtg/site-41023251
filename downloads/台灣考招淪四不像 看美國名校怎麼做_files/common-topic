@@ -1,0 +1,256 @@
+'use strict';
+
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
+// Production steps of ECMA-262, Edition 6, 22.1.2.1
+if (!Array.from) {
+		Array.from = function () {
+				var toStr = Object.prototype.toString;
+				var isCallable = function isCallable(fn) {
+						return typeof fn === 'function' || toStr.call(fn) === '[object Function]';
+				};
+				var toInteger = function toInteger(value) {
+						var number = Number(value);
+						if (isNaN(number)) {
+								return 0;
+						}
+						if (number === 0 || !isFinite(number)) {
+								return number;
+						}
+						return (number > 0 ? 1 : -1) * Math.floor(Math.abs(number));
+				};
+				var maxSafeInteger = Math.pow(2, 53) - 1;
+				var toLength = function toLength(value) {
+						var len = toInteger(value);
+						return Math.min(Math.max(len, 0), maxSafeInteger);
+				};
+
+				// The length property of the from method is 1.
+				return function from(arrayLike /*, mapFn, thisArg */) {
+						// 1. Let C be the this value.
+						var C = this;
+
+						// 2. Let items be ToObject(arrayLike).
+						var items = Object(arrayLike);
+
+						// 3. ReturnIfAbrupt(items).
+						if (arrayLike == null) {
+								throw new TypeError('Array.from requires an array-like object - not null or undefined');
+						}
+
+						// 4. If mapfn is undefined, then let mapping be false.
+						var mapFn = arguments.length > 1 ? arguments[1] : void undefined;
+						var T;
+						if (typeof mapFn !== 'undefined') {
+								// 5. else
+								// 5. a If IsCallable(mapfn) is false, throw a TypeError exception.
+								if (!isCallable(mapFn)) {
+										throw new TypeError('Array.from: when provided, the second argument must be a function');
+								}
+
+								// 5. b. If thisArg was supplied, let T be thisArg; else let T be undefined.
+								if (arguments.length > 2) {
+										T = arguments[2];
+								}
+						}
+
+						// 10. Let lenValue be Get(items, "length").
+						// 11. Let len be ToLength(lenValue).
+						var len = toLength(items.length);
+
+						// 13. If IsConstructor(C) is true, then
+						// 13. a. Let A be the result of calling the [[Construct]] internal method
+						// of C with an argument list containing the single item len.
+						// 14. a. Else, Let A be ArrayCreate(len).
+						var A = isCallable(C) ? Object(new C(len)) : new Array(len);
+
+						// 16. Let k be 0.
+						var k = 0;
+						// 17. Repeat, while k < len… (also steps a - h)
+						var kValue;
+						while (k < len) {
+								kValue = items[k];
+								if (mapFn) {
+										A[k] = typeof T === 'undefined' ? mapFn(kValue, k) : mapFn.call(T, kValue, k);
+								} else {
+										A[k] = kValue;
+								}
+								k += 1;
+						}
+						// 18. Let putStatus be Put(A, "length", len, true).
+						A.length = len;
+						// 20. Return A.
+						return A;
+				};
+		}();
+}
+
+var UDN_TOPIC = function () {
+
+		var topic = document.querySelector('meta[name="topic_id"]');
+
+		if (topic) {
+				var topicId = topic.getAttribute('content');
+				var channelId = document.querySelector('meta[name="channel_id"]').getAttribute('content');
+				var siteId = (document.querySelector('meta[name="site_id"]')) ? document.querySelector('meta[name="site_id"]').getAttribute('content') : 0;
+				var commonUrl = document.querySelector('meta[name="origion_common_url"]').getAttribute('content');
+				var pvUrl = channelId === '1001' ? '/money/topic_daily/' + channelId + '/' + topicId + '/0' : commonUrl + '/topic/topic_daily/' + channelId + '/' + topicId + '/0/' + siteId;
+				fetch(pvUrl);
+		}
+
+		window.lazySizesConfig = {
+				addClasses: true
+		};
+
+		var supportPageOffset = window.pageXOffset !== undefined;
+		var isCSS1Compat = (document.compatMode || "") === "CSS1Compat";
+		var articleSliderAll = document.querySelectorAll('.article-slider');
+		var smoothscroll = document.querySelectorAll('.smoothscroll[data-scroll]');
+		var menuToggler = document.querySelector('.menu-toggler');
+		var headerHeight = document.querySelector('.header');
+		var goTop = document.querySelector('.goTop');
+		var browserIE = detectIE();
+
+		if (browserIE) {
+				document.querySelector('html').classList.add('ie');
+		}
+
+		var w = window,
+		    d = document,
+		    e = d.documentElement,
+		    g = d.getElementsByTagName('body')[0],
+		    x = w.innerWidth || e.clientWidth || g.clientWidth,
+		    h = w.innerHeight || e.clientHeight || g.clientHeight;
+
+		var windowOffset = function windowOffset() {
+				return supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop;
+		};
+
+		var getElementOffsetTop = function getElementOffsetTop(el) {
+				return document.querySelector(el).offsetTop;
+		};
+
+		var comSlider = document.querySelectorAll('.article-comparison');
+
+		if (comSlider.length) {
+				[].concat(_toConsumableArray(comSlider)).forEach(function (el) {
+						var rangeInput = el.querySelector('input[type="range"]');
+						var afterImg = el.querySelector('.comparison-after');
+						var slider = el.querySelector('.comparison-slider');
+						var input = browserIE ? "change" : "input";
+						rangeInput.addEventListener(input, function (e) {
+								var value = e.target.value;
+								afterImg.style.width = value + '%';
+								slider.style.left = value + '%';
+						});
+				});
+		}
+
+		// article slider
+		if (articleSliderAll.length) {
+				[].concat(_toConsumableArray(articleSliderAll)).map(function (el) {
+						var id = el.id;
+
+						return tns({
+								container: '#' + id,
+								items: 1,
+								slideBy: 'page',
+								autoplay: el.dataset.autoplay === '1' ? true : false,
+								autoplayTimeout: parseInt(el.dataset.speed) || 5000,
+								controls: true,
+								mouseDrag: x >= 767 ? true : false
+						});
+				});
+		}
+
+		// menu hamburger
+		if (menuToggler) {
+				console.log('contain menu hamburger');
+				menuToggler.addEventListener('click', function (e) {
+						document.body.classList.toggle('menu-open');
+				});
+
+				var navigationOverlay = document.querySelector('.navigation-bg');
+
+				if (navigationOverlay) {
+						navigationOverlay.addEventListener('click', function (e) {
+								document.body.classList.toggle('menu-open');
+						});
+				}
+		}
+
+		// anchor smooth scroll
+		if (smoothscroll.length) {
+				[].concat(_toConsumableArray(smoothscroll)).forEach(function (el) {
+						el.addEventListener('click', function (e) {
+								e.preventDefault();
+								var location = document.getElementById(e.target.dataset.scroll);
+								var top = location.offsetTop - headerHeight.offsetHeight;
+								document.body.classList.remove('menu-open');
+								window.scroll({ top: top, left: 0, behavior: 'smooth' });
+						});
+				});
+		}
+
+		window.addEventListener('scroll', function () {
+				var documentHeight = document.documentElement.clientHeight;
+				if (windowOffset() > documentHeight) {
+						goTop.classList.add('show');
+				} else {
+						goTop.classList.remove('show');
+				}
+		});
+
+		goTop.addEventListener('click', function (e) {
+				e.preventDefault();
+				window.scroll({ top: 0, left: 0, behavior: 'smooth' });
+		});
+
+		function detectIE() {
+				var ua = window.navigator.userAgent;
+
+				// Test values; Uncomment to check result …
+
+				// IE 10
+				// ua = 'Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)';
+
+				// IE 11
+				// ua = 'Mozilla/5.0 (Windows NT 6.3; Trident/7.0; rv:11.0) like Gecko';
+
+				// Edge 12 (Spartan)
+				// ua = 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.71 Safari/537.36 Edge/12.0';
+
+				// Edge 13
+				// ua = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2486.0 Safari/537.36 Edge/13.10586';
+
+				var msie = ua.indexOf('MSIE ');
+				if (msie > 0) {
+						// IE 10 or older => return version number
+						return parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
+				}
+
+				var trident = ua.indexOf('Trident/');
+				if (trident > 0) {
+						// IE 11 => return version number
+						var rv = ua.indexOf('rv:');
+						return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
+				}
+
+				// var edge = ua.indexOf('Edge/');
+				// if (edge > 0) {
+				// 	// Edge (IE 12+) => return version number
+				// 	return parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10);
+				// }
+
+				// other browser
+				return false;
+		}
+
+		return {
+				detectIE: detectIE,
+				width: x,
+				height: h,
+				windowScroll: windowOffset,
+				elOffsetTop: getElementOffsetTop
+		};
+}();

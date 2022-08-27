@@ -1,2 +1,2560 @@
-<h1>About</h1>
-<p>https://mde.tw</p>
+<h1>cp2022</h1>
+<h4>2022 Fall</h4>
+<p>Introduction to Computer Programming (計算機程式)</p>
+<p><a href="https://www.youtube.com/c/Freecodecamp/search?query=python">https://www.youtube.com/c/Freecodecamp/search?query=python</a></p>
+<p>C -&gt; Brython (Javascript, html5, css) -&gt; CPython -&gt; Rust</p>
+<h4>行事曆</h4>
+<p><a href="https://calendar.google.com/calendar/embed?src=mde.nfu.edu.tw_3439313938333136353439%40resource.calendar.google.com&amp;ctz=Asia%2FTaipei&amp;mode=week&amp;src=mde.nfu.edu.tw_35303530373431313438%40resource.calendar.google.com&amp;ctz=Asia%2FTaipei&amp;src=yen%40gm.nfu.edu.tw&amp;ctz=Asia%2FTaipei">全頁檢視</a></p>
+<p><iframe height="600" src="https://calendar.google.com/calendar/embed?src=mde.nfu.edu.tw_3439313938333136353439%40resource.calendar.google.com&amp;ctz=Asia%2FTaipei&amp;mode=week&amp;src=mde.nfu.edu.tw_35303530373431313438%40resource.calendar.google.com&amp;ctz=Asia%2FTaipei&amp;src=yen%40gm.nfu.edu.tw&amp;ctz=Asia%2FTaipei" width="800"></iframe></p>
+<h2>Syllabus</h2>
+<h4>課程評分:</h4>
+<p style="padding-left: 30px;">w3 建立 <a href="https://tcexam.org/">TCExam</a> 帳號, 進行模擬考試.</p>
+<p style="padding-left: 30px;">w4 Exam1 (5%)</p>
+<p style="padding-left: 30px;">w8 Exam2 (5%)</p>
+<p style="padding-left: 30px;">w9 Exam3 (5%)</p>
+<p style="padding-left: 30px;">w12 Exam4 (5%)</p>
+<p style="padding-left: 30px;">w16 Exam5 (5%)</p>
+<p style="padding-left: 30px;">w18 Exam6 (5%)</p>
+<p style="padding-left: 30px;">Github Repository and Pages (70%)</p>
+<p style="padding-left: 60px;">個人簡歷與課程進度心得</p>
+<p style="padding-left: 60px;">課程內容操作影片 (<a href="https://www.debugmode.com/wink/">Wink3</a>)</p>
+<p style="padding-left: 60px;">期中程式專案</p>
+<p style="padding-left: 60px;">期末程式專案</p>
+<h4>課程內容:</h4>
+<p style="padding-left: 30px;">學員利用網頁建立個人簡歷 (<a href="https://www.thebalancecareers.com/cv-vs-resume-2058495">Curriculum Vitae</a>)</p>
+<p style="padding-left: 60px;">建立 Github 帳號:</p>
+<p style="padding-left: 90px;"><a href="https://education.github.com/">https://education.github.com/</a></p>
+<p style="padding-left: 60px;">建立 Onedrive 帳號</p>
+<p style="padding-left: 90px;">請各學員至 <a href="https://www.microsoft.com/zh-tw/education/products/office">https://www.microsoft.com/zh-tw/education/products/office</a>, 以 @gm 帳號申請 OneDrive 儲存權限.</p>
+<p style="padding-left: 60px;">利用 Github 建立網頁:</p>
+<p style="padding-left: 90px;"><a href="https://pages.github.com/">https://pages.github.com/</a></p>
+<p style="padding-left: 60px;">維護 Github 上的網頁:</p>
+<p style="padding-left: 90px;">在近端將動態網頁轉為靜態網頁後, acp 至 Github 倉儲.</p>
+<p style="padding-left: 90px;">利用 <a href="https://github.com/features/actions">Github Actions</a> 將已推送之動態網頁轉為靜態網頁並自動改版.</p>
+<p style="padding-left: 60px;">可攜程式系統與網路設定</p>
+<p style="padding-left: 60px;">個人電腦, 筆電與隨身碟</p>
+<p style="padding-left: 30px;">網頁上的 Pyrhon 程式</p>
+<p style="padding-left: 60px;">程式環境配置</p>
+<p style="padding-left: 60px;">Python 基本語法</p>
+<p style="padding-left: 60px;">html, css 與 Javascript</p>
+<p style="padding-left: 60px;">靜態繪圖</p>
+<p style="padding-left: 60px;">動態繪圖</p>
+<p style="padding-left: 30px;">ANSI C 程式</p>
+<p style="padding-left: 60px;">Tiny C compiler and C 基本語法</p>
+<p style="padding-left: 60px;">GCC and C 基本語法</p>
+<p style="padding-left: 30px;">CPython 程式</p>
+<p style="padding-left: 60px;"><a href="https://link.springer.com/book/10.1007/978-1-4842-7774-4">C and Python Applications</a> (2022)</p>
+<p style="padding-left: 60px;"><a href="https://link.springer.com/book/10.1007/978-1-4842-7410-1">Hands-on Matplotlib</a> (2022)</p>
+<h4>Reference:</h4>
+<p style="padding-left: 30px;"><a href="https://c1.cycu.org/doc/trunk/content/index.html">cp2021</a></p>
+<h2>Problem solving</h2>
+<p><a href="https://math.berkeley.edu/~gmelvin/polya.pdf">Polya’s Problem Solving Techniques</a></p>
+<p><a href="https://courses.cs.washington.edu/courses/cse190d/17sp/materials/GDFPSP-ch1-3.pdf">Game Design for Problem Solving with Python</a></p>
+<h2>Programming</h2>
+<p><a href="https://link.springer.com/book/10.1007/978-3-7091-1343-1">Introduction to Programming Concepts with Case Studies in Python</a> (2012)</p>
+<p><a href="https://link.springer.com/book/10.1007/978-1-4842-2172-3">Learn to Program with Python</a> (2016)</p>
+<p><a href="https://link.springer.com/book/10.1007/978-1-4842-0028-5">Beginning Python</a> (2017)</p>
+<p><a href="https://link.springer.com/book/10.1007/978-1-4842-3879-0">Learn to Program with Python 3</a> (2018)</p>
+<p><a href="https://link.springer.com/book/10.1007/978-1-4842-3378-8">Python Graphics</a> (2018)</p>
+<p><a href="https://link.springer.com/book/10.1007/978-1-4842-4504-0">PowerShell and Python Together</a> (2019)</p>
+<p><a href="https://link.springer.com/book/10.1007/978-1-4842-6339-6">Foundation Dynamic Web Pages with Python</a> (2020)</p>
+<p><a href="https://link.springer.com/book/10.1007/978-3-030-81885-2">Algorithms on Trees and Graphs</a> (2021)</p>
+<p><a href="https://link.springer.com/book/10.1007/978-1-4842-4281-0">Python Continuous Integration and Delivery</a> (2019)</p>
+<h3>Computer</h3>
+<p><a href="https://en.wikipedia.org/wiki/Computer">https://en.wikipedia.org/wiki/Computer</a></p>
+<h3>Program</h3>
+<p><a href="https://en.wikipedia.org/wiki/Computer_program">https://en.wikipedia.org/wiki/Computer_program</a></p>
+<h3>Python</h3>
+<p><a href="https://en.wikipedia.org/wiki/Python_(programming_language)">https://en.wikipedia.org/wiki/Python_(programming_language)</a></p>
+<h4>Examples:</h4>
+<p style="padding-left: 30px;"><a href="https://gist.github.com/mdecycu/d9082d678096bd58378d6afe2c7fa05d">https://gist.github.com/mdecycu/d9082d678096bd58378d6afe2c7fa05d</a></p>
+<p style="padding-left: 30px;"><a href="https://www.geeksforgeeks.org/python-programming-examples/">https://www.geeksforgeeks.org/python-programming-examples/</a></p>
+<p style="padding-left: 30px;"><a href="https://www.programiz.com/python-programming/examples">https://www.programiz.com/python-programming/examples</a></p>
+<p style="padding-left: 30px;"><a href="https://www.freecodecamp.org/news/python-code-examples-sample-script-coding-tutorial-for-beginners/">https://www.freecodecamp.org/news/python-code-examples-sample-script-coding-tutorial-for-beginners/</a></p>
+<h4>Python Tutorial:</h4>
+<p style="padding-left: 30px;"><a href="https://docs.python.org/3/tutorial/">https://docs.python.org/3/tutorial/</a></p>
+<p style="padding-left: 30px;"><a href="https://docs.python.org/3/tutorial/introduction.html">An informal introduction to Python</a></p>
+<h4>Indentation</h4>
+<h4>Variables</h4>
+<h4>Comments</h4>
+<h4><a href="https://docs.python.org/3/tutorial/introduction.html#numbers">Numbers</a></h4>
+<h4><a href="https://docs.python.org/3/tutorial/introduction.html#strings">Strings</a></h4>
+<h4>print</h4>
+<p><a href="https://docs.python.org/3/tutorial/controlflow.html">Python control flow tools</a></p>
+<h4 style="padding-left: 30px;"><a href="https://docs.python.org/3/tutorial/controlflow.html#for-statements">for</a></h4>
+<h4 style="padding-left: 30px;"><a href="https://docs.python.org/3/tutorial/controlflow.html#if-statements">if</a></h4>
+<h4 style="padding-left: 30px;"><a href="https://docs.python.org/3/tutorial/controlflow.html#the-range-function">range</a></h4>
+<h4>open</h4>
+<h4>read</h4>
+<h4><a href="https://docs.python.org/3/tutorial/introduction.html#lists">lists</a></h4>
+<h4><a href="https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences">tuples</a></h4>
+<h4><a href="https://docs.python.org/3/tutorial/datastructures.html#dictionaries">dictionaries</a></h4>
+<h4><a href="https://docs.python.org/3/tutorial/controlflow.html#defining-functions">functions</a></h4>
+<h4><a href="https://docs.python.org/3/tutorial/errors.html#exceptions">try ... except</a></h4>
+<h4><a href="https://docs.python.org/3/tutorial/controlflow.html#break-and-continue-statements-and-else-clauses-on-loops">break</a></h4>
+<h4><a href="https://docs.python.org/3/tutorial/controlflow.html#pass-statements">pass</a></h4>
+<h4><a href="https://docs.python.org/3/tutorial/classes.html?highlight=classes">classes</a></h4>
+<p>這個頁面 demo 如何在同一頁面下納入多個線上 Ace 編輯器與執行按鈕 (<a href="/downloads/practice_html.txt">practice_html.txt</a> 動態頁面超文件).</p>
+<p><a href="/downloads/practice_html.txt">practice_html.txt</a> 動態頁面超文件應該可以在啟動 Brython 時, 設定將 .py 檔案放入 downloads/py 目錄中引用.</p>
+<p>亦即將所有對應的 html 也使用 Brython 產生, 然後寫為 <a href="https://docs.python.org/3/tutorial/classes.html">class</a> 後, 在範例導入時透過 <a href="https://docs.python.org/3/tutorial/classes.html#instance-objects">instance</a> 引用.</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">&lt;!-- 啟動 Brython --&gt;
+&lt;script&gt;
+window.onload=function(){
+brython({debug:1, pythonpath:['/static/','./../downloads/py/']});
+}
+&lt;/script&gt;</pre>
+<p>從 1 累加到 100:</p>
+<p><button id="add1to100">1 add to 100</button></p>
+<p>將 iterable 與 iterator <a href="https://home.gamer.com.tw/creationDetail.php?sn=4337438">相關說明</a>, 利用 Brython 與 Ace Editor 整理在這個頁面.</p>
+<!-- 導入 brython 程式庫 -->
+<p>
+<script src="/static/brython.js"></script>
+<script src="/static/brython_stdlib.js"></script>
+</p>
+<!-- 啟動 Brython -->
+<p>
+<script>
+window.onload=function(){
+brython({debug:1, pythonpath:['/static/','./../downloads/py/']});
+}
+</script>
+</p>
+<p><!-- 導入 FileSaver 與 filereader --></p>
+<p>
+<script src="/static/ace/FileSaver.min.js" type="text/javascript"></script>
+<script src="/static/ace/filereader.js" type="text/javascript"></script>
+</p>
+<p><!-- 導入 ace --></p>
+<p>
+<script src="/static/ace/ace.js" type="text/javascript"></script>
+<script src="/static/ace/ext-language_tools.js" type="text/javascript"></script>
+<script src="/static/ace/mode-python3.js" type="text/javascript"></script>
+<script src="/static/ace/snippets/python.js" type="text/javascript"></script>
+</p>
+<p><!-- 導入 gearUtils-0.9.js Cango 齒輪繪圖程式庫 -->
+<script src="/static/Cango-24v03-min.js"></script>
+<script src="/static/gearUtils-09.js"></script>
+<script src="/static/SVGpathUtils-6v03-min.js"></script>
+<script src="/static/sylvester.js"></script>
+<script src="/static/PrairieDraw.js"></script>
+</p>
+<p><!-- 請注意, 這裡使用 Javascript 將 localStorage["kw_py_src1"] 中存在近端瀏覽器的程式碼, 由使用者決定存檔名稱--></p>
+<p>
+<script type="text/javascript">
+function doSave(storage_id, filename){
+    var blob = new Blob([localStorage[storage_id]], {type: "text/plain;charset=utf-8"});
+    filename = document.getElementById(filename).value
+    saveAs(blob, filename+".py");
+}
+</script>
+</p>
+<p>
+<script type="text/python3">
+from browser import document as doc
+import ace
+# 清除畫布
+def clear_bd1(ev):
+    bd = doc["brython_div1"]
+    bd.clear()
+Ace1 = ace.Editor(editor_id="kw_editor1", console_id="kw_console1", container_id="kw__container1", storage_id="kw_py_src1" )
+# 從 gist 取出程式碼後, 放入 editor 作為 default 程式
+def run1():
+    # 利用 get 取下 src 變數值
+    try:
+        url = doc.query["src"]
+    except:
+        url = "https://gist.githubusercontent.com/mdecourse/0229a8a017091476a79700b8a190f185/raw/c3a6deaf717f8f2739a4b1392a5ab10936e9693a/from_1_add_to_10_1.py"
+    prog = open(url).read()
+
+    # 將程式載入編輯區
+    Ace1.editor.setValue(prog)
+    Ace1.editor.scrollToRow(0)
+    Ace1.editor.gotoLine(0)
+    # 直接執行程式
+    #ns = {'__name__':'__main__'}
+    #exec(prog, ns)
+    # 按下 run 按鈕
+    Ace1.run()
+
+# 執行程式, 顯示輸出結果與清除輸出結果及對應按鈕綁定
+doc['kw_run1'].bind('click', Ace1.run)
+doc['kw_show_console1'].bind('click', Ace1.show_console)
+doc['kw_clear_console1'].bind('click', Ace1.clear_console)
+doc['clear_bd1'].bind('click', clear_bd1)
+# 呼叫函式執行
+run1()
+</script>
+</p>
+<p><!-- add 1 to 100 開始 -->
+<script type="text/python3">
+from browser import document as doc
+import ace
+
+# 清除畫布
+def clear_bd1(ev):
+    bd = doc["brython_div1"]
+    bd.clear()
+
+# 利用 ace 中的 Editor 建立 Ace2 物件, 其中的輸入變數分別對應到頁面中的編輯區物件
+Ace2 = ace.Editor(editor_id="kw_editor1", console_id="kw_console1", container_id="kw__container1", storage_id="kw_py_src1" )
+
+add1to100_url = "https://gist.githubusercontent.com/mdecourse/0229a8a017091476a79700b8a190f185/raw/c48e37714f055c3a0027cbfef59e442a6ef659b9/from_1_add_to_100_1.py"
+
+# 從 gist 取得程式碼
+add_src = open(add1to100_url).read()
+def add(ev):
+    Ace2.editor.setValue(add_src)
+    Ace2.editor.scrollToRow(0)
+    Ace2.editor.gotoLine(0)
+    Ace2.run()
+
+# id 為 "add1to100" 的按鈕點按時, 執行 add 方法
+doc["add1to100"].bind('click', add)
+</script>
+</p>
+<p><!-- add 1 to 100 結束--></p>
+<!-- editor1 開始 -->
+<p><!-- 用來顯示程式碼的 editor 區域 --></p>
+<div id="kw_editor1" style="width: 600px; height: 300px;"></div>
+<p><!-- 以下的表單與按鈕與前面的 Javascript doSave 函式以及 FileSaver.min.js 互相配合 --></p>
+<p><!-- 存擋表單開始 --></p>
+<form><label>Filename: <input id="kw_filename" placeholder="input file name" type="text"/>.py</label> <input onclick="doSave('kw_py_src1', 'kw_filename1');" type="submit" value="Save"/></form>
+<p><!-- 存擋表單結束 --></p>
+<p></p>
+<p><!-- 執行與清除按鈕開始 --></p>
+<p><button id="kw_run1">Run</button> <button id="kw_show_console1">Output</button> <button id="kw_clear_console1">清除輸出區</button><button id="clear_bd1">清除繪圖區</button><button onclick="window.location.reload()">Reload</button></p>
+<p><!-- 執行與清除按鈕結束 --></p>
+<p></p>
+<p><!-- 程式執行 ouput 區 --></p>
+<div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console1"></textarea></div>
+<p><!-- Brython 程式執行的結果, 都以 brython_div1 作為切入位置 --></p>
+<div id="brython_div1"></div>
+<!-- editor1 結束 --><hr/><!-- ########################################## -->
+<p>從 1 累加到 100 part2:</p>
+<p><button id="add1to100part2">1 add to 100</button><button id="cango_three_gears">cango_three_gears</button><button id="bsnake">BSnake</button><button id="aitetris">AI Tetris</button></p>
+<p><!-- 請注意, 這裡使用 Javascript 將 localStorage["kw_py_src2"] 中存在近端瀏覽器的程式碼, 由使用者決定存檔名稱--></p>
+<p>
+<script type="text/python3">
+from browser import document as doc
+import ace
+# 清除畫布
+def clear_bd2(ev):
+    bd = doc["brython_div2"]
+    bd.clear()
+Ace3 = ace.Editor(editor_id="kw_editor2", console_id="kw_console2", container_id="kw__container2", storage_id="kw_py_src2" )
+# 從 gist 取出程式碼後, 放入 editor 作為 default 程式
+def run2():
+    # 利用 get 取下 src 變數值
+    try:
+        url = doc.query["src2"]
+    except:
+        url = "https://gist.githubusercontent.com/mdecourse/0229a8a017091476a79700b8a190f185/raw/c3a6deaf717f8f2739a4b1392a5ab10936e9693a/from_1_add_to_10_1.py"
+    prog = open(url).read()
+
+    # 將程式載入編輯區
+    Ace3.editor.setValue(prog)
+    Ace3.editor.scrollToRow(0)
+    Ace3.editor.gotoLine(0)
+    # 直接執行程式
+    #ns = {'__name__':'__main__'}
+    #exec(prog, ns)
+    # 按下 run 按鈕
+    Ace3.run()
+
+# 執行程式, 顯示輸出結果與清除輸出結果及對應按鈕綁定
+doc['kw_run2'].bind('click', Ace3.run)
+doc['kw_show_console2'].bind('click', Ace3.show_console)
+doc['kw_clear_console2'].bind('click', Ace3.clear_console)
+doc['clear_bd2'].bind('click', clear_bd2)
+# 呼叫函式執行
+run2()
+</script>
+</p>
+<p><!-- add 1 to 100 part2 開始 -->
+<script type="text/python3">
+from browser import document as doc
+import ace
+
+# 清除畫布
+def clear_bd2(ev):
+    bd = doc["brython_div2"]
+    bd.clear()
+
+# 利用 ace 中的 Editor 建立 Ace2 物件, 其中的輸入變數分別對應到頁面中的編輯區物件
+Ace4 = ace.Editor(editor_id="kw_editor2", console_id="kw_console2", container_id="kw__container2", storage_id="kw_py_src2" )
+
+# 透過 Ace4 以類別建立一個通用的 button2, 可以在多個案例中將 gist 程導入編輯區
+
+class button2:
+    def __init__(self, url):
+        self.url = url
+
+    # 記得加入 event 輸入變數
+    def do(self,ev):
+        Ace4.editor.setValue(open(self.url).read())
+        Ace4.editor.scrollToRow(0)
+        Ace4.editor.gotoLine(0)
+        Ace4.run()
+
+add1to100_url = "https://gist.githubusercontent.com/mdecourse/0229a8a017091476a79700b8a190f185/raw/c48e37714f055c3a0027cbfef59e442a6ef659b9/from_1_add_to_100_1.py"
+
+# 從 gist 取得程式碼
+add_src = open(add1to100_url).read()
+def add2(ev):
+    Ace4.editor.setValue(add_src)
+    Ace4.editor.scrollToRow(0)
+    Ace4.editor.gotoLine(0)
+    Ace4.run()
+
+# id 為 "add1to100part2" 的按鈕點按時, 執行 add 方法
+doc["add1to100part2"].bind('click', add2)
+# 以下為運用 button2 class 的通用 gist 程式導入區
+################################## cango_three_gears start
+cango_three_gears_url = "https://gist.githubusercontent.com/mdecycu/d9082d678096bd58378d6afe2c7fa05d/raw/f7a85d737d6723d5e34c526d5daee990ed92c32b/cango_three_gears_brython_div2.py"
+cango_three_gears = button2(cango_three_gears_url)
+doc["cango_three_gears"].bind("click", cango_three_gears.do)
+################################## cango_three_gears end
+################################## bsnake start
+bsnake_url = "https://gist.githubusercontent.com/mdecycu/d9082d678096bd58378d6afe2c7fa05d/raw/f7a85d737d6723d5e34c526d5daee990ed92c32b/kmol_snakey.py"
+bsnake = button2(bsnake_url)
+doc["bsnake"].bind("click", bsnake.do)
+################################## bsnake end
+################################## aitetris start
+aitetris_url = "https://gist.githubusercontent.com/mdecycu/d9082d678096bd58378d6afe2c7fa05d/raw/f7a85d737d6723d5e34c526d5daee990ed92c32b/pygame_to_brython_tetris_ai.py"
+aitetris = button2(aitetris_url)
+doc["aitetris"].bind("click", aitetris.do)
+################################## aitetris end
+</script>
+</p>
+<p><!-- add 1 to 100 part2 結束--></p>
+<!-- editor2 開始 -->
+<p><!-- 用來顯示程式碼的 editor 區域 --></p>
+<div id="kw_editor2" style="width: 600px; height: 300px;"></div>
+<p><!-- 以下的表單與按鈕與前面的 Javascript doSave 函式以及 FileSaver.min.js 互相配合 --></p>
+<p><!-- 存擋表單開始 --></p>
+<form><label>Filename: <input id="kw_filename2" placeholder="input file name" type="text"/>.py</label> <input onclick="doSave('kw_py_src2', 'kw_filename2');" type="submit" value="Save"/></form>
+<p><!-- 存擋表單結束 --></p>
+<p></p>
+<p><!-- 執行與清除按鈕開始 --></p>
+<p><button id="kw_run2">Run</button> <button id="kw_show_console2">Output</button> <button id="kw_clear_console2">清除輸出區</button><button id="clear_bd2">清除繪圖區</button><button onclick="window.location.reload()">Reload</button></p>
+<p><!-- 執行與清除按鈕結束 --></p>
+<p></p>
+<p><!-- 程式執行 ouput 區 --></p>
+<div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console2"></textarea></div>
+<p><!-- Brython 程式執行的結果, 都以 brython_div1 作為切入位置 --></p>
+<div id="brython_div2"></div>
+<!-- editor2 結束 --><hr/>
+<h3>ANSIC</h3>
+<p><a href="https://link.springer.com/book/10.1007/978-1-4612-1484-7">C Programming</a> (1999)</p>
+<p><a href="https://link.springer.com/book/10.1007/978-3-030-50750-3">Computer Programming in C for Beginners</a> (2020)</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">// Our first program
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+int main()
+{
+    printf("Hello world!\n");
+    return 0;
+}</pre>
+<p><a href="https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/yen_gm_nfu_edu_tw/EXxz57GzrnBKmnniJvffmoABCDC_cUCbqlTa4cx29dC_UA?e=iCaVgk">cp2022_ANSIC_w_tinyc_scite.7z</a> (for cp2022 users only)</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">// from https://stackoverflow.com/questions/6127503/shuffle-array-in-c
+#include &lt;stdio.h&gt; //for printf()
+#include &lt;stdlib.h&gt; //for srand() and rand()
+#include &lt;time.h&gt; //for time()
+#include &lt;memory.h&gt; //for memcpy()
+// 作業, 請計算各數值在各位數出現的總數, 是否依照亂數機率出現?
+// 作業, 請將此程式改用 Brython 編寫.
+
+void main ()
+{
+    int elesize = sizeof (int);
+    int i;
+    int j;
+    int r;
+    int num = 10;
+    int times = 50;
+    int src [num];
+    int tgt [num];
+    
+    srand ( (unsigned int) time (0) );
+    
+    for (j = 0; j &lt; times; j++)
+    {
+        for (i = 0; i &lt; num; src [i] = i++);
+        
+        for (i = num; i &gt; 0; i --)
+        {
+            r = rand () % i;
+            memcpy (&amp;tgt [num - i], &amp;src [r], elesize);
+            memcpy (&amp;src [r], &amp;src [i - 1], elesize);
+        }
+        
+        for (i = 0; i &lt; num; printf ("%d ", tgt [i++] ) );
+        printf("\n");
+    }
+}</pre>
+<p>利用 <a href="https://en.wikipedia.org/wiki/Differential_evolution">Differential Evoluation</a> (差分進化演算法), 以 <a href="https://en.wikipedia.org/wiki/ANSI_C">ANSI C</a> 程式語言編寫適應方程式的最大化或最小化演算:</p>
+<p style="padding-left: 30px;"><a href="/downloads/volume_in_de_ex1.c">volume_in_de_ex1.c</a></p>
+<p style="padding-left: 30px;"><a href="https://gist.github.com/mdecourse/b5df54ab3d5f2f079f785541d1178a66">其他範例程式</a></p>
+<p style="padding-left: 30px;">相同演算法, 以 CPython 解題:</p>
+<p style="padding-left: 60px;"><a href="/downloads/volume_in_de_ex1.py">volume_in_de_ex1.py</a></p>
+<p style="padding-left: 30px;">相同演算法, <a href="https://mde.tw/cp2022/content/Brython.html?src=https://gist.githubusercontent.com/mdecourse/b5df54ab3d5f2f079f785541d1178a66/raw/ccdea7b056702bcf06ed24c7407a43e0a1aacdbc/volume_in_de_ex1.py">以 Brython 解題</a>.</p>
+<p style="padding-left: 30px;">此一採<a href="https://www.analyzemath.com/calculus/Problems/maximum_volume_problem.html">固定表面積的紙盒體積最大化</a>運算範例, <a href="/downloads/volume_in_de_ex1.py">volume_in_de_ex1.py</a> 的原始作者為<a href="https://hdl.handle.net/11296/tur9hu">李孟恭</a> (<a href="https://github.com/kmollee/algorithm/blob/master/de.py">https://github.com/kmollee/algorithm/blob/master/de.py</a>)</p>
+<p>從 <a href="https://github.com/Akagi201/lw_oopc/blob/master/doc/%E8%BD%BB%E9%87%8F%E7%BA%A7%E7%9A%84%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1C%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A8%8B%E6%A1%86%E6%9E%B6%E4%BB%8B%E7%BB%8D.md">lw-oopc 的簡介</a> 以及<a href="https://github.com/Akagi201/lw_oopc">升級版 lw-oopc 原始碼</a>中, 則可以進一步對 ANSI C 在嵌入式 (embedded) 系統上的應用有所了解.</p>
+<p style="padding-left: 60px;"></p>
+<h3>Rust</h3>
+<p>儘管對於計算機程式的初學者, Rust 似乎遠在天邊, 但是遠沒有關係, 只要願意抬起頭, 睜大眼睛看, 一閃一閃亮晶晶, 就在那裏......</p>
+<p><a href="https://course.rs/about-book.html">https://course.rs/about-book.html</a> (Rust 語言聖經) - <a href="https://github.com/sunface/rust-course">https://github.com/sunface/rust-course</a></p>
+<p><a href="https://export.arxiv.org/ftp/arxiv/papers/2206/2206.05503.pdf">Rust: The Programming Language for Safety and Performance</a> (<a href="/downloads/Rust -The Programming Language for Safety and Performance.pdf">local</a>)</p>
+<p style="padding-left: 30px;">Even though this study was not comprehensive (and more work must be done in this area), it informs the programming and research communities on the promising features of Rust as the language of choice for the future.</p>
+<p style="padding-left: 30px;">Rust is a systems programming language meant to supersede languages like C++. The main<br/>focus of Rust is (memory) safety, but it later began to target performance as well, adopting the<br/>C++ approach of zero cost abstraction.</p>
+<p><a href="https://doc.rust-lang.org/book/">https://doc.rust-lang.org/book/</a></p>
+<p><a href="https://github.com/rust-lang/book">https://github.com/rust-lang/book</a></p>
+<p><a href="https://github.com/cmsc388z/lectures">https://github.com/cmsc388z/lectures</a></p>
+<p><a href="https://www.ralfj.de/projects/rust-101/">https://www.ralfj.de/projects/rust-101/</a></p>
+<p><a href="https://github.com/rust-lang/mdBook">https://github.com/rust-lang/mdBook</a></p>
+<p><a href="https://github.com/rust-lang/miri">https://github.com/rust-lang/miri</a></p>
+<h2>TCExam</h2>
+<p><a href="https://tcexam.org/">https://tcexam.org/</a></p>
+<p><a href="https://link.springer.com/book/10.1007/978-1-4842-7141-4">PHP 8 Solutions</a> (2022)</p>
+<p><a href="https://netcorecloud.com/tutorials/send-an-email-via-gmail-smtp-server-using-php/">https://netcorecloud.com/tutorials/send-an-email-via-gmail-smtp-server-using-php/</a></p>
+<p><a href="https://phppot.com/php/send-email-in-php-using-gmail-smtp/">https://phppot.com/php/send-email-in-php-using-gmail-smtp/</a></p>
+<p style="padding-left: 30px;"><a href="https://myaccount.google.com/security">https://myaccount.google.com/security</a></p>
+<p style="padding-left: 30px;">Google has decided to begin phasing out Less Secure Apps from May 30th, 2022. Google Workspace and Google Cloud Identity users won’t be affected right away, but support for Less Secure Apps will still be phased out for those users at a later date.</p>
+<p style="padding-left: 30px;"><a href="https://support.google.com/accounts/answer/185839" rel="nofollow noopener" target="_blank">turn on two factor authentication for your Google account</a></p>
+<p style="padding-left: 30px;"><a href="https://phppot.com/php/sending-email-using-phpmailer-with-gmail-xoauth2/">https://phppot.com/php/sending-email-using-phpmailer-with-gmail-xoauth2/</a></p>
+<p style="padding-left: 30px;"><a href="https://stackoverflow.com/questions/22335574/phpmailer-send-email-using-gmail-oauth2">https://stackoverflow.com/questions/22335574/phpmailer-send-email-using-gmail-oauth2</a></p>
+<p style="padding-left: 30px;"><a href="https://matters.news/@johnny5610j6/253533-php-mailer%E7%99%BC%E4%BF%A1-%E9%AB%98%E5%AE%89%E5%85%A8%E6%80%A7%E6%A8%A1%E5%BC%8F-oauth2-bafyreigrdtdyww6ua6xf6q3hpxk4mmzfeka3pl3xb4tkkhbivf2d7aszd4">PHPMailer with Oauth2</a><br/>   </p>
+<h3>sendmail</h3>
+<p><a href="https://tcexam.org/">https://tcexam.org/</a> 線上考試系統允許使用者自行建立帳號, 並選擇參與特定 Group (即與帳號對應的課程, 若同時選擇多個 CYCU 所開設的線上考試課程, 則必須在建立帳號時參與多個 Groups).</p>
+<p>當使用者忘記註冊時所選用的密碼時, 原系統允許使用者透過所登錄的 email 收信, 以便重新設定密碼.</p>
+<p>但此一 sendmail 必須由 php 程式配合 php.ini 進行設定. 先前 Gmail 帳號允許使用較低權限的設定進行 sendmail, 但此功能已經從一般 Gmail 帳號中移除. 而目前仍保留降低 Gmail 權限的功能僅限 Workspace 的用戶 (即先前的 GSuite 用戶), 但隨後 Google 也已經宣布將逐一移除此項功能.</p>
+<p>因應 Google 此項變更, 預計在 2022 Fall 或仍可使用 Google Workspace 下的帳號進行送信 (例如: mde.nfu.edu.tw 或 eng.nfu.edu.tw), 但最終還是必須透過 Gmail API 進行程式化的 sendmail.</p>
+<p></p>
+<h2>Three.js</h2>
+<p><a href="https://threejs.org/docs/index.html#manual/en/introduction/Creating-a-scene">https://threejs.org/docs/index.html#manual/en/introduction/Creating-a-scene</a></p>
+<p><a href="https://riptutorial.com/Download/three-js.pdf">https://riptutorial.com/Download/three-js.pdf</a></p>
+<p><a href="https://github.com/josdirksen/learning-threejs-third">https://github.com/josdirksen/learning-threejs-third</a></p>
+<p><a href="https://www.jotform.com/blog/20-exceptional-three-js-experiments-98740/">https://www.jotform.com/blog/20-exceptional-three-js-experiments-98740/</a></p>
+<p><iframe frameborder="0" height="600" src="/downloads/threejs_ex/index.html" width="600"></iframe></p>
+<p><iframe frameborder="0" height="600" src="/downloads/threejs_ex/asm.html" width="600"></iframe></p>
+<!-- 先定義 id 為 threejs 的 canvas -->
+<p><canvas id="threejs"></canvas></p>
+<!-- 從 downloads 目錄下導入 three.min.js 程式庫 -->
+<p>
+<script src="/downloads/three.min.js"></script>
+</p>
+<!-- 以下直接利用 three.js 在 id 為 threejs 的 canvas 上建立 3D 場景 -->
+<p>
+<script>
+const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+    // create a canvas by id
+    const canvas = document.getElementById('threejs');
+    // create a renderer in the canvas
+    const renderer = new THREE.WebGLRenderer({canvas: canvas});
+    // set renderer size
+    renderer.setSize(window.innerWidth/3, window.innerHeight/3);
+    // create a box geometry
+    const geometry = new THREE.BoxGeometry( 2, 2, 2 );
+    // create material
+    const material = new THREE.MeshBasicMaterial( { color: 0xff0000 } );
+    // create a cube with material 
+    const cube = new THREE.Mesh( geometry, material );
+    // add the cube to the scene
+    scene.add( cube );
+    // set camera position
+    camera.position.z = 5;
+
+    function animate() {
+        requestAnimationFrame( animate );
+
+        cube.rotation.x += 0.01;
+        cube.rotation.y += 0.01;
+        // call the render function
+        renderer.render( scene, camera );
+    };
+
+    animate();
+</script>
+</p>
+<p><iframe height="600" src="https://threejs.org/docs/scenes/geometry-browser.html" width="800"></iframe></p>
+<h2>Pandoc</h2>
+<p><a href="https://pandoc.org/">https://pandoc.org/</a></p>
+<p>cmsimde -&gt; LaTex -&gt; Github Actions -&gt; PDF</p>
+<p><a href="https://github.com/mdecycu/4072pj1">https://github.com/mdecycu/4072pj1</a></p>
+<p><a href="https://github.com/mdecycu/pj4082">https://github.com/mdecycu/pj4082</a></p>
+<p><a href="https://stackoverflow.com/questions/52396579/can-i-convert-github-pages-with-jekyll-to-pdf">https://stackoverflow.com/questions/52396579/can-i-convert-github-pages-with-jekyll-to-pdf</a></p>
+<p><a href="https://github.com/topics/html-to-pdf">https://github.com/topics/html-to-pdf</a></p>
+<p><a href="https://github.com/chiamingyen/sphinxBook">https://github.com/chiamingyen/sphinxBook</a></p>
+<h2>VSCode</h2>
+<h4>EBooks:</h4>
+<p style="padding-left: 30px;"><a href="https://link.springer.com/book/10.1007/978-1-4842-6901-5">Visual Studio Code Distilled </a></p>
+<p style="padding-left: 30px;"><a href="https://link.springer.com/book/10.1007/978-1-4842-7344-9">Optimizing Visual Studio Code for Python Development </a></p>
+<h4>Portable mode of Visual Studio Code:</h4>
+<p style="padding-left: 30px;"><a href="https://code.visualstudio.com/docs/editor/portable">https://code.visualstudio.com/docs/editor/portable</a> (338 MB)</p>
+<p style="padding-left: 30px;">Download .zip file and add a data directory to enable the Portable mode of VSCode.</p>
+<h4>Leo for VSCode:</h4>
+<p style="padding-left: 30px;"><a href="https://marketplace.visualstudio.com/items?itemName=boltex.leointeg">https://marketplace.visualstudio.com/items?itemName=boltex.leointeg</a></p>
+<p></p>
+<h2>Powershell</h2>
+<p><a href="https://link.springer.com/book/10.1007/978-1-4842-4504-0">PowerShell and Python Together</a> (2019)</p>
+<p><a href="https://link.springer.com/book/10.1007/978-1-4842-7064-6">PowerShell for Beginner</a> (2021)</p>
+<p><a href="https://link.springer.com/book/10.1007/978-1-4842-7759-1">PowerShell Fast Track</a> (2022)</p>
+<p><a href="https://www.servertribe.com/difference-between-cmd-vs-powershell-vs-bash/">https://www.servertribe.com/difference-between-cmd-vs-powershell-vs-bash/</a></p>
+<p><a href="https://stackoverflow.com/questions/44032838/are-all-cmd-commands-available-within-powershell">https://stackoverflow.com/questions/44032838/are-all-cmd-commands-available-within-powershell</a></p>
+<h1>Brython</h1>
+<p><a href="https://link.springer.com/book/10.1007/978-3-319-14240-1">The Python Workbook</a> (2014) - 程式練習題</p>
+<p><a href="https://link.springer.com/book/10.1007/978-1-4842-6812-4">Introduction to Python for Kids</a> (2021) - Turtle graphics</p>
+<p><a href="https://en.wikipedia.org/wiki/Flag_of_the_Republic_of_China#Construction_details">ROC 國旗規格</a> <a href="https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E5%9B%BD%E6%97%97#%E8%A7%84%E6%A0%BC">PROC 國旗規格</a> <a href="https://en.wikipedia.org/wiki/Flag_of_the_United_States#Specifications">USA 國旗規格</a></p>
+<p><a href="https://gist.github.com/mdecourse/05930b1775b77293523b59b1bbb43e57">Gist Brython scripts</a></p>
+<p><a href="https://www.arc.id.au/CanvasGraphics.html">Cango</a></p>
+<p><a href="/downloads/turtle.py.txt">turtle.py</a></p>
+<p><a href="/downloads/turtle_graphics.pdf">turtle_graphics.pdf</a> (<a href="https://www.cs.auckland.ac.nz/compsci111ssc/lectures/LectureSlides/L25_Python3.pdf">source</a>)</p>
+<p><a href="/downloads/turtle_graphics_2.pdf">turtle_graphics_2.pdf</a> (<a href="https://eecs.wsu.edu/~schneidj/PyBook/chap13.pdf">source</a>)</p>
+<p><a href="/downloads/turtle_graphics_3.pdf">turtle_graphics_3.pdf</a> (<a href="https://www.cs.utexas.edu/~byoung/summer-python-class/summer15-turtle-graphics.pdf">source</a>)</p>
+<p>
+<script src="/static/brython.js">
+</script>
+<script src="/static/brython_stdlib.js"></script>
+</p>
+<!-- for ggame -->
+<p>
+<script src="/static/jquery-3.3.1.min.js"></script>
+<script src="/static/jquery-ui.1.12.1.min.js"></script>
+<script src="/static/pixi-3.0.5.min.js"></script>
+<script src="/static/buzz-1.2.1.js"></script>
+<script src="/static/bs.js"></script>
+<script src="/downloads/brython_modules.js"></script>
+</p>
+<!-- Cango 程式庫 -->
+<p>
+<script src="/static/Cango-24v03-min.js"></script>
+<script src="/static/CangoAxes-6v01-min.js"></script>
+<script src="/static/gearUtils-09.js"></script>
+<script src="/static/SVGpathUtils-6v03-min.js"></script>
+<script src="/static/sylvester.js"></script>
+<script src="/static/PrairieDraw.js"></script>
+</p>
+<!-- for Konva 程式庫 -->
+<p>
+<script src="/static/konva.min.js"></script>
+<script>
+window.onload=function(){
+brython({debug:1, pythonpath:['/static/','./../downloads/py/']});
+}
+</script>
+</p>
+<p><!-- 導入 FileSaver 與 filereader --></p>
+<p>
+<script src="/static/ace/FileSaver.min.js" type="text/javascript"></script>
+<script src="/static/ace/filereader.js" type="text/javascript"></script>
+</p>
+<p><!-- 導入 ace --></p>
+<p>
+<script src="/static/ace/ace.js" type="text/javascript"></script>
+<script src="/static/ace/ext-language_tools.js" type="text/javascript"></script>
+<script src="/static/ace/mode-python3.js" type="text/javascript"></script>
+<script src="/static/ace/snippets/python.js" type="text/javascript"></script>
+</p>
+<p><!-- 請注意, 這裡使用 Javascript 將 localStorage["py_src"] 中存在近端瀏覽器的程式碼, 由使用者決定存檔名稱--></p>
+<p>
+<script type="text/javascript">
+function doSave(storage_id, filename){
+    var blob = new Blob([localStorage[storage_id]], {type: "text/plain;charset=utf-8"});
+    filename = document.getElementById(filename).value
+    saveAs(blob, filename+".py");
+}
+</script>
+</p>
+<p><button id="add1to100">add 1 to 100</button><button id="p261">p261</button><button id="rocflag">ROC flag</button><button id="procflag">PROC flag</button><button id="usaflag">USA flag</button><button id="drawgrid">Draw Grid</button><button id="grid_rect">Random Rect</button><button id="rect_walk">Rect Walk</button><button id="rect_u_walk">Rect U Walk</button><button id="rect_rev_u_walk">Rect rev U Walk</button><button id="sgcr">單節貪食蛇</button><button id="cfrr">5 個紅點方塊</button><button id="snake">Snake</button><button id="bsnake">BSnake</button><button id="auto_guess">auto_guess</button><button id="ball">ball</button><button id="bezier">bezier</button><button id="big_lotto">big_lotto</button><button id="brython_kw">brython_kw</button><button id="bunny">bunny</button><button id="cango_spur">cango_spur</button><button id="cango_spur1">cango_spur1</button><button id="cango_three_gears">cango_three_gears</button><button id="clear">clear</button><button id="clock">clock</button><button id="convert_temp">convert_temp</button><button id="deepmerge">deepmerge</button><button id="display_stl">display_stl</button><button id="draw">draw</button><button id="ex1">ex1</button><button id="ex2">ex2</button><button id="ex3">ex3</button><button id="ex4">ex4</button><button id="fibo">fibo</button><button id="fourbar">fourbar</button><button id="guess_a_number">guess_a_number</button><button id="hw1_1">hw1_1</button><button id="hw1_2">hw1_2</button><button id="keycode">Keycode</button><button id="knova1">knova1</button><button id="merge3">merge3</button><button id="power_lotto">power_lotto</button><button id="spur">spur</button><button id="spur_w_form">spur_w_form</button><button id="stl_binary_ascii">stl_binary_ascii</button><button id="stl_writer">stl_writer</button><button id="tetris">Tetris</button><button id="auto_tetris">Auto Tetris</button><button id="turtle1">turtle1</button><button id="turtle2">turtle2</button><button id="turtle3">turtle3</button><button id="turtle4">turtle4</button><button id="turtle5">turtle5</button><button id="turtle6">turtle6</button><button id="turtle7">turtle7</button><button id="turtle8">turtle8</button><button id="twl_link_ik">twl_link_ik</button><button id="webcam">webcam</button><button id="websocket">websocket</button><button id="ycqsort">ycqsort</button></p>
+<p><!-- ######################  editor1 開始 ###################### --></p>
+<p><!-- 用來顯示程式碼的 editor 區域 --></p>
+<div id="kw_editor1" style="width: 600px; height: 300px;"></div>
+<p><!-- 以下的表單與按鈕與前面的 Javascript doSave 函式以及 FileSaver.min.js 互相配合 --></p>
+<p><!-- 存擋表單開始 --></p>
+<form><label>Filename: <input id="kw_filename" placeholder="input file name" type="text"/>.py</label> <input onclick="doSave('kw_py_src1', 'kw_filename1');" type="submit" value="Save"/></form>
+<p><!-- 存擋表單結束 --></p>
+<p></p>
+<p><!-- 執行與清除按鈕開始 --></p>
+<p><button id="kw_run1">Run</button> <button id="kw_show_console1">Output</button> <button id="kw_clear_console1">清除輸出區</button><button id="clear_bd1">清除繪圖區</button><button onclick="window.location.reload()">Reload</button></p>
+<p><!-- 執行與清除按鈕結束 --></p>
+<p></p>
+<p><!-- 程式執行 ouput 區 --></p>
+<div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console1"></textarea></div>
+<p><!-- Brython 程式執行的結果, 都以 brython_div 作為切入位置 --></p>
+<p><!-- 這裡的畫布 id 為 brython_div --></p>
+<div id="brython_div"></div>
+<!-- graphics-column is for ggame -->
+<div class="col-md-0" height="1" id="graphics-column" width="1"></div>
+<p><!-- ######################  editor1 結束 ###################### --></p>
+<p><!-- 以下可以開始利用 editor1 的設定編寫對應 Brython 程式 -->
+<script type="text/python3">
+from browser import document as doc
+import ace
+
+# 清除畫布
+def clear_bd1(ev):
+    # 注意這裡清除的畫布 id 為 brython_div
+    bd = doc["brython_div"]
+    bd.clear()
+Ace1 = ace.Editor(editor_id="kw_editor1", console_id="kw_console1", container_id="kw__container1", storage_id="kw_py_src1" )
+# 從 gist 取出程式碼後, 放入 editor 作為 default 程式
+def run1():
+    # 利用 get 取下 src 變數值
+    try:
+        url = doc.query["src"]
+    except:
+        url = "https://gist.githubusercontent.com/mdecourse/0229a8a017091476a79700b8a190f185/raw/c3a6deaf717f8f2739a4b1392a5ab10936e9693a/from_1_add_to_10_1.py"
+    prog = open(url).read()
+
+    # 將程式載入編輯區
+    Ace1.editor.setValue(prog)
+    Ace1.editor.scrollToRow(0)
+    Ace1.editor.gotoLine(0)
+    # 直接執行程式
+    #ns = {'__name__':'__main__'}
+    #exec(prog, ns)
+    # 按下 run 按鈕
+    Ace1.run()
+
+# 執行程式, 顯示輸出結果與清除輸出結果及對應按鈕綁定
+doc['kw_run1'].bind('click', Ace1.run)
+doc['kw_show_console1'].bind('click', Ace1.show_console)
+doc['kw_clear_console1'].bind('click', Ace1.clear_console)
+doc['clear_bd1'].bind('click', clear_bd1)
+# 呼叫函式執行
+run1()
+</script>
+<!-- 以上為內建程式, 頁面可透過 ?src=gist_url 執行 --></p>
+<p><!-- add 1 to 100 開始 -->
+<script type="text/python3">
+from browser import document as doc
+import ace
+
+# 清除畫布
+def clear_bd1(ev):
+    bd = doc["brython_div1"]
+    bd.clear()
+
+# 利用 ace 中的 Editor 建立 Ace 物件, 其中的輸入變數分別對應到頁面中的編輯區物件
+Ace2 = ace.Editor(editor_id="kw_editor1", console_id="kw_console1", container_id="kw__container1", storage_id="kw_py_src1" )
+
+class button2:
+    def __init__(self, url):
+        self.url = url
+
+    # 記得加入 event 輸入變數
+    def do(self,ev):
+        Ace2.editor.setValue(open(self.url).read())
+        Ace2.editor.scrollToRow(0)
+        Ace2.editor.gotoLine(0)
+        Ace2.run()
+
+add1to100_url = "https://gist.githubusercontent.com/mdecourse/0229a8a017091476a79700b8a190f185/raw/c48e37714f055c3a0027cbfef59e442a6ef659b9/from_1_add_to_100_1.py"
+add1to100 = button2(add1to100_url)
+doc["add1to100"].bind('click', add1to100.do)
+################################# p261 start 
+p261_url = "https://gist.githubusercontent.com/mdecourse/2f56974a40da7a218dbaef376a5b4ca4/raw/980606effcd29635307d6474718cd4a7ef016747/p261.py"
+p261 = button2(p261_url)
+doc["p261"].bind('click', p261.do)
+################################## p261 end
+################################## rocflag start
+rocflag_url = "https://gist.githubusercontent.com/mdecourse/2f56974a40da7a218dbaef376a5b4ca4/raw/03dd57e75b6b5be2b3d64c4fd15758e80cb9bf36/roc_flag.py"
+rocflag = button2(rocflag_url)
+doc["rocflag"].bind("click", rocflag.do)
+################################## rocflag end
+################################## procflag start
+procflag_url = "https://gist.githubusercontent.com/mdecourse/2f56974a40da7a218dbaef376a5b4ca4/raw/03dd57e75b6b5be2b3d64c4fd15758e80cb9bf36/proc_flag.py"
+procflag = button2(procflag_url)
+doc["procflag"].bind("click", procflag.do)
+################################## rocflag end
+################################## drawgrid start
+drawgrid_url = "https://gist.githubusercontent.com/mdecourse/2f56974a40da7a218dbaef376a5b4ca4/raw/070f424f2e9a99617009af216762163f66628e6d/draw_grid.py"
+drawgrid = button2(drawgrid_url)
+doc["drawgrid"].bind("click", drawgrid.do)
+################################## drawgrid end
+################################## grid_rect start
+grid_rect_url = "https://gist.githubusercontent.com/mdecourse/2f56974a40da7a218dbaef376a5b4ca4/raw/f3683ed24646f63625b616e9cb8e61a9a08ae9be/draw_grid_random_rect.py"
+grid_rect = button2(grid_rect_url)
+doc["grid_rect"].bind("click", grid_rect.do)
+################################## grid_rect end
+################################## rect_walk start
+rect_walk_url = "https://gist.githubusercontent.com/mdecourse/2f56974a40da7a218dbaef376a5b4ca4/raw/fdf9749488a59f00c2398aede8b6cbe8c0ed5d81/rect_walk.py"
+rect_walk = button2(rect_walk_url)
+doc["rect_walk"].bind("click", rect_walk.do)
+################################## rect_walk end
+################################## rect_walk start
+rect_u_walk_url = "https://gist.githubusercontent.com/mdecourse/2f56974a40da7a218dbaef376a5b4ca4/raw/63645d3f5823fd22bdb02e840e46e551afee4087/rect_u_walk.py"
+rect_u_walk = button2(rect_u_walk_url)
+doc["rect_u_walk"].bind("click", rect_u_walk.do)
+################################## rect_walk end
+################################## rect_rev_u_walk start
+rect_rev_u_walk_url = "https://gist.githubusercontent.com/mdecourse/2f56974a40da7a218dbaef376a5b4ca4/raw/165e7792091d4b91b9923592242bfaf28258a719/rect_rev_u_walk.py"
+rect_rev_u_walk = button2(rect_rev_u_walk_url)
+doc["rect_rev_u_walk"].bind("click", rect_rev_u_walk.do)
+################################## rect_rev_u_walk end
+################################## single green chasing red start
+sgcr_url = "https://gist.githubusercontent.com/mdecourse/2f56974a40da7a218dbaef376a5b4ca4/raw/9f7c1cda3a51b061cde00d104054fb3ce19ffd1a/single_green_chasing_red.py"
+sgcr = button2(sgcr_url)
+doc["sgcr"].bind("click", sgcr.do)
+################################## single green chasing red end
+################################## chasing 5 red rect start
+# execute only one time
+#cfrr_url = "https://gist.githubusercontent.com/mdecourse/2f56974a40da7a218dbaef376a5b4ca4/raw/c43844d62a0bd7eb6617d5222ba93b5de033a63f/chasing_5_red_rect.py"
+# continuously execution
+cfrr_url = "https://gist.githubusercontent.com/mdecourse/2f56974a40da7a218dbaef376a5b4ca4/raw/7e0563617649a2532ed0fc903858e135cbcedcd0/chasing_5_red_rect.py"
+cfrr = button2(cfrr_url)
+doc["cfrr"].bind("click", cfrr.do)
+################################## chasing 5 red rect end
+################################## usaflag start
+usaflag_url = "https://gist.githubusercontent.com/mdecourse/2f56974a40da7a218dbaef376a5b4ca4/raw/144b62fa07987d5ab6f369ae3661c645405e1872/usaflag.py"
+usaflag = button2(usaflag_url)
+doc["usaflag"].bind("click", usaflag.do)
+################################## usaflag end
+################################## snake start
+snake_url = "https://gist.githubusercontent.com/mdecourse/d55158478f4f8fcbfedd455f8be8c7b6/raw/f29309745a98687ed5c41cf90d28ef25a1e48dd4/snake_brython_div.py"
+snake = button2(snake_url)
+doc["snake"].bind("click", snake.do)
+################################## snake end
+################################## bsnake start
+bsnake_url = "https://gist.githubusercontent.com/mdecourse/2a8f213b6858a40481d17556c8a2fe86/raw/0a4a824493865dc7cf56977d03c9438d002b4268/kmlo_snakey.py"
+bsnake = button2(bsnake_url)
+doc["bsnake"].bind("click", bsnake.do)
+################################## bsnake end
+################################## auto_guess start
+auto_guess_url = "https://gist.githubusercontent.com/mdecourse/05930b1775b77293523b59b1bbb43e57/raw/cb022783696ed8f2e8050f1427a05e652d5fa686/auto_guess.py"
+auto_guess = button2(auto_guess_url)
+doc["auto_guess"].bind("click", auto_guess.do)
+################################## auto_guess end
+################################## ball start
+ball_url = "https://gist.githubusercontent.com/mdecourse/05930b1775b77293523b59b1bbb43e57/raw/cb022783696ed8f2e8050f1427a05e652d5fa686/ball.py"
+ball = button2(ball_url)
+doc["ball"].bind("click", ball.do)
+################################## ball end
+################################## bezier start
+bezier_url = "https://gist.githubusercontent.com/mdecourse/05930b1775b77293523b59b1bbb43e57/raw/79794cbd97d0846e2c9df14d54118d5e00a97a22/bezier.py"
+bezier = button2(bezier_url)
+doc["bezier"].bind("click", bezier.do)
+################################## bezier end
+################################## big_lotto start
+big_lotto_url = "https://gist.githubusercontent.com/mdecourse/05930b1775b77293523b59b1bbb43e57/raw/cb022783696ed8f2e8050f1427a05e652d5fa686/big_lotto.py"
+big_lotto = button2(big_lotto_url)
+doc["big_lotto"].bind("click", big_lotto.do)
+################################## big_lotto end
+################################## brython_kw start
+brython_kw_url = "https://gist.githubusercontent.com/mdecourse/05930b1775b77293523b59b1bbb43e57/raw/cb022783696ed8f2e8050f1427a05e652d5fa686/brython_kw.py"
+brython_kw = button2(brython_kw_url)
+doc["brython_kw"].bind("click", brython_kw.do)
+################################## brython_kw end
+################################## bunny start
+bunny_url = "https://gist.githubusercontent.com/mdecourse/05930b1775b77293523b59b1bbb43e57/raw/cb022783696ed8f2e8050f1427a05e652d5fa686/bunny.py"
+bunny = button2(bunny_url)
+doc["bunny"].bind("click", bunny.do)
+################################## bunny end
+################################## cango_spur start
+cango_spur_url = "https://gist.githubusercontent.com/mdecourse/05930b1775b77293523b59b1bbb43e57/raw/cb022783696ed8f2e8050f1427a05e652d5fa686/cango_spur.py"
+cango_spur = button2(cango_spur_url)
+doc["cango_spur"].bind("click", cango_spur.do)
+################################## cango_spur end
+################################## cango_spur1 start
+cango_spur1_url = "https://gist.githubusercontent.com/mdecourse/05930b1775b77293523b59b1bbb43e57/raw/cb022783696ed8f2e8050f1427a05e652d5fa686/cango_spur1.py"
+cango_spur1 = button2(cango_spur1_url)
+doc["cango_spur1"].bind("click", cango_spur1.do)
+################################## cango_spur1 end
+################################## cango_three_gears start
+cango_three_gears_url = "https://gist.githubusercontent.com/mdecourse/05930b1775b77293523b59b1bbb43e57/raw/cb022783696ed8f2e8050f1427a05e652d5fa686/cango_three_gears.py"
+cango_three_gears = button2(cango_three_gears_url)
+doc["cango_three_gears"].bind("click", cango_three_gears.do)
+################################## cango_three_gears end
+################################## clear start
+clear_url = "https://gist.githubusercontent.com/mdecourse/05930b1775b77293523b59b1bbb43e57/raw/cb022783696ed8f2e8050f1427a05e652d5fa686/clear.py"
+clear = button2(clear_url)
+doc["clear"].bind("click", clear.do)
+################################## clear end
+################################## clock start
+clock_url = "https://gist.githubusercontent.com/mdecourse/05930b1775b77293523b59b1bbb43e57/raw/cb022783696ed8f2e8050f1427a05e652d5fa686/clock.py"
+clock = button2(clock_url)
+doc["clock"].bind("click", clock.do)
+################################## clock end
+################################## convert_temp start
+convert_temp_url = "https://gist.githubusercontent.com/mdecourse/05930b1775b77293523b59b1bbb43e57/raw/cb022783696ed8f2e8050f1427a05e652d5fa686/convert_temp.py"
+convert_temp = button2(convert_temp_url)
+doc["convert_temp"].bind("click", convert_temp.do)
+################################## convert_temp end
+################################## display_stl start
+display_stl_url = "https://gist.githubusercontent.com/mdecourse/05930b1775b77293523b59b1bbb43e57/raw/cb022783696ed8f2e8050f1427a05e652d5fa686/display_stl.py"
+display_stl = button2(display_stl_url)
+doc["display_stl"].bind("click", display_stl.do)
+################################## display_stl end
+################################## draw start
+draw_url = "https://gist.githubusercontent.com/mdecourse/05930b1775b77293523b59b1bbb43e57/raw/cb022783696ed8f2e8050f1427a05e652d5fa686/draw.py"
+draw = button2(draw_url)
+doc["draw"].bind("click", draw.do)
+################################## draw end
+################################## ex1 start
+ex1_url = "https://gist.githubusercontent.com/mdecourse/05930b1775b77293523b59b1bbb43e57/raw/cb022783696ed8f2e8050f1427a05e652d5fa686/ex1.py"
+ex1 = button2(ex1_url)
+doc["ex1"].bind("click", ex1.do)
+################################## ex1 end
+################################## ex2 start
+ex2_url = "https://gist.githubusercontent.com/mdecourse/05930b1775b77293523b59b1bbb43e57/raw/cb022783696ed8f2e8050f1427a05e652d5fa686/ex2.py"
+ex2 = button2(ex2_url)
+doc["ex2"].bind("click", ex2.do)
+################################## ex2 end
+################################## ex3 start
+ex3_url = "https://gist.githubusercontent.com/mdecourse/05930b1775b77293523b59b1bbb43e57/raw/cb022783696ed8f2e8050f1427a05e652d5fa686/ex3.py"
+ex3 = button2(ex3_url)
+doc["ex3"].bind("click", ex3.do)
+################################## ex3 end
+################################## ex4 start
+ex4_url = "https://gist.githubusercontent.com/mdecourse/05930b1775b77293523b59b1bbb43e57/raw/cb022783696ed8f2e8050f1427a05e652d5fa686/ex4.py"
+ex4 = button2(ex4_url)
+doc["ex4"].bind("click", ex4.do)
+################################## ex4 end
+################################## fourbar start
+fourbar_url = "https://gist.githubusercontent.com/mdecourse/05930b1775b77293523b59b1bbb43e57/raw/fa232853da824f6dd5ae1f61a96543e6106c04b5/fourbar.py"
+fourbar = button2(fourbar_url)
+doc["fourbar"].bind("click", fourbar.do)
+################################## fourbar end
+################################## guess_a_number start
+guess_a_number_url = "https://gist.githubusercontent.com/mdecourse/05930b1775b77293523b59b1bbb43e57/raw/cb022783696ed8f2e8050f1427a05e652d5fa686/guess_a_number.py"
+guess_a_number = button2(guess_a_number_url)
+doc["guess_a_number"].bind("click", guess_a_number.do)
+################################## guess_a_number end
+################################## hw1_1 start
+hw1_1_url = "https://gist.githubusercontent.com/mdecourse/05930b1775b77293523b59b1bbb43e57/raw/cb022783696ed8f2e8050f1427a05e652d5fa686/hw1-1.py"
+hw1_1 = button2(hw1_1_url)
+doc["hw1_1"].bind("click", hw1_1.do)
+################################## hw1_1 end
+################################## hw1_2 start
+hw1_2_url = "https://gist.githubusercontent.com/mdecourse/05930b1775b77293523b59b1bbb43e57/raw/cb022783696ed8f2e8050f1427a05e652d5fa686/hw1-2.py"
+hw1_2 = button2(hw1_2_url)
+doc["hw1_2"].bind("click", hw1_2.do)
+################################## hw1-2 end
+################################## knova1 start
+knova1_url = "https://gist.githubusercontent.com/mdecourse/05930b1775b77293523b59b1bbb43e57/raw/cb022783696ed8f2e8050f1427a05e652d5fa686/konva1.py"
+knova1 = button2(knova1_url)
+doc["knova1"].bind("click", knova1.do)
+################################## knova1 end
+################################## power_lotto start
+power_lotto_url = "https://gist.githubusercontent.com/mdecourse/05930b1775b77293523b59b1bbb43e57/raw/cb022783696ed8f2e8050f1427a05e652d5fa686/power_lotto.py"
+power_lotto = button2(power_lotto_url)
+doc["power_lotto"].bind("click", power_lotto.do)
+################################## power_lotto end
+################################## spur start
+spur_url = "https://gist.githubusercontent.com/mdecourse/05930b1775b77293523b59b1bbb43e57/raw/e6d0cc9302f7b43bd36321d69c2433bec2cbcfd4/spur.py"
+spur = button2(spur_url)
+doc["spur"].bind("click", spur.do)
+################################## spur end
+################################## spur_w_form start
+spur_w_form_url = "https://gist.githubusercontent.com/mdecourse/05930b1775b77293523b59b1bbb43e57/raw/e6d0cc9302f7b43bd36321d69c2433bec2cbcfd4/spur_w_form.py"
+spur_w_form = button2(spur_w_form_url)
+doc["spur_w_form"].bind("click", spur_w_form.do)
+################################## spur_w_form end
+################################## stl_binary_ascii start
+stl_binary_ascii_url = "https://gist.githubusercontent.com/mdecourse/05930b1775b77293523b59b1bbb43e57/raw/cb022783696ed8f2e8050f1427a05e652d5fa686/stl_binary_ascii.py"
+stl_binary_ascii = button2(stl_binary_ascii_url)
+doc["stl_binary_ascii"].bind("click", stl_binary_ascii.do)
+################################## stl_binary_ascii end
+################################## stl_writer start
+stl_writer_url = "https://gist.githubusercontent.com/mdecourse/05930b1775b77293523b59b1bbb43e57/raw/cb022783696ed8f2e8050f1427a05e652d5fa686/stl_writer.py"
+stl_writer = button2(stl_writer_url)
+doc["stl_writer"].bind("click", stl_writer.do)
+################################## stl_writer end
+################################## turtle1 start
+turtle1_url = "https://gist.githubusercontent.com/mdecourse/05930b1775b77293523b59b1bbb43e57/raw/cb022783696ed8f2e8050f1427a05e652d5fa686/turtle1.py"
+turtle1 = button2(turtle1_url)
+doc["turtle1"].bind("click", turtle1.do)
+################################## turtle1 end
+################################## turtle2 start
+turtle2_url = "https://gist.githubusercontent.com/mdecourse/05930b1775b77293523b59b1bbb43e57/raw/cb022783696ed8f2e8050f1427a05e652d5fa686/turtle2.py"
+turtle2 = button2(turtle2_url)
+doc["turtle2"].bind("click", turtle2.do)
+################################## turtle2 end
+################################## turtle3 start
+turtle3_url = "https://gist.githubusercontent.com/mdecourse/05930b1775b77293523b59b1bbb43e57/raw/cb022783696ed8f2e8050f1427a05e652d5fa686/turtle3.py"
+turtle3 = button2(turtle3_url)
+doc["turtle3"].bind("click", turtle3.do)
+################################## turtle3 end
+################################## turtle4 start
+turtle4_url = "https://gist.githubusercontent.com/mdecourse/05930b1775b77293523b59b1bbb43e57/raw/cb022783696ed8f2e8050f1427a05e652d5fa686/turtle4.py"
+turtle4 = button2(turtle4_url)
+doc["turtle4"].bind("click", turtle4.do)
+################################## turtle4 end
+################################## turtle5 start
+turtle5_url = "https://gist.githubusercontent.com/mdecourse/05930b1775b77293523b59b1bbb43e57/raw/cb022783696ed8f2e8050f1427a05e652d5fa686/turtle5.py"
+turtle5 = button2(turtle5_url)
+doc["turtle5"].bind("click", turtle5.do)
+################################## turtle5 end
+################################## turtle6 start
+turtle6_url = "https://gist.githubusercontent.com/mdecourse/05930b1775b77293523b59b1bbb43e57/raw/cb022783696ed8f2e8050f1427a05e652d5fa686/turtle6.py"
+turtle6 = button2(turtle6_url)
+doc["turtle6"].bind("click", turtle6.do)
+################################## turtle6 end
+################################## turtle7 start
+turtle7_url = "https://gist.githubusercontent.com/mdecourse/05930b1775b77293523b59b1bbb43e57/raw/cb022783696ed8f2e8050f1427a05e652d5fa686/turtle7.py"
+turtle7 = button2(turtle7_url)
+doc["turtle7"].bind("click", turtle7.do)
+################################## turtle7 end
+################################## turtle8 start
+turtle8_url = "https://gist.githubusercontent.com/mdecourse/05930b1775b77293523b59b1bbb43e57/raw/cb022783696ed8f2e8050f1427a05e652d5fa686/turtle8.py"
+turtle8 = button2(turtle8_url)
+doc["turtle8"].bind("click", turtle8.do)
+################################## turtle8 end
+################################## twl_link_ik start
+twl_link_ik_url = "https://gist.githubusercontent.com/mdecourse/05930b1775b77293523b59b1bbb43e57/raw/cb022783696ed8f2e8050f1427a05e652d5fa686/twl_link_ik.py"
+twl_link_ik = button2(twl_link_ik_url)
+doc["twl_link_ik"].bind("click", twl_link_ik.do)
+################################## twl_link_ik end
+################################## webcam start
+webcam_url = "https://gist.githubusercontent.com/mdecourse/05930b1775b77293523b59b1bbb43e57/raw/cb022783696ed8f2e8050f1427a05e652d5fa686/webcam.py"
+webcam = button2(webcam_url)
+doc["webcam"].bind("click", webcam.do)
+################################## webcam end
+################################## ycqsort start
+ycqsort_url = "https://gist.githubusercontent.com/mdecourse/05930b1775b77293523b59b1bbb43e57/raw/cb022783696ed8f2e8050f1427a05e652d5fa686/ycqsort.py"
+ycqsort = button2(ycqsort_url)
+doc["ycqsort"].bind("click", ycqsort.do)
+################################## ycqsort end
+################################## fibo start
+fibo_url = "https://gist.githubusercontent.com/mdecourse/05930b1775b77293523b59b1bbb43e57/raw/fa232853da824f6dd5ae1f61a96543e6106c04b5/fibo_ex.py"
+fibo = button2(fibo_url)
+doc["fibo"].bind("click", fibo.do)
+################################## fibo end
+################################## deepmerge start
+deepmerge_url = "https://gist.githubusercontent.com/mdecourse/05930b1775b77293523b59b1bbb43e57/raw/e89e0f978a015bf9361270a389a5b84e6244ed5b/deepmerge.py"
+deepmerge = button2(deepmerge_url)
+doc["deepmerge"].bind("click", deepmerge.do)
+################################## deepmerge end
+################################## merge3 start
+merge3_url = "https://gist.githubusercontent.com/mdecourse/05930b1775b77293523b59b1bbb43e57/raw/8a7452a451e57e4de720f22fc2fc8abd6aac0bc8/merge3.py"
+merge3 = button2(merge3_url)
+doc["merge3"].bind("click", merge3.do)
+################################## merge3 end
+################################## websocket start
+websocket_url = "https://gist.githubusercontent.com/mdecourse/05930b1775b77293523b59b1bbb43e57/raw/86dda666271974d6c520086700db14a2124f0ae8/websocket.py"
+websocket = button2(websocket_url)
+doc["websocket"].bind("click", websocket.do)
+################################## websocket end
+################################## keycode start
+keycode_url = "https://gist.githubusercontent.com/mdecourse/05930b1775b77293523b59b1bbb43e57/raw/ba159101705aaf8ba182a442b455425a48a85610/keycode.py"
+keycode = button2(keycode_url)
+doc["keycode"].bind("click", keycode.do)
+################################## keycode end
+################################## tetris start
+tetris_url = "https://gist.githubusercontent.com/mdecourse/05930b1775b77293523b59b1bbb43e57/raw/738223b424c3f5f12961070aa8a75185177420b6/pygame_to_brython_tetris.py"
+tetris = button2(tetris_url)
+doc["tetris"].bind("click", tetris.do)
+################################## tetris end
+################################## auto tetris start
+auto_tetris_url = "https://gist.githubusercontent.com/mdecourse/05930b1775b77293523b59b1bbb43e57/raw/45740f32e5c3ee292a88df8a47f46e60039b77f9/pygame_to_brython_tetris_ai.py"
+auto_tetris = button2(auto_tetris_url)
+doc["auto_tetris"].bind("click", auto_tetris.do)
+################################## auto tetris end
+</script>
+</p>
+<h2>Game</h2>
+<p><a href="https://link.springer.com/book/10.1007/978-1-4302-5801-8">Advanced Game Design with HTML5 and JavaScript</a> (2015)</p>
+<h2>Simulator</h2>
+<p><a href="https://sim.firialabs.com/">CodeSpace Development Environment (firialabs.com)</a></p>
+<p style="padding-left: 30px;"><a href="https://groups.google.com/g/brython/c/0kA4pM1YirE">https://groups.google.com/g/brython/c/0kA4pM1YirE</a></p>
+<h2>Algorithms</h2>
+<p><a href="https://link.springer.com/book/10.1007/978-1-4302-3238-4">Python Algorithms</a> (2010)</p>
+<p><a href="https://link.springer.com/book/10.1007/978-1-4842-0055-1">Python Algorithms Second Edition</a> (2014)</p>
+<h1>CPython</h1>
+<p>比對兩份資料, 列出差異:</p>
+<p style="padding-left: 30px;">數列應用</p>
+<p style="padding-left: 30px;">for 重複迴圈</p>
+<p style="padding-left: 30px;">以 utf-8 編碼讀出檔案內容</p>
+<p style="padding-left: 30px;">splitlines() 函式逐行將檔案內容放入數列</p>
+<p style="padding-left: 30px;">if 判斷式應用</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># 兩份資料所在目錄字串
+studlist_path = "Y:/studlist/2022spring/"
+score_path = "Y:/score/2022/spring/"
+# score 區檔案套稿字串
+score_file_temp = "_stud_list.txt"
+# 班級代號數列
+classes = ["1a", "2a", "2b", "5j"]
+
+# 利用 for 迴圈, 逐班進行處理
+for i in classes:
+    # read data from studlist
+    # 以 utf-8 編碼開啟檔案
+    with open(studlist_path + i + ".txt", encoding="utf-8") as f:
+        studlist_data = f.read().splitlines()
+    #print(studlist_data)
+    with open(score_path + i + "/" + i + score_file_temp, encoding="utf-8") as f:
+        score_list_data = f.read().splitlines()
+    #print(score_list_data)
+    for i in studlist_data:
+        stud_num = i.split("\t")[0]
+        #print(stud_num)
+        # 列出已經不在評分名單中的學號
+        if stud_num not in score_list_data:
+            print(stud_num)</pre>
+<p>MS Teams assignment downloaded directory rename:</p>
+<p style="padding-left: 30px;">os 模組的 walk() 應用</p>
+<p style="padding-left: 30px;">next() 應用</p>
+<p style="padding-left: 30px;">讀取檔案內容</p>
+<p style="padding-left: 30px;">splitlines() 將各行資料納入數列</p>
+<p style="padding-left: 30px;">dictionary 資料結構應用</p>
+<p style="padding-left: 30px;">for 重複迴圈應用</p>
+<p style="padding-left: 30px;">try 與 except 應用</p>
+<p style="padding-left: 30px;">os 模組的 rename() 應用</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import os
+
+'''
+MS Teams student submitted assignment files can be downloaded through SharePoint App, but directory named as student name,
+we may use this program to rename directory into student number
+'''
+# from https://stackoverflow.com/questions/141291/how-to-list-only-top-level-directories-in-python
+# rename directory: os.rename(source,destination)
+stud_name_list = next(os.walk('./cd2022_student'))[1]
+#print(stud_name_list)
+# read data from wcm2022_5j_stud_name_email.txt
+# firstname \t lastname \t email
+with open("cd2022_stud_name_email.txt", encoding="utf-8") as f:
+    data = f.read().splitlines()
+# set stud_name and stud_num into dict
+stud_dict = {}
+# skip the first line
+for i in data[1:]:
+    line = i.split("\t")
+    firstname = line[0]
+    lastname = line[1]
+    # get student number from email
+    stud_num = line[2].split("@")[0]
+    stud_dict[lastname+firstname] = stud_num
+print(stud_dict)
+dir_pre = './cd2022_student/'
+# loop stud_name_list and rename into stud_num
+for i in stud_name_list:
+    try:
+        os.rename(dir_pre+i, dir_pre+stud_dict[i])
+        print("rename ", i, " into ", stud_dict[i])
+    except:
+        print(i, "no data")
+</pre>
+<p>Use old Python to create new portable Python:</p>
+<p>gen_portable_python.py</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import urllib.request
+import os
+
+# basic files for Python installation
+py_list = ["core", "dev", "exe", "lib", "tcltk", "tools"]
+# Python version
+version = "3.10.6"
+# location for Portable Python
+path = "c:\\tmp\\Python310"
+# Python msi download URL
+ftp = "https://www.python.org/ftp/python/" + version + "/amd64/"
+extract_path = path + "\\extract"
+# create directory
+try:
+    os.mkdir(path)
+except:
+    # path exists
+    pass
+# get Python installation msi files and extract into target dir
+for i in py_list:
+    filename = i + ".msi"
+    url = ftp + filename
+    # download basic python msi file
+    urllib.request.urlretrieve(url, path+ "\\"+ filename)
+    os.system("msiexec.exe /a " + path + "\\" + i + ".msi /qb targetdir=" + extract_path)
+    # delete msi file
+    os.remove(extract_path + "\\" + i + ".msi")</pre>
+<p>search cmd to open command line window.</p>
+<p>cd to c:\tmp where gen_portable_python.py located.</p>
+<p>c:\tmp&gt;c:\old_python_path\python gen_portable_python.py</p>
+<p></p>
+<h2>PDF</h2>
+<h4>從單機程式到全球資訊網服務:</h4>
+<p><a href="https://link.springer.com/book/10.1007/978-1-4842-7107-0">Essential Computer Science</a> 是 2021 年出版的電子書, 在校園裡可以直接下載 pdf 檔案, 以下 CPython 程式套用 <a href="https://pypi.org/project/PyPDF2/">PyPDF2</a> 模組, 可以分割或合併 pdf 檔案.</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># pip install PyPDF2
+from PyPDF2 import PdfFileWriter, PdfFileReader
+import os
+
+def SplitPdf(pdfFileName, newFileName, fromPage, toPage):
+
+    """Action to split user uploaded files
+    """
+
+    pdfReader = PdfFileReader(open(pdfFileName, "rb"))
+    information = [(newFileName, fromPage, toPage)]
+    pdf_writer = PdfFileWriter()
+    pdf_writer.addPage(pdfReader.getPage(1))
+    for i in range(13, 18):
+        pdf_writer.addPage(pdfReader.getPage(i))
+    
+    for page in range(len(information)):
+        start = information[page][1]
+        end = information[page][2]
+        while start&lt;=end:
+            pdf_writer.addPage(pdfReader.getPage(start-1))
+            start+=1
+        if not os.path.exists("./"):
+            os.makedirs(savepath)
+        output_filename = '{}_{}_page_{}.pdf'.format(information[page][0], information[page][1], information[page][2])
+        with open(output_filename,'wb') as out:
+            pdf_writer.write(out)
+
+    outstring = "已經將 " + pdfFileName + " 中的第 " + str(fromPage) + " 到第 " + str(toPage) + "頁, 存為 " + output_filename
+
+    return outstring
+
+def CombinePdf(pdfFileNames, newFileName):
+
+    """Action to split user uploaded files
+    """
+    
+    # pdfFileNames is []
+    pdf_write_object = PdfFileWriter()
+
+    filenameString = ""
+    
+    for filename in pdfFileNames:
+        pdf_read_object = PdfFileReader(open(filename, "rb"))
+        filenameString += filename + ", "
+        for page in range(pdf_read_object.numPages):
+            pdf_write_object.addPage(pdf_read_object.getPage(page))
+     
+    final_file_object = open(newFileName + ".pdf", 'wb')
+    pdf_write_object.write(final_file_object)
+    final_file_object.close()
+
+    outstring = "已經將 " + filenameString+ " 合併為: "+ newFileName + ".pdf"
+
+    return outstring
+ 
+pdfFileName = "2021_Book_EssentialComputerScience.pdf"
+newFileName = "cp2022_textbook_part1.pdf"
+fromPage = 21
+toPage = 98
+SplitPdf(pdfFileName, newFileName, fromPage, toPage)
+print("done")</pre>
+<p>上列程式只能在單機執行, 假如再套用 <a href="https://flask.palletsprojects.com/en/2.1.x/">Flask</a> 全球資訊網框架. 就可以將單機程式配置在 server 上, 讓參與協同產品設計的成員可以在任何地方透過瀏覽器使用分割與合併 pdf 檔案的功能.</p>
+<p><a href="https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/yen_gm_nfu_edu_tw/EXUaz5TU5bZNsrnxUfA-CZwBvsngVpA7S4ikP9J7ueb6nw?e=i3QMBN">cp2022_CPython_pypdf2_Flask_project1.7z</a> (for cp2022 users only)</p>
+<p></p>
+<p></p>
+<h2>CAD</h2>
+<p>SolidWorks: <a href="https://www.solidworks.com/">https://www.solidworks.com/</a></p>
+<p>AutoDesk Inventor: <a href="https://www.autodesk.com/products/inventor">https://www.autodesk.com/products/inventor</a></p>
+<p>Siemens NX: <a href="https://www.plm.automation.siemens.com/global/en/products/nx/">https://www.plm.automation.siemens.com/global/en/products/nx/</a></p>
+<p>PTC Onshape: <a href="https://www.ptc.com/en/products/onshape">https://www.ptc.com/en/products/onshape</a></p>
+<p>Solvespace: <a href="https://solvespace.com">https://solvespace.com</a></p>
+<p style="padding-left: 30px;"><a href="https://github.com/solvespace/solvespace">https://github.com/solvespace/solvespace</a></p>
+<h3>Python for SW</h3>
+<p><a href="http://wcm.cycu.org:88/github/cad2020/content/HW1_SW.html">http://wcm.cycu.org:88/github/cad2020/content/HW1_SW.html</a></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import pythoncom
+import win32com.client
+import win32api
+import os
+ 
+os.system("taskkill /IM sldworks.exe /F")
+os.system("taskkill /IM sldworks_fs.exe /F")
+ 
+'''
+About DispatchEx and Dispatch Methods:
+https://stackoverflow.com/questions/18648933/using-pywin32-what-is-the-difference-between-dispatch-and-dispatchex
+Source code:
+http://pywin32.hg.sourceforge.net/hgweb/pywin32/pywin32/file/0db1b26904d5/com/win32com/src/PyIDispatch.cpp
+Doc:
+https://docs.microsoft.com/en-us/dotnet/standard/native-interop/com-callable-wrapper
+ 
+IDispatch: Provides a mechanism for late binding to type.
+IDispatchEx:
+    Interface supplied by the runtime if the class implements IExpando. The IDispatchEx interface is an extension of the IDispatch interface that, unlike IDispatch, enables enumeration, addition, deletion, and case-sensitive calling of members.
+'''
+app = win32com.client.DispatchEx("SldWorks.Application")
+#app=win32com.client.Dispatch("SldWorks.Application")
+ 
+# define var to convert variables
+def var(type, value):
+    # type needs to be string
+    # use builtin getattr() to return pythoncom.type
+    pytype = getattr(pythoncom, type)
+    return win32com.client.VARIANT(pytype, value)
+ 
+# for two-type variable convert
+# is there any three-type variant?
+def var2(type1, type2, value):
+    pytype1 = getattr(pythoncom, type1)
+    pytype2 = getattr(pythoncom, type2)
+    return win32com.client.VARIANT(pytype1|pytype2, value)
+     
+def part(app, fileName, sketchName, dimName, newDim, newFileName):
+    arg1 = var("VT_I4", 1)
+    # GetMassProperties( ((3, 1), (16387, 3)))
+    #arg1 = win32com.client.VARIANT(pythoncom.VT_I4, 1)
+    arg2 = var("VT_I4", -1)
+ 
+    # 0. need the most important obj app
+    #app=win32com.client.Dispatch("SldWorks.Application")
+    # use relative directory to open part
+    # 1. open part file, need the path of the part file (need the file name)
+    #doc=app.OpenDoc(".\\block2.SLDPRT", 1)
+    doc=app.OpenDoc(os.path.join(os.getcwd(), fileName), 1)
+    # save part as binary stl
+    # can we save part as ASCII stl as well?
+    #doc.SaveAs2(".\\block2.stl", 0, True, False)
+    # the parameter VARIANT list for SelectByID2
+    # can we automate the VARIANT conversion?
+    # 2. use the sketch to select the SKETCH (need the sketch name)
+    #SelectByID2((8, 1), (8, 1), (5, 1), (5, 1), (5, 1), (11, 1), (3, 1), (9, 1), (3, 1))
+    #arg3 = var("VT_BSTR", "Sketch1")
+    arg3 = var("VT_BSTR", sketchName)
+    arg4 = var("VT_BSTR", "SKETCH")
+    arg5 = var("VT_R8", 0)
+    arg6 = var("VT_R8", 0)
+    arg7 = var("VT_R8", 0)
+    arg8 = var("VT_BOOL", False)
+    arg9 = var("VT_I4", 0)
+    arg10 = var("VT_DISPATCH", None)
+    arg11 = var("VT_I4", 0)
+    # select Sketch1 first
+    status = doc.Extension.SelectByID2(arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11)
+    # select DIMENSION to to modify
+    # 3. use the dimension name @ sketch name @ part file name
+    # to select the DIMENSION to modify
+    #arg12 = var("VT_BSTR", "Width@Sketch1@block2.SLDPRT")
+    arg12 = var("VT_BSTR", dimName+"@"+sketchName+"@"+fileName)
+    arg13 = var("VT_BSTR", "DIMENSION")
+    status = doc.Extension.SelectByID2(arg12, arg13, arg5, arg6, arg7, arg8, arg9, arg10, arg11)
+    #Dim swDimension As SldWorks.Dimension
+    # 4. to bring out the parameter to modify, need the dimension name and 
+    # sketch name
+    #swDimension = doc.Parameter("Width@Sketch1")
+    swDimension = doc.Parameter(dimName+"@"+sketchName)
+    # the dimension unit is in meter
+    # 5. need the new value of the parameter
+    #swDimension.SystemValue = 0.50
+    swDimension.SystemValue = newDim
+    # 6. do the final house keeping process, clear selection and rebuild the part
+    sel = doc.ClearSelection2 
+    sel = True
+    status = doc.EditRebuild()
+    arg31 = var("VT_I4", 1)
+    arg32 = var2("VT_I4", "VT_BYREF", 3)
+    # 7. get the volume of the new part
+    volumn = doc.Extension.GetMassProperties(arg31, arg32)
+    #print(volumn[3]*1E9, "mm*3")
+    # 8. save the new part (need the new part file name)
+    #doc.SaveAs2(".\\block3.SLDPRT", 0, True, False)
+    doc.SaveAs2(os.path.join(os.getcwd(), "html/" + newFileName + ".SLDPRT"), 0, True, False)
+    # save jpg of part
+    doc.EditRebuild()
+    arg33 = var("VT_BSTR", "Isometric")
+    doc.ShowNamedView(arg33)
+    doc.ViewZoomtofit2()
+    doc.SaveAs3(os.path.join(os.getcwd(), "html/" + newFileName + ".jpg"), 0, 0)
+    # mm*3
+    return str(round(volumn[3]*1E9, 3)) + " mm*3"
+html = "以下零件採 SolidWorks 2017 SP 2.0 教育版繪製:&lt;br /&gt;&lt;br /&gt;&lt;table border='1' cellpadding='5'&gt;&lt;tr&gt;&lt;th&gt;Number&lt;/th&gt;&lt;th&gt;Part&lt;/th&gt;&lt;th&gt;Jpg&lt;/th&gt;&lt;th&gt;Width&lt;/th&gt;&lt;th&gt;Volume&lt;/th&gt;&lt;/tr&gt;"
+index = 0
+for i in range(1, 11):
+    dim = i*0.002
+    blockVolume = part(app, "31_step.SLDPRT", "Sketch1", "Width", dim, "31_" + str(i))
+    print("31_" + str(i) + ".SLDPRT, dim= " + str(round(dim, 3)) +", volume= " + blockVolume)
+    index += 1
+    newFileName = "31_" + str(i)
+    html += '''&lt;tr&gt;
+    &lt;td&gt;''' + str(index) +'''&lt;/td&gt;
+    &lt;td&gt;&lt;a href="./../downloads/sw_macro/html/''' + newFileName + '''.SLDPRT"&gt;''' + newFileName + '''.SLDPRT&lt;/a&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;img width="300" src="./../downloads/sw_macro/html/''' + newFileName + '''.jpg"&gt;&lt;/img&gt;&lt;/td&gt;
+    &lt;td&gt;''' + str(round(dim*1000, 2)) + ''' mm &lt;/td&gt;
+    &lt;td&gt;''' + blockVolume + '''&lt;/td&gt;
+    &lt;/tr&gt;
+    '''
+html += "&lt;/table&gt;"
+# save part.html
+with open("./html/part.html", "w", encoding="utf-8") as f:
+     f.write(html)
+      
+'''
+for assembly
+        swModelDocExt.SelectByID2("", "EDGE", -0.439825991092107, 7.07350481263802E-02, 0.40982045578545, true, 2, null, 0);
+        swModelDocExt.SelectByID2("", "EDGE", -0.219003008311574, 0.073085842475507, 0.549481823985616, true, 4, null, 0);
+        swModelDocExt.SelectByID2("Part-3@AssemModel", "COMPONENT", 0, 0, 0, true, 1, null, 0);
+        swFeature = (Feature)swFeatureManager.FeatureLinearPattern2(3, 40 / 1000, 0, 0, false, true, "NULL", "NULL", false);
+        assemblyModel.ClearSelection2(true);
+'''
+os.system("taskkill /IM sldworks.exe /F")
+os.system("taskkill /IM sldworks_fs.exe /F")
+# now the SolidWorks is embedding</pre>
+<p></p>
+<h3>Python for INV</h3>
+<p>針對 HW1 使用 AutoDesk Inventor 2019 教育版繪零件圖者, 可以利用下列 Python 程式修改零件參數, 取零件影像圖並計算零件體積:</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import pythoncom
+import win32com.client
+import win32api
+import os
+ 
+# Open Inventor
+invApp = win32com.client.Dispatch("Inventor.Application")
+#print(invApp)
+invApp.Visible = True
+ 
+invApp.SilentOperation = True
+ 
+# Set location of assembly
+partName = 'C:/tmp/Part1.ipt'
+ 
+# Open the model
+oDoc = invApp.Documents.Open(partName)
+# use UserParameters to access the user parameters
+#oUserParams = oDoc.ComponentDefinition.Parameters.UserParameters
+#oNewParam = oUserParams.AddByExpression("x", "9", "mm")
+# use Item() to get the model parameter named "d0"
+d0 = oDoc.ComponentDefinition.Parameters.Item("d0")
+# Expression can add dimension unit
+#d0.Expression = "2 cm"
+# Value use the default system unit: cm
+d0.Value = 2
+# use Update() method to get the new part volume
+oDoc.Update()
+# fit the active view and save the part image
+invApp.ActiveView.Fit(True)
+oDoc.SaveAs("C:/tmp/Part1.png", True)
+print(oDoc.ComponentDefinition.MassProperties.Volume)
+#invApp.Quit()</pre>
+<p></p>
+<h3>Python for NX</h3>
+<p>針對 HW1 使用 NX12.0.2 教育版繪零件圖者, 可以利用下列 Python 程式修改零件參數, 取零件影像圖並計算零件體積:</p>
+<p>參考零件: <a href="http://wcm.cycu.org:88/github/cad2020/downloads/nx12/journal/block.prt">block.prt</a></p>
+<p><a href="https://docs.plm.automation.siemens.com/data_services/resources/nx/12/nx_api/custom/en_US/nxopen_python_ref/index.html">NX12 NXOpen Python API Reference</a></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># nx_open_part.py
+# 導入 NXOpen
+import NXOpen
+import NXOpen.UF
+import NXOpen.Gateway
+   
+def main():
+    # 取得目前開啟的工作階段
+    theSession = NXOpen.Session.GetSession()
+    theUfSession = NXOpen.UF.UFSession.GetUFSession()
+      
+    # 建立 ListingWindow
+    listWin= theSession.ListingWindow
+    # 開啟零件檔案
+    basePart1 = theSession.Parts.OpenBaseDisplay("c:/tmp/block.prt")
+    workPart = theSession.Parts.Work
+    unit1 = workPart.UnitCollection.FindObject("MilliMeter")
+    # height
+    p7 = workPart.Expressions.FindObject("p7")
+    # width
+    p8 = workPart.Expressions.FindObject("p8")
+    # length
+    p9 = workPart.Expressions.FindObject("p9")
+    workPart.Expressions.EditWithUnits(p7, unit1, "30")
+    workPart.Expressions.EditWithUnits(p8, unit1, "60")
+    workPart.Expressions.EditWithUnits(p9, unit1, "90")
+    theSession.UpdateManager.DoUpdate(0)
+    #saveStatus1 = workPart.SaveAs("c:/tmp/block_new.prt")
+    #saveStatus1.Dispose()
+    # initialize list to hold bodies
+    theBodyTags = []
+   
+    for x in workPart.Bodies:
+        if x.IsSolidBody:
+            theBodyTags.append(x.Tag)
+      
+    # 準備輸出 ASCII 格式 STL 零件檔案
+    sTLCreator1 = theSession.DexManager.CreateStlCreator()
+    sTLCreator1.AutoNormalGen = True
+    sTLCreator1.ChordalTol = 0.08
+    sTLCreator1.AdjacencyTol = 0.08
+    sTLCreator1.OutputFile = "C:\\tmp\\block_ascii.stl"
+    # Binary STL: NXOpen.STLCreatorOutputTypeEnum.Binary
+    sTLCreator1.OutputType = NXOpen.STLCreatorOutputTypeEnum.Text
+    # 已知 body1 命名
+    body1 = workPart.Bodies.FindObject("EXTRUDE(2)")
+    added1 = sTLCreator1.ExportSelectionBlock.Add(body1)
+    nXObject1 = sTLCreator1.Commit()
+    sTLCreator1.Destroy()
+  
+    # 開啟所建立的 ListingWindow
+    listWin.Open()
+    listWin.WriteLine("number of solid bodies: " + str(len(theBodyTags)))
+   
+    (massProps, Stats) = theUfSession.Modeling.AskMassProps3d(theBodyTags, len(theBodyTags), 1, 4, .03, 1, [0.99,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0])
+    listWin.WriteLine("units: kg, mm")
+    listWin.WriteLine("surface area: " + str(massProps[0]))
+    listWin.WriteLine("volume: " + str(massProps[1]*1E9))
+    # 在 ListingWindow 中寫入字串
+    listWin.WriteLine("Hello, NXOpen")
+    listWin.Close()
+     
+    # 將零件檔案 fit 之後, export 出 png 檔案
+    theUI = NXOpen.UI.GetUI()
+    imageExportBuilder1 = theUI.CreateImageExportBuilder()
+ 
+    custombackgroundcolor1 = [None] * 3
+    custombackgroundcolor1[0] = 1.0
+    custombackgroundcolor1[1] = 1.0
+    custombackgroundcolor1[2] = 1.0
+ 
+    imageExportBuilder1.SetCustomBackgroundColor(custombackgroundcolor1)
+    imageExportBuilder1.FileFormat = NXOpen.Gateway.ImageExportBuilder.FileFormats.Png
+    imageExportBuilder1.FileName = "c:\\tmp\\block.png"
+ 
+    imageExportBuilder1.BackgroundOption = NXOpen.Gateway.ImageExportBuilder.BackgroundOptions.Original
+ 
+    imageExportBuilder1.EnhanceEdges = False
+    imageExportBuilder1.RegionMode = False
+    # fit view 後 commit export png
+    workPart.ModelingViews.WorkView.Fit()
+    nXObject6 = imageExportBuilder1.Commit()
+ 
+    imageExportBuilder1.Destroy()
+      
+if __name__ == "__main__":
+    main()</pre>
+<p></p>
+<h2>CAE</h2>
+<h4>Mechatronic control system design and simulation:</h4>
+<h4 style="padding-left: 30px;">Coppeliasim:</h4>
+<p style="padding-left: 60px;"><a href="https://www.coppeliarobotics.com/">https://www.coppeliarobotics.com/</a></p>
+<p style="padding-left: 90px;"><a href="https://www.coppeliarobotics.com/helpFiles/en/remoteApiFunctionsPython.htm">https://www.coppeliarobotics.com/helpFiles/en/remoteApiFunctionsPython.htm</a></p>
+<p style="padding-left: 90px;"><a href="https://www.coppeliarobotics.com/helpFiles/en/zmqRemoteApiOverview.htm">https://www.coppeliarobotics.com/helpFiles/en/zmqRemoteApiOverview.htm</a></p>
+<p style="padding-left: 90px;"><a href="https://github.com/CoppeliaRobotics">https://github.com/CoppeliaRobotics</a></p>
+<h4 style="padding-left: 30px;">Webots:</h4>
+<p style="padding-left: 60px;"><a href="https://cyberbotics.com/">https://cyberbotics.com/</a></p>
+<p style="padding-left: 60px;"><a href="https://github.com/cyberbotics/webots">https://github.com/cyberbotics/webots</a></p>
+<h4>FEM:</h4>
+<h4 style="padding-left: 30px;">sfepy:</h4>
+<p style="padding-left: 60px;"><a href="https://sfepy.org/doc-devel">https://sfepy.org/doc-devel</a></p>
+<p style="padding-left: 60px;"><a href="https://github.com/sfepy/sfepy">https://github.com/sfepy/sfepy</a></p>
+<p style="padding-left: 60px;"><a href="https://sfepy.org/doc-devel/examples/gallery.html">https://sfepy.org/doc-devel/examples/gallery.html</a></p>
+<h4 style="padding-left: 30px;">Netgen/NGSolve:</h4>
+<p style="padding-left: 60px;"><a href="https://www.math.uzh.ch/compmath/fileadmin/user/stas/compmath/Abschlussarbeiten/Arnold_Noam/myManual.pdf">https://www.math.uzh.ch/compmath/fileadmin/user/stas/compmath/Abschlussarbeiten/Arnold_Noam/myManual.pdf</a></p>
+<p style="padding-left: 60px;"><a href="https://ngsolve.org/">https://ngsolve.org/</a></p>
+<p style="padding-left: 60px;"><a href="https://github.com/NGSolve/ngsolve">https://github.com/NGSolve/ngsolve</a></p>
+<p style="padding-left: 60px;"><a href="https://github.com/NGSolve/netgen">https://github.com/NGSolve/netgen</a></p>
+<p style="padding-left: 60px;"></p>
+<h2>BS4</h2>
+<p><a href="https://link.springer.com/book/10.1007/978-1-4842-3925-4">Website Scraping with Python</a> (2018)</p>
+<p><a href="https://github.com/mdecycu/nfulist">https://github.com/mdecycu/nfulist</a></p>
+<h2>MS Graph</h2>
+<p>Microsoft Graph client library for Python</p>
+<p><a href="https://github.com/microsoftgraph/msgraph-sdk-python-core">https://github.com/microsoftgraph/msgraph-sdk-python-core</a></p>
+<h4>MS Teams:</h4>
+<p style="padding-left: 30px;">Microsoft Teams is the ultimate hub for teamwork and intelligent communications. Built on the strength and scale of Microsoft 365 with over 120 million users, Microsoft Teams delivers chat-based collaboration, meetings, calling, and enterprise voice features.</p>
+<h4>MS Graph:</h4>
+<p style="padding-left: 30px;">Microsoft Graph makes it easy to create large numbers of teams and populate them with users and channels, by automating the creation and management of teams, channels, tabs, and apps. Microsoft Graph also lets you find and archive the teams you are no longer using. This is the same API that the Microsoft Teams Admin Center and Teams PowerShell cmdlets are built on.</p>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/KCvAhQEJmyY" title="YouTube video player" width="560"></iframe></p>
+<h4>More MS Teams related video:</h4>
+<p style="padding-left: 30px;"><a href="https://www.youtube.com/c/Microsoft365Developer/search?query=Teams">https://www.youtube.com/c/Microsoft365Developer/search?query=Teams</a></p>
+<h4>安裝模組:</h4>
+<p style="padding-left: 30px;">pip install msgraph-core azure-identity</p>
+<p>Target:</p>
+<h4>MS Graph SDK for MS Teams:</h4>
+<p style="padding-left: 30px;"><a href="https://docs.microsoft.com/en-us/graph/teams-concept-overview">https://docs.microsoft.com/en-us/graph/teams-concept-overview</a></p>
+<h4>Login: </h4>
+<p style="padding-left: 30px;"><a href="https://developer.microsoft.com/en-us/microsoft-365/dev-program">https://developer.microsoft.com/en-us/microsoft-365/dev-program</a></p>
+<h3>MS Teams</h3>
+<p><a href="https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/security-apponly-azuread">Granting access via Azure AD App-Only | Microsoft Docs</a></p>
+<p style="padding-left: 30px;">Azure Access Control (ACS), a service of Azure Active Directory (Azure AD), has been retired on November 7, 2018. This retirement does not impact the SharePoint Add-in model, which uses the <a href="https://accounts.accesscontrol.windows.net">https://accounts.accesscontrol.windows.net</a> hostname (which is not impacted by this retirement). For more information, see <a href="https://developer.microsoft.com/office/blogs/impact-of-azure-access-control-deprecation-for-sharepoint-add-ins">Impact of Azure Access Control retirement for SharePoint Add-ins</a>.</p>
+<p>Download MS Teams Student submitted files:</p>
+<ol>
+<li>Login to Onedrive.</li>
+<li>From App Launcher, select SharePoint -&gt; My sites.</li>
+<li>Search for the specific class -&gt; Site contents -&gt; Student Work -&gt; Submitted Files, click Download to download all submitted files or use Ctrl to select multiple students and click Download to download associated files.</li>
+</ol>
+<h1>cmsimde</h1>
+<p><a href="https://github.com/mdecycu/cmsimde">cmsimde</a> 是一套 Web-based content management system, 也就是基於全球資訊網的內容管理系統.</p>
+<p>由於全球資訊網頁中主要使用 html, css 與 javascript 控制網頁內容, 因此在利用 <a href="https://github.com/mdecycu/cmsimde">cmsimde</a> 管理數位內容時, 必須同時對這三種語言有一定的認識.</p>
+<h4>有關 html (html5) 請參考:</h4>
+<p style="padding-left: 30px;"><a href="https://link.springer.com/book/10.1007/978-1-4302-3862-1">HTML5 Mastery</a></p>
+<h4 style="padding-left: 30px;">假如要在網頁中嵌入 2D 物件, 請參考:</h4>
+<p style="padding-left: 60px;"><a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API</a></p>
+<h4 style="padding-left: 30px;">假如要在網頁中嵌入 3D 物件, 請參考:</h4>
+<p style="padding-left: 60px;"><a href="https://link.springer.com/book/10.1007/978-1-4302-3997-0">Beginning WebGL for HTML5</a></p>
+<h4>有關 css 請參考:</h4>
+<p style="padding-left: 30px;"><a href="https://link.springer.com/book/10.1007/978-1-4842-6294-8">Modern CSS</a></p>
+<h4>有關 Javascript 請參考:</h4>
+<p style="padding-left: 30px;"><a href="https://link.springer.com/book/10.1007/978-1-4842-4395-4">Beginning Javascript</a></p>
+<p>為了 <a href="https://github.com/mdecycu/cmsimde">cmsimde</a> 靜態頁面功能表的簡潔性, 一般建議除了 Home 之外的 H1 標題, 不要超過 9 個. 若善用各分類的 H2 與 H3 子頁面分類至多 9 個子頁面, 9x9x9 合計可以容納 729 個頁面, 應該足以涵蓋中等網站的所有內容.</p>
+<p><a href="https://github.com/mdecycu/cmsimde">https://github.com/mdecycu/cmsimde</a></p>
+<p>目前的課程網站 cmsimde submodule 已經使用 mdecycu 帳號下的倉儲, 準備要將現有分別位於</p>
+<p>get_page2, render_menu2, 以及 sitemap2 函式中, 如下圖所示:</p>
+<p><img caption="false" class="add_border" height="189" src="/images/bootstrap_container_fluid.png" width="600"/></p>
+<p>的 class='container-fluid' 改為 class='container', 根據 <a href="https://getbootstrap.com/docs/5.0/layout/containers/">bootstrap containers</a> 頁面的說明, 能夠將現有散佈在頁面 100% 的內容, 取用各不同尺寸螢幕的局部大小:</p>
+<p><img alt="" class="add_border" height="254" src="/images/bootstrap_contener_table.png" width="600"/></p>
+<h4>cmsimde Template:</h4>
+<p style="padding-left: 30px;"><a href="https://github.com/mdecycu/cmsite">https://github.com/mdecycu/cmsite</a></p>
+<h4>cmsimde submodule update:</h4>
+<p style="padding-left: 30px;">使用 cmsimde 作為 submodule 的倉儲, 當發現 cmsimde 倉儲內容已經更新後, 若希望使用更新後的子模組內容, 則可以利用下列指令完成:</p>
+<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">REM 從倉儲更換目錄至 cmsimde
+cd cmsimde
+REM 利用 git 指令中的 pull, 從 origin 代號的網路連結, 取回 master 分支的內容, 在近端進行合併
+git pull origin master
+REM 回到原始倉儲目錄
+cd ..
+REM 利用 acp.bat 中的 git add, git commit 與 git push 將更新資料送到遠端 github 倉儲中
+acp "update cmsimde submodule"</pre>
+<h4>Are we living in a smart city (University, College, Department, Class, Group)?</h4>
+<h4>我們生活在智慧城市 (大學, 學院, 科系, 班級, 團隊) 嗎?</h4>
+<p style="padding-left: 30px;"><a href="https://link.springer.com/referencework/10.1007/978-3-030-69698-6">Handbook of Smart Cities</a></p>
+<h2>Portable Python</h2>
+<h4>何謂可攜式 Python 程式環境?</h4>
+<h4 style="padding-left: 30px;">Python 程式是如何執行的?</h4>
+<p style="padding-left: 30px;">首先 Python 是一種解譯式 (Interpreted) 程式語言, 與 C 或 C++ 程式語言最大的差別是, C/C++ 程式碼通常必須透過編譯 (Compile) 與連結 (Link) 的過程, 將原始碼轉為可執行的格式 (在 Windows 操作系統為 .exe 檔案), 而 Python 程式寫好後, 可以直接利用解譯器執行, 使用者不需要手動執行程式碼的編譯, 而是由解譯器在執行前即時將程式碼轉換為可執行檔案.</p>
+<p style="padding-left: 30px;">在 <a href="https://www.geeksforgeeks.org/internal-working-of-python/">geeksforgeeks 網站</a>, 以下列敘述說明 Python 程式如何執行:</p>
+<p style="padding-left: 30px;">Python is an object-oriented programming language like Java. Python is called an interpreted language. Python uses code modules that are interchangeable instead of a single long list of instructions that was standard for functional programming languages. The standard implementation of python is called "cpython". It is the default and widely used implementation of Python.</p>
+<p style="padding-left: 30px;">Python doesn’t convert its code into machine code, something that hardware can understand. It actually converts it into something called byte code. So within python, compilation happens, but it’s just not into a machine language. It is into byte code (.pyc or .pyo) and this byte code can’t be understood by the CPU. So we need an interpreter called the python virtual machine to execute the byte codes</p>
+<p style="padding-left: 30px;">針對 Python 程式的"編譯"過程, 則<a href="https://www.geeksforgeeks.org/understanding-the-execution-of-python-program/">說明如下</a>:</p>
+<p style="padding-left: 30px;">The Python program is converted into byte code. Byte code is a fixed set of instructions that represent arithmetic, comparison, memory operations, etc. It can run on any operating system and hardware. The byte code instructions are created in the .pyc file. The .pyc file is not explicitly created as Python handles it internally but it can be viewed with the following command:</p>
+<p style="padding-left: 60px;">Y:\tmp\python_ex&gt;python -m py_compile hello.py</p>
+<p style="padding-left: 30px;">-m and py_compile represent module and module name respectively. This module is responsible to generate .pyc file. The compiler creates a directory named  __pycache__ where it stores the hello.cpython-39.pyc file (若採用 Python 3.9 版次的編譯器).</p>
+<p style="padding-left: 30px;">至於針對 Python 程式的"解譯"執行過程, 則<a href="https://www.geeksforgeeks.org/understanding-the-execution-of-python-program/">說明如下</a>:</p>
+<p style="padding-left: 30px;">The next step involves converting the byte code (.pyc file) into machine code. This step is necessary as the computer can understand only machine code (binary code). Python Virtual Machine (PVM) first understands the operating system and processor in the computer and then converts it into machine code. Further, these machine code instructions are executed by processor and the results are displayed.</p>
+<p style="padding-left: 30px;">However, the interpreter inside the PVM translates the program line by line thereby consuming a lot of time. To overcome this, a compiler known as Just In Time (JIT) is added to PVM. JIT compiler improves the execution speed of the Python program. This compiler is not used in all Python environments like CPython which is standard Python software.</p>
+<p style="padding-left: 30px;">To execute the hello.cpython-39.pyc we can use the following command:</p>
+<p style="padding-left: 60px;">Y:\tmp\python_ex&gt;python __pycache__\hello.cpython-39.pyc</p>
+<p style="padding-left: 30px;">至於有關 python.exe 與 pythonw.exe 的差別, 則參見<a href="https://stackoverflow.com/questions/9705982/pythonw-exe-or-python-exe">這裡的說明</a>. 至於 SciTE 設定 python.properties 中, 使用 pythonw.exe -u 表示除了採非同步 (asynchronous) 執行模式外, 同時 force the stdout and stderr streams to be unbuffered; but has no effect on stdin.</p>
+<h4 style="padding-left: 30px;">Python 解譯器的類別:</h4>
+<p style="padding-left: 30px;">最早的 Python 解譯器以 C 程式語言編寫, 稱為 <a href="https://en.wikipedia.org/wiki/CPython">CPython</a>, 以 Python 編寫的 Python 解譯器稱為 <a href="https://en.wikipedia.org/wiki/PyPy">Pypy</a>, 以 .NET 技術編寫的 Python 解譯器稱為 <a href="https://en.wikipedia.org/wiki/IronPython">Ironpython</a>, 以 Java 編寫的 Python 解譯器稱為 <a href="https://en.wikipedia.org/wiki/Jython">Jython</a>, 以 Javascript 編寫的 Python 解譯器稱為 <a href="https://brython.info/">Brython</a>. 以 Rust 編寫的 Python 解譯器稱為 <a href="https://github.com/RustPython/RustPython">RustPython</a>.</p>
+<h4 style="padding-left: 30px;">建立可攜 Python 程式環境的目的:</h4>
+<p style="padding-left: 30px;">一般在 Windows 10 中使用 <a href="https://en.wikipedia.org/wiki/CPython">CPython</a> 都是透過操作系統安裝, 將 <a href="https://en.wikipedia.org/wiki/CPython">CPython</a> 解譯器登錄在操作系統的 <a href="https://en.wikipedia.org/wiki/Windows_Registry">Registry</a> 中. 只不過配置在操作系統的 <a href="https://en.wikipedia.org/wiki/CPython">CPython</a> 解譯器若在使用過程中, 透過 <a href="https://pypi.org/project/pip/">pip</a> 安裝額外的模組後, 當電腦輔助設計室中的電腦重新開機後, 操作系統將會因為安裝防寫套件而恢復原先所安裝無額外模組的狀態.</p>
+<p style="padding-left: 30px;">網際內容管理與協同產品設計實習課程為了<span style="background-color: #ffff99;">讓使用者可以隨身帶著 <a href="https://en.wikipedia.org/wiki/CPython" style="background-color: #ffff99;">CPython</a> 解譯器</span>, 因此繞過 Windows 10 操作系統的 Registry 登錄, 設法以批次檔案在虛擬的硬碟 (y:) 啟動 <a href="https://en.wikipedia.org/wiki/CPython">CPython</a> 解譯環境.</p>
+<p style="padding-left: 30px;">此外, 配置在 USB 隨身碟的可攜 <a href="https://en.wikipedia.org/wiki/CPython">CPython</a> 程式環境, 除了可執行一般 Python 程式外, 也可自行安裝所需模組, 並用於 <a href="https://github.com/mdecourse/cmsimde">cmsimde</a> 動態與靜態網站編輯.</p>
+<p style="padding-left: 30px;">可攜程式環境中除 <a href="https://en.wikipedia.org/wiki/CPython">CPython</a>, 還可配置 <a href="https://www.msys2.org/">MSYS2</a> C/C++ 編譯系統. 針對 <a href="https://www.scintilla.org/SciTE.html">SciTE</a>, <a href="https://github.com/solvespace/solvespace">Solvespace</a>, <a href="https://github.com/Range-Software/range3">Range3</a>, <a href="https://github.com/CoppeliaRobotics">CoppeliaSim</a> 等開源套件執行編譯.</p>
+<h4>如何建立可攜 Python 程式環境?</h4>
+<p style="padding-left: 30px;">能放入 USB 隨身碟執行的 Python 程式環境包含兩個部分:</p>
+<p style="padding-left: 60px;">(1) Python 解譯器系統檔案</p>
+<p style="padding-left: 60px;">(2) 可攜啟動設定批次檔 (例如: <a href="/downloads/start_ipv6.bat">start_ipv6.bat</a>)</p>
+<p style="padding-left: 30px;">要在 Windows 操作系統中, 取得各版本的 Python 解譯器系統檔案, 也有兩種方法:</p>
+<p style="padding-left: 60px;">(1) 從官方網站下載安裝檔 (例如: <a href="https://www.python.org/ftp/python/3.10.5/">3.10.5 版</a>的 <a href="https://www.python.org/ftp/python/3.10.5/python-3.10.5-amd64.exe">python-3.10.5-amd64.exe)</a>, 手動安裝 Python, 取下安裝內容後, 解除安裝程式.</p>
+<p style="padding-left: 60px;">(2) 利用 <a href="/downloads/gen_portable_python.py">gen_portable_python.py</a>, 從 Python 官方網站下載基本的 .msi 檔案 (例如 <a href="https://www.python.org/ftp/python/3.10.5/amd64/">3.10.5 版</a>中的 core.msi, dev.msi, exe.msi, lib.msi, tcltk.msi 與 tools.msi), 然後利用 <a href="https://docs.microsoft.com/zh-tw/windows-server/administration/windows-commands/msiexec">msiexec.exe</a> 配合 <a href="https://docs.microsoft.com/zh-tw/windows/win32/msi/targetdir">targetdir</a> 屬性解開各安裝檔.</p>
+<p id="pp310">以下將要結合 <a href="https://www.scintilla.org/SciTE.html">SciTE</a>, <a href="https://github.com/TinyCC/tinycc">Tiny C Compiler</a> 與 <a href="https://www.python.org/ftp/python/3.10.5/">Python 3.10.5</a>, 建立一個可攜版的 CPython 與 <a href="https://en.wikipedia.org/wiki/ANSI_C">ANSI C</a> 執行環境.</p>
+<ol>
+<li>從 <a href="http://download.savannah.gnu.org/releases/tinycc/">http://download.savannah.gnu.org/releases/tinycc/</a> 下載 <a href="http://download.savannah.gnu.org/releases/tinycc/tcc-0.9.27-win64-bin.zip">tcc-0.9.27-win64-bin.zip</a>.</li>
+<li>從 <a href="https://www.scintilla.org/SciTEDownload.html">https://www.scintilla.org/SciTEDownload.html</a> 下載 <a href="https://www.scintilla.org/wscite521.zip">wscite521.zip</a>.</li>
+<li>利用 Python 3.9.5 (或先前的 Python3 舊版可攜程式) 執行 <a href="/downloads/gen_portable_python.py">gen_portable_python.py</a> 取得 Python310 解譯器系統檔案.</li>
+<li>根據上述流程建立的基本 Python 與 ANSI C 可攜程式系統 <a href="http://wcm.cycu.org:88/Portable_py310_tcc.7z">Portable_py310_tcc.7z</a> (只能在系網路 下載, 此一 Python 解譯器只帶有基本模組且尚未安裝 <a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=&amp;cad=rja&amp;uact=8&amp;ved=2ahUKEwiywaDasrb2AhX7rVYBHbSJCcoQFnoECAoQAQ&amp;url=https%3A%2F%2Fbootstrap.pypa.io%2Fget-pip.py&amp;usg=AOvVaw0zKVO_zW0nkF7s0zdjWFNj">get-pip.py</a>)</li>
+<li>此一 Python 解譯器以 python <a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=&amp;cad=rja&amp;uact=8&amp;ved=2ahUKEwigkdK1s7b2AhUBs1YBHYhXA8oQFnoECAcQAQ&amp;url=https%3A%2F%2Fbootstrap.pypa.io%2Fget-pip.py&amp;usg=AOvVaw0zKVO_zW0nkF7s0zdjWFNj">get-pip.py</a> 安裝 pip 後, 再以 pip install flask flask_cors bs4 lxml pelican markdown leo pyopenssl 安裝 <a href="https://mde.tw/cmstemplate/content/CMSiMDE.html">cmsimde 所需模組</a>後, 即可用於 wcm2022 動態與靜態系統的編輯.</li>
+<li>此一 Python 解譯器再結合 <a href="https://git-scm.com/download/win">Portablegit</a> 與 <a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html">PUTTY</a>, 就可以支援以 <a href="https://mde.tw/wcm2022_guide/content/Token%20and%20SSH.html">SSH</a> 執行 github 倉儲的 git push.</li>
+</ol>
+<h4>如何建立網際 Python 程式環境 (Brython)?</h4>
+<p style="padding-left: 30px;">例如: <a href="https://mde.tw/cp2022/content/Brython.html">Brython</a> 頁面.</p>
+<p>從 <a href="https://drive.google.com/file/d/1TMPsHz6G01-pxkvXf9NFM8nFdtCHQv8D/view?usp=sharing">portable_python_wcm2022.7z</a> 下載的可攜程式環境有哪些功能?</p>
+<p><span style="background-color: #ffff99;">請注意: 以下的 .7z 檔案下載, 只允許在系上網段上下載</span>.</p>
+<ol>
+<li><a href="http://wcm.cycu.org:88/compile_copsim_cd2022.7z">compile_copsim_cd2022.7z</a> (file size: 5 GB, extracted size: 17.3 GB, 包含除了 NX1980 之外的所有課程相關可攜程式套件, 是專門為 <a href="http://wcm.cycu.org:88/github/cd2022_guide/content/index.html">cd2022</a> 課程學員打造的套件).</li>
+<li><a href="http://wcm.cycu.org:88/portable_python_wcm2022.7z">portable_python_wcm2022.7z</a> (file size: 513 MB, extracted size: 2.3 G, 這是專門為 <a href="https://mde.tw/wcm2022http://wcm.cycu.org:88/github/wcm2022_guide/content/index.html">wcm2022</a> 課程打造的可攜程式套件, 適合選修學員下載後在任何 Windows 10 中以隨身碟啟動後操作)</li>
+<li><a href="http://wcm.cycu.org:88/drive.7z">drive.7z</a> (file size: 2.6 MB, extracted size: 10 MB, 只包含 PUTTY, tcc, wscite 與 tmp 目錄, 採用 Hybrid 方式設定, 可與目前電腦輔助設計室中 SSD 硬碟所安裝的 Python 3.9.5 與 <a href="https://git-scm.com/download/win">Portablegit</a> 結合, 使用者只需自行設定啟動後的 home_ipv6 目錄與 home_ipv6/Desktop 目錄後即可以最輕薄便捷的方式將 SSH key 存入隨身碟, 並將個人與分組倉儲存入隨身碟啟動後的 tmp 目錄進行操作).</li>
+</ol>
+<p>以下利用 Wink3 影片說明以 Hybrid 方式啟動的 USB 隨身碟如何建立? 以及使用上與完整 USB 隨身碟可攜程式系統的差別:</p>
+<p>Hybrid 可攜程式系統是只將必要檔案配置到 USB 隨身碟, 其餘檔案則使用已經存在電腦上的內容, 主要包含 Python 3.9.5 解譯程式 (863 MB) 與 Portblegit 2.31.1 (285 MB).</p>
+<p>Hybrid 可攜程式系統優點:</p>
+<ol>
+<li>初始 USB 隨身碟只需複製 10.5 MB 的資料 (只自帶 PUTTY (4.3 MB), tcc (1.7 MB), tmp 與 wscite (4.3 MB)).</li>
+<li>使用電腦 SSD 上所安裝的 Python 與 Portablegit, 執行速度會比一般 USB 隨身碟快.</li>
+</ol>
+<p>Hybrid 可攜程式系統缺點:</p>
+<ol>
+<li>在未修改 Python Script 目錄中的 .exe 可執行檔之前, 必須透過 .py 執行, 例如: 命令列 中輸入 leo 並無法執行執行, 必須採用 import leo.core.runLeo;leo.core.runLeo.run()</li>
+<li>若在裝有還原卡的電腦, 未修改 Python 系統模組路徑之前, 所安裝的額外模組無法放入 USB 隨身碟中.</li>
+</ol>
+<h2>Token and SSH</h2>
+<p>Remote Desktop - Windows, Ubuntu, Mac</p>
+<h4>Token:</h4>
+<p style="padding-left: 30px;"><a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token">https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token</a></p>
+<p style="padding-left: 30px;">Github token 是一串可以用來替代 Github 帳號與密碼功能的字串, 可在登入 Github 帳號後, 至 <a href="https://github.com/settings/tokens">https://github.com/settings/tokens</a> 設定. 每一個 token 都具備有效時間與權限範圍, 一般初學者可以只勾選 Token 的 repo 改版權限, 並選擇 30 天的有效時間. 之後再設法改用 SSH 對 Github 倉儲改版.</p>
+<p>以下影片說明如何使用 Personal Access Token 執行 git push:</p>
+<p>
+<script>
+var winkVideoData1 = {
+  dataVersion: 1,
+  frameRate: 10,
+  buttonFrameLength: 5,
+  buttonFrameOffset: 2,
+  frameStops: {
+  },
+};
+</script>
+</p>
+<!-- 接下來將 mp4 檔案從 downloads 目錄取出 -->
+<div class="winkVideoContainerClass"><video autoplay="autoplay" class="winkVideoClass" controls="controls" data-dirname="/static" data-varname="winkVideoData1" height="630" muted="true" width="1008">
+<source src="/downloads/token_wink/github_token.mp4" type="video/mp4"/></video>
+<h4>SSH:</h4>
+<p style="padding-left: 30px;"><a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh">https://docs.github.com/en/authentication/connecting-to-github-with-ssh</a></p>
+<p style="padding-left: 30px;">Windows 10 環境中的 SSH 可以透過 <a href="https://www.putty.org/">https://www.putty.org/</a> 執行設定.</p>
+<p style="padding-left: 30px;">puttygen.exe 可用來建立 OpenSSL 格式的數位簽章, public key 送到使用者 Github 帳號下 settings 中的 SSH and GPG keys 區, 在隨身碟中則存放與 public key 成對的 Putty 格式 private key.</p>
+<p style="padding-left: 30px;">使用者在 Windows 10 使用 git + putty 時, 必須在啟動隨身系統時設定 GIT_SSH 變數 (<a href="https://git-scm.com/book/en/v2/Git-Internals-Environment-Variables">Git 環境變數</a>) 至 putty 中的 plink.exe, 之後再利用 putty 設定連至 github.com 用的 session, 且在純 IPv6 環境中, 連至 github.com 的 session 除了必須指向隨身碟中的 private key 外, 還需要設定能同時支援 IPv6 與 IPv4 的 proxy server.</p>
+<p style="padding-left: 30px;">使用者希望透過 SSH 對 github 中的倉儲改版時, 必須使用 <a href="mailto:git@session_name:github_account/repository.git">git@session_name:github_account/repository.git</a> 連線.</p>
+<p style="padding-left: 30px;">有關 GIT_SSH 變數：</p>
+<p style="padding-left: 60px;">GIT_SSH, if specified, is a program that is invoked instead of ssh when Git tries to connect to an SSH host. It is invoked like $GIT_SSH [username@]host [-p &lt;port&gt;] &lt;command&gt;. Note that this isn’t the easiest way to customize how ssh is invoked; it won’t support extra command-line parameters, so you’d have to write a wrapper script and set GIT_SSH to point to it. It’s probably easier just to use the ~/.ssh/config file for that.</p>
+<p>以下影片說明如何在 Windows IPv6 環境下, 利用 PUTTY 以 SSH 協定執行 git push:</p>
+<p>
+<script>
+var winkVideoData2 = {
+  dataVersion: 1,
+  frameRate: 10,
+  buttonFrameLength: 5,
+  buttonFrameOffset: 2,
+  frameStops: {
+  },
+};
+</script>
+</p>
+<div class="winkVideoContainerClass"><video autoplay="autoplay" class="winkVideoClass" controls="controls" data-dirname="/static" data-varname="winkVideoData2" height="630" muted="true" width="1008">
+<source src="/downloads/ssh_wink/wink_ssh.mp4" type="video/mp4"/></video></div>
+</div>
+<h2>Bootstrap</h2>
+<p><a href="https://getbootstrap.com/">https://getbootstrap.com/</a></p>
+<h4>cmsimde page:</h4>
+<p style="padding-left: 30px;">head banner</p>
+<p style="padding-left: 30px;">search form</p>
+<p style="padding-left: 30px;">page navigator</p>
+<p style="padding-left: 30px;">page content</p>
+<p style="padding-left: 30px;">pelican blog</p>
+<p style="padding-left: 30px;">reveal</p>
+<h4>Bootstrap editor:</h4>
+<p style="padding-left: 30px;"><a href="https://www.layoutit.com/">https://www.layoutit.com/</a></p>
+<p style="padding-left: 30px;"><a href="https://github.com/Vegetam/BootstrapPageGenerator">https://github.com/Vegetam/BootstrapPageGenerator</a></p>
+<h4>Flask and Bootstrap:</h4>
+<p style="padding-left: 30px;"><a href="https://github.com/mbr/flask-bootstrap">https://github.com/mbr/flask-bootstrap</a></p>
+<p style="padding-left: 30px;"><a href="https://www.techwithtim.net/tutorials/flask/adding-bootstrap/">https://www.techwithtim.net/tutorials/flask/adding-bootstrap/</a></p>
+<p style="padding-left: 30px;"><a href="https://pythonhosted.org/Flask-Bootstrap/basic-usage.html">https://pythonhosted.org/Flask-Bootstrap/basic-usage.html</a></p>
+<p style="padding-left: 30px;"><a href="https://github.com/MashSoftware/flask-bootstrap-ui">https://github.com/MashSoftware/flask-bootstrap-ui</a></p>
+<p style="padding-left: 30px;"><a href="https://github.com/hfilimonescu/flask-bs4">https://github.com/hfilimonescu/flask-bs4</a></p>
+<h2>Bugs</h2>
+<p>靜態網頁在 Brython 頁面無法執行關鍵字搜尋.</p>
+<h2>frameworks</h2>
+<h4>fastapi</h4>
+<p><a href="https://fastapi.tiangolo.com/">https://fastapi.tiangolo.com/</a></p>
+<h4>starlette</h4>
+<p><a href="https://www.starlette.io/">https://www.starlette.io/</a></p>
+<h1>cad2022</h1>
+<h4>2022 Fall</h4>
+<p>Computer aided Design and Practices 電腦輔助設計實習</p>
+<h4>行事曆</h4>
+<p><a href="https://calendar.google.com/calendar/embed?src=mde.nfu.edu.tw_3439313938333136353439%40resource.calendar.google.com&amp;ctz=Asia%2FTaipei&amp;mode=week&amp;src=mde.nfu.edu.tw_35303530373431313438%40resource.calendar.google.com&amp;ctz=Asia%2FTaipei&amp;src=yen%40gm.nfu.edu.tw&amp;ctz=Asia%2FTaipei">全頁檢視</a></p>
+<p><iframe height="600" src="https://calendar.google.com/calendar/embed?src=mde.nfu.edu.tw_3439313938333136353439%40resource.calendar.google.com&amp;ctz=Asia%2FTaipei&amp;mode=week&amp;src=mde.nfu.edu.tw_35303530373431313438%40resource.calendar.google.com&amp;ctz=Asia%2FTaipei&amp;src=yen%40gm.nfu.edu.tw&amp;ctz=Asia%2FTaipei" width="800"></iframe></p>
+<h2>Syllabus</h2>
+<h4>課程評分:</h4>
+<p style="padding-left: 30px;">w3 建立 <a href="https://tcexam.org/">TCExam</a> 帳號, 進行模擬考試.</p>
+<p style="padding-left: 30px;">w4 Exam1 (5%)</p>
+<p style="padding-left: 30px;">w8 Exam2 (5%)</p>
+<p style="padding-left: 30px;">w9 Exam3 (5%)</p>
+<p style="padding-left: 30px;">w12 Exam4 (5%)</p>
+<p style="padding-left: 30px;">w16 Exam5 (5%)</p>
+<p style="padding-left: 30px;">w18 Exam6 (5%)</p>
+<p style="padding-left: 30px;">Github Repository and Pages (70%)</p>
+<p style="padding-left: 60px;">個人簡歷與課程進度心得</p>
+<p style="padding-left: 60px;">課程內容操作影片 (<a href="https://www.debugmode.com/wink/">Wink3</a>)</p>
+<p style="padding-left: 60px;">期中設計專案</p>
+<p style="padding-left: 60px;">期末設計專案</p>
+<h4>課程內容:</h4>
+<h4 style="padding-left: 30px;">Design a Foosball Table:</h4>
+<h4 style="padding-left: 60px;">期中設計專案:</h4>
+<p style="padding-left: 90px;">請在個人網頁中, 建立一個 Foosball 頁面, 以 MCAD 套件建立所需的所有零組件檔案:</p>
+<p style="padding-left: 120px;"><a href="https://www.youtube.com/watch?v=uhIqciRFMLM">How To Make a Desktop Foosball Table</a></p>
+<p style="padding-left: 120px;"><a href="https://www.youtube.com/watch?v=PgnvZV5s13c">Foosball Table with 3d printing</a></p>
+<p style="padding-left: 120px;"><a href="https://www.theseus.fi/bitstream/handle/10024/745224/Mohebi_Dani.pdf?sequence=3">The Study of Semi-Automated Football Table</a></p>
+<p style="padding-left: 120px;"><a href="https://2019wcm.blogspot.com/2019/04/table-foosball.html">https://2019wcm.blogspot.com/2019/04/table-foosball.html</a></p>
+<p style="padding-left: 90px;">評分項目 (<a href="https://pages.github.com/">Github Pages</a>, <a href="https://en.wikipedia.org/wiki/PDF">pdf</a>, <a href="https://revealjs.com/">reveal</a>, <a href="https://getpelican.com/">pelican</a>):</p>
+<p style="padding-left: 120px;">專案摘要</p>
+<p style="padding-left: 120px;">專案目錄</p>
+<p style="padding-left: 120px;">設計簡介與目標</p>
+<p style="padding-left: 120px;">相關文獻探討</p>
+<p style="padding-left: 150px;">專利:</p>
+<p style="padding-left: 180px;"><a href="https://patentimages.storage.googleapis.com/e5/81/ef/9799c9e66ba2f9/US2215687.pdf">Game Apparatus</a> (1939)<br/> <br/> <a href="https://patentimages.storage.googleapis.com/8e/91/1f/ad20040354e5ee/US2507258.pdf">Simulated Hockey Game</a> (1950)<br/> <br/> <a href="https://patentimages.storage.googleapis.com/7e/b4/25/f7590b2e8ad46f/US3724851.pdf">Table soccer or football game structure</a> (1973)<br/> <br/> <a href="https://patentimages.storage.googleapis.com/91/99/2e/eb253894bd23c7/US3926432.pdf">Table soccer or football game structure</a> (1975)<br/> <br/> <a href="https://patentimages.storage.googleapis.com/69/23/1f/16e1e961c81abb/US4382598.pdf">Rod Bearing for Table Soccer  or Fussball Game Structure</a> (1983)<br/> <br/> <a href="https://patentimages.storage.googleapis.com/e3/dc/cd/bfb33b9ad4680d/US5072880.pdf">Sectional Rod Bearing for Fussball Game Structure</a> (1991)<br/> <br/> <a href="https://patentimages.storage.googleapis.com/ef/7d/29/feabf8b805aad4/US5058892.pdf">Table Soccer or Fussball Game Playing Ball</a> (1991)<br/> <br/> <a href="https://patentimages.storage.googleapis.com/49/25/72/afbd4c20d23734/US5071137.pdf">Table Soccer Game Bumper Structure</a> (1991)<br/> <br/> <a href="https://patentimages.storage.googleapis.com/d3/1f/fc/c1d24b39561834/US5333864.pdf">Table Soccer Playing Figure</a> (1994)<br/> <br/> <a href="https://patentimages.storage.googleapis.com/36/8b/ae/1a149f3094e2dd/USD347245.pdf">Soccer Table</a> (1994)<br/> <br/> <a href="https://patentimages.storage.googleapis.com/46/9b/74/7c25bf392913e4/US5630760.pdf">Convertible Game Table</a> (1997)<br/> <br/> <a href="https://patentimages.storage.googleapis.com/61/83/92/582e246f118944/US6027251.pdf">Bracing Structure of Rotary Rod</a> (2000)<br/> <br/> <a href="https://patentimages.storage.googleapis.com/69/ea/15/3c40119a551aa8/US6231046.pdf">Structure of a Soccer Game Table</a> (2001)<br/> <br/> <a href="https://patentimages.storage.googleapis.com/20/cd/2b/8873ba5fe44dda/US6357744.pdf">Player Structure in a Fooz Ball Game</a> (2002)<br/> <br/> <a href="https://patentimages.storage.googleapis.com/53/f1/94/c237bfb13e461c/US6464220.pdf">Retractable Rotating Rod for Football Table</a> (2002)<br/> <br/> <a href="https://patentimages.storage.googleapis.com/ca/b0/c2/0ea0d3b03d67d1/US20100084812A1.pdf">Double Sided Soccer Man</a> (2010)<br/> <br/> <a href="https://patentimages.storage.googleapis.com/dd/fd/fd/58d26ff6b4a35a/US20120205865A1.pdf">Support Device for Slidable Shafts of Table Soccer Games</a> (2012)</p>
+<p style="padding-left: 150px;">課程報告:</p>
+<p style="padding-left: 180px;"><a href="https://mdecadp2018.github.io/site-40623128">https://mdecadp2018.github.io/site-40623128</a></p>
+<p style="padding-left: 180px;"><a href="https://mdecadp2018.github.io/site-40623130">https://mdecadp2018.github.io/site-40623130</a></p>
+<p style="padding-left: 180px;"><a href="https://mdecadp2018.github.io/site-40623224">https://mdecadp2018.github.io/site-40623224</a></p>
+<p style="padding-left: 180px;"><a href="https://mdecadp2018.github.io/site-40623242">https://mdecadp2018.github.io/site-40623242</a></p>
+<p style="padding-left: 150px;">大學部專題:</p>
+<p style="padding-left: 180px;"><a href="https://www.theseus.fi/bitstream/handle/10024/745224/Mohebi_Dani.pdf">The Study of Semi-Automated Football Table</a></p>
+<p style="padding-left: 150px;">研究報告:</p>
+<p style="padding-left: 180px;"><a href="https://ieeexplore.ieee.org/search/searchresult.jsp?queryText=foosball">foosball keyword searching on IEEE</a></p>
+<p style="padding-left: 180px;"><a href="https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.92.5428&amp;rep=rep1&amp;type=pdf">Development Of Robotic Foosball As A Versatile Platform For Robotics Research and Contests</a> (2003)</p>
+<p style="padding-left: 180px;"><a href="https://gki.informatik.uni-freiburg.de/papers/weigel-etal-robocup-02-kiro.pdf">Kiro</a> (2006)</p>
+<p style="padding-left: 180px;"><a href="https://diglib.eg.org/bitstream/handle/10.2312/PE.vriphys.vriphys09.049-058/049-058.pdf?sequence=1&amp;isAllowed=y">Space Foosball: Coupling Tangible Interfaces with a Real-time Game Physics Engine</a> (2009)</p>
+<p style="padding-left: 180px;"><a href="https://core.ac.uk/download/pdf/19161196.pdf">Automated Foosball Table</a> (2013)</p>
+<p style="padding-left: 180px;"><a href="https://2019wcm.blogspot.com/search/label/foosball">https://2019wcm.blogspot.com/search/label/foosball</a></p>
+<p style="padding-left: 180px;"><a href="https://www.ximea.com/en/corporate-news/foosball-table-robot-camera">https://www.ximea.com/en/corporate-news/foosball-table-robot-camera</a></p>
+<p style="padding-left: 180px;"><a href="https://computing.ece.vt.edu/~steflee/pdfs/foosball-tracking.pdf">Foosball tracking</a> (2012)</p>
+<p style="padding-left: 180px;"><a href="https://www.ece.ucf.edu/seniordesign/fa2012sp2013/g30/docs/Final%20Paper-%20G30.pdf">Foose</a> (2012)</p>
+<p style="padding-left: 180px;"><a href="https://cduck.me/2015/robotic-foosball-table/">https://cduck.me/2015/robotic-foosball-table/</a> (2015)</p>
+<p style="padding-left: 180px;"><a href="https://www.siliconrepublic.com/machines/chess-go-and-now-foosball-ai-is-coming-for-you">https://www.siliconrepublic.com/machines/chess-go-and-now-foosball-ai-is-coming-for-you</a> (2016)</p>
+<p style="padding-left: 180px;"><a href="https://www.thestar.com/news/insight/2016/05/12/can-a-computer-beat-you-at-foosball-yes-yes-it-can.html">https://www.thestar.com/news/insight/2016/05/12/can-a-computer-beat-you-at-foosball-yes-yes-it-can.html</a> (2016)</p>
+<p style="padding-left: 180px;"><a href="https://mro.massey.ac.nz/bitstream/handle/10179/15187/02_whole.pdf?sequen">Low latency vision-based control for robotics</a> (2018)</p>
+<p style="padding-left: 180px;"><a href="https://www.researchgate.net/publication/341204434_KIcker_An_Industrial_Drive_and_Control_Foosball_System_automated_with_Deep_Reinforcement_Learning">KIcker</a> (2021)</p>
+<p style="padding-left: 180px;"><a href="https://youtu.be/Hu7LFrP43tA">https://youtu.be/Hu7LFrP43tA</a></p>
+<p style="padding-left: 180px;"><a href="https://forum.allaboutcircuits.com/threads/automated-foosball-hardware-advice-for-crazy-speeds.137860/">https://forum.allaboutcircuits.com/threads/automated-foosball-hardware-advice-for-crazy-speeds.137860/</a></p>
+<p style="padding-left: 120px;">設計方法與工具 (<a href="https://solvespace.com">Solvespace</a>, <a href="https://www.onshape.com">Onshape</a>, NX 分屬三種不同類型的 MCAD 套件)</p>
+<p style="padding-left: 150px;">可自行編譯延伸的 MCAD (<a href="https://solvespace.com">Solvespace</a>, <a href="https://verylowfreq.github.io/experimental-solvespace-on-browser/bin-2022081301/solvespace.html">Web version</a>, <a href="https://kevinlynagh.com/cadtron/">CADtron</a>) 套件</p>
+<p style="padding-left: 150px;">可直接在雲端上執行的 MCAD (<a href="https://www.onshape.com">Onshape</a>) 套件</p>
+<p style="padding-left: 150px;">可放入 USB 連網啟動的高階 MCAD (<a href="https://community.sw.siemens.com/s/question/0D54O00007ZW2YFSA1/nxcustom-for-nx-base-version-2206-revb">NX2206 revB</a>) 套件</p>
+<p style="padding-left: 180px;"><a href="https://me5763.github.io/lab/">https://me5763.github.io/lab/</a></p>
+<p style="padding-left: 180px;"><a href="https://www.youtube.com/channel/UChYht2a_KxGdqqJBQ00m4lA/videos">NX Tips Video</a></p>
+<p style="padding-left: 120px;">設計結果</p>
+<p style="padding-left: 120px;">設計討論</p>
+<p style="padding-left: 120px;">附錄</p>
+<h4 style="padding-left: 60px;">期末設計專案:</h4>
+<p style="padding-left: 90px;">請根據期中專案所完成的設計零組件, 轉入 <a href="https://www.coppeliarobotics.com/downloads">CoppeliaSim 4.3.0 rev3</a> 以上版本後, 透過網路連線, 建立可讓 Human 與 Human 對打, Human 與 Computer 對打, 以及 Computer 與 Computer 對打的 Foosball 線上遊戲.</p>
+<p style="padding-left: 120px;"><a href="https://www.coppeliarobotics.com/">https://www.coppeliarobotics.com/</a></p>
+<p style="padding-left: 120px;"><a href="https://forum.coppeliarobotics.com/">https://forum.coppeliarobotics.com/</a></p>
+<p style="padding-left: 120px;"><a href="https://mde.tw/pjcopsim">https://mde.tw/pjcopsim</a></p>
+<p style="padding-left: 120px;"><a href="https://github.com/CoppeliaRobotics">https://github.com/CoppeliaRobotics</a></p>
+<p style="padding-left: 90px;">評分項目:</p>
+<p style="padding-left: 120px;">專案摘要</p>
+<p style="padding-left: 120px;">專案目錄</p>
+<p style="padding-left: 120px;">設計簡介與目標</p>
+<p style="padding-left: 120px;">相關文獻探討</p>
+<p style="padding-left: 150px;"><a href="https://mde.tw/pjcopsim/content/welcome.html">CoppeliaSim Overview</a></p>
+<p style="padding-left: 150px;"><a href="https://mde.tw/pjcopsim/content/tutorials.html">CoppeliaSim Tutorials</a></p>
+<p style="padding-left: 120px;">設計方法與工具</p>
+<p style="padding-left: 150px;">自行編譯 CoppeliaSim: <a href="https://github.com/CoppeliaRobotics">https://github.com/CoppeliaRobotics</a></p>
+<p style="padding-left: 150px;"><a href="https://mde.tw/pjcopsim/content/buildingAModelTutorial.html">Building a Clean Model</a></p>
+<p style="padding-left: 150px;"><a href="https://mde.tw/pjcopsim/content/joints.html">Joints</a></p>
+<p style="padding-left: 150px;"><a href="https://mde.tw/pjcopsim/content/kinematics.html">Kinematics</a></p>
+<p style="padding-left: 150px;"><a href="https://mde.tw/pjcopsim/content/designingDynamicSimulations.html">Desiging Dynamic Simulations</a></p>
+<p style="padding-left: 150px;"><a href="https://mde.tw/pjcopsim/content/writingCode.html">Writing Code</a></p>
+<p style="padding-left: 180px;"><a href="https://mde.tw/pjcopsim/content/remoteApiOverview.html">RemoteAPI</a></p>
+<p style="padding-left: 150px;"><a href="https://mde.tw/pjcopsim/content/externalFrontEnd.html">Web-browser based Front-end</a></p>
+<p style="padding-left: 120px;">設計結果</p>
+<p style="padding-left: 120px;">設計討論</p>
+<p style="padding-left: 120px;">附錄</p>
+<p style="padding-left: 120px;">期末簡報</p>
+<h2>ME</h2>
+<p><a href="https://www.sg-lib.org/">https://www.sg-lib.org/</a></p>
+<p style="padding-left: 30px;"><a href="https://github.com/timlueth/SG-Lib-Matlab-Toolbox">https://github.com/timlueth/SG-Lib-Matlab-Toolbox</a></p>
+<p style="padding-left: 30px;"><a href="https://github.com/jan-mue/geometer">https://github.com/jan-mue/geometer</a></p>
+<p style="padding-left: 30px;"><a href="https://github.com/Dessia-tech/volmdlr">https://github.com/Dessia-tech/volmdlr</a></p>
+<p><a href="https://gmnfuedutw-my.sharepoint.com/:b:/g/personal/yen_gm_nfu_edu_tw/EYAuJdRwebpLlY7DMcY4BSUBKXOAlq86mLhCFhhmfAu4TA?e=GjJ5rQ">A Method for the Automatic Design of Mechanisms on the Example of a Four-Bar Linkage.pdf</a> (for @gm users only)</p>
+<p><a href="https://link.springer.com/book/10.1007/978-3-7091-2532-8">Basics of Robotics</a> (1999)</p>
+<p><a href="https://link.springer.com/content/pdf/10.1007/978-3-319-01851-5.pdf">Fundamentals of Robotic Mechanical Systems</a> (2014)</p>
+<p><a href="https://link.springer.com/book/10.1007/978-3-030-73022-2">Gears in Design, Production and Education</a> (2021)</p>
+<p><a href="https://link.springer.com/book/10.1007/978-3-030-93220-6">Theory of Applied Robotics Kinematics Dynamics and Control</a> (2022)</p>
+<p><a href="https://link.springer.com/book/10.1007/978-981-16-5007-9">Modular Robots: Theory and Practice</a> (2022)</p>
+<p><a href="http://engineering.nyu.edu/mechatronics/smart/pdf/Intro2Robotics.pdf">Intro to Robotics</a></p>
+<p><a href="https://www.theseus.fi/bitstream/handle/10024/37806/Shakhatreh_Fareed.pdf">The Basics of Robotics</a></p>
+<p><a href="https://www.therobotreport.com/10-most-automated-countries-wordlwide-in-2020/">https://www.therobotreport.com/10-most-automated-countries-wordlwide-in-2020/</a></p>
+<p><a href="https://wokwi.com/">https://wokwi.com/</a></p>
+<p><a href="https://pimylifeup.com/raspberry-pi-virtualbox/">https://pimylifeup.com/raspberry-pi-virtualbox/</a></p>
+<h3>Vehicle</h3>
+<p><a href="https://link.springer.com/book/10.1007/978-3-030-75884-4">Vehicle Dynamics</a> (2022)</p>
+<h3>Aircraft</h3>
+<p><a href="https://github.com/convexengineering/SPaircraft">https://github.com/convexengineering/SPaircraft</a></p>
+<p><a href="https://convex.mit.edu/publications/spajoa_final.pdf">2017_Application of Signomial Programming to Aircraft Design.pdf</a></p>
+<p><a href="https://convex.mit.edu/publications/turbofanSP.pdf">2017_Turbofan Engine Sizing and Tradeoff Analysis via Signomial Programming.pdf</a></p>
+<p><a href="https://github.com/camUrban/PteraSoftware">https://github.com/camUrban/PteraSoftware</a></p>
+<p><a href="https://github.com/vibrationtoolbox/vibration_toolbox">https://github.com/vibrationtoolbox/vibration_toolbox</a></p>
+<p><a href="https://github.com/white-noise-ntua/autogyro-blades-optimization">https://github.com/white-noise-ntua/autogyro-blades-optimization</a></p>
+<p><a href="https://github.com/matst1008/FlyPy">https://github.com/matst1008/FlyPy</a></p>
+<p><a href="https://link.springer.com/book/10.1007/978-3-030-83144-8">Automated Low-Altitude Air Delivery</a> (2022)</p>
+<p><a href="http://www.hevac-heritage.org/e-books_large/fan_engineering_1840/FAN_contents-1/[1]FANS-INTRODUCTION.pdf">Fan Engineering 1840-1930</a></p>
+<p style="padding-left: 30px;"><a href="http://www.hevac-heritage.org">http://www.hevac-heritage.org</a></p>
+<h2>Reference</h2>
+<p><a href="https://mdecadp2018.github.io/site-40623128">https://mdecadp2018.github.io/site-40623128</a></p>
+<p><a href="https://mdecadp2018.github.io/site-40623130">https://mdecadp2018.github.io/site-40623130</a></p>
+<p><a href="https://mdecadp2018.github.io/site-40623224">https://mdecadp2018.github.io/site-40623224</a></p>
+<p><a href="https://mdecadp2018.github.io/site-40623242">https://mdecadp2018.github.io/site-40623242</a></p>
+<h3>Portable NX1980</h3>
+<p>在 Windows 10 配置可攜 NX1980 程式, 需要:</p>
+<ol>
+<li><a href="https://github.com/Bioruebe/UniExtract2">https://github.com/Bioruebe/UniExtract2</a></li>
+<li><a href="https://github.com/wixtoolset/wix3/releases/tag/wix3112rtm">https://github.com/wixtoolset/wix3/releases/tag/wix3112rtm</a></li>
+</ol>
+<p>等兩項工具, UniExtract2 用來解開 SiemensNX-1980_wntx64\nx\SiemensNX.msi, 以及 .msi, 而 wix 則用來解開 SiemensNX-1980_wntx64\nx\VC_redist.x64.exe, 指令為:</p>
+<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">wix311-binaries\dark.exe vc_redist.x64.exe -x x64-extracted</pre>
+<p>表示要在 x64-extracted 目錄中取得 x64-extracted\AttachedContainer\packages\vcRuntimeMinimum_amd64\vc_runtimeMinimum_x64.msi 之後, 再利用 UniExtract2 解開所需的 dll 檔案後, 再放入 NXBIN 目錄.</p>
+<p>製作 Portable NX1980 的步驟請參考以下影片:</p>
+<p>
+<script>
+var winkVideoData = {
+  dataVersion: 1,
+  frameRate: 10,
+  buttonFrameLength: 5,
+  buttonFrameOffset: 2,
+  frameStops: {
+  },
+};
+</script>
+</p>
+<!-- 接下來將 mp4 檔案從 downloads 目錄取出 -->
+<div class="winkVideoContainerClass"><video autoplay="autoplay" class="winkVideoClass" controls="controls" data-dirname="/static" data-varname="winkVideoData" height="630" muted="true" width="1008">
+<source src="/downloads/w5_portable_nx1980.mp4" type="video/mp4"/></video></div>
+<h3>template and SSH</h3>
+<p>以下教學影片說明如何利用 <a href="https://github.com/wcm2022/wcm2022">https://github.com/wcm2022/wcm2022</a> 倉儲作為 template, 建立個人與分組的倉儲. 並且利用 putty 與 GIT_SSH 變數的設定, 採用 SSH 網路協定對 Github 上的倉儲進行改版:</p>
+<p>
+<script>
+var winkVideoData = {
+  dataVersion: 1,
+  frameRate: 10,
+  buttonFrameLength: 5,
+  buttonFrameOffset: 2,
+  frameStops: {
+  },
+};
+</script>
+</p>
+<!-- 接下來將 mp4 檔案從 downloads 目錄取出 -->
+<div class="winkVideoContainerClass"><video autoplay="autoplay" class="winkVideoClass" controls="controls" data-dirname="/static" data-varname="winkVideoData" height="630" muted="true" width="1008">
+<source src="/downloads/w5_template.mp4" type="video/mp4"/></video></div>
+<h3>Pull Requests</h3>
+<p>以下影片說明如何利用 Pull Requests 對沒有協同管理權限的 github 倉儲進行改版後, 要求合併內容:</p>
+<p>
+<script>
+var winkVideoData = {
+  dataVersion: 1,
+  frameRate: 10,
+  buttonFrameLength: 5,
+  buttonFrameOffset: 2,
+  frameStops: {
+  },
+};
+</script>
+</p>
+<!-- 接下來將 mp4 檔案從 downloads 目錄取出 -->
+<div class="winkVideoContainerClass"><video autoplay="autoplay" class="winkVideoClass" controls="controls" data-dirname="/static" data-varname="winkVideoData" height="630" muted="true" width="1008">
+<source src="/downloads/2a_w3_studlist_pull_requests.mp4" type="video/mp4"/></video></div>
+<p>以下影片說明如何透過逆向 Pull Requests 讓各學員帳號下的分組倉儲與組長帳號下的協同倉儲內容保持同步:</p>
+<p>
+<script>
+var winkVideoData2 = {
+  dataVersion: 1,
+  frameRate: 10,
+  buttonFrameLength: 5,
+  buttonFrameOffset: 2,
+  frameStops: {
+    "1682": [
+      { type: "gotourl", rect: { x: 321, y: 166, width: 60, height: 24 }, target: "https://support.mozilla.org/en-US/questions/1230877", window: "reset certificate" },
+    ],
+  },
+};
+</script>
+</p>
+<!-- 接下來將 mp4 檔案從 downloads 目錄取出 -->
+<div class="winkVideoContainerClass"><video autoplay="autoplay" class="winkVideoClass" controls="controls" data-dirname="/static" data-varname="winkVideoData2" height="630" muted="true" width="1008">
+<source src="/downloads/w5_pull_request.mp4" type="video/mp4"/></video></div>
+<h3>Resolve Conflicts</h3>
+<h4>解決協同設計流程中的倉儲衝突</h4>
+<p>當各組學員對組長帳號下的分組倉儲具備協同管理權限後, 各學員可以 git 採非同步協同設計, 對組長帳號下的分組倉儲進行改版, 其間不免要設法以手動方式解決 config/content.htm 動態超文件中的衝突.</p>
+<p>以下影片就是利用動態網頁系統中的 Search 與 Edit All 設法找出帶有衝突起點、中線與衝突終點的超文件範圍, 然後根據協同設計整體需求解決衝突後, 新增、提交並推送新版本.</p>
+<hr/>
+<p>
+<script>
+var winkVideoData_resolve_conflict = {
+  dataVersion: 1,
+  frameRate: 10,
+  buttonFrameLength: 5,
+  buttonFrameOffset: 2,
+  frameStops: {
+  },
+};
+</script>
+</p>
+<!-- 接下來將 mp4 檔案從 downloads 目錄取出 -->
+<div class="winkVideoContainerClass"><video autoplay="autoplay" class="winkVideoClass" controls="controls" data-dirname="/static" data-varname="winkVideoData_resolve_conflict" height="630" muted="true" width="1008">
+<source src="/downloads/w11_resolve_conflict.mp4" type="video/mp4"/></video></div>
+<div class="winkVideoContainerClass"><hr/></div>
+<h3>Revealjs</h3>
+<p><a href="https://revealjs.com/">https://revealjs.com/</a> 是一個 Javascript 程式框架, 可用來建立全球資訊網上的簡報.</p>
+<p>將 reveal.js 納入分組倉儲的真正目的, 是能直接在統一的 GitHub 提交推送過程中, 持續查核各組員對於協同產品開發流程的貢獻度.</p>
+<p>至於為何要利用 markdown 格式, 在 Leo Editor 中轉為 index.html 進行展示, 是希望在組員改版間避開以 html 格式處理衝突的難度.</p>
+<p>課程中所採的各種方法並非限制, 而是在衡量協同利弊得失後的可行方法之一.你們可以就各種工具在協同產品設計流程中的應用. 進行討論及實作, 然後查驗所採行的方法是否也能:</p>
+<ol>
+<li>持續改進</li>
+<li>保有各組員的改版紀錄</li>
+<li>方便處理合併及展示</li>
+<li>具永續性及可應變性</li>
+</ol>
+<p><a href="https://github.com/hakimel/reveal.js">https://github.com/hakimel/reveal.js</a> 引用了許多 Javascript 程式庫, 這些程式庫的改版非常頻繁, 經常造成改版頻率相對緩慢的 <a href="https://github.com/mdecycu/cmsimde">cmsimde</a> 經常收到來自 Github 的改版通知.</p>
+<p>因此在利用 <a href="https://github.com/mdecycu/cmsimde">cmsimde</a> 建立 cd2022 課程網站與大分組網站時, 若要直接使用 Reveal.js 建立線上簡報, 就必須將 <a href="https://github.com/mdecycu/cmsimde">cmsimde</a> 的 reveal 目錄內容保持在最新的 Reveal.js 版本.</p>
+<p><a href="https://github.com/mdecycu/cmsimde_site">https://github.com/mdecycu/cmsimde_site</a> 就是用於開發 <a href="https://github.com/mdecycu/cmsimde">cmsimde</a> 的倉儲. cmsimde_site 的 main 分支直接將 <a href="https://github.com/mdecycu/cmsimde">cmsimde</a> 內容放入 cmsimde 目錄, 可以直接根據需求修改其中的任何內容, 當測試無誤後(尚未使用 <a href="https://docs.python.org/3/library/unittest.html">unittest</a>), 將改版內容反應至 <a href="https://github.com/mdecycu/cmsimde">cmsimde</a> 後, 將在 cmsimde_site 倉儲中的 submodule 分支中進行測試.</p>
+<p>由於 cmsimde_site 的 main 分支直接將 cmsimde 當作子目錄, 而 submodule 分支則將 cmsimde 當作子模組. 從 main 分支切換到 submodule, 由於需要同時取下 cmsimde 子模組資料, 因此使用:</p>
+<p style="padding-left: 30px;">git checkout -f submodule --recurse-submodules</p>
+<p>而從 submodule 分支切換回 main 分支, 則使用:</p>
+<p style="padding-left: 30px;">git checkout -f main</p>
+<p><a href="https://github.com/mdecycu/cmsimde">cmsimde</a> 倉儲中的 config/reveal.leo 使用 <a href="https://leoeditor.com/">Leo Editor</a> 編輯各簡報頁面內容. reveal.leo 中包含 demo.html 中的各種簡報應用, 使用者可以從 Leo Editor 專案中取出所需的簡報頁面進行編輯.</p>
+<p>以下影片說明如何利用 Leo Editor 編輯 config/reveal.leo 網際簡報檔案:</p>
+<p>
+<script>
+var winkVideoData = {
+  dataVersion: 1,
+  frameRate: 10,
+  buttonFrameLength: 5,
+  buttonFrameOffset: 2,
+  frameStops: {
+  },
+};
+</script>
+</p>
+<!-- 接下來將 mp4 檔案從 downloads 目錄取出 -->
+<div class="winkVideoContainerClass"><video autoplay="autoplay" class="winkVideoClass" controls="controls" data-dirname="/static" data-varname="winkVideoData" height="630" muted="true" width="1008">
+<source src="/downloads/w5_reveal.mp4" type="video/mp4"/></video></div>
+<p>以下影片說明如何利用 Leo Editor 編輯 config/pelican.leo 網誌檔案:</p>
+<p>
+<script>
+var winkVideoData2 = {
+  dataVersion: 1,
+  frameRate: 10,
+  buttonFrameLength: 5,
+  buttonFrameOffset: 2,
+  frameStops: {
+  },
+};
+</script>
+</p>
+<!-- 接下來將 mp4 檔案從 downloads 目錄取出 -->
+<div class="winkVideoContainerClass"><video autoplay="autoplay" class="winkVideoClass" controls="controls" data-dirname="/static" data-varname="winkVideoData2" height="630" muted="true" width="1008">
+<source src="/downloads/w6_blog.mp4" type="video/mp4"/></video></div>
+<h3>cube</h3>
+<p>以下為採用 NX1980 繪製的正方體零件, 可能原先的繪圖流程是在草圖階段繪圖時並未對長度與寬度設定尺寸, 就直接長出實體, 然後再回到草圖設定尺寸, 因此 Tools -&gt; Expressions 以 p1 定義高度, 而長度則設為 p2, 寬度設為 p3, 在沒有透過 set Expressions 對長度與寬度對應尺寸約束之前, 在 Tools -&gt; Expressions 只能看到 p1, 其實 p2 與 p3 應該已經跟草圖的尺寸綁定, 因此可以透過 NXOpen Python API 程式 對無列出長寬尺寸變數的零件進行操控, 看是否能夠利用 p2 與 p3 變數控制草圖大小.</p>
+<p>以下為設法透過草圖編輯列出尺變數的 Wink 影片:</p>
+<p><a href="/downloads/w10_cube_1980_cubes.7z">參考零件.7z</a></p>
+<p>
+<script>
+var winkVideoData_40923151 = {
+  dataVersion: 1,
+  frameRate: 10,
+  buttonFrameLength: 5,
+  buttonFrameOffset: 2,
+  frameStops: {
+  },
+};
+</script>
+</p>
+<!-- 接下來將 mp4 檔案從 downloads 目錄取出 -->
+<div class="winkVideoContainerClass"><video autoplay="autoplay" class="winkVideoClass" controls="controls" data-dirname="/static" data-varname="winkVideoData_40923151" height="630" muted="true" width="1008">
+<source src="/downloads/w10_cube.mp4" type="video/mp4"/></video></div>
+<h2>Solvespace</h2>
+<p><a href="https://solvespace.com">https://solvespace.com</a></p>
+<p><a href="https://github.com/solvespace/solvespace">https://github.com/solvespace/solvespace</a></p>
+<p><a href="https://github.com/KmolYuan/Pyslvs-UI">https://github.com/KmolYuan/Pyslvs-UI</a></p>
+<h2>Leo Editor</h2>
+<p><a href="https://leoeditor.com/">https://leoeditor.com/</a></p>
+<p><a href="https://github.com/leo-editor/leo-editor">https://github.com/leo-editor/leo-editor</a></p>
+<p><a href="https://groups.google.com/g/leo-editor">https://groups.google.com/g/leo-editor</a></p>
+<p><a href="https://edreamleo.blogspot.com/">https://edreamleo.blogspot.com/</a></p><h2>Fossil SCM2</h2>
+<p><a href="https://www.fossil-scm.org">https://www.fossil-scm.org</a></p>
+<p><a href="https://sqlite.org/whynotgit.html">https://sqlite.org/whynotgit.html</a></p>
+<h2>Classroom</h2>
+<p><a href="https://youtu.be/4i1D5rIrkAM">https://youtu.be/4i1D5rIrkAM</a></p>
+<h2>Webots</h2>
+<p><a href="https://cyberbotics.com">https://cyberbotics.com</a></p>
+<p><a href="https://github.com/cyberbotics/webots">https://github.com/cyberbotics/webots</a></p>
+<p><a href="https://robotbenchmark.net/">https://robotbenchmark.net/</a></p>
+<h2>Deep RL</h2>
+<p><a href="https://link.springer.com/book/10.1007/978-3-030-59238-7">Learning to play</a> (2020)</p>
+<p><a href="https://link.springer.com/book/10.1007/978-981-15-4095-0">Deep Reinforcement Learning</a> (2020)</p>
+<p><a href="https://link.springer.com/book/10.1007/978-981-19-0638-1">Deep Reinforcement Learning</a> (2022)</p>
+<p><a href="https://deepreinforcementlearningbook.org/docs/Fundamentals/">Deep Reinforcement Learning Book</a> (2020)</p>
+<p style="padding-left: 30px;"><a href="https://deepreinforcementlearningbook.org/assets/pdfs/ch16.pdf">模擬環境中機器人學習</a></p>
+<p><a href="https://dtransposed.github.io/blog/2020/10/21/Robotic-Assembly/">Robotic Assembly Using Deep Reinforcement Learning</a> (2020)</p>
+<p><a href="https://www.hou.usra.edu/meetings/isairas2020fullpapers/pdf/5032.pdf">RL STaR Platform: Reinforcement Learning for Simulation based Training of Robots</a> (2020)</p>
+<p><a href="https://ieeexplore.ieee.org/document/9663504">Robots Learn Visual Pouring Task Using Deep Reinforcement Learning with Minimal Human Effort </a>(2021)</p>
+<p><a href="https://www.sciencedirect.com/science/article/pii/S0020025521001158">Deep reinforcement learning based moving object grasping</a> (2021)</p>
+<p><a href="https://github.com/gbartyzel/gym-vrep">https://github.com/gbartyzel/gym-vrep</a></p>
+<h1>NX</h1>
+<p><a href="https://www.plm.automation.siemens.com/global/en/products/nx/">https://www.plm.automation.siemens.com/global/en/products/nx/</a></p>
+<p>NX2206 只包含下列目錄 (CAD_lite), 檔案容量 7.5 GB: dir /b /ad &gt; dir.txt</p>
+<p>DESIGNSPACEEXPLORER (<a href="https://webinars.sw.siemens.com/en-US/design-space-exploration">Webina</a>r (41 分 19 秒 - View with Gmail account)<br/>DESIGN_TOOLS (<a href="https://www.designfusion.com/post/a-look-at-nx-check-mate">A look at NX Check-Mate</a>)<br/>DIAGRAMCORE (利用 <a href="https://www.yworks.com/products/yfiles">yFiles</a> 繪製 Diagrams)<br/>DIAGRAMMING (<a href="https://www.plm.automation.siemens.com/global/fr/webinar/piping-and-instrumentation-diagrams/78351">Piping and Instrumentation Diagramming</a>)<br/>DRAFTING (<a href="https://www.youtube.com/watch?v=yQy6lY-Gq6Y">Basic Drafting Tutorial</a>)<br/>DXFDWG<br/>IGES<br/>INSTALL<br/>MECHATRONICS<br/>NXASSEMBLY<br/>NXBIN<br/>NXPARTS<br/>STEP203UG<br/>STEP214UG<br/>Temp<br/>TRANSLATORS<br/>UGFLEXLM<br/>UGII<br/>UGMANAGER<br/>UGOPEN<br/>UGOPENPP<br/>UNFOLD</p>
+<p>若加上簡單的 CAE 工程分析模組 (CAX_lite), 檔案容量 21 GB:</p>
+<p>AUTOMATED_TESTING<br/>AUTOMATION_DESIGNER<br/>DESIGNSPACEEXPLORER<br/>DESIGN_TOOLS<br/>DRAFTING<br/>DXFDWG<br/>IGES<br/>INSTALL<br/>MACH<br/>MANUFACTURING_PLANNING<br/>MECHATRONICS<br/>NXASSEMBLY<br/>NXBIN<br/>NXCAE_EXTRAS<br/>NXHUMAN<br/>NXNASTRAN<br/>NXPARTS<br/>NXSTRUCTUREDESIGN<br/>SIMULATION<br/>STEP203UG<br/>STEP214UG<br/>Temp<br/>TRANSLATORS<br/>UGFLEXLM<br/>UGII<br/>UGMANAGER<br/>UGOPEN<br/>UGOPENPP<br/>UGSTRUCTURES<br/>UNFOLD</p>
+<p>若包含全模組, 檔案容量 31 GB:</p>
+<p>AUTOMATED_TESTING<br/>AUTOMATION_DESIGNER<br/>CAPITALINTEGRATION<br/>CATIAV5<br/>CLOUDDM<br/>CMM_INSPECTION<br/>DESIGNSPACEEXPLORER<br/>DESIGN_TOOLS<br/>DIAGRAMCORE<br/>DIAGRAMMING<br/>DRAFTING<br/>DXFDWG<br/>IGES<br/>INSTALL<br/>LOCALIZATION<br/>MACH<br/>MANUFACTURING_PLANNING<br/>MBD<br/>MECH<br/>MECHATRONICS<br/>MENDIXREPORTING<br/>MOLDCOOLING<br/>MOLDWIZARD<br/>MPA<br/>NXAECDESIGN<br/>NXASSEMBLY<br/>NXBIN<br/>NXCABLEROUTER<br/>NXCAE_EXTRAS<br/>NXCOATINGS<br/>NXCREO<br/>NXHUMAN<br/>NXJOIN<br/>NXNASTRAN<br/>NXPARTS<br/>NXPLOT<br/>NXPROE<br/>NXREPORTS<br/>NXSHIP<br/>NXSTRUCTUREDESIGN<br/>NXVR<br/>NX_VSA<br/>POSTBUILD<br/>PSTUDIO<br/>PVTRANS<br/>REL_INFO<br/>ROUTING<br/>RULE<br/>SAFETY<br/>SIMULATION<br/>STAGE_MODEL<br/>STAMPING_TOOLS<br/>STEP203UG<br/>STEP214UG<br/>TDP<br/>Temp<br/>TOOLING_BASE<br/>TRANSLATORS<br/>UGALLIANCE<br/>UGAUTOMOTIVE<br/>UGCATIA<br/>UGFLEXLM<br/>UGFPCD<br/>UGII<br/>UGIMW<br/>UGMANAGER<br/>UGOPEN<br/>UGOPENPP<br/>UGPCBX<br/>UGPCBXCHANGE<br/>UGPHOTO<br/>UGSTRUCTURES<br/>UGSTUDIO<br/>UGTIPS<br/>UGTO2D<br/>UGWEB<br/>UGWELD<br/>UNFOLD<br/>VDA<br/>VDV</p>
+<h2>NX1980_setup</h2>
+<p>以下影片說明如何設定 Journal 存檔格式, 關閉 Product Execellence Program, 並查驗版本與授權使用單位:</p>
+<p><a href="/downloads/w5_nx_api.7z">w5_nx_api.7z</a></p>
+<p>
+<script>
+var winkVideoData = {
+  dataVersion: 1,
+  frameRate: 10,
+  buttonFrameLength: 5,
+  buttonFrameOffset: 2,
+  frameStops: {
+  },
+};
+</script>
+</p>
+<!-- 接下來將 mp4 檔案從 downloads 目錄取出 -->
+<div class="winkVideoContainerClass"><video autoplay="autoplay" class="winkVideoClass" controls="controls" data-dirname="/static" data-varname="winkVideoData" height="630" muted="true" width="1008">
+<source src="/downloads/w5_nx_api.mp4" type="video/mp4"/></video></div>
+<h2>NX2206</h2>
+<p>2022.06.17 正式推出 SiemensNX-2206_wntx64.zip (10.9GB)</p>
+<p>NX2206 完整系統容量為 29.35 GB</p>
+<p>以下列 get_dir_size.py 計算 NX2206 各目錄容量:</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import os
+import math
+ 
+def convert_size(size_bytes):
+    # from https://stackoverflow.com/questions/5194057/better-way-to-convert-file-sizes-in-python
+    if size_bytes == 0:
+        return "0B"
+    size_name = ("B", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB")
+    i = int(math.floor(math.log(size_bytes, 1024)))
+    p = math.pow(1024, i)
+    s = round(size_bytes / p, 2)
+    return "%s %s" % (s, size_name[i])
+    
+def get_dir_size(path='.'):
+    # from https://note.nkmk.me/en/python-os-path-getsize/
+    total = 0
+    with os.scandir(path) as it:
+        for entry in it:
+            if entry.is_file():
+                total += entry.stat().st_size
+            elif entry.is_dir():
+                total += get_dir_size(entry.path)
+    return total
+ 
+#for (root,dirs,files) in os.walk('./', topdown=True):
+    #print (dirs)
+ 
+total = 0
+nx_dir_list = os.listdir('./')
+for i in nx_dir_list:
+    try:
+        # skip files
+        total += get_dir_size(i)
+        print(i, ":", convert_size(get_dir_size(i)))
+    except:
+        #print(i)
+        pass
+print("total:", convert_size(total))</pre>
+<p>執行結果:</p>
+<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">AUTOMATED_TESTING : 3.9 MB
+AUTOMATION_DESIGNER : 276.42 MB
+CAPITALINTEGRATION : 2.04 MB
+CATIAV5 : 763.49 KB
+CLOUDDM : 99.22 KB
+CMM_INSPECTION : 143.32 MB
+DESIGNSPACEEXPLORER : 7.87 KB
+DESIGN_TOOLS : 64.18 MB
+DIAGRAMCORE : 5.77 MB
+DIAGRAMMING : 51.07 MB
+DRAFTING : 123.71 MB
+DXFDWG : 207.4 MB
+IGES : 5.2 MB
+INSTALL : 55.05 KB
+LOCALIZATION : 1.1 GB
+MACH : 1.96 GB
+MANUFACTURING_PLANNING : 136.6 MB
+MBD : 62.8 MB
+MECH : 568.6 MB
+MECHATRONICS : 216.88 MB
+MENDIXREPORTING : 1.04 MB
+MOLDCOOLING : 12.17 KB
+MOLDWIZARD : 230.24 MB
+MPA : 1.5 MB
+NXAECDESIGN : 32.3 MB
+NXASSEMBLY : 127.27 MB
+NXBIN : 5.24 GB
+NXCABLEROUTER : 205.75 KB
+NXCAE_EXTRAS : 3.3 GB
+NXCOATINGS : 645.3 KB
+NXCREO : 6.19 MB
+NXHUMAN : 247.8 MB
+NXJOIN : 18.22 MB
+NXNASTRAN : 2.94 GB
+NXPARTS : 53.28 MB
+NXPLOT : 255.92 MB
+NXPROE : 6.19 MB
+NXREPORTS : 9.45 MB
+NXSHIP : 340.46 MB
+NXSTRUCTUREDESIGN : 121.55 MB
+NXVR : 446.12 MB
+NX_VSA : 13.88 MB
+POSTBUILD : 37.65 MB
+PSTUDIO : 35.5 MB
+PVTRANS : 104.49 KB
+REL_INFO : 36.92 KB
+ROUTING : 324.37 MB
+RULE : 302.85 KB
+SAFETY : 522.78 MB
+SIMULATION : 4.29 GB
+STAGE_MODEL : 3.53 MB
+STAMPING_TOOLS : 93.18 MB
+STEP203UG : 1.28 MB
+STEP214UG : 1.27 MB
+TDP : 237.67 MB
+TOOLING_BASE : 970.12 KB
+TRANSLATORS : 157.99 MB
+UGALLIANCE : 85.09 KB
+UGAUTOMOTIVE : 105.7 MB
+UGCATIA : 6.55 MB
+UGFLEXLM : 31.5 MB
+UGFPCD : 35.19 KB
+UGII : 698.39 MB
+UGIMW : 8.45 MB
+UGMANAGER : 118.83 MB
+UGOPEN : 436.93 MB
+UGOPENPP : 567.28 KB
+UGPCBX : 3.92 MB
+UGPCBXCHANGE : 81.62 MB
+UGPHOTO : 2.99 GB
+UGSTRUCTURES : 789.79 MB
+UGSTUDIO : 14.03 MB
+UGTIPS : 192.46 MB
+UGTO2D : 921.06 KB
+UGWEB : 9.08 MB
+UGWELD : 2.07 MB
+UNFOLD : 71.92 KB
+VDA : 25.43 KB
+VDV : 14.55 KB
+total: 29.35 GB</pre>
+<p>假如只需要 NX2206 Modeling, Drawing, Mechatronic Design Studio, Product Template Studio 等功能, 則只需要下列目錄檔案, 容量為 7.49GB, NX2206_CAD_lite.7z:</p>
+<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">DESIGNSPACEEXPLORER : 7.87 KB
+DESIGN_TOOLS : 64.18 MB
+DIAGRAMCORE : 5.77 MB
+DIAGRAMMING : 51.07 MB
+DRAFTING : 123.71 MB
+DXFDWG : 207.4 MB
+IGES : 5.2 MB
+INSTALL : 55.05 KB
+MECHATRONICS : 216.88 MB
+NXASSEMBLY : 127.27 MB
+NXBIN : 5.24 GB
+NXPARTS : 53.28 MB
+STEP203UG : 1.28 MB
+STEP214UG : 1.27 MB
+Temp : 1.02 KB
+TRANSLATORS : 157.99 MB
+UGFLEXLM : 31.5 MB
+UGII : 698.39 MB
+UGMANAGER : 118.83 MB
+UGOPEN : 436.93 MB
+UGOPENPP : 567.28 KB
+UNFOLD : 71.92 KB
+total: 7.49 GB</pre>
+<p>基本 NX2206 CAD 教育版功能模組:</p>
+<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false"># NX Academic - Core &amp; CAD
+3d_to_2d_flattener
+acis_nx_translator
+adv_assemblies
+adv_sheet_metal_dsgn
+aero_sheet_metal
+assemblies
+cam_additive_1
+cam_additive_2
+cam_additive_post
+cam_robotics_1000
+cam_robotics_1001
+cam_robotics_1002
+cam_robotics_1003
+cam_robotics_1004
+cam_robotics_1006
+cam_robotics_1009
+catv5_nx_sca
+conf_cooling_channel
+des_top_opt
+design_studio
+die_engineering
+drafting
+dxf_to_ug
+dxfdwg
+features_modeling
+free_form_modeling
+gateway
+geometric_tol
+grip_execute
+ifc_to_nx
+iges
+insp_programming
+ld_line_designer
+mrl_connect
+nx_3d_path_planning
+nx_4gd_integration
+nx_access_tcclass
+nx_additive_design
+nx_aero_design
+nx_animationdesigner
+nx_cam_deburr_planar
+nx_cam_deburring3x
+nx_cam_deburring4x
+nx_cam_deburring5x
+nx_cam_rotary_4x
+nx_cam_smks_3x
+nx_cam_smks_4x
+nx_cam_smks_additive
+nx_cam_smks_complex
+nx_cam_turn_prime
+nx_coatings
+nx_design_explorer
+nx_diagramming
+nx_drawing_auto
+nx_electrode_wizard
+nx_flexible_pcb
+nx_freeform_1
+nx_freeform_2
+nx_gc_toolkit
+nx_general_packaging
+nx_issue_mgmt
+nx_isv_mtb
+nx_isv_vm_hmi
+nx_jacktkapi
+nx_join
+nx_lnx_batch
+nx_mc_basic
+nx_mc_full
+nx_mcd_core
+nx_ml_cmd_pred_ui
+nx_onestep_analysis
+nx_penetration_mgmt
+nx_pid_design_author
+nx_pmi_effectivity
+nx_point_cloud_view
+nx_polygon_modeling
+nx_post_config_adv
+nx_post_config_full
+nx_posture
+nx_reuse_cadenas
+nx_samcef_ui
+nx_sdpd_mpm_a
+nx_sdpd_mpm_v
+nx_sdpd_pam_a
+nx_sdpd_pam_v
+nx_sheet_metal
+nx_ship_basic
+nx_ship_concept
+nx_ship_detail
+nx_ship_drafting
+nx_ship_gen_arrange
+nx_ship_mfg_prep
+nx_snap_author
+nx_structure_design
+nx_subdivision
+nx_sysnoise_bem
+nx_to_ifc
+nx_visual_reporting
+nx_wi_authoring
+nx_xr
+pcf_package_file
+proenx
+prog_die_wizard
+pstudio_cons
+pts_author
+pts_consumer
+pv_ugdatagenerator
+routing_advanced
+routing_base
+routing_cabling
+routing_harness
+routing_hvac
+routing_pid
+routing_pipetube
+routing_platform
+sc_des_topol_opt
+sc_fp_sa
+sc_fp_sa_beam
+sc_fp_sa_dyn
+sc_fp_sa_dyn_nl
+sc_fp_sa_opt
+sc_fp_sa_shell
+shape_search
+sinumerik_spline
+sla_3d_systems
+solid_modeling
+std_ug_library
+step_ap203
+step_ap214
+step_ap242
+structure_weld
+student_read
+studio_analyze
+studio_free_form
+studio_render
+studio_visualize
+ug_body_design
+ug_checkmate
+ug_comp_flattener
+ug_comp_pipeline
+ug_die_design
+ug_human
+ug_kf_author
+ug_kf_checker
+ug_kf_execute
+ug_mold_design
+ug_opt_wizard
+ug_prod_des_advisor
+ug_visualize
+ug_web_express
+ugopen_menuscript
+ugweld
+ui_styler
+usr_defined_features
+wave</pre>
+<p>假如要再加上 CAE 與 CAM 功能, 則需要下列目錄, 容量為 21.47GB, NX2206_CAX_lite.7z</p>
+<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">AUTOMATED_TESTING : 3.9 MB
+AUTOMATION_DESIGNER : 276.42 MB
+DESIGNSPACEEXPLORER : 7.87 KB
+DESIGN_TOOLS : 64.18 MB
+DRAFTING : 123.71 MB
+DXFDWG : 207.4 MB
+IGES : 5.2 MB
+INSTALL : 55.05 KB
+MACH : 1.96 GB
+MANUFACTURING_PLANNING : 136.6 MB
+MECHATRONICS : 216.88 MB
+NXASSEMBLY : 127.27 MB
+NXBIN : 5.24 GB
+NXCAE_EXTRAS : 3.3 GB
+NXHUMAN : 247.8 MB
+NXNASTRAN : 2.94 GB
+NXPARTS : 53.28 MB
+NXSTRUCTUREDESIGN : 121.55 MB
+SIMULATION : 4.29 GB
+STEP203UG : 1.28 MB
+STEP214UG : 1.27 MB
+Temp : 0B
+TRANSLATORS : 157.99 MB
+UGFLEXLM : 31.5 MB
+UGII : 698.39 MB
+UGMANAGER : 118.83 MB
+UGOPEN : 436.93 MB
+UGOPENPP : 567.28 KB
+UGSTRUCTURES : 789.79 MB
+UNFOLD : 71.92 KB
+total: 21.47 GB</pre>
+<p>NX2206 基本 CAE + CAM 教育版功能:</p>
+<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false"># NX Academic Perpetual License CAE+CAM
+3d_to_2d_flattener
+appearance_mgmt
+appearance_mgmt_aw
+appearance_mgmt_mgd
+assemblies
+cam_additive_3
+cam_base
+cam_facets
+cavity_milling
+contour_profile
+dmu_markup
+dxf_to_ug
+dxfdwg
+elma
+fbm_author
+fix_axis_surf_mill
+flow_cut
+gateway
+gmc
+graphical_tool_path
+grip_execute
+iges
+mechanisms
+motion_cd_tire
+motion_ext_control
+motion_flex_modal
+motion_std_tire
+motion_swift_tire
+motion_tno_tire
+nc_external_program
+nc_wizard_builder
+nurb_output_enabler
+nx_3d_swept_volume
+nx_abaqus_env
+nx_abaqus_export
+nx_abaqus_export_g
+nx_abaqus_import
+nx_acoustic_modeling
+nx_acoustics_bem_hpc
+nx_adv_durability
+nx_adv_fld_mod_solv
+nx_adv_fluid_mod
+nx_algorithmic
+nx_ansys_env
+nx_ansys_export
+nx_ansys_export_g
+nx_ansys_import
+nx_cam_deburring4x
+nx_cam_rotary_4x
+nx_cam_smks_3x
+nx_cam_smks_4x
+nx_cam_smks_complex
+nx_correl_base
+nx_correl_update
+nx_design_sim
+nx_drafting_plus
+nx_draw_shape
+nx_durability_wiz
+nx_easyfill_advanced
+nx_easyfill_analysis
+nx_esc_solv
+nx_esc_ui
+nx_flow_adv_solv
+nx_flow_adv_ui
+nx_flow_solver
+nx_flow_ui
+nx_general_packaging
+nx_implicit
+nx_isv_mtb
+nx_lam_comp_adv
+nx_lam_composites
+nx_layout
+nx_lsdyna_export
+nx_lsdyna_import
+nx_mach_line_planner
+nx_masterfem
+nx_mbd
+nx_ml_sel_pred_std
+nx_ml_show_hide
+nx_mlp_setup
+nx_mlp_solid
+nx_mscnastran_env
+nx_mu_notifications
+nx_multi_blade_mill
+nx_nas_acous_adv
+nx_nas_aero_dsk
+nx_nas_bn_basic_dsk
+nx_nas_dmap_dsk
+nx_nas_dyn_dsk
+nx_nas_nonlin_dsk
+nx_nas_optim_dsk
+nx_nas_rotdyn_dsk
+nx_nas_supel_dsk
+nx_nas_topol
+nx_nas_uss_dsk
+nx_nastran_export
+nx_nastran_export_g
+nx_post_config_adv
+nx_response_anlys
+nx_ship_super_plate
+nx_space_therm_solv
+nx_space_therm_ui
+nx_spsd_stress
+nx_spsd_vibration
+nx_sysnoisebem_ui
+nx_tdp
+nx_thermal_adv_solv
+nx_thermal_adv_ui
+nx_thermal_solver
+nx_thermal_ui
+nx_tilt_tool_axis
+nx_vr_sudr
+nx_wedm_base
+nx_wedm_extra
+nx_wedm_gear
+nx_wedm_ruled
+nx_wedmp_db
+nx_wedmp_no_db
+nx_wi_authoring
+planar_milling
+probe
+pstudio_auth
+pstudio_cons
+pv_ugdatagenerator
+sequential_milling
+shop_doc
+sla_3d_systems
+stage_model
+step_ap203
+step_ap214
+surface_milling
+sync_mgr
+tol_cavity_milling
+ug_epak
+ug_holemaking
+ug_isv_full
+ug_kf_execute
+ug_library_access
+ug_nas_bn
+ug_nas_des
+ug_pcb_exchange
+ug_pcb_modeler
+ug_post_exe
+ug_post_kinematics
+ug_post_mill
+ug_schematics
+ug_smart_models
+ug_strength_wizard
+ug_to_dxf
+ug_to_vericut
+ug_turning
+ug_visualize
+ugopen_menuscript
+var_axis_surf_mill
+vehicle_des_val
+wire_edm_machining</pre>
+<p></p>
+<h2>NXOpen</h2>
+<p>NX Open is an Application Programming Interface (API) that lets you write programs to customize or extend NX. The benefit is that applications created this way can often speed up repetitive tasks, and capture important design process knowledge.</p>
+<p>Python 範例: UGOPEN\SampleNXOpenApplications\Python</p>
+<p><a href="/downloads/Introduction_to_NXOpen.pdf">Introduction_to_NXOpen.pdf</a> from <a href="https://github.com/derda48/NXOpen">https://github.com/derda48/NXOpen</a></p>
+<p><a href="https://docs.plm.automation.siemens.com/tdoc/nx/12/nx_api#uid:xid1162445:index_nxopen_prog_guide">NXOpen Programmer's Guide</a> (NX12)</p>
+<p><a href="https://docs.plm.automation.siemens.com/data_services/resources/nx/12/nx_api/custom/en_US/nxopen_python_ref/index.html">NXOpen for Python Reference Guide</a> (NX12</p>
+<p><a href="/downloads/NXOpen_spur_gear.c">NXOpen_spur_gear.c</a></p>
+<p><a href="https://docs.plm.automation.siemens.com/data_services/resources/nx/1872/nx_api/common/en_US/graphics/fileLibrary/nx/nxopen/NXOpen_Getting_Started.pdf">Get Started with NXOpen.pdf</a> (2019)</p>
+<p>NX10: <a href="https://docs.plm.automation.siemens.com/data_services/resources/nx/10/nx_api/en_US/custom/nxopen_python_ref/index.html">https://docs.plm.automation.siemens.com/data_services/resources/nx/10/nx_api/en_US/custom/nxopen_python_ref/index.html</a></p>
+<p>NX12: <a href="https://docs.plm.automation.siemens.com/data_services/resources/nx/12/nx_api/custom/en_US/nxopen_python_ref/index.html">https://docs.plm.automation.siemens.com/data_services/resources/nx/12/nx_api/custom/en_US/nxopen_python_ref/index.html</a></p>
+<p><a href="/downloads/SNAP_Getting_Started_nx1872.pdf">SNAP_Getting_Started_nx1872.pdf</a></p>
+<p style="padding-left: 30px;">A <a href="https://docs.plm.automation.siemens.com/data_services/resources/nx/10/nx_api/en_US/custom/nxopen_python_ref/NXOpen.Assemblies.Component.html">Component</a> (組件) is an <a href="https://en.wikipedia.org/wiki/Event_(computing)">occurrence</a> (事件) whose <a href="https://docs.plm.automation.siemens.com/data_services/resources/nx/10/nx_api/en_US/custom/nxopen_python_ref/NXOpen.NXObject.html#prototype">prototype</a> (原型) is a NXOpen.Part.</p>
+<p style="padding-left: 60px;">Component 為電腦事件, 其原型為零件檔案.</p>
+<p>下圖的黃色部分即為組件 (Components), 也就是所謂的零件事件. 透過組件間的樹狀結構, 就可以得知組立件中的零件組成, 而無需開啟零件檔案.</p>
+<p>每一個組立件中都有一個根組件 (RootComponent), 也就是該組立件的樹狀結構源頭. 若一個 prt 檔案中並無根組件, 代表其並非組立件.</p>
+<p>因為每一個組件都應該帶有連結到其子組件、父組件與其零件檔案的連結. 而其中的零件檔案就稱為該組件的原型. 至於根組件並非"真實的"組件, 因為其原型連結有特殊意義, 也就是根組件的原型連結會"連回"其零件檔案本身.</p>
+<p><img caption="false" height="483" src="/images/assembly_component1.png" width="600"/></p>
+<p><img caption="false" height="479" src="/images/assembly_component2.png" width="600"/></p>
+<p>NXOpen Python 程式範例:</p>
+<p style="padding-left: 30px;"><a href="/downloads/nxopen/nxopen_ex1.py">nxopen_ex1.py</a></p>
+<p style="padding-left: 30px;"><a href="/downloads/nxopen/nxopen_ex2.py">nxopen_ex2.py</a></p>
+<p style="padding-left: 30px;"><a href="/downloads/nxopen/nxopen_ex3.py">nxopen_ex3.py</a></p>
+<h4>Referene:</h4>
+<p style="padding-left: 30px;"><a href="https://support.industrysoftware.automation.siemens.com/general/nx.shtml#lp-tab-1">NX 各版本技術手冊</a></p>
+<p style="padding-left: 30px;"><a href="https://docs.plm.automation.siemens.com/tdoc/nx/1899/nx_help">https://docs.plm.automation.siemens.com/tdoc/nx/1899/nx_help</a></p>
+<p style="padding-left: 30px;">NX1980\NXBIN\managed\exceladdin_x64.dll</p>
+<p style="padding-left: 30px;"><a href="/downloads/nxopen/ugii_env_ug.dat.txt">ugii_env_ug.dat.txt</a></p>
+<p style="padding-left: 60px;">UGII_PYTHONPATH</p>
+<p style="padding-left: 60px;">UGII_PYTHON_LIBRARY_DIR</p>
+<p style="padding-left: 30px;"><a href="https://ntnuopen.ntnu.no/ntnu-xmlui/handle/11250/2656770">https://ntnuopen.ntnu.no/ntnu-xmlui/handle/11250/2656770</a> (Design of a KBE system for automatic weld path definition in CAD</p>
+<p></p>
+<h1>CoppeliaSim</h1>
+<p><a href="https://www.sciencedirect.com/science/article/pii/S1569190X22001046">How to pick a mobile robot simulator: A quantitative comparison of</a><br/><a href="https://www.sciencedirect.com/science/article/pii/S1569190X22001046">CoppeliaSim, Gazebo, MORSE and Webots with a focus on accuracy</a><br/><a href="https://www.sciencedirect.com/science/article/pii/S1569190X22001046">of motion</a></p>
+<p>User Manual: <a href="https://mde.tw/pjcopsim">https://mde.tw/pjcopsim</a> (相關專題: <a href="https://mde.tw/pj5083">https://mde.tw/pj5083</a>)</p>
+<p><a href="https://www.coppeliarobotics.com/">https://www.coppeliarobotics.com/</a></p>
+<p><a href="https://github.com/CoppeliaRobotics">https://github.com/CoppeliaRobotics</a></p>
+<h4>ABB SCARA Robots:</h4>
+<p style="padding-left: 30px;"><a href="https://new.abb.com/products/robotics/industrial-robots/irb-920t">https://new.abb.com/products/robotics/industrial-robots/irb-920t</a></p>
+<p style="padding-left: 30px;"><a href="/downloads/abb_irb_920t.ttt">abb_irb_920t.ttt</a></p>
+<h4>Foosball Table:</h4>
+<p style="padding-left: 30px;"><a href="/downloads/cad2022_foosball_table.ttt">cad2022_foosball_table.ttt</a> (<a href="https://grabcad.com/library/football-table--1">source</a>)</p>
+<p style="padding-left: 30px;"><a href="/downloads/foosball_nx2206.7z">foosball_nx2206.7z</a> (4.237 MB)</p>
+<p style="padding-left: 30px;"><a href="/downloads/foosball_nx12.7z">foosball_nx12.7z</a> (2.75 MB)</p>
+<p style="padding-left: 30px;"><a href="/downloads/Foosball Table Goalkeeper Automation Using Reinforcement Learning.pdf">Foosball Table Goalkeeper Automation Using Reinforcement Learning.pdf</a>, 2021 (<a href="http://ceur-ws.org/Vol-2993/paper-17.pdf">source</a>)</p>
+<p style="padding-left: 30px;"><a href="https://link.springer.com/chapter/10.1007/978-3-642-11876-0_12">Real-Time Ball Tracking in a Semi-automated Foosball Table</a> (2009)</p>
+<p style="padding-left: 30px;"><a href="https://www.cambridgeconsultants.com/insights/opinion/diary-developer-part-3-foosbot-strategy">https://www.cambridgeconsultants.com/insights/opinion/diary-developer-part-3-foosbot-strategy</a> (2019)</p>
+<p style="padding-left: 30px;"><a href="/get_page/CoppeliaSim/KiRo – An autonomous table soccer player.pdf">KIRo</a> (2002, <a href="https://gki.informatik.uni-freiburg.de/papers/weigel-etal-robocup-02-kiro.pdf">source</a>)</p>
+<p style="padding-left: 30px;"><a href="https://www.researchgate.net/profile/Stefano-De-Blasi/publication/341204434_KIcker_An_Industrial_Drive_and_Control_Foosball_System_automated_with_Deep_Reinforcement_Learning/links/60642b8d92851cd8ce7b2005/KIcker-An-Industrial-Drive-and-Control-Foosball-System-automated-with-Deep-Reinforcement-Learning.pdf?origin=publication_detail">KIcker</a> (2020)</p>
+<p style="padding-left: 30px;"><a href="https://github.com/glmcdona/FoosAI">FoosAI</a> (2017)</p>
+<p style="padding-left: 30px;"><a href="https://www.youtube.com/watch?v=RSYshQdcjYM">AI learns to play table soccer</a> (2018)</p>
+<p style="padding-left: 30px;"><a href="https://www.youtube.com/watch?v=8TMT-gHlj_Q">Training a Reinforcement Learning Agent to play Soccer</a> (2020)</p>
+<p style="padding-left: 30px;"><a href="https://github.com/mdecourse/site-40623128">mdecourse/site-40623128: site-40623128 created by GitHub Classroom</a> (2018)</p>
+<p style="padding-left: 30px;"><a href="https://github.com/mdecourse/site-40623130">mdecourse/site-40623130: site-40623130 created by GitHub Classroom</a> (2018)</p>
+<p style="padding-left: 30px;"><a href="https://github.com/mdecourse/site-40623224">mdecourse/site-40623224: site-40623224 created by GitHub Classroom</a> (2018)</p>
+<p style="padding-left: 30px;"><a href="https://cad.onshape.com/documents/f942bc02bd60de603095cd9d/w/e3af941ed5245875e39138d0/e/af657625f78911e9e727c91a?renderMode=0&amp;uiState=62b87263e48a585ead2bb1db">40623224 Foosball Table using Onshape</a> (2018)</p>
+<p style="padding-left: 30px;"><a href="https://www.theseus.fi/bitstream/handle/10024/745224/Mohebi_Dani.pdf?sequence=3">The Study of Semi-Automated Football Table</a> (2022)</p>
+<h4>Snooker Table:</h4>
+<p style="padding-left: 30px;"><a href="/downloads/Snooker Table Assembly_sldasm.stp">Snooker Table Assembly_sldasm.stp</a> (<a href="https://grabcad.com/library/foosball-pool-table-1">source</a>)</p>
+<h2>Foosball</h2>
+<p><a href="https://ieeexplore.ieee.org/search/searchresult.jsp?queryText=foosball">foosball keyword searching on IEEE</a></p>
+<p><a href="https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.92.5428&amp;rep=rep1&amp;type=pdf">Development Of Robotic Foosball As A Versatile Platform For Robotics Research and Contests</a> (2003)</p>
+<p><a href="https://gki.informatik.uni-freiburg.de/papers/weigel-etal-robocup-02-kiro.pdf">Kiro</a> (2006)</p>
+<p><a href="https://diglib.eg.org/bitstream/handle/10.2312/PE.vriphys.vriphys09.049-058/049-058.pdf?sequence=1&amp;isAllowed=y">Space Foosball: Coupling Tangible Interfaces with a Real-time Game Physics Engine</a> (2009)</p>
+<p><a href="https://core.ac.uk/download/pdf/19161196.pdf">Automated Foosball Table</a> (2013)</p>
+<p><a href="https://2019wcm.blogspot.com/search/label/foosball">https://2019wcm.blogspot.com/search/label/foosball</a></p>
+<p><a href="https://www.ximea.com/en/corporate-news/foosball-table-robot-camera">https://www.ximea.com/en/corporate-news/foosball-table-robot-camera</a></p>
+<p><a href="https://computing.ece.vt.edu/~steflee/pdfs/foosball-tracking.pdf">Foosball tracking</a> (2012)</p>
+<p><a href="https://www.ece.ucf.edu/seniordesign/fa2012sp2013/g30/docs/Final%20Paper-%20G30.pdf">Foose</a> (2012)</p>
+<p><a href="https://cduck.me/2015/robotic-foosball-table/">https://cduck.me/2015/robotic-foosball-table/</a> (2015)</p>
+<p><a href="https://www.siliconrepublic.com/machines/chess-go-and-now-foosball-ai-is-coming-for-you">https://www.siliconrepublic.com/machines/chess-go-and-now-foosball-ai-is-coming-for-you</a> (2016)</p>
+<p><a href="https://www.thestar.com/news/insight/2016/05/12/can-a-computer-beat-you-at-foosball-yes-yes-it-can.html">https://www.thestar.com/news/insight/2016/05/12/can-a-computer-beat-you-at-foosball-yes-yes-it-can.html</a> (2016)</p>
+<p><a href="https://mro.massey.ac.nz/bitstream/handle/10179/15187/02_whole.pdf?sequen">Low latency vision-based control for robotics</a> (2018)</p>
+<p><a href="https://www.researchgate.net/publication/341204434_KIcker_An_Industrial_Drive_and_Control_Foosball_System_automated_with_Deep_Reinforcement_Learning">KIcker</a> (2021)</p>
+<p><a href="https://youtu.be/Hu7LFrP43tA">https://youtu.be/Hu7LFrP43tA</a></p>
+<p><a href="https://forum.allaboutcircuits.com/threads/automated-foosball-hardware-advice-for-crazy-speeds.137860/">https://forum.allaboutcircuits.com/threads/automated-foosball-hardware-advice-for-crazy-speeds.137860/</a></p>
+<h2>Mujoco</h2>
+<p><a href="https://mujoco.org/">https://mujoco.org/</a></p>
+<p><a href="https://mujoco.readthedocs.io/en/latest/overview.html">https://mujoco.readthedocs.io/en/latest/overview.html</a></p>
+<p><a href="https://www.deepmind.com/blog/opening-up-a-physics-simulator-for-robotics">https://www.deepmind.com/blog/opening-up-a-physics-simulator-for-robotics</a></p>
+<p style="padding-left: 30px;"><a href="https://www.coursehero.com/study-guides/boundless-biology/somatosensation/">https://www.coursehero.com/study-guides/boundless-biology/somatosensation/</a></p>
+<p><a href="https://www.deepmind.com/blog/open-sourcing-mujoco">https://www.deepmind.com/blog/open-sourcing-mujoco</a></p>
+<p><a href="https://github.com/deepmind/mujoco">https://github.com/deepmind/mujoco</a></p>
+<h2>ROS</h2>
+<p><a href="https://link.springer.com/content/pdf/10.1007/978-1-4842-7750-8.pdf">Robot Operating System for Absolute Beginners</a> (2022)</p>
+<p></p>

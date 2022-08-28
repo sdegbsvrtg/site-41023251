@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
 
-  <title>有關 Fossil SCM</title>
+  <title>Git 常用指令</title>
 
 
   <meta name="HandheldFriendly" content="True" />
@@ -40,31 +40,31 @@
   <![endif]-->
 
 
-    <link href="https://mde.tw/blog/about-fossil-scm.html" rel="canonical" />
+    <link href="https://mde.tw/blog/useful-git-commands.html" rel="canonical" />
 
-        <meta name="description" content="Fossil SCM 是一套 Software Configuration Management 套件, 專門用於 SQLite 的原始碼管理.">
+        <meta name="description" content="根據使用情境將常用的 git 指令加以整理.">
 
         <meta name="author" content="mdecycu">
 
-        <meta name="tags" content="repository">
-        <meta name="tags" content="scm">
+        <meta name="tags" content="remote-add">
+        <meta name="tags" content="recurse-submodules">
 
 
 
 
 <!-- Open Graph -->
 <meta property="og:site_name" content="Mde.tw"/>
-<meta property="og:title" content="有關 Fossil SCM"/>
-<meta property="og:description" content="Fossil SCM 是一套 Software Configuration Management 套件, 專門用於 SQLite 的原始碼管理."/>
+<meta property="og:title" content="Git 常用指令"/>
+<meta property="og:description" content="根據使用情境將常用的 git 指令加以整理."/>
 <meta property="og:locale" content="en_US"/>
-<meta property="og:url" content="https://mde.tw/blog/about-fossil-scm.html"/>
+<meta property="og:url" content="https://mde.tw/blog/useful-git-commands.html"/>
 <meta property="og:type" content="article"/>
-<meta property="article:published_time" content="2022-08-27 13:00:00+08:00"/>
-<meta property="article:modified_time" content="2022-08-27 23:39:56.402085+08:00"/>
+<meta property="article:published_time" content="2022-08-28 11:00:00+08:00"/>
+<meta property="article:modified_time" content="2022-08-28 11:58:17.633062+08:00"/>
 <meta property="article:author" content="https://mde.tw/blog/author/mdecycu.html">
-<meta property="article:section" content="fossil-scm"/>
-<meta property="article:tag" content="repository"/>
-<meta property="article:tag" content="scm"/>
+<meta property="article:section" content="git"/>
+<meta property="article:tag" content="remote-add"/>
+<meta property="article:tag" content="recurse-submodules"/>
 <meta property="og:image" content="https://mde.tw/blog/theme/images/post-bg.jpg">
 
 <!-- Twitter Card -->
@@ -73,18 +73,18 @@
 {
   "@context": "http://schema.org",
   "@type": "Article",
-  "name": "有關 Fossil SCM",
-  "headline": "有關 Fossil SCM",
-  "datePublished": "2022-08-27 13:00:00+08:00",
-  "dateModified": "2022-08-27 23:39:56.402085+08:00",
+  "name": "Git 常用指令",
+  "headline": "Git 常用指令",
+  "datePublished": "2022-08-28 11:00:00+08:00",
+  "dateModified": "2022-08-28 11:58:17.633062+08:00",
   "author": {
     "@type": "Person",
     "name": "mdecycu",
     "url": "https://mde.tw/blog/author/mdecycu.html"
   },
   "image": "https://mde.tw/blog/theme/images/post-bg.jpg",
-  "url": "https://mde.tw/blog/about-fossil-scm.html",
-  "description": "Fossil SCM 是一套 Software Configuration Management 套件, 專門用於 SQLite 的原始碼管理."
+  "url": "https://mde.tw/blog/useful-git-commands.html",
+  "description": "根據使用情境將常用的 git 指令加以整理."
 }
 </script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
@@ -199,14 +199,14 @@ init_mathjax();
             <a class="menu-button"><i class="ic ic-menu"></i> Menu</a>
           </span>
         </nav>
-        <h1 class="post-title">有關 Fossil SCM</h1>
+        <h1 class="post-title">Git 常用指令</h1>
         <!-- TODO : Proper class for headline -->
         <span class="post-meta">
                 <a href="https://mde.tw/blog/author/mdecycu.html">Mdecycu</a>
-            | <time datetime="週六 27 八月 2022">週六 27 八月 2022</time>
+            | <time datetime="週日 28 八月 2022">週日 28 八月 2022</time>
         </span>
         <!-- TODO : Modified check -->
-            <span class="post-meta"> | Updated on 週六 27 八月 2022</span>
+            <span class="post-meta"> | Updated on 週日 28 八月 2022</span>
             <div class="post-cover cover" style="background-image: url('https://mde.tw/blog/theme/images/post-bg.jpg')">
       </div>
     </header>
@@ -226,53 +226,46 @@ init_mathjax();
         <article class="post">
         <div class="inner">
             <section class="post-content">
-                <p><a href="https://www.fossil-scm.org">Fossil SCM</a> 是一套 Software Configuration Management 套件, 專門用於 <a href="https://sqlite.org">SQLite</a> 的原始碼管理.</p>
+                <p>根據使用情境將常用的 git 指令加以整理.</p>
 
 
-<p><a href="https://www.fossil-scm.org">Fossil SCM</a> 是一套冷門的系統, 感覺好像沒有太多單位或團體使用, 只是就分散式版次管理系統的角度來看, 其實是一套小而美且功能齊全的 SCM 系統, 接下來將對 <a href="https://www.fossil-scm.org">Fossil SCM</a> 進行初步介紹.</p>
-<h1>fossil init</h1>
-<p>起始一個 Fossil SCM 倉儲之前需要先從 <a href="https://fossil-scm.org/home/uv/download.html">https://fossil-scm.org/home/uv/download.html</a> 下載相應的檔案, 與 Portablegit 相比, Fossil SCM 工具無論在 Windows, Linux 或 Mac 操作系統, 都只有一個檔案, 且大小只有約 9MB.</p>
-<p>而起始 Fossil SCM 倉儲的指令與 Git 相同:</p>
-<p>fossil init</p>
-<p>只不過 Fossil SCM 在倉儲 clone 之後的檔案為一個壓縮檔案, 通常以 .fossil 作為副檔名, 其實這是一個 SQLite 資料庫檔案. 當使用者 clone Fossil SCM 倉儲至近端之後, 必須透過 fossil open 將最新的版本內容展開, 一般會建議, 擺放 .fossil 檔案的目錄中, 建立 working director 目錄, 建議命名為 wd, 然後在 wd 目錄之中, 再根據各倉儲檔案的名稱建立位於 wd 目錄下的子目錄, 而各 .fossil 倉儲的內容則在各自的 "wd\倉儲名稱" 目錄下展開.</p>
-<p>假如要將遠端的倉儲 clone 至遠端, 若採 https 協定, 其命令列語法為:</p>
-<p>fossil clone https://user_name@fossil.kmol.info/repository repository.fossil</p>
-<p>表示要將位於 fossil.kmol.info 主機上的 repository 倉儲, 以 https 協定 clone 至近端且存為 repository.fossil</p>
-<p>以一位於近端檔案架構的 repository.fossil 本身會帶有管理者的密碼設定, 而此一管理者帳號下對應的 local password 與 remote passwors 分屬於兩個不同的 repository.fossil, 當使用者要將近端改版資料推向遠端時, 依據的是遠端的管理者 passwors, 而近端的管理者密碼則在近端倉儲以 fossil web 進行網際啟動時之用. 換言之, 各個 Fossil SCM 倉儲壓縮檔案內所儲存的管理者帳號密碼, 主針對下游啟動服務時採用.</p>
-<p>至於在工作目錄下倉儲資料檔案中的改版資料, 一旦新增提交推送後, 不僅會將版本更新資料註記在近端對應的 .fossil 檔案中, 也會推向遠端對應的 .fossil 倉儲檔案.</p>
-<p>Fossil SCM project documentation: <a href="https://www.fossil-scm.org/home/doc/trunk/www/embeddeddoc.wiki">https://www.fossil-scm.org/home/doc/trunk/www/embeddeddoc.wiki</a>
-Fossil SCM unversioned content: <a href="https://www.fossil-scm.org/home/doc/trunk/www/unvers.wiki">https://www.fossil-scm.org/home/doc/trunk/www/unvers.wiki</a></p>
-<p>在 Fossil SCM 倉儲中, 所謂的 unversioned content 指在改版紀錄中沒有保留改版資料的檔案, 倉儲中的 unversioned 內容只保留最新的版本, 且可以透過網際 /uvlist 列出無改版歷程的檔案列表, 並能透過網際 /uv/檔案名稱 進行下載.</p>
-<p>Fossil SCM 中的帳號必須具備 y capabilities 的權限才能 fossil uv sync -v 對倉儲中先前所加入的無版本檔案送到倉儲資料中.</p>
-<p>Fossil SCM 中的帳號最高管理者必須具備 s capabilities (setup 權限).</p>
-<p>Fossil SCM 倉儲改版時若刪除檔案, 則可以透過 fossil addremove 納入改版內容.</p>
-<p>將 uversioned_file_name 納入或移除倉儲中成為無版本管理內容:</p>
-<p>fossil uv add unversioned_file_name</p>
-<p>fossil uv delete unversioned_file_name</p>
-<p>fossil uv sync -v</p>
-<p>其他參考資料:</p>
-<p><a href="https://fossil-scm.org/home/help?cmd=unversioned">https://fossil-scm.org/home/help?cmd=unversioned</a></p>
-<p><a href="https://mdecourse.blogspot.com/2021/02/fossil-scm.html">Fossil SCM 使用案例</a></p>
-<p><a href="https://mdecourse.blogspot.com/2021/02/fossil-scm-github.html">Fossil SCM 與 Github 整合</a></p>
-<p><a href="https://mdecourse.blogspot.com/2021/02/fossil-scm-on-ubuntu.html">Fossil SCM on Ubuntu</a></p>
+<h1>remote add</h1>
+<p>git remote add 的使用情境是希望將某一個倉儲的完整歷程資料, 改存至另一個倉儲.</p>
+<p>假設原來的 cad2021_final 倉儲位於 mdecourse 帳號下, 現在想要將此倉儲的完整歷程資料, 轉存至 mdecycu 帳號下.</p>
+<p>先前準備: 要先在近端電腦設定好 mdecourse 與 mdecycu 對 git 的 <a href="https://mde.tw/content/Token%20and%20SSH.html#ssh">SSH 公私鑰簽章設定</a>. 且 mdecourse 對應的 putty session 為 github.com, 而 mdecycu 對應的 putty session 為 mdecycu.</p>
+<p>步驟一:  登入 github.com mdecycu 帳號, 建立一個空的 cad2021_final 倉儲, 也就是連 README.md 都先不加入的完全空的倉儲.</p>
+<p>步驟二: 將 cad2021_final 從 mdecycu 帳號下, git clone 至近端電腦.</p>
+<p>git clone --recurse-submodules git@github.com:mdecourse/cad2021_final.git</p>
+<p>因為 cad2021_final 倉儲在 mdecourse 帳號下設為 private, 因此需要透過 putty session github.com, 利用近端的 puttygen 所建立的 .ppk private key 與 github 上 OpenSSL 格式的 public 對應下, 才能夠透過 ssh 協定取下 cad2021_final 倉儲.</p>
+<p>步驟三: cd 至 cad2021_final 倉儲目錄, 以 git remote add 設定代號, 並對應至 mdecycu 帳號下的同名倉儲.</p>
+<p>git remote add mdecycu git@mdecycu:mdecycu/cad2021_final.git</p>
+<p>其中的 git remote add 為指令, 表示要加入一個遠端的連結代號, 而此代號名稱為 mdecycu, 隨後的 git@ 表示要利用 ssh 協定, 以 git 作為登入帳號, @ 後面的 mdecycu 為近端 putty 的 session 名稱, 而 :mdecycu 中的 mdecycu 則是 github 系統下的 mdecycu 帳號用戶名稱, /cad2021_final.git 則為先前已經建立的空倉儲.</p>
+<p>步驟四: 將 cad2021_final 倉儲內容, 以 git push 推送到 mdecycu 帳號下.</p>
+<p>git push mdecycu</p>
+<h1>recurse-submodules</h1>
+<p>當使用 git clone 倉儲時, 之所以要宣告 --recurse-submodules 選項命令, 是針對該倉儲的所有子模組, 包括子模組下的所有子模組, 也要同時取下.</p>
+<h1>submodule add</h1>
+<p>git submodule add 隨後要加入 URL 指向某一倉儲, 表示要將該倉儲設為子模組, 然後指令還要再加上該子模組連結的對應代號.</p>
+<p>git submodule add https://github.com/mdecycu/cmsimde.git cmsimde</p>
+<p>表示要將 cmsimde 倉儲設為子模組, 且放入 cmsimde 目錄中.</p>
             </section>
 
             <section class="post-info">
                 <div class="post-share">
-                    <a class="twitter" href="https://twitter.com/share?text=有關 Fossil SCM&amp;url=https://mde.tw/blog/about-fossil-scm.html" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <a class="twitter" href="https://twitter.com/share?text=Git 常用指令&amp;url=https://mde.tw/blog/useful-git-commands.html" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
                     <i class="ic ic-twitter"></i><span class="hidden">Twitter</span>
                     </a>
-                    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://mde.tw/blog/about-fossil-scm.html" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://mde.tw/blog/useful-git-commands.html" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
                     <i class="ic ic-facebook"></i><span class="hidden">Facebook</span>
                     </a>
-                    <a class="googleplus" href="https://plus.google.com/share?url=https://mde.tw/blog/about-fossil-scm.html" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <a class="googleplus" href="https://plus.google.com/share?url=https://mde.tw/blog/useful-git-commands.html" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
                     <i class="ic ic-googleplus"></i><span class="hidden">Google+</span>
                     </a>
                     <div class="clear"></div>
                 </div>
 
                 <aside class="post-tags">
-<a href="https://mde.tw/blog/tag/repository.html">repository</a><a href="https://mde.tw/blog/tag/scm.html">scm</a>                </aside>
+<a href="https://mde.tw/blog/tag/remote-add.html">remote-add</a><a href="https://mde.tw/blog/tag/recurse-submodules.html">recurse-submodules</a>                </aside>
 
                 <div class="clear"></div>
 
@@ -282,28 +275,21 @@ Fossil SCM unversioned content: <a href="https://www.fossil-scm.org/home/doc/tru
                 <script type="text/javascript">
                     var disqus = 'mdetw';
                     var disqus_shortname = 'mdetw';
-                    var disqus_identifier = '/about-fossil-scm.html';
-                    var disqus_url = 'https://mde.tw/blog/about-fossil-scm.html';
+                    var disqus_identifier = '/useful-git-commands.html';
+                    var disqus_url = 'https://mde.tw/blog/useful-git-commands.html';
                 </script>
                 <noscript>Please enable JavaScript to view the comments.</noscript>
                 <section class="post-comments">
-                        <a id="show-disqus" class="post-comments-activate" data-disqus-identifier="/about-fossil-scm.html" >Show Comments</a>
+                        <a id="show-disqus" class="post-comments-activate" data-disqus-identifier="/useful-git-commands.html" >Show Comments</a>
                     <div id="disqus_thread"></div>
                 </section>
 
                 <aside class="post-nav">
-                    <a class="post-nav-next" href="https://mde.tw/blog/useful-git-commands.html">
-                        <section class="post-nav-teaser">
-                            <i class="ic ic-arrow-left"></i>
-                                <h2 class="post-nav-title">Git 常用指令</h2>
-                            <p class="post-nav-excerpt">根據使用情境將常用的 git 指令加以整理.</p>
-                        </section>
-                    </a>
-                    <a class="post-nav-prev" href="https://mde.tw/blog/about-ethercalc.html">
+                    <a class="post-nav-prev" href="https://mde.tw/blog/about-fossil-scm.html">
                         <section class="post-nav-teaser">
                             <i class="ic ic-arrow-right"></i>
-                                <h2 class="post-nav-title">有關 ethercalc</h2>
-                            <p class="post-nav-excerpt">ethercalc 是一個網頁同步試算表.</p>
+                                <h2 class="post-nav-title">有關 Fossil SCM</h2>
+                            <p class="post-nav-excerpt">Fossil SCM 是一套 Software Configuration Management 套件, 專門用於 SQLite 的原始碼管理.</p>
                         </section>
                     </a>
                     <div class="clear"></div>

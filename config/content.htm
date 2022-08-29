@@ -7,6 +7,7 @@
 <p><a href="https://calendar.google.com/calendar/embed?src=mde.nfu.edu.tw_3439313938333136353439%40resource.calendar.google.com&amp;ctz=Asia%2FTaipei&amp;mode=week&amp;src=mde.nfu.edu.tw_35303530373431313438%40resource.calendar.google.com&amp;ctz=Asia%2FTaipei&amp;src=yen%40gm.nfu.edu.tw&amp;ctz=Asia%2FTaipei">全頁檢視</a></p>
 <p><iframe height="600" src="https://calendar.google.com/calendar/embed?src=mde.nfu.edu.tw_3439313938333136353439%40resource.calendar.google.com&amp;ctz=Asia%2FTaipei&amp;mode=week&amp;src=mde.nfu.edu.tw_35303530373431313438%40resource.calendar.google.com&amp;ctz=Asia%2FTaipei&amp;src=yen%40gm.nfu.edu.tw&amp;ctz=Asia%2FTaipei" width="800"></iframe></p>
 <div id="disqus_thread"></div>
+<p>
 <script>
     /**
     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
@@ -24,6 +25,7 @@
     (d.head || d.body).appendChild(s);
     })();
 </script>
+</p>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <h2>cp-syllabus</h2>
 <h4>課程評分:</h4>
@@ -66,6 +68,149 @@
 <p style="padding-left: 60px;"><a href="https://link.springer.com/book/10.1007/978-1-4842-7410-1">Hands-on Matplotlib</a> (2022)</p>
 <h4>Reference:</h4>
 <p style="padding-left: 30px;"><a href="https://c1.cycu.org/doc/trunk/content/index.html">cp2021</a></p>
+<h2>cmsimde</h2>
+<p><a href="https://github.com/mdecycu/cmsimde">cmsimde</a> 是一套 Web-based content management system, 也就是基於全球資訊網的內容管理系統.</p>
+<p>由於全球資訊網頁中主要使用 html, css 與 javascript 控制網頁內容, 因此在利用 <a href="https://github.com/mdecycu/cmsimde">cmsimde</a> 管理數位內容時, 必須同時對這三種語言有一定的認識.</p>
+<h4>有關 html (html5) 請參考:</h4>
+<p style="padding-left: 30px;"><a href="https://link.springer.com/book/10.1007/978-1-4302-3862-1">HTML5 Mastery</a></p>
+<h4 style="padding-left: 30px;">假如要在網頁中嵌入 2D 物件, 請參考:</h4>
+<p style="padding-left: 60px;"><a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API</a></p>
+<h4 style="padding-left: 30px;">假如要在網頁中嵌入 3D 物件, 請參考:</h4>
+<p style="padding-left: 60px;"><a href="https://link.springer.com/book/10.1007/978-1-4302-3997-0">Beginning WebGL for HTML5</a></p>
+<h4>有關 css 請參考:</h4>
+<p style="padding-left: 30px;"><a href="https://link.springer.com/book/10.1007/978-1-4842-6294-8">Modern CSS</a></p>
+<h4>有關 Javascript 請參考:</h4>
+<p style="padding-left: 30px;"><a href="https://link.springer.com/book/10.1007/978-1-4842-4395-4">Beginning Javascript</a></p>
+<p>為了 <a href="https://github.com/mdecycu/cmsimde">cmsimde</a> 靜態頁面功能表的簡潔性, 一般建議除了 Home 之外的 H1 標題, 不要超過 9 個. 若善用各分類的 H2 與 H3 子頁面分類至多 9 個子頁面, 9x9x9 合計可以容納 729 個頁面, 應該足以涵蓋中等網站的所有內容.</p>
+<p><a href="https://github.com/mdecycu/cmsimde">https://github.com/mdecycu/cmsimde</a></p>
+<p>目前的課程網站 cmsimde submodule 已經使用 mdecycu 帳號下的倉儲, 準備要將現有分別位於</p>
+<p>get_page2, render_menu2, 以及 sitemap2 函式中, 如下圖所示:</p>
+<p><img caption="false" class="add_border" height="189" src="/images/bootstrap_container_fluid.png" width="600"/></p>
+<p>的 class='container-fluid' 改為 class='container', 根據 <a href="https://getbootstrap.com/docs/5.0/layout/containers/">bootstrap containers</a> 頁面的說明, 能夠將現有散佈在頁面 100% 的內容, 取用各不同尺寸螢幕的局部大小:</p>
+<p><img alt="" class="add_border" height="254" src="/images/bootstrap_contener_table.png" width="600"/></p>
+<h4>cmsimde Template:</h4>
+<p style="padding-left: 30px;"><a href="https://github.com/mdecycu/cmsite">https://github.com/mdecycu/cmsite</a></p>
+<h4>cmsimde submodule update:</h4>
+<p style="padding-left: 30px;">使用 cmsimde 作為 submodule 的倉儲, 當發現 cmsimde 倉儲內容已經更新後, 若希望使用更新後的子模組內容, 則可以利用下列指令完成:</p>
+<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">REM 從倉儲更換目錄至 cmsimde
+cd cmsimde
+REM 利用 git 指令中的 pull, 從 origin 代號的網路連結, 取回 master 分支的內容, 在近端進行合併
+git pull origin master
+REM 回到原始倉儲目錄
+cd ..
+REM 利用 acp.bat 中的 git add, git commit 與 git push 將更新資料送到遠端 github 倉儲中
+acp "update cmsimde submodule"</pre>
+<h4>Are we living in a smart city (University, College, Department, Class, Group)?</h4>
+<h4>我們生活在智慧城市 (大學, 學院, 科系, 班級, 團隊) 嗎?</h4>
+<p style="padding-left: 30px;"><a href="https://link.springer.com/referencework/10.1007/978-3-030-69698-6">Handbook of Smart Cities</a></p>
+<h3>Portable Python</h3>
+<h4>何謂可攜式 Python 程式環境?</h4>
+<h4 style="padding-left: 30px;">Python 程式是如何執行的?</h4>
+<p style="padding-left: 30px;">首先 Python 是一種解譯式 (Interpreted) 程式語言, 與 C 或 C++ 程式語言最大的差別是, C/C++ 程式碼通常必須透過編譯 (Compile) 與連結 (Link) 的過程, 將原始碼轉為可執行的格式 (在 Windows 操作系統為 .exe 檔案), 而 Python 程式寫好後, 可以直接利用解譯器執行, 使用者不需要手動執行程式碼的編譯, 而是由解譯器在執行前即時將程式碼轉換為可執行檔案.</p>
+<p style="padding-left: 30px;">在 <a href="https://www.geeksforgeeks.org/internal-working-of-python/">geeksforgeeks 網站</a>, 以下列敘述說明 Python 程式如何執行:</p>
+<p style="padding-left: 30px;">Python is an object-oriented programming language like Java. Python is called an interpreted language. Python uses code modules that are interchangeable instead of a single long list of instructions that was standard for functional programming languages. The standard implementation of python is called "cpython". It is the default and widely used implementation of Python.</p>
+<p style="padding-left: 30px;">Python doesn’t convert its code into machine code, something that hardware can understand. It actually converts it into something called byte code. So within python, compilation happens, but it’s just not into a machine language. It is into byte code (.pyc or .pyo) and this byte code can’t be understood by the CPU. So we need an interpreter called the python virtual machine to execute the byte codes</p>
+<p style="padding-left: 30px;">針對 Python 程式的"編譯"過程, 則<a href="https://www.geeksforgeeks.org/understanding-the-execution-of-python-program/">說明如下</a>:</p>
+<p style="padding-left: 30px;">The Python program is converted into byte code. Byte code is a fixed set of instructions that represent arithmetic, comparison, memory operations, etc. It can run on any operating system and hardware. The byte code instructions are created in the .pyc file. The .pyc file is not explicitly created as Python handles it internally but it can be viewed with the following command:</p>
+<p style="padding-left: 60px;">Y:\tmp\python_ex&gt;python -m py_compile hello.py</p>
+<p style="padding-left: 30px;">-m and py_compile represent module and module name respectively. This module is responsible to generate .pyc file. The compiler creates a directory named  __pycache__ where it stores the hello.cpython-39.pyc file (若採用 Python 3.9 版次的編譯器).</p>
+<p style="padding-left: 30px;">至於針對 Python 程式的"解譯"執行過程, 則<a href="https://www.geeksforgeeks.org/understanding-the-execution-of-python-program/">說明如下</a>:</p>
+<p style="padding-left: 30px;">The next step involves converting the byte code (.pyc file) into machine code. This step is necessary as the computer can understand only machine code (binary code). Python Virtual Machine (PVM) first understands the operating system and processor in the computer and then converts it into machine code. Further, these machine code instructions are executed by processor and the results are displayed.</p>
+<p style="padding-left: 30px;">However, the interpreter inside the PVM translates the program line by line thereby consuming a lot of time. To overcome this, a compiler known as Just In Time (JIT) is added to PVM. JIT compiler improves the execution speed of the Python program. This compiler is not used in all Python environments like CPython which is standard Python software.</p>
+<p style="padding-left: 30px;">To execute the hello.cpython-39.pyc we can use the following command:</p>
+<p style="padding-left: 60px;">Y:\tmp\python_ex&gt;python __pycache__\hello.cpython-39.pyc</p>
+<p style="padding-left: 30px;">至於有關 python.exe 與 pythonw.exe 的差別, 則參見<a href="https://stackoverflow.com/questions/9705982/pythonw-exe-or-python-exe">這裡的說明</a>. 至於 SciTE 設定 python.properties 中, 使用 pythonw.exe -u 表示除了採非同步 (asynchronous) 執行模式外, 同時 force the stdout and stderr streams to be unbuffered; but has no effect on stdin.</p>
+<h4 style="padding-left: 30px;">Python 解譯器的類別:</h4>
+<p style="padding-left: 30px;">最早的 Python 解譯器以 C 程式語言編寫, 稱為 <a href="https://en.wikipedia.org/wiki/CPython">CPython</a>, 以 Python 編寫的 Python 解譯器稱為 <a href="https://en.wikipedia.org/wiki/PyPy">Pypy</a>, 以 .NET 技術編寫的 Python 解譯器稱為 <a href="https://en.wikipedia.org/wiki/IronPython">Ironpython</a>, 以 Java 編寫的 Python 解譯器稱為 <a href="https://en.wikipedia.org/wiki/Jython">Jython</a>, 以 Javascript 編寫的 Python 解譯器稱為 <a href="https://brython.info/">Brython</a>. 以 Rust 編寫的 Python 解譯器稱為 <a href="https://github.com/RustPython/RustPython">RustPython</a>.</p>
+<h4 style="padding-left: 30px;">建立可攜 Python 程式環境的目的:</h4>
+<p style="padding-left: 30px;">一般在 Windows 10 中使用 <a href="https://en.wikipedia.org/wiki/CPython">CPython</a> 都是透過操作系統安裝, 將 <a href="https://en.wikipedia.org/wiki/CPython">CPython</a> 解譯器登錄在操作系統的 <a href="https://en.wikipedia.org/wiki/Windows_Registry">Registry</a> 中. 只不過配置在操作系統的 <a href="https://en.wikipedia.org/wiki/CPython">CPython</a> 解譯器若在使用過程中, 透過 <a href="https://pypi.org/project/pip/">pip</a> 安裝額外的模組後, 當電腦輔助設計室中的電腦重新開機後, 操作系統將會因為安裝防寫套件而恢復原先所安裝無額外模組的狀態.</p>
+<p style="padding-left: 30px;">網際內容管理與協同產品設計實習課程為了<span style="background-color: #ffff99;">讓使用者可以隨身帶著 <a href="https://en.wikipedia.org/wiki/CPython" style="background-color: #ffff99;">CPython</a> 解譯器</span>, 因此繞過 Windows 10 操作系統的 Registry 登錄, 設法以批次檔案在虛擬的硬碟 (y:) 啟動 <a href="https://en.wikipedia.org/wiki/CPython">CPython</a> 解譯環境.</p>
+<p style="padding-left: 30px;">此外, 配置在 USB 隨身碟的可攜 <a href="https://en.wikipedia.org/wiki/CPython">CPython</a> 程式環境, 除了可執行一般 Python 程式外, 也可自行安裝所需模組, 並用於 <a href="https://github.com/mdecourse/cmsimde">cmsimde</a> 動態與靜態網站編輯.</p>
+<p style="padding-left: 30px;">可攜程式環境中除 <a href="https://en.wikipedia.org/wiki/CPython">CPython</a>, 還可配置 <a href="https://www.msys2.org/">MSYS2</a> C/C++ 編譯系統. 針對 <a href="https://www.scintilla.org/SciTE.html">SciTE</a>, <a href="https://github.com/solvespace/solvespace">Solvespace</a>, <a href="https://github.com/Range-Software/range3">Range3</a>, <a href="https://github.com/CoppeliaRobotics">CoppeliaSim</a> 等開源套件執行編譯.</p>
+<h4>如何建立可攜 Python 程式環境?</h4>
+<p style="padding-left: 30px;">能放入 USB 隨身碟執行的 Python 程式環境包含兩個部分:</p>
+<p style="padding-left: 60px;">(1) Python 解譯器系統檔案</p>
+<p style="padding-left: 60px;">(2) 可攜啟動設定批次檔 (例如: <a href="/downloads/start_ipv6.bat">start_ipv6.bat</a>)</p>
+<p style="padding-left: 30px;">要在 Windows 操作系統中, 取得各版本的 Python 解譯器系統檔案, 也有兩種方法:</p>
+<p style="padding-left: 60px;">(1) 從官方網站下載安裝檔 (例如: <a href="https://www.python.org/ftp/python/3.10.5/">3.10.5 版</a>的 <a href="https://www.python.org/ftp/python/3.10.5/python-3.10.5-amd64.exe">python-3.10.5-amd64.exe)</a>, 手動安裝 Python, 取下安裝內容後, 解除安裝程式.</p>
+<p style="padding-left: 60px;">(2) 利用 <a href="/downloads/gen_portable_python.py">gen_portable_python.py</a>, 從 Python 官方網站下載基本的 .msi 檔案 (例如 <a href="https://www.python.org/ftp/python/3.10.5/amd64/">3.10.5 版</a>中的 core.msi, dev.msi, exe.msi, lib.msi, tcltk.msi 與 tools.msi), 然後利用 <a href="https://docs.microsoft.com/zh-tw/windows-server/administration/windows-commands/msiexec">msiexec.exe</a> 配合 <a href="https://docs.microsoft.com/zh-tw/windows/win32/msi/targetdir">targetdir</a> 屬性解開各安裝檔.</p>
+<p id="pp310">以下將要結合 <a href="https://www.scintilla.org/SciTE.html">SciTE</a>, <a href="https://github.com/TinyCC/tinycc">Tiny C Compiler</a> 與 <a href="https://www.python.org/ftp/python/3.10.5/">Python 3.10.5</a>, 建立一個可攜版的 CPython 與 <a href="https://en.wikipedia.org/wiki/ANSI_C">ANSI C</a> 執行環境.</p>
+<ol>
+<li>從 <a href="http://download.savannah.gnu.org/releases/tinycc/">http://download.savannah.gnu.org/releases/tinycc/</a> 下載 <a href="http://download.savannah.gnu.org/releases/tinycc/tcc-0.9.27-win64-bin.zip">tcc-0.9.27-win64-bin.zip</a>.</li>
+<li>從 <a href="https://www.scintilla.org/SciTEDownload.html">https://www.scintilla.org/SciTEDownload.html</a> 下載 <a href="https://www.scintilla.org/wscite521.zip">wscite521.zip</a>.</li>
+<li>利用 Python 3.9.5 (或先前的 Python3 舊版可攜程式) 執行 <a href="/downloads/gen_portable_python.py">gen_portable_python.py</a> 取得 Python310 解譯器系統檔案.</li>
+<li>根據上述流程建立的基本 Python 與 ANSI C 可攜程式系統 <a href="http://wcm.cycu.org:88/Portable_py310_tcc.7z">Portable_py310_tcc.7z</a> (只能在系網路 下載, 此一 Python 解譯器只帶有基本模組且尚未安裝 <a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=&amp;cad=rja&amp;uact=8&amp;ved=2ahUKEwiywaDasrb2AhX7rVYBHbSJCcoQFnoECAoQAQ&amp;url=https%3A%2F%2Fbootstrap.pypa.io%2Fget-pip.py&amp;usg=AOvVaw0zKVO_zW0nkF7s0zdjWFNj">get-pip.py</a>)</li>
+<li>此一 Python 解譯器以 python <a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=&amp;cad=rja&amp;uact=8&amp;ved=2ahUKEwigkdK1s7b2AhUBs1YBHYhXA8oQFnoECAcQAQ&amp;url=https%3A%2F%2Fbootstrap.pypa.io%2Fget-pip.py&amp;usg=AOvVaw0zKVO_zW0nkF7s0zdjWFNj">get-pip.py</a> 安裝 pip 後, 再以 pip install flask flask_cors bs4 lxml pelican markdown leo pyopenssl 安裝 <a href="https://mde.tw/cmstemplate/content/CMSiMDE.html">cmsimde 所需模組</a>後, 即可用於 wcm2022 動態與靜態系統的編輯.</li>
+<li>此一 Python 解譯器再結合 <a href="https://git-scm.com/download/win">Portablegit</a> 與 <a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html">PUTTY</a>, 就可以支援以 <a href="https://mde.tw/wcm2022_guide/content/Token%20and%20SSH.html">SSH</a> 執行 github 倉儲的 git push.</li>
+</ol>
+<h4>如何建立網際 Python 程式環境 (Brython)?</h4>
+<p style="padding-left: 30px;">例如: <a href="https://mde.tw/cp2022/content/Brython.html">Brython</a> 頁面.</p>
+<p>從 <a href="https://drive.google.com/file/d/1TMPsHz6G01-pxkvXf9NFM8nFdtCHQv8D/view?usp=sharing">portable_python_wcm2022.7z</a> 下載的可攜程式環境有哪些功能?</p>
+<p><span style="background-color: #ffff99;">請注意: 以下的 .7z 檔案下載, 只允許在系上網段上下載</span>.</p>
+<ol>
+<li><a href="http://wcm.cycu.org:88/compile_copsim_cd2022.7z">compile_copsim_cd2022.7z</a> (file size: 5 GB, extracted size: 17.3 GB, 包含除了 NX1980 之外的所有課程相關可攜程式套件, 是專門為 <a href="http://wcm.cycu.org:88/github/cd2022_guide/content/index.html">cd2022</a> 課程學員打造的套件).</li>
+<li><a href="http://wcm.cycu.org:88/portable_python_wcm2022.7z">portable_python_wcm2022.7z</a> (file size: 513 MB, extracted size: 2.3 G, 這是專門為 <a href="https://mde.tw/wcm2022http://wcm.cycu.org:88/github/wcm2022_guide/content/index.html">wcm2022</a> 課程打造的可攜程式套件, 適合選修學員下載後在任何 Windows 10 中以隨身碟啟動後操作)</li>
+<li><a href="http://wcm.cycu.org:88/drive.7z">drive.7z</a> (file size: 2.6 MB, extracted size: 10 MB, 只包含 PUTTY, tcc, wscite 與 tmp 目錄, 採用 Hybrid 方式設定, 可與目前電腦輔助設計室中 SSD 硬碟所安裝的 Python 3.9.5 與 <a href="https://git-scm.com/download/win">Portablegit</a> 結合, 使用者只需自行設定啟動後的 home_ipv6 目錄與 home_ipv6/Desktop 目錄後即可以最輕薄便捷的方式將 SSH key 存入隨身碟, 並將個人與分組倉儲存入隨身碟啟動後的 tmp 目錄進行操作).</li>
+</ol>
+<p>以下利用 Wink3 影片說明以 Hybrid 方式啟動的 USB 隨身碟如何建立? 以及使用上與完整 USB 隨身碟可攜程式系統的差別:</p>
+<p>Hybrid 可攜程式系統是只將必要檔案配置到 USB 隨身碟, 其餘檔案則使用已經存在電腦上的內容, 主要包含 Python 3.9.5 解譯程式 (863 MB) 與 Portblegit 2.31.1 (285 MB).</p>
+<p>Hybrid 可攜程式系統優點:</p>
+<ol>
+<li>初始 USB 隨身碟只需複製 10.5 MB 的資料 (只自帶 PUTTY (4.3 MB), tcc (1.7 MB), tmp 與 wscite (4.3 MB)).</li>
+<li>使用電腦 SSD 上所安裝的 Python 與 Portablegit, 執行速度會比一般 USB 隨身碟快.</li>
+</ol>
+<p>Hybrid 可攜程式系統缺點:</p>
+<ol>
+<li>在未修改 Python Script 目錄中的 .exe 可執行檔之前, 必須透過 .py 執行, 例如: 命令列 中輸入 leo 並無法執行執行, 必須採用 import leo.core.runLeo;leo.core.runLeo.run()</li>
+<li>若在裝有還原卡的電腦, 未修改 Python 系統模組路徑之前, 所安裝的額外模組無法放入 USB 隨身碟中.</li>
+</ol>
+<h3>Token and SSH</h3>
+<p>Remote Desktop - Windows, Ubuntu, Mac</p>
+<h4 id="token">Token:</h4>
+<p style="padding-left: 30px;"><a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token">https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token</a></p>
+<p style="padding-left: 30px;">Github token 是一串可以用來替代 Github 帳號與密碼功能的字串, 可在登入 Github 帳號後, 至 <a href="https://github.com/settings/tokens">https://github.com/settings/tokens</a> 設定. 每一個 token 都具備有效時間與權限範圍, 一般初學者可以只勾選 Token 的 repo 改版權限, 並選擇 30 天的有效時間. 之後再設法改用 SSH 對 Github 倉儲改版.</p>
+<p>以下影片說明如何使用 Personal Access Token 執行 git push:</p>
+<p></p>
+<div class="winkVideoContainerClass"><video autoplay="autoplay" class="winkVideoClass" controls="controls" data-dirname="/static" data-varname="winkVideoData1" height="630" muted="true" width="1008">
+<source src="/downloads/token_wink/github_token.mp4" type="video/mp4"/></video>
+<h4 id="ssh">SSH:</h4>
+<p style="padding-left: 30px;"><a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh">https://docs.github.com/en/authentication/connecting-to-github-with-ssh</a></p>
+<p style="padding-left: 30px;">Windows 10 環境中的 SSH 可以透過 <a href="https://www.putty.org/">https://www.putty.org/</a> 執行設定.</p>
+<p style="padding-left: 30px;">puttygen.exe 可用來建立 OpenSSL 格式的數位簽章, public key 送到使用者 Github 帳號下 settings 中的 SSH and GPG keys 區, 在隨身碟中則存放與 public key 成對的 Putty 格式 private key.</p>
+<p style="padding-left: 30px;">使用者在 Windows 10 使用 git + putty 時, 必須在啟動隨身系統時設定 GIT_SSH 變數 (<a href="https://git-scm.com/book/en/v2/Git-Internals-Environment-Variables">Git 環境變數</a>) 至 putty 中的 plink.exe, 之後再利用 putty 設定連至 github.com 用的 session, 且在純 IPv6 環境中, 連至 github.com 的 session 除了必須指向隨身碟中的 private key 外, 還需要設定能同時支援 IPv6 與 IPv4 的 proxy server.</p>
+<p style="padding-left: 30px;">使用者希望透過 SSH 對 github 中的倉儲改版時, 必須使用 <a href="mailto:git@session_name:github_account/repository.git">git@session_name:github_account/repository.git</a> 連線.</p>
+<p style="padding-left: 30px;">有關 GIT_SSH 變數：</p>
+<p style="padding-left: 60px;">GIT_SSH, if specified, is a program that is invoked instead of ssh when Git tries to connect to an SSH host. It is invoked like $GIT_SSH [username@]host [-p &lt;port&gt;] &lt;command&gt;. Note that this isn’t the easiest way to customize how ssh is invoked; it won’t support extra command-line parameters, so you’d have to write a wrapper script and set GIT_SSH to point to it. It’s probably easier just to use the ~/.ssh/config file for that.</p>
+<p>以下影片說明如何在 Windows IPv6 環境下, 利用 PUTTY 以 SSH 協定執行 git push:</p>
+<p></p>
+<div class="winkVideoContainerClass"><video autoplay="autoplay" class="winkVideoClass" controls="controls" data-dirname="/static" data-varname="winkVideoData2" height="630" muted="true" width="1008">
+<source src="/downloads/ssh_wink/wink_ssh.mp4" type="video/mp4"/></video></div>
+</div>
+<h3>Bootstrap</h3>
+<p><a href="https://getbootstrap.com/">https://getbootstrap.com/</a></p>
+<h4>cmsimde page:</h4>
+<p style="padding-left: 30px;">head banner</p>
+<p style="padding-left: 30px;">search form</p>
+<p style="padding-left: 30px;">page navigator</p>
+<p style="padding-left: 30px;">page content</p>
+<p style="padding-left: 30px;">pelican blog</p>
+<p style="padding-left: 30px;">reveal</p>
+<h4>Bootstrap editor:</h4>
+<p style="padding-left: 30px;"><a href="https://www.layoutit.com/">https://www.layoutit.com/</a></p>
+<p style="padding-left: 30px;"><a href="https://github.com/Vegetam/BootstrapPageGenerator">https://github.com/Vegetam/BootstrapPageGenerator</a></p>
+<h4>Flask and Bootstrap:</h4>
+<p style="padding-left: 30px;"><a href="https://github.com/mbr/flask-bootstrap">https://github.com/mbr/flask-bootstrap</a></p>
+<p style="padding-left: 30px;"><a href="https://www.techwithtim.net/tutorials/flask/adding-bootstrap/">https://www.techwithtim.net/tutorials/flask/adding-bootstrap/</a></p>
+<p style="padding-left: 30px;"><a href="https://pythonhosted.org/Flask-Bootstrap/basic-usage.html">https://pythonhosted.org/Flask-Bootstrap/basic-usage.html</a></p>
+<p style="padding-left: 30px;"><a href="https://github.com/MashSoftware/flask-bootstrap-ui">https://github.com/MashSoftware/flask-bootstrap-ui</a></p>
+<p style="padding-left: 30px;"><a href="https://github.com/hfilimonescu/flask-bs4">https://github.com/hfilimonescu/flask-bs4</a></p>
+<h3>Bugs</h3>
+<p>靜態網頁在 Brython 頁面無法執行關鍵字搜尋.</p>
+<h3>frameworks</h3>
+<h4>fastapi</h4>
+<p><a href="https://fastapi.tiangolo.com/">https://fastapi.tiangolo.com/</a></p>
+<h4>starlette</h4>
+<p><a href="https://www.starlette.io/">https://www.starlette.io/</a></p>
 <h2>Problem solving</h2>
 <p><a href="https://math.berkeley.edu/~gmelvin/polya.pdf">Polya’s Problem Solving Techniques</a></p>
 <p><a href="https://courses.cs.washington.edu/courses/cse190d/17sp/materials/GDFPSP-ch1-3.pdf">Game Design for Problem Solving with Python</a></p>
@@ -974,7 +1119,8 @@ auto_tetris = button2(auto_tetris_url)
 doc["auto_tetris"].bind("click", auto_tetris.do)
 ################################## auto tetris end
 </script>
-</p><h2>Game</h2>
+</p>
+<h2>Game</h2>
 <p><a href="https://link.springer.com/book/10.1007/978-1-4302-5801-8">Advanced Game Design with HTML5 and JavaScript</a> (2015)</p>
 <h2>Simulator</h2>
 <p><a href="https://sim.firialabs.com/">CodeSpace Development Environment (firialabs.com)</a></p>
@@ -1485,172 +1631,6 @@ if __name__ == "__main__":
 <li>From App Launcher, select SharePoint -&gt; My sites.</li>
 <li>Search for the specific class -&gt; Site contents -&gt; Student Work -&gt; Submitted Files, click Download to download all submitted files or use Ctrl to select multiple students and click Download to download associated files.</li>
 </ol>
-<h1>cmsimde</h1>
-<p><a href="https://github.com/mdecycu/cmsimde">cmsimde</a> 是一套 Web-based content management system, 也就是基於全球資訊網的內容管理系統.</p>
-<p>由於全球資訊網頁中主要使用 html, css 與 javascript 控制網頁內容, 因此在利用 <a href="https://github.com/mdecycu/cmsimde">cmsimde</a> 管理數位內容時, 必須同時對這三種語言有一定的認識.</p>
-<h4>有關 html (html5) 請參考:</h4>
-<p style="padding-left: 30px;"><a href="https://link.springer.com/book/10.1007/978-1-4302-3862-1">HTML5 Mastery</a></p>
-<h4 style="padding-left: 30px;">假如要在網頁中嵌入 2D 物件, 請參考:</h4>
-<p style="padding-left: 60px;"><a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API</a></p>
-<h4 style="padding-left: 30px;">假如要在網頁中嵌入 3D 物件, 請參考:</h4>
-<p style="padding-left: 60px;"><a href="https://link.springer.com/book/10.1007/978-1-4302-3997-0">Beginning WebGL for HTML5</a></p>
-<h4>有關 css 請參考:</h4>
-<p style="padding-left: 30px;"><a href="https://link.springer.com/book/10.1007/978-1-4842-6294-8">Modern CSS</a></p>
-<h4>有關 Javascript 請參考:</h4>
-<p style="padding-left: 30px;"><a href="https://link.springer.com/book/10.1007/978-1-4842-4395-4">Beginning Javascript</a></p>
-<p>為了 <a href="https://github.com/mdecycu/cmsimde">cmsimde</a> 靜態頁面功能表的簡潔性, 一般建議除了 Home 之外的 H1 標題, 不要超過 9 個. 若善用各分類的 H2 與 H3 子頁面分類至多 9 個子頁面, 9x9x9 合計可以容納 729 個頁面, 應該足以涵蓋中等網站的所有內容.</p>
-<p><a href="https://github.com/mdecycu/cmsimde">https://github.com/mdecycu/cmsimde</a></p>
-<p>目前的課程網站 cmsimde submodule 已經使用 mdecycu 帳號下的倉儲, 準備要將現有分別位於</p>
-<p>get_page2, render_menu2, 以及 sitemap2 函式中, 如下圖所示:</p>
-<p><img caption="false" class="add_border" height="189" src="/images/bootstrap_container_fluid.png" width="600"/></p>
-<p>的 class='container-fluid' 改為 class='container', 根據 <a href="https://getbootstrap.com/docs/5.0/layout/containers/">bootstrap containers</a> 頁面的說明, 能夠將現有散佈在頁面 100% 的內容, 取用各不同尺寸螢幕的局部大小:</p>
-<p><img alt="" class="add_border" height="254" src="/images/bootstrap_contener_table.png" width="600"/></p>
-<h4>cmsimde Template:</h4>
-<p style="padding-left: 30px;"><a href="https://github.com/mdecycu/cmsite">https://github.com/mdecycu/cmsite</a></p>
-<h4>cmsimde submodule update:</h4>
-<p style="padding-left: 30px;">使用 cmsimde 作為 submodule 的倉儲, 當發現 cmsimde 倉儲內容已經更新後, 若希望使用更新後的子模組內容, 則可以利用下列指令完成:</p>
-<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">REM 從倉儲更換目錄至 cmsimde
-cd cmsimde
-REM 利用 git 指令中的 pull, 從 origin 代號的網路連結, 取回 master 分支的內容, 在近端進行合併
-git pull origin master
-REM 回到原始倉儲目錄
-cd ..
-REM 利用 acp.bat 中的 git add, git commit 與 git push 將更新資料送到遠端 github 倉儲中
-acp "update cmsimde submodule"</pre>
-<h4>Are we living in a smart city (University, College, Department, Class, Group)?</h4>
-<h4>我們生活在智慧城市 (大學, 學院, 科系, 班級, 團隊) 嗎?</h4>
-<p style="padding-left: 30px;"><a href="https://link.springer.com/referencework/10.1007/978-3-030-69698-6">Handbook of Smart Cities</a></p>
-<h2>Portable Python</h2>
-<h4>何謂可攜式 Python 程式環境?</h4>
-<h4 style="padding-left: 30px;">Python 程式是如何執行的?</h4>
-<p style="padding-left: 30px;">首先 Python 是一種解譯式 (Interpreted) 程式語言, 與 C 或 C++ 程式語言最大的差別是, C/C++ 程式碼通常必須透過編譯 (Compile) 與連結 (Link) 的過程, 將原始碼轉為可執行的格式 (在 Windows 操作系統為 .exe 檔案), 而 Python 程式寫好後, 可以直接利用解譯器執行, 使用者不需要手動執行程式碼的編譯, 而是由解譯器在執行前即時將程式碼轉換為可執行檔案.</p>
-<p style="padding-left: 30px;">在 <a href="https://www.geeksforgeeks.org/internal-working-of-python/">geeksforgeeks 網站</a>, 以下列敘述說明 Python 程式如何執行:</p>
-<p style="padding-left: 30px;">Python is an object-oriented programming language like Java. Python is called an interpreted language. Python uses code modules that are interchangeable instead of a single long list of instructions that was standard for functional programming languages. The standard implementation of python is called "cpython". It is the default and widely used implementation of Python.</p>
-<p style="padding-left: 30px;">Python doesn’t convert its code into machine code, something that hardware can understand. It actually converts it into something called byte code. So within python, compilation happens, but it’s just not into a machine language. It is into byte code (.pyc or .pyo) and this byte code can’t be understood by the CPU. So we need an interpreter called the python virtual machine to execute the byte codes</p>
-<p style="padding-left: 30px;">針對 Python 程式的"編譯"過程, 則<a href="https://www.geeksforgeeks.org/understanding-the-execution-of-python-program/">說明如下</a>:</p>
-<p style="padding-left: 30px;">The Python program is converted into byte code. Byte code is a fixed set of instructions that represent arithmetic, comparison, memory operations, etc. It can run on any operating system and hardware. The byte code instructions are created in the .pyc file. The .pyc file is not explicitly created as Python handles it internally but it can be viewed with the following command:</p>
-<p style="padding-left: 60px;">Y:\tmp\python_ex&gt;python -m py_compile hello.py</p>
-<p style="padding-left: 30px;">-m and py_compile represent module and module name respectively. This module is responsible to generate .pyc file. The compiler creates a directory named  __pycache__ where it stores the hello.cpython-39.pyc file (若採用 Python 3.9 版次的編譯器).</p>
-<p style="padding-left: 30px;">至於針對 Python 程式的"解譯"執行過程, 則<a href="https://www.geeksforgeeks.org/understanding-the-execution-of-python-program/">說明如下</a>:</p>
-<p style="padding-left: 30px;">The next step involves converting the byte code (.pyc file) into machine code. This step is necessary as the computer can understand only machine code (binary code). Python Virtual Machine (PVM) first understands the operating system and processor in the computer and then converts it into machine code. Further, these machine code instructions are executed by processor and the results are displayed.</p>
-<p style="padding-left: 30px;">However, the interpreter inside the PVM translates the program line by line thereby consuming a lot of time. To overcome this, a compiler known as Just In Time (JIT) is added to PVM. JIT compiler improves the execution speed of the Python program. This compiler is not used in all Python environments like CPython which is standard Python software.</p>
-<p style="padding-left: 30px;">To execute the hello.cpython-39.pyc we can use the following command:</p>
-<p style="padding-left: 60px;">Y:\tmp\python_ex&gt;python __pycache__\hello.cpython-39.pyc</p>
-<p style="padding-left: 30px;">至於有關 python.exe 與 pythonw.exe 的差別, 則參見<a href="https://stackoverflow.com/questions/9705982/pythonw-exe-or-python-exe">這裡的說明</a>. 至於 SciTE 設定 python.properties 中, 使用 pythonw.exe -u 表示除了採非同步 (asynchronous) 執行模式外, 同時 force the stdout and stderr streams to be unbuffered; but has no effect on stdin.</p>
-<h4 style="padding-left: 30px;">Python 解譯器的類別:</h4>
-<p style="padding-left: 30px;">最早的 Python 解譯器以 C 程式語言編寫, 稱為 <a href="https://en.wikipedia.org/wiki/CPython">CPython</a>, 以 Python 編寫的 Python 解譯器稱為 <a href="https://en.wikipedia.org/wiki/PyPy">Pypy</a>, 以 .NET 技術編寫的 Python 解譯器稱為 <a href="https://en.wikipedia.org/wiki/IronPython">Ironpython</a>, 以 Java 編寫的 Python 解譯器稱為 <a href="https://en.wikipedia.org/wiki/Jython">Jython</a>, 以 Javascript 編寫的 Python 解譯器稱為 <a href="https://brython.info/">Brython</a>. 以 Rust 編寫的 Python 解譯器稱為 <a href="https://github.com/RustPython/RustPython">RustPython</a>.</p>
-<h4 style="padding-left: 30px;">建立可攜 Python 程式環境的目的:</h4>
-<p style="padding-left: 30px;">一般在 Windows 10 中使用 <a href="https://en.wikipedia.org/wiki/CPython">CPython</a> 都是透過操作系統安裝, 將 <a href="https://en.wikipedia.org/wiki/CPython">CPython</a> 解譯器登錄在操作系統的 <a href="https://en.wikipedia.org/wiki/Windows_Registry">Registry</a> 中. 只不過配置在操作系統的 <a href="https://en.wikipedia.org/wiki/CPython">CPython</a> 解譯器若在使用過程中, 透過 <a href="https://pypi.org/project/pip/">pip</a> 安裝額外的模組後, 當電腦輔助設計室中的電腦重新開機後, 操作系統將會因為安裝防寫套件而恢復原先所安裝無額外模組的狀態.</p>
-<p style="padding-left: 30px;">網際內容管理與協同產品設計實習課程為了<span style="background-color: #ffff99;">讓使用者可以隨身帶著 <a href="https://en.wikipedia.org/wiki/CPython" style="background-color: #ffff99;">CPython</a> 解譯器</span>, 因此繞過 Windows 10 操作系統的 Registry 登錄, 設法以批次檔案在虛擬的硬碟 (y:) 啟動 <a href="https://en.wikipedia.org/wiki/CPython">CPython</a> 解譯環境.</p>
-<p style="padding-left: 30px;">此外, 配置在 USB 隨身碟的可攜 <a href="https://en.wikipedia.org/wiki/CPython">CPython</a> 程式環境, 除了可執行一般 Python 程式外, 也可自行安裝所需模組, 並用於 <a href="https://github.com/mdecourse/cmsimde">cmsimde</a> 動態與靜態網站編輯.</p>
-<p style="padding-left: 30px;">可攜程式環境中除 <a href="https://en.wikipedia.org/wiki/CPython">CPython</a>, 還可配置 <a href="https://www.msys2.org/">MSYS2</a> C/C++ 編譯系統. 針對 <a href="https://www.scintilla.org/SciTE.html">SciTE</a>, <a href="https://github.com/solvespace/solvespace">Solvespace</a>, <a href="https://github.com/Range-Software/range3">Range3</a>, <a href="https://github.com/CoppeliaRobotics">CoppeliaSim</a> 等開源套件執行編譯.</p>
-<h4>如何建立可攜 Python 程式環境?</h4>
-<p style="padding-left: 30px;">能放入 USB 隨身碟執行的 Python 程式環境包含兩個部分:</p>
-<p style="padding-left: 60px;">(1) Python 解譯器系統檔案</p>
-<p style="padding-left: 60px;">(2) 可攜啟動設定批次檔 (例如: <a href="/downloads/start_ipv6.bat">start_ipv6.bat</a>)</p>
-<p style="padding-left: 30px;">要在 Windows 操作系統中, 取得各版本的 Python 解譯器系統檔案, 也有兩種方法:</p>
-<p style="padding-left: 60px;">(1) 從官方網站下載安裝檔 (例如: <a href="https://www.python.org/ftp/python/3.10.5/">3.10.5 版</a>的 <a href="https://www.python.org/ftp/python/3.10.5/python-3.10.5-amd64.exe">python-3.10.5-amd64.exe)</a>, 手動安裝 Python, 取下安裝內容後, 解除安裝程式.</p>
-<p style="padding-left: 60px;">(2) 利用 <a href="/downloads/gen_portable_python.py">gen_portable_python.py</a>, 從 Python 官方網站下載基本的 .msi 檔案 (例如 <a href="https://www.python.org/ftp/python/3.10.5/amd64/">3.10.5 版</a>中的 core.msi, dev.msi, exe.msi, lib.msi, tcltk.msi 與 tools.msi), 然後利用 <a href="https://docs.microsoft.com/zh-tw/windows-server/administration/windows-commands/msiexec">msiexec.exe</a> 配合 <a href="https://docs.microsoft.com/zh-tw/windows/win32/msi/targetdir">targetdir</a> 屬性解開各安裝檔.</p>
-<p id="pp310">以下將要結合 <a href="https://www.scintilla.org/SciTE.html">SciTE</a>, <a href="https://github.com/TinyCC/tinycc">Tiny C Compiler</a> 與 <a href="https://www.python.org/ftp/python/3.10.5/">Python 3.10.5</a>, 建立一個可攜版的 CPython 與 <a href="https://en.wikipedia.org/wiki/ANSI_C">ANSI C</a> 執行環境.</p>
-<ol>
-<li>從 <a href="http://download.savannah.gnu.org/releases/tinycc/">http://download.savannah.gnu.org/releases/tinycc/</a> 下載 <a href="http://download.savannah.gnu.org/releases/tinycc/tcc-0.9.27-win64-bin.zip">tcc-0.9.27-win64-bin.zip</a>.</li>
-<li>從 <a href="https://www.scintilla.org/SciTEDownload.html">https://www.scintilla.org/SciTEDownload.html</a> 下載 <a href="https://www.scintilla.org/wscite521.zip">wscite521.zip</a>.</li>
-<li>利用 Python 3.9.5 (或先前的 Python3 舊版可攜程式) 執行 <a href="/downloads/gen_portable_python.py">gen_portable_python.py</a> 取得 Python310 解譯器系統檔案.</li>
-<li>根據上述流程建立的基本 Python 與 ANSI C 可攜程式系統 <a href="http://wcm.cycu.org:88/Portable_py310_tcc.7z">Portable_py310_tcc.7z</a> (只能在系網路 下載, 此一 Python 解譯器只帶有基本模組且尚未安裝 <a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=&amp;cad=rja&amp;uact=8&amp;ved=2ahUKEwiywaDasrb2AhX7rVYBHbSJCcoQFnoECAoQAQ&amp;url=https%3A%2F%2Fbootstrap.pypa.io%2Fget-pip.py&amp;usg=AOvVaw0zKVO_zW0nkF7s0zdjWFNj">get-pip.py</a>)</li>
-<li>此一 Python 解譯器以 python <a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=&amp;cad=rja&amp;uact=8&amp;ved=2ahUKEwigkdK1s7b2AhUBs1YBHYhXA8oQFnoECAcQAQ&amp;url=https%3A%2F%2Fbootstrap.pypa.io%2Fget-pip.py&amp;usg=AOvVaw0zKVO_zW0nkF7s0zdjWFNj">get-pip.py</a> 安裝 pip 後, 再以 pip install flask flask_cors bs4 lxml pelican markdown leo pyopenssl 安裝 <a href="https://mde.tw/cmstemplate/content/CMSiMDE.html">cmsimde 所需模組</a>後, 即可用於 wcm2022 動態與靜態系統的編輯.</li>
-<li>此一 Python 解譯器再結合 <a href="https://git-scm.com/download/win">Portablegit</a> 與 <a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html">PUTTY</a>, 就可以支援以 <a href="https://mde.tw/wcm2022_guide/content/Token%20and%20SSH.html">SSH</a> 執行 github 倉儲的 git push.</li>
-</ol>
-<h4>如何建立網際 Python 程式環境 (Brython)?</h4>
-<p style="padding-left: 30px;">例如: <a href="https://mde.tw/cp2022/content/Brython.html">Brython</a> 頁面.</p>
-<p>從 <a href="https://drive.google.com/file/d/1TMPsHz6G01-pxkvXf9NFM8nFdtCHQv8D/view?usp=sharing">portable_python_wcm2022.7z</a> 下載的可攜程式環境有哪些功能?</p>
-<p><span style="background-color: #ffff99;">請注意: 以下的 .7z 檔案下載, 只允許在系上網段上下載</span>.</p>
-<ol>
-<li><a href="http://wcm.cycu.org:88/compile_copsim_cd2022.7z">compile_copsim_cd2022.7z</a> (file size: 5 GB, extracted size: 17.3 GB, 包含除了 NX1980 之外的所有課程相關可攜程式套件, 是專門為 <a href="http://wcm.cycu.org:88/github/cd2022_guide/content/index.html">cd2022</a> 課程學員打造的套件).</li>
-<li><a href="http://wcm.cycu.org:88/portable_python_wcm2022.7z">portable_python_wcm2022.7z</a> (file size: 513 MB, extracted size: 2.3 G, 這是專門為 <a href="https://mde.tw/wcm2022http://wcm.cycu.org:88/github/wcm2022_guide/content/index.html">wcm2022</a> 課程打造的可攜程式套件, 適合選修學員下載後在任何 Windows 10 中以隨身碟啟動後操作)</li>
-<li><a href="http://wcm.cycu.org:88/drive.7z">drive.7z</a> (file size: 2.6 MB, extracted size: 10 MB, 只包含 PUTTY, tcc, wscite 與 tmp 目錄, 採用 Hybrid 方式設定, 可與目前電腦輔助設計室中 SSD 硬碟所安裝的 Python 3.9.5 與 <a href="https://git-scm.com/download/win">Portablegit</a> 結合, 使用者只需自行設定啟動後的 home_ipv6 目錄與 home_ipv6/Desktop 目錄後即可以最輕薄便捷的方式將 SSH key 存入隨身碟, 並將個人與分組倉儲存入隨身碟啟動後的 tmp 目錄進行操作).</li>
-</ol>
-<p>以下利用 Wink3 影片說明以 Hybrid 方式啟動的 USB 隨身碟如何建立? 以及使用上與完整 USB 隨身碟可攜程式系統的差別:</p>
-<p>Hybrid 可攜程式系統是只將必要檔案配置到 USB 隨身碟, 其餘檔案則使用已經存在電腦上的內容, 主要包含 Python 3.9.5 解譯程式 (863 MB) 與 Portblegit 2.31.1 (285 MB).</p>
-<p>Hybrid 可攜程式系統優點:</p>
-<ol>
-<li>初始 USB 隨身碟只需複製 10.5 MB 的資料 (只自帶 PUTTY (4.3 MB), tcc (1.7 MB), tmp 與 wscite (4.3 MB)).</li>
-<li>使用電腦 SSD 上所安裝的 Python 與 Portablegit, 執行速度會比一般 USB 隨身碟快.</li>
-</ol>
-<p>Hybrid 可攜程式系統缺點:</p>
-<ol>
-<li>在未修改 Python Script 目錄中的 .exe 可執行檔之前, 必須透過 .py 執行, 例如: 命令列 中輸入 leo 並無法執行執行, 必須採用 import leo.core.runLeo;leo.core.runLeo.run()</li>
-<li>若在裝有還原卡的電腦, 未修改 Python 系統模組路徑之前, 所安裝的額外模組無法放入 USB 隨身碟中.</li>
-</ol>
-<h2>Token and SSH</h2>
-<p>Remote Desktop - Windows, Ubuntu, Mac</p>
-<h4 id="token">Token:</h4>
-<p style="padding-left: 30px;"><a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token">https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token</a></p>
-<p style="padding-left: 30px;">Github token 是一串可以用來替代 Github 帳號與密碼功能的字串, 可在登入 Github 帳號後, 至 <a href="https://github.com/settings/tokens">https://github.com/settings/tokens</a> 設定. 每一個 token 都具備有效時間與權限範圍, 一般初學者可以只勾選 Token 的 repo 改版權限, 並選擇 30 天的有效時間. 之後再設法改用 SSH 對 Github 倉儲改版.</p>
-<p>以下影片說明如何使用 Personal Access Token 執行 git push:</p>
-<p>
-<script>
-var winkVideoData1 = {
-  dataVersion: 1,
-  frameRate: 10,
-  buttonFrameLength: 5,
-  buttonFrameOffset: 2,
-  frameStops: {
-  },
-};
-</script>
-</p>
-<!-- 接下來將 mp4 檔案從 downloads 目錄取出 -->
-<div class="winkVideoContainerClass"><video autoplay="autoplay" class="winkVideoClass" controls="controls" data-dirname="/static" data-varname="winkVideoData1" height="630" muted="true" width="1008">
-<source src="/downloads/token_wink/github_token.mp4" type="video/mp4"/></video>
-<h4 id="ssh">SSH:</h4>
-<p style="padding-left: 30px;"><a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh">https://docs.github.com/en/authentication/connecting-to-github-with-ssh</a></p>
-<p style="padding-left: 30px;">Windows 10 環境中的 SSH 可以透過 <a href="https://www.putty.org/">https://www.putty.org/</a> 執行設定.</p>
-<p style="padding-left: 30px;">puttygen.exe 可用來建立 OpenSSL 格式的數位簽章, public key 送到使用者 Github 帳號下 settings 中的 SSH and GPG keys 區, 在隨身碟中則存放與 public key 成對的 Putty 格式 private key.</p>
-<p style="padding-left: 30px;">使用者在 Windows 10 使用 git + putty 時, 必須在啟動隨身系統時設定 GIT_SSH 變數 (<a href="https://git-scm.com/book/en/v2/Git-Internals-Environment-Variables">Git 環境變數</a>) 至 putty 中的 plink.exe, 之後再利用 putty 設定連至 github.com 用的 session, 且在純 IPv6 環境中, 連至 github.com 的 session 除了必須指向隨身碟中的 private key 外, 還需要設定能同時支援 IPv6 與 IPv4 的 proxy server.</p>
-<p style="padding-left: 30px;">使用者希望透過 SSH 對 github 中的倉儲改版時, 必須使用 <a href="mailto:git@session_name:github_account/repository.git">git@session_name:github_account/repository.git</a> 連線.</p>
-<p style="padding-left: 30px;">有關 GIT_SSH 變數：</p>
-<p style="padding-left: 60px;">GIT_SSH, if specified, is a program that is invoked instead of ssh when Git tries to connect to an SSH host. It is invoked like $GIT_SSH [username@]host [-p &lt;port&gt;] &lt;command&gt;. Note that this isn’t the easiest way to customize how ssh is invoked; it won’t support extra command-line parameters, so you’d have to write a wrapper script and set GIT_SSH to point to it. It’s probably easier just to use the ~/.ssh/config file for that.</p>
-<p>以下影片說明如何在 Windows IPv6 環境下, 利用 PUTTY 以 SSH 協定執行 git push:</p>
-<p>
-<script>
-var winkVideoData2 = {
-  dataVersion: 1,
-  frameRate: 10,
-  buttonFrameLength: 5,
-  buttonFrameOffset: 2,
-  frameStops: {
-  },
-};
-</script>
-</p>
-<div class="winkVideoContainerClass"><video autoplay="autoplay" class="winkVideoClass" controls="controls" data-dirname="/static" data-varname="winkVideoData2" height="630" muted="true" width="1008">
-<source src="/downloads/ssh_wink/wink_ssh.mp4" type="video/mp4"/></video></div>
-</div>
-<h2>Bootstrap</h2>
-<p><a href="https://getbootstrap.com/">https://getbootstrap.com/</a></p>
-<h4>cmsimde page:</h4>
-<p style="padding-left: 30px;">head banner</p>
-<p style="padding-left: 30px;">search form</p>
-<p style="padding-left: 30px;">page navigator</p>
-<p style="padding-left: 30px;">page content</p>
-<p style="padding-left: 30px;">pelican blog</p>
-<p style="padding-left: 30px;">reveal</p>
-<h4>Bootstrap editor:</h4>
-<p style="padding-left: 30px;"><a href="https://www.layoutit.com/">https://www.layoutit.com/</a></p>
-<p style="padding-left: 30px;"><a href="https://github.com/Vegetam/BootstrapPageGenerator">https://github.com/Vegetam/BootstrapPageGenerator</a></p>
-<h4>Flask and Bootstrap:</h4>
-<p style="padding-left: 30px;"><a href="https://github.com/mbr/flask-bootstrap">https://github.com/mbr/flask-bootstrap</a></p>
-<p style="padding-left: 30px;"><a href="https://www.techwithtim.net/tutorials/flask/adding-bootstrap/">https://www.techwithtim.net/tutorials/flask/adding-bootstrap/</a></p>
-<p style="padding-left: 30px;"><a href="https://pythonhosted.org/Flask-Bootstrap/basic-usage.html">https://pythonhosted.org/Flask-Bootstrap/basic-usage.html</a></p>
-<p style="padding-left: 30px;"><a href="https://github.com/MashSoftware/flask-bootstrap-ui">https://github.com/MashSoftware/flask-bootstrap-ui</a></p>
-<p style="padding-left: 30px;"><a href="https://github.com/hfilimonescu/flask-bs4">https://github.com/hfilimonescu/flask-bs4</a></p>
-<h2>Bugs</h2>
-<p>靜態網頁在 Brython 頁面無法執行關鍵字搜尋.</p>
-<h2>frameworks</h2>
-<h4>fastapi</h4>
-<p><a href="https://fastapi.tiangolo.com/">https://fastapi.tiangolo.com/</a></p>
-<h4>starlette</h4>
-<p><a href="https://www.starlette.io/">https://www.starlette.io/</a></p>
 <h1>cad2022</h1>
 <h4>2022 Fall</h4>
 <p>Computer aided Design and Practices 電腦輔助設計實習</p>
@@ -1658,6 +1638,7 @@ var winkVideoData2 = {
 <p><a href="https://calendar.google.com/calendar/embed?src=mde.nfu.edu.tw_3439313938333136353439%40resource.calendar.google.com&amp;ctz=Asia%2FTaipei&amp;mode=week&amp;src=mde.nfu.edu.tw_35303530373431313438%40resource.calendar.google.com&amp;ctz=Asia%2FTaipei&amp;src=yen%40gm.nfu.edu.tw&amp;ctz=Asia%2FTaipei">全頁檢視</a></p>
 <p><iframe height="600" src="https://calendar.google.com/calendar/embed?src=mde.nfu.edu.tw_3439313938333136353439%40resource.calendar.google.com&amp;ctz=Asia%2FTaipei&amp;mode=week&amp;src=mde.nfu.edu.tw_35303530373431313438%40resource.calendar.google.com&amp;ctz=Asia%2FTaipei&amp;src=yen%40gm.nfu.edu.tw&amp;ctz=Asia%2FTaipei" width="800"></iframe></p>
 <div id="disqus_thread"></div>
+<p>
 <script>
     /**
     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
@@ -1675,6 +1656,7 @@ var winkVideoData2 = {
     (d.head || d.body).appendChild(s);
     })();
 </script>
+</p>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <h2>cad-syllabus</h2>
 <h4>課程評分:</h4>
@@ -2013,6 +1995,10 @@ var winkVideoData_40923151 = {
 <p><a href="https://sqlite.org/whynotgit.html">https://sqlite.org/whynotgit.html</a></p>
 <h2>Classroom</h2>
 <p><a href="https://youtu.be/4i1D5rIrkAM">https://youtu.be/4i1D5rIrkAM</a></p>
+<h2>Gazebo</h2>
+<p><a href="https://gazebosim.org">https://gazebosim.org</a></p>
+<p><a href="https://community.gazebosim.org/">https://community.gazebosim.org/</a></p>
+<p><a href="https://gazebosim.org/docs/garden/install_windows_src">https://gazebosim.org/docs/garden/install_windows_src</a></p>
 <h2>Webots</h2>
 <p><a href="https://cyberbotics.com">https://cyberbotics.com</a></p>
 <p><a href="https://github.com/cyberbotics/webots">https://github.com/cyberbotics/webots</a></p>
@@ -2648,4 +2634,50 @@ wire_edm_machining</pre>
 <p><a href="https://github.com/deepmind/mujoco">https://github.com/deepmind/mujoco</a></p>
 <h2>ROS</h2>
 <p><a href="https://link.springer.com/content/pdf/10.1007/978-1-4842-7750-8.pdf">Robot Operating System for Absolute Beginners</a> (2022)</p>
+<h1>Projects</h1>
+<p>pj40921: <a href="https://github.com/mdecycu/pj40921">https://github.com/mdecycu/pj40921</a></p>
+<p>pj40922: <a href="https://github.com/mdecycu/pj40922">https://github.com/mdecycu/pj40922</a></p>
+<p>pj5083: <a href="https://github.com/mdecycu/pj5083">https://github.com/mdecycu/pj5083</a></p>
+<h2>pjcopsim</h2>
+<p>專題動機:</p>
+<p>探討如何利用網際內容管理系統架構, 讓 Coppeliasim 用戶手冊, 得以更加容易進行資料附加與應用, 擬藉此提升課程教學與專題研究效益.</p>
+<p>相關轉檔程式: <a href="https://github.com/mdecycu/copsimdoc">https://github.com/mdecycu/copsimdoc</a></p>
+<p>初步結果: <a href="https://mde.tw/pjcopsim">https://mde.tw/pjcopsim</a></p><h2>pjgazebo</h2>
+<p><strong>Gazebo 套件的安裝與應用研究</strong></p>
+<p><strong>Installation and application study of the Gazebo software<br/></strong></p>
+<h4>專題動機:</h4>
+<p>最近幾年正是 gazebo 套件從 <a href="https://classic.gazebosim.org/">classic Gazebo</a> 轉為 <a href="https://gazebosim.org/docs/garden">Gazebo</a> 的時間點, 推出時程規劃可參見 <a href="https://gazebosim.org/docs/garden/releases">releases</a>, 由於 classic Gazebo 的<a href="https://classic.gazebosim.org/download">版本釋出</a>以 source codes 為主, 在 Windows 操作系統安裝配置的參考資料較少, 而新版的 Gazebo 則提供較詳細的<a href="https://gazebosim.org/docs/garden/install_windows_src">安裝步驟</a>. 因此本專題將研究新版本 Gazebo 的安裝流程與其後續模擬應用.</p>
+<h4>研究方法:</h4>
+<ol>
+<li>文獻探討: (一) <a href="https://www.sciencedirect.com/science/article/pii/S1569190X22001046">How to pick a mobile robot simulator: A quantitative comparison of CoppeliaSim, Gazebo, MORSE and Webots with a focus on accuracy of motion</a>, (二) <a href="/downloads/Feature and performance comparison of the V-REP, Gazebo and ARGoS robot simulators.pdf">Feature and performance comparison of the V-REP, Gazebo and ARGoS robot simulators</a>, (三) <a href="/downloads/Comparative Analysis Between Gazebo and V-REP Robotic Simulators.pdf">Comparative Analysis Between Gazebo and V-REP Robotic Simulators</a>, (四) <a href="https://learn.e.ros4.pro/en/robotic_simulators/comparison/">https://learn.e.ros4.pro/en/robotic_simulators/comparison/</a>.</li>
+<li>依據<a href="https://gazebosim.org/docs/garden/install_windows_src">安裝步驟</a>, 完成新版 Gazebo 的安裝.</li>
+<li>研究是否可以將 Gazebo 配置為可攜套件.</li>
+<li>嘗試利用 Gazebo 模擬 foosball table 機電系統.</li>
+<li>嘗試利用 Gazebo 模擬 <a href="/downloads/uarm_robot_nx12.7z">uarm robot</a> 機械手臂 pick and place 流程.</li>
+<li>比較 Gazebo 與 CoppeliaSim 在安裝配置與模擬應用流程上的差異.</li>
+</ol>
+<p>從 <a href="https://gazebosim.org/about">https://gazebosim.org/about</a> 可得知 gazebo 正面臨關鍵改版中, 引用官方網站內容說明如下:</p>
+<p>Gazebo is a collection of open source software libraries designed to simplify development of high-performance applications. The primary audience for Gazebo are <strong>robot developers</strong>, <strong>designers, and educators</strong>. However, Gazebo has been structured to suit many different use cases. Each library within Gazebo has minimal dependencies, allowing them to be used in tasks ranging from solving mathematical transforms, to video encoding, and up to simulation and process management. Just choose the libraries you need for your application without committing to a whole ecosystem.<br/><br/>Trust and reliablity has been established through a curation and maintainence process lead by <a href="https://www.openrobotics.org/">Open Robotics</a> in collaboration with a community of developers. Each library within Gazebo has been designed to serve a specific purpose. This philosophy reduces code clutter, establishes consistency between libraries, and simplifies finding solutions. Development and maintenance adheres to a protocol consisting of multiple reviews, code checkers, and continuous integration. Take a look at Gazebo's roadmap for upcoming features and the latest improvements.</p>
+<p><a href="https://gazebosim.org/docs/garden/install_windows_src">https://gazebosim.org/docs/garden/install_windows_src</a></p>
+<h2>pjgithub</h2>
+<p>github actions 自動轉靜態網頁研究 </p>
+<p><a href="https://github.com/features/actions">https://github.com/features/actions</a></p>
+<p><a href="https://docs.github.com/en/actions">https://docs.github.com/en/actions</a> </p>
+<p><a href="/downloads/github_actions.7z">github_actions.7z</a></p>
+<p> </p><h2>pyslvs</h2>
+<p>平面摺疊機構應用研究</p>
+<p style="padding-left: 30px;"><a href="https://github.com/KmolYuan/Pyslvs-UI">https://github.com/KmolYuan/Pyslvs-UI</a></p>
+<p>摺疊自行車研究:</p>
+<p style="padding-left: 30px;"><a href="https://www.foldingcyclist.com/folding-bike-history.html">https://www.foldingcyclist.com/folding-bike-history.html</a></p>
+<p style="padding-left: 30px;"><a href="https://patents.google.com/patent/EP0026800A1/en">Brompton 摺疊專利</a> (<a href="https://patents.google.com/?assignee=BROMPTON+BICYCLE+Ltd">其他相關專利</a>)</p>
+<p style="padding-left: 30px;"><a href="/downloads/1896_folding_bike_US569354.pdf">1896_folding_bike_US569354.pdf</a></p><h2>pjfem</h2>
+<p>FEM 有限元素套件編譯與應用研究</p>
+<p><a href="https://github.com/Range-Software/range3">https://github.com/Range-Software/range3</a></p>
+<p>Reference: <a href="https://github.com/mdecycu/4072pj2">https://github.com/mdecycu/4072pj2</a></p>
+<h2>pjblender</h2>
+<p><a href="https://www.blender.org/">https://www.blender.org/</a> 建立模型, 轉入 Gazebo 或 CoppeliaSim 執行機電模擬.</p>
+<p>3D 零件轉檔研究</p>
+<p>平面機構自動組立</p>
+<p>STL 零組件自動分割</p>
+<p style="padding-left: 30px;"><a href="/downloads/stl_splliter.7z">stl_splitter.7z</a></p>
 <p></p>

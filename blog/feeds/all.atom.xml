@@ -1,5 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Mde.tw</title><link href="https://mde.tw/blog/" rel="alternate"></link><link href="https://mde.tw/blog/feeds/all.atom.xml" rel="self"></link><id>https://mde.tw/blog/</id><updated>2022-08-28T11:58:17+08:00</updated><entry><title>Git 常用指令</title><link href="https://mde.tw/blog/useful-git-commands.html" rel="alternate"></link><published>2022-08-28T11:00:00+08:00</published><updated>2022-08-28T11:58:17+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-08-28:/blog/useful-git-commands.html</id><summary type="html">&lt;p&gt;根據使用情境將常用的 git 指令加以整理.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Mde.tw</title><link href="https://mde.tw/blog/" rel="alternate"></link><link href="https://mde.tw/blog/feeds/all.atom.xml" rel="self"></link><id>https://mde.tw/blog/</id><updated>2022-09-01T12:00:00+08:00</updated><entry><title>有關 TCExam</title><link href="https://mde.tw/blog/about-tcexam.html" rel="alternate"></link><published>2022-09-01T12:00:00+08:00</published><updated>2022-09-01T02:38:14+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-09-01:/blog/about-tcexam.html</id><summary type="html">&lt;p&gt;這裡將收集與 TCExam 有關的資料內容.&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;這裡將收集與 TCExam 有關的資料內容.&lt;/p&gt;
+
+
+&lt;h1&gt;虛擬主機上的 TCExam&lt;/h1&gt;
+&lt;p&gt;相關程式檔案放在 c:\tcexam, 管理者帳號設為 tcexam. 啟動 exam.網域.名稱, 牽涉 nginx, php, pgsql 以及 tcexam 程式原始碼.&lt;/p&gt;
+&lt;p&gt;nginx 主要負責將 http 跳轉至 https, 並且透過 fastcgi 啟動 php 解譯器的執行. 而 nginx 的 server 設定範例如下:&lt;/p&gt;
+&lt;pre class="brush: jscript"&gt;
+server { 
+    listen    98 ssl;
+    listen    [::]:98 ssl;
+
+    root c:/tmp/TCExam;
+
+    server_name    exam.網域.名稱;
+    ssl_certificate    C:/pj2022/stunnel/config/fullchain.pem;
+    ssl_certificate_key    C:/pj2022/stunnel/config/privkey.pem;
+    ssl_protocols    TLSv1 TLSv1.1 TLSv1.2;
+    ssl_ciphers    HIGH:!aNULL:!MD5;
+
+    location /{ 
+        index index.html index.php;
+    }
+
+    location ~ \.php$ {
+        fastcgi_pass   127.0.0.1:9123;
+        fastcgi_index  index.php;
+        fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;
+        include        fastcgi_params;
+    }
+}
+&lt;/pre&gt;
+
+&lt;p&gt;pgsql 以手動 start.bat 啟動, 設定檔案如下:&lt;/p&gt;
+&lt;pre class="brush: jscript"&gt;
+@echo off
+set /p DATA=&lt;PGDATA.txt
+cd %~dp0
+bin\postgres -V
+bin\pg_ctl -D %DATA% -l logfile.txt start
+&lt;/pre&gt;
+
+其中的 PGDATA.txt 內容為 .\data, 表示資料庫內容存在 .\data 目錄中.
+
+一旦考試結束後, 以 stop.bat 關閉 pgsql:
+
+&lt;pre class="brush: jscript"&gt;
+@echo off
+set /p DATA=&lt;PGDATA.txt
+cd %~dp0
+bin\pg_ctl -D %DATA% -l logfile.txt stop
+&lt;/pre&gt;
+
+TCExam 原始碼
+====
+
+由於目前所啟動的線上 TCExam 採用 2022.06.9 釋出的 PHP 8.1.7 版, 而 &lt;https://github.com/tecnickcom/tcexam&gt; 最近修改日期為 2021.08.05, 因此直接從 TCExam github 網站 clone 下來的原始碼無法在最新版的 PHP 解譯環境中執行.
+
+因此啟動修改 TCExam, 令其可以在 PHP 8.1.7 中執行, 且 pdf 轉檔的部分, 也自行建立中文字型, 以便正確將考試內容轉為中英並存的格式.
+
+目前尚未完成的設定為 send mail 的部分.
+
+總結上述說明, 要啟動 TCExam 考試系統, 必須確認 nginx 已經啟動, 然後手動執行 pgsql 目錄下的 start.bat, 並且注意 c:\certbot 目錄下有關 https 數位簽章每 90 天必須設法手動或自動更新.</content><category term="tcexam"></category><category term="exam"></category><category term="php"></category><category term="pgsql"></category><category term="nginx"></category></entry><entry><title>Windows 常用指令</title><link href="https://mde.tw/blog/useful-windows-commands.html" rel="alternate"></link><published>2022-09-01T11:00:00+08:00</published><updated>2022-09-01T02:10:52+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-09-01:/blog/useful-windows-commands.html</id><summary type="html">&lt;p&gt;根據使用情境將常用的 Windows 指令加以整理.&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;根據使用情境將常用的 Windows 指令加以整理.&lt;/p&gt;
+
+
+&lt;h1&gt;密碼最長使用期限&lt;/h1&gt;
+&lt;p&gt;Windows 10 &lt;a href="https://docs.microsoft.com/zh-tw/windows/security/threat-protection/security-policy-settings/maximum-password-age"&gt;密碼最長使用期限&lt;/a&gt; 內定為 42 天, 假如此一設定對使用者造成困擾, 可以從系統管理者執行的 cmd 中, 輸入 secpol.msc 開啟 &lt;a href="https://mitblog.pixnet.net/blog/post/40807765-%5Bwindows%5D-%E6%9C%AC%E6%A9%9F%E5%AE%89%E5%85%A8%E6%80%A7%E5%8E%9F%E5%89%87%28secpol.msc%29%E3%80%81%E7%BE%A4%E7%B5%84%E5%8E%9F%E5%89%87"&gt;本機安全性設定&lt;/a&gt;, 開啟"帳戶原則"中的"密碼原則", 然後將"密碼最長使用期限"從內定的  42 天改為 0, 表示密碼永不過期.&lt;/p&gt;</content><category term="windows"></category><category term="batch"></category><category term="commands"></category></entry><entry><title>Git 常用指令</title><link href="https://mde.tw/blog/useful-git-commands.html" rel="alternate"></link><published>2022-08-28T11:00:00+08:00</published><updated>2022-08-28T11:58:17+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-08-28:/blog/useful-git-commands.html</id><summary type="html">&lt;p&gt;根據使用情境將常用的 git 指令加以整理.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;根據使用情境將常用的 git 指令加以整理.&lt;/p&gt;
 
 

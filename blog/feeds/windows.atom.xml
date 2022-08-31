@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Mde.tw - windows</title><link href="https://mde.tw/blog/" rel="alternate"></link><link href="https://mde.tw/blog/feeds/windows.atom.xml" rel="self"></link><id>https://mde.tw/blog/</id><updated>2022-09-01T11:00:00+08:00</updated><entry><title>Windows 常用指令</title><link href="https://mde.tw/blog/useful-windows-commands.html" rel="alternate"></link><published>2022-09-01T11:00:00+08:00</published><updated>2022-09-01T02:10:52+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-09-01:/blog/useful-windows-commands.html</id><summary type="html">&lt;p&gt;根據使用情境將常用的 Windows 指令加以整理.&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;根據使用情境將常用的 Windows 指令加以整理.&lt;/p&gt;
+
+
+&lt;h1&gt;密碼最長使用期限&lt;/h1&gt;
+&lt;p&gt;Windows 10 &lt;a href="https://docs.microsoft.com/zh-tw/windows/security/threat-protection/security-policy-settings/maximum-password-age"&gt;密碼最長使用期限&lt;/a&gt; 內定為 42 天, 假如此一設定對使用者造成困擾, 可以從系統管理者執行的 cmd 中, 輸入 secpol.msc 開啟 &lt;a href="https://mitblog.pixnet.net/blog/post/40807765-%5Bwindows%5D-%E6%9C%AC%E6%A9%9F%E5%AE%89%E5%85%A8%E6%80%A7%E5%8E%9F%E5%89%87%28secpol.msc%29%E3%80%81%E7%BE%A4%E7%B5%84%E5%8E%9F%E5%89%87"&gt;本機安全性設定&lt;/a&gt;, 開啟"帳戶原則"中的"密碼原則", 然後將"密碼最長使用期限"從內定的  42 天改為 0, 表示密碼永不過期.&lt;/p&gt;</content><category term="windows"></category><category term="batch"></category><category term="commands"></category></entry></feed>

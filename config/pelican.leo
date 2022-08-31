@@ -81,6 +81,12 @@
 <v t="leo.20220828113010.1"><vh>@clean useful_git_commands.md</vh>
 <v t="leo.20220828113236.1"><vh>Git 常用指令</vh></v>
 </v>
+<v t="leo.20220901020048.1"><vh>@clean useful_windows_commands.md</vh>
+<v t="leo.20220901020212.1"><vh>Windows 常用指令</vh></v>
+</v>
+<v t="leo.20220901021551.1"><vh>@clean about_tcexam.md</vh>
+<v t="leo.20220901021609.1"><vh>有關 TCExam</vh></v>
+</v>
 </v>
 </v>
 <v t="yen.20170108171733.83"><vh>產生 .key 與 .crt 指令</vh></v>
@@ -930,6 +936,108 @@ git submodule add 隨後要加入 URL 指向某一倉儲, 表示要將該倉儲�
 git submodule add https://github.com/mdecycu/cmsimde.git cmsimde
 
 表示要將 cmsimde 倉儲設為子模組, 且放入 cmsimde 目錄中.</t>
+<t tx="leo.20220901020048.1">@language md
+---
+Title: Windows 常用指令
+Date: 2022-09-01 11:00
+Category: windows
+Tags: batch, commands
+Slug: useful-windows-commands
+Author: mdecycu
+---
+
+根據使用情境將常用的 Windows 指令加以整理.
+
+&lt;!-- PELICAN_END_SUMMARY --&gt;
+
+@others</t>
+<t tx="leo.20220901020212.1">密碼最長使用期限
+====
+
+Windows 10 [密碼最長使用期限] 內定為 42 天, 假如此一設定對使用者造成困擾, 可以從系統管理者執行的 cmd 中, 輸入 secpol.msc 開啟 [本機安全性設定], 開啟"帳戶原則"中的"密碼原則", 然後將"密碼最長使用期限"從內定的  42 天改為 0, 表示密碼永不過期.
+
+[密碼最長使用期限]: https://docs.microsoft.com/zh-tw/windows/security/threat-protection/security-policy-settings/maximum-password-age
+[本機安全性設定]: https://mitblog.pixnet.net/blog/post/40807765-%5Bwindows%5D-%E6%9C%AC%E6%A9%9F%E5%AE%89%E5%85%A8%E6%80%A7%E5%8E%9F%E5%89%87%28secpol.msc%29%E3%80%81%E7%BE%A4%E7%B5%84%E5%8E%9F%E5%89%87</t>
+<t tx="leo.20220901021551.1">@language md
+---
+Title: 有關 TCExam
+Date: 2022-09-01 12:00
+Category: tcexam
+Tags: exam, php, pgsql, nginx
+Slug: about-tcexam
+Author: mdecycu
+---
+
+這裡將收集與 TCExam 有關的資料內容.
+
+&lt;!-- PELICAN_END_SUMMARY --&gt;
+
+@others</t>
+<t tx="leo.20220901021609.1">虛擬主機上的 TCExam
+====
+
+相關程式檔案放在 c:\tcexam, 管理者帳號設為 tcexam. 啟動 exam.網域.名稱, 牽涉 nginx, php, pgsql 以及 tcexam 程式原始碼.
+
+nginx 主要負責將 http 跳轉至 https, 並且透過 fastcgi 啟動 php 解譯器的執行. 而 nginx 的 server 設定範例如下:
+
+&lt;pre class="brush: jscript"&gt;
+server { 
+    listen    98 ssl;
+    listen    [::]:98 ssl;
+    
+    root c:/tmp/TCExam;
+
+    server_name    exam.網域.名稱;
+    ssl_certificate    C:/pj2022/stunnel/config/fullchain.pem;
+    ssl_certificate_key    C:/pj2022/stunnel/config/privkey.pem;
+    ssl_protocols    TLSv1 TLSv1.1 TLSv1.2;
+    ssl_ciphers    HIGH:!aNULL:!MD5;
+    
+    location /{ 
+        index index.html index.php;
+    }
+    
+    location ~ \.php$ {
+        fastcgi_pass   127.0.0.1:9123;
+        fastcgi_index  index.php;
+        fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;
+        include        fastcgi_params;
+    }
+}
+&lt;/pre&gt;
+
+pgsql 以手動 start.bat 啟動, 設定檔案如下:
+
+&lt;pre class="brush: jscript"&gt;
+@echo off
+set /p DATA=&lt;PGDATA.txt
+cd %~dp0
+bin\postgres -V
+bin\pg_ctl -D %DATA% -l logfile.txt start
+&lt;/pre&gt;
+
+其中的 PGDATA.txt 內容為 .\data, 表示資料庫內容存在 .\data 目錄中.
+
+一旦考試結束後, 以 stop.bat 關閉 pgsql:
+
+&lt;pre class="brush: jscript"&gt;
+@echo off
+set /p DATA=&lt;PGDATA.txt
+cd %~dp0
+bin\pg_ctl -D %DATA% -l logfile.txt stop
+&lt;/pre&gt;
+
+TCExam 原始碼
+====
+
+由於目前所啟動的線上 TCExam 採用 2022.06.9 釋出的 PHP 8.1.7 版, 而 &lt;https://github.com/tecnickcom/tcexam&gt; 最近修改日期為 2021.08.05, 因此直接從 TCExam github 網站 clone 下來的原始碼無法在最新版的 PHP 解譯環境中執行.
+
+因此啟動修改 TCExam, 令其可以在 PHP 8.1.7 中執行, 且 pdf 轉檔的部分, 也自行建立中文字型, 以便正確將考試內容轉為中英並存的格式.
+
+目前尚未完成的設定為 send mail 的部分.
+
+總結上述說明, 要啟動 TCExam 考試系統, 必須確認 nginx 已經啟動, 然後手動執行 pgsql 目錄下的 start.bat, 並且注意 c:\certbot 目錄下有關 https 數位簽章每 90 天必須設法手動或自動更新.
+</t>
 <t tx="yen.20170108171605.1"></t>
 <t tx="yen.20170108171605.2">QTreeWidget {
     /* These apply to the selected item, but not to editing items.*/

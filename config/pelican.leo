@@ -87,6 +87,9 @@
 <v t="leo.20220901021551.1"><vh>@clean about_tcexam.md</vh>
 <v t="leo.20220901021609.1"><vh>有關 TCExam</vh></v>
 </v>
+<v t="leo.20220901223644.1"><vh>@clean cp2022_w1.md</vh>
+<v t="leo.20220901223953.1"><vh>cp2022_w1</vh></v>
+</v>
 </v>
 </v>
 <v t="yen.20170108171733.83"><vh>產生 .key 與 .crt 指令</vh></v>
@@ -171,8 +174,8 @@ Author: mdecycu
 &lt;!-- PELICAN_END_SUMMARY --&gt;
 
 @others</t>
-<t tx="leo.20220827124834.7">Hybrid 模式
-====
+<t tx="leo.20220827124834.7">&lt;!-- 由於 md 無法加入 id 屬性, 因此針對標題的 h1 或 h2 直皆使用 html 設定 --&gt;
+&lt;h2 id="hybrid"&gt;Hybrid 模式&lt;/h2&gt;
 
 雖然記不得是從何時開始在上課採用可攜套件模式, 但 2004 導入 NX3 時就已經採用 Portable 架構, 將程式存入隨身碟, 以 start.bat 啟動, 以 stop.bat 關閉, 所有與個人工作有關的資料與設定都可隨身帶走, 就好像擁有一台虛擬的筆電一樣, 唯一的缺點就是 USB 隨身碟的讀取速度沒有目前 Solid State 硬碟快, 因此從上學期電腦更新後, 就一直採用 Hybrid 的模式啟動套件.
 
@@ -457,7 +460,7 @@ Y:\tmp\cop410\programming\simExtUI\build&gt;mingw32-make
 Title: 2022 Fall CP 課程
 Date: 2022-08-19 11:00
 Category: cp2022
-Tags: cp2022-Syllabus
+Tags: cp2022-Syllabus, 計算機程式
 Slug: 2022-Fall-Intro-to-computer-programming
 Author: mdecycu
 ---
@@ -472,8 +475,7 @@ Author: mdecycu
 
 cp2022 課程評分項目請參考: [syllabus]
  
-命令提示字元
-----
+&lt;h2 id="commandline"&gt;命令提示字元&lt;/h2&gt;
 
 [cmd] (Command Line) 指令, 是 [Windows 命令] 中的一種. 常用的命令提示字元視窗中的指令包括:
 
@@ -492,8 +494,7 @@ cp2022 課程評分項目請參考: [syllabus]
 [taskkill]: https://docs.microsoft.com/zh-tw/windows-server/administration/windows-commands/taskkill
 [powershell]: https://docs.microsoft.com/zh-tw/windows-server/administration/windows-commands/powershell
  
-網路環境設定
-----
+&lt;h2 id="networksetup"&gt;網路環境設定&lt;/h2&gt;
  
  由於希望能夠讓電腦輔助設計室中使用純 [IPv6] 網路設定上網, 開機啟動後, 可採管理員模式執行下列 batch file 進行[網路環境設定]:
 
@@ -1037,6 +1038,54 @@ TCExam 原始碼
 目前尚未完成的設定為 send mail 的部分.
 
 總結上述說明, 要啟動 TCExam 考試系統, 必須確認 nginx 已經啟動, 然後手動執行 pgsql 目錄下的 start.bat, 並且注意 c:\certbot 目錄下有關 https 數位簽章每 90 天必須設法手動或自動更新.
+</t>
+<t tx="leo.20220901223644.1">@language md
+---
+Title: cp2022_w1
+Date: 2022-09-01 13:00
+Category: cp2022
+Tags: w1, portable python, 計算機程式
+Slug: cp2022-w1
+Author: mdecycu
+---
+
+計算機程式課程第一週, 只有 1b 有課, 1a 因為中秋節放假.
+
+&lt;!-- PELICAN_END_SUMMARY --&gt;
+
+@others</t>
+<t tx="leo.20220901223953.1">電腦系統
+====
+
+目前電腦輔助設計室中絕大部分的電腦都只有一個磁區 (假如有三個磁區的電腦是上一代的舊電腦), 使用的操作系統是 Windows 10, 因為系上有四門課程在電腦輔助設計室上課時, 採用的是純 [IPv6] 網路連線, 因此各位學員在接觸到計算機程式課程時, 必須學會設定電腦系統的網路連線.
+
+[IPv4] 與 [IPv6]
+----
+
+[IPv4] 與 [IPv6] 是兩種不相容的網路協定. 目前除了計算機程式課程, 還有網際內容管理、電腦輔助設計與實習以及協同產品設計實習等課程, 上課時都將電腦輔助設計室的連外網路直接與系上主幹連接. 目的是希望擴大每一台電腦的網路頻寬, 可以無需透過 [NAT] 轉址後再連接到系上.
+
+但是這樣做, 所要付出的代價是, 首先, 每一台電腦都直接以 [IPv6] 外部網路位址與網際網路相通, 若此時電腦中的 [IPv4] 也同時開啟的話, 安裝在操作系統中的某些軟體會以為已經取得 [IPv4] 的外部網路位址 (其實並沒有, 因此系上已經沒有額外的外部 [IPv4] 網路位址), 而啟動網路攻擊. 因而導致操作系統所安裝的防毒軟體作動, 關閉電腦的所有對外網路連線, 亦即, 當電腦輔助設計室網路線直接連到主幹時, 要設法關閉 [IPv4] 網路連線, 否則無法使用網路.
+
+其次, [IPv6] 網路協定雖然已經逐漸普及, 但目前仍有許多網站只支援 [IPv4] 網路協定, 因此在純 [IPv6] 網路設定下, 若要連接至某些只支援 [IPv4] 的電腦或網站, 必須透過代理主機.
+
+學習議題
+----
+
+為什麼會有 [IPv4] 與 [IPv6] 兩種網路協定並存?
+
+上計算機程式課程時, 當使用瀏覽器與執行 git 指令時, 該如何正確設定網路協定?
+
+[IPv4]: https://zh.wikipedia.org/zh-tw/IPv4
+[IPv6]: https://zh.wikipedia.org/zh-tw/IPv6
+[NAT: https://en.wikipedia.org/wiki/Network_address_translation
+[這裡]: https://mde.tw/content/Python.html
+[Brython]: https://brython.info/
+[網路設定]: https://mde.tw/blog/2022-Fall-Intro-to-computer-programming.html#networksetup
+
+&lt;h1 id="learnbrython"&gt;線上學習 Brython&lt;h1&gt;
+
+當你完成電腦輔助設計室中的[網路設定]後, 就可以利用瀏覽器連線到[這裡], 直接在線上學習 [Brython].
+
 </t>
 <t tx="yen.20170108171605.1"></t>
 <t tx="yen.20170108171605.2">QTreeWidget {

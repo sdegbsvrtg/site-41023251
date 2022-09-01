@@ -1082,7 +1082,7 @@ Author: mdecycu
 [Brython]: https://brython.info/
 [網路設定]: https://mde.tw/blog/2022-Fall-Intro-to-computer-programming.html#networksetup
 
-&lt;h1 id="learnbrython"&gt;線上學習 Brython&lt;h1&gt;
+&lt;h1 id="learnbrython"&gt;線上學習 Brython&lt;/h1&gt;
 
 當你完成電腦輔助設計室中的[網路設定]後, 就可以利用瀏覽器連線到[這裡], 直接在線上學習 [Brython].
 

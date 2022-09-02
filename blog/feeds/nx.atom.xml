@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Mde.tw - NX</title><link href="https://mde.tw/blog/" rel="alternate"></link><link href="https://mde.tw/blog/feeds/nx.atom.xml" rel="self"></link><id>https://mde.tw/blog/</id><updated>2022-09-02T11:00:00+08:00</updated><entry><title>有關 NX</title><link href="https://mde.tw/blog/about-nx.html" rel="alternate"></link><published>2022-09-02T11:00:00+08:00</published><updated>2022-09-02T02:00:17+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-09-02:/blog/about-nx.html</id><summary type="html">&lt;p&gt;這裡將收集與 NX 有關的資料內容.&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;這裡將收集與 NX 有關的資料內容.&lt;/p&gt;
+
+
+&lt;h2&gt;Recent Opened Files&lt;/h2&gt;
+&lt;p&gt;啟動 NX12 時將 HOME 以及 UGII_TMP_DIR 設定至 Temp 子目錄後, Recent Opened Files 資料會存入 Temp 目錄, 當 NX12 啟動後, 會將資料轉存至 電腦\HKEY_CURRENT_USER\SOFTWARE\Unigraphics Solutions\NX\12.0\General\Parts\Recent, 若希望刪除此類資料, 則必須在重新啟動 NX12 之前, 分別刪除 Temp 目錄下的所有檔案, 並以 regedit 進入將 Recent 項目下的 Native 機碼刪除.&lt;/p&gt;
+&lt;p&gt;以下為啟動 NX12 時所設定的環境變數:&lt;/p&gt;
+&lt;pre class="brush: jscript"&gt;
+set HOME=%cd%\Temp
+set UGII_TMP_DIR=%cd%\Temp\
+&lt;/pre&gt;
+
+&lt;h2&gt;NX 繪圖與組立&lt;/h2&gt;
+&lt;p&gt;基本的 NX 繪圖與組立, 只需要下列目錄:&lt;/p&gt;
+&lt;pre class="brush: jscript"&gt;
+DESIGNSPACEEXPLORER
+DESIGN_TOOLS
+DIAGRAMCORE
+DIAGRAMMING
+DRAFTING
+DXFDWG
+IGES
+INSTALL
+MECHATRONICS
+NXASSEMBLY
+NXBIN
+NXPARTS
+STEP203UG
+STEP214UG
+Temp
+TRANSLATORS
+UGFLEXLM
+UGII
+UGMANAGER
+UGOPEN
+UGOPENPP
+UNFOLD
+&lt;/pre&gt;</content><category term="NX"></category><category term="Siemens"></category></entry></feed>

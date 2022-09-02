@@ -1,0 +1,1619 @@
+<CoppeliaSim>
+    <!---->
+    <!-- All tags are optional, unless otherwise specified -->
+    <!-- Linear values are specified in meters, angular values in degrees, unless otherwise specified -->
+    <!---->
+    <!-- 'filetype' tag: required. Can be 'simpleScene' or 'simpleModel' -->
+    <filetype>simpleScene</filetype>
+    <!-- 'xmlSerializationNb' tag: required. Set to 1 -->
+    <xmlSerializationNb>1</xmlSerializationNb>
+    <prgFlavor>1</prgFlavor>
+    <prgVer>40300</prgVer>
+    <prgRev>3</prgRev>
+    <!-- 'environment' tag: has no effect when loading a model -->
+    <environment>
+        <ambientLight>102 102 102</ambientLight>
+        <backgroundColor>
+            <down>12 12 25</down>
+            <up>205 221 233</up>
+        </backgroundColor>
+        <visibleLayers>255</visibleLayers>
+        <fog>
+            <enabled>false</enabled>
+            <!-- 'type' tag: can be 'linear', 'exp' or 'exp2' -->
+            <type>linear</type>
+            <startEnd>0.000000 5.000000</startEnd>
+            <density>0.500000</density>
+            <color>0 0 0</color>
+        </fog>
+        <switches>
+            <shapeTexturesEnabled>true</shapeTexturesEnabled>
+        </switches>
+        <acknowledgment></acknowledgment>
+        <extensionString>povray {fogDist {4.00} fogTransp {0.50}}</extensionString>
+    </environment>
+    <!-- 'settings' tag: has no effect when loading a model -->
+    <settings>
+        <!-- 'visibleLayers' tag: deprecated. Use equivalent in 'environment' section -->
+        <visibleLayers>255</visibleLayers>
+        <switches>
+            <visionSensorsEnabled>true</visionSensorsEnabled>
+            <proximitySensorsEnabled>true</proximitySensorsEnabled>
+            <mirrorsEnabled>true</mirrorsEnabled>
+            <clippingPlanesEnabled>true</clippingPlanesEnabled>
+            <ikEnabled>true</ikEnabled>
+            <collisionDetectionsEnabled>true</collisionDetectionsEnabled>
+            <distanceCalculationsEnabled>true</distanceCalculationsEnabled>
+        </switches>
+    </settings>
+    <!-- 'dynamics' tag: has no effect when loading a model -->
+    <dynamics>
+        <!-- 'engine' tag: can be 'bullet', 'ode', 'vortex' or 'newton' -->
+        <engine>bullet</engine>
+        <engineVersion>0</engineVersion>
+        <!-- 'settingsMode' tag: can be 'veryAccurate', 'accurate', 'balanced', 'fast', 'veryFast' or 'custom' -->
+        <settingsMode>balanced</settingsMode>
+        <gravity>0.000000 0.000000 -9.810000</gravity>
+        <switches>
+            <dynamicsEnabled>true</dynamicsEnabled>
+            <showContactPoints>false</showContactPoints>
+        </switches>
+        <engines>
+            <bullet>
+                <stepsize>0.005000</stepsize>
+                <internalscalingfactor>10.000000</internalscalingfactor>
+                <collisionmarginfactor>0.100000</collisionmarginfactor>
+                <constraintsolvingiterations>100</constraintsolvingiterations>
+                <constraintsolvertype>0</constraintsolvertype>
+                <fullinternalscaling>true</fullinternalscaling>
+            </bullet>
+            <ode>
+                <stepsize>0.005000</stepsize>
+                <internalscalingfactor>1.000000</internalscalingfactor>
+                <cfm>0.000010</cfm>
+                <erp>0.600000</erp>
+                <constraintsolvingiterations>100</constraintsolvingiterations>
+                <randomseed>-1</randomseed>
+                <fullinternalscaling>true</fullinternalscaling>
+                <quickstep>true</quickstep>
+            </ode>
+            <vortex>
+                <stepsize>0.005000</stepsize>
+                <internalscalingfactor>1.000000</internalscalingfactor>
+                <contacttolerance>0.001000</contacttolerance>
+                <constraintlinearcompliance>0.000000</constraintlinearcompliance>
+                <constraintlineardamping>8000000.000000</constraintlineardamping>
+                <constraintlinearkineticloss>0.000060</constraintlinearkineticloss>
+                <constraintangularcompliance>0.000000</constraintangularcompliance>
+                <constraintangulardamping>800000000.000000</constraintangulardamping>
+                <constraintangularkineticloss>0.000001</constraintangularkineticloss>
+                <autosleep>true</autosleep>
+                <multithreading>false</multithreading>
+            </vortex>
+            <newton>
+                <stepsize>0.005000</stepsize>
+                <contactmergetolerance>0.010000</contactmergetolerance>
+                <constraintsolvingiterations>8</constraintsolvingiterations>
+                <multithreading>true</multithreading>
+                <exactsolver>true</exactsolver>
+                <highjointaccuracy>true</highjointaccuracy>
+            </newton>
+        </engines>
+    </dynamics>
+    <!-- 'simulation' tag: has no effect when loading a model -->
+    <simulation>
+        <simulationTimeStep>0.050000</simulationTimeStep>
+        <simulationPassesPerRendering>1</simulationPassesPerRendering>
+        <!-- 'simulationMode' tag: can be '200ms', '100ms', '50ms', '25ms', '10ms' or 'custom' -->
+        <simulationMode>50ms</simulationMode>
+        <realTimeCoefficient>1.000000</realTimeCoefficient>
+        <simulationTimeToPause>10.000000</simulationTimeToPause>
+        <switches>
+            <realTime>false</realTime>
+            <avoidBlocking>false</avoidBlocking>
+            <pauseAtTime>false</pauseAtTime>
+            <pauseAtError>true</pauseAtError>
+            <catchUpIfLate>false</catchUpIfLate>
+            <resetAtEnd>true</resetAtEnd>
+            <removeNewObjectsAtEnd>true</removeNewObjectsAtEnd>
+        </switches>
+    </simulation>
+    <camera>
+        <common>
+            <alias>DefaultCamera*0</alias>
+            <!-- 'name' and 'altName' tags only used for backward compatibility:-->
+            <name>DefaultCamera</name>
+            <altName>DefaultCamera</altName>
+            <localFrame>
+                <position>1.414568 -1.749966 0.775147</position>
+                <euler>-103.698746 -37.600044 171.540771</euler>
+            </localFrame>
+            <hierarchyColorIndex>-1</hierarchyColorIndex>
+            <collectionSelfCollisionIndicator>0</collectionSelfCollisionIndicator>
+            <localObjectProperty>
+                <hierarchyCollapsed>false</hierarchyCollapsed>
+                <selectable>true</selectable>
+                <selectModelBaseInstead>false</selectModelBaseInstead>
+                <dontShowAsInsideModel>false</dontShowAsInsideModel>
+                <selectInvisible>false</selectInvisible>
+                <depthInvisible>false</depthInvisible>
+                <cannotDelete>false</cannotDelete>
+                <cannotDeleteDuringSimulation>false</cannotDeleteDuringSimulation>
+            </localObjectProperty>
+            <localObjectSpecialProperty>
+                <collidable>false</collidable>
+                <measurable>false</measurable>
+                <detectable>false</detectable>
+                <!-- 'renderable' tag for backward compatibility, set to 'true':-->
+                <renderable>false</renderable>
+                <!-- following 5 for backward compatibility:-->
+                <ultrasonicDetectable>false</ultrasonicDetectable>
+                <infraredDetectable>false</infraredDetectable>
+                <laserDetectable>false</laserDetectable>
+                <inductiveDetectable>false</inductiveDetectable>
+                <capacitiveDetectable>false</capacitiveDetectable>
+            </localObjectSpecialProperty>
+            <localModelProperty>
+                <notCollidable>false</notCollidable>
+                <notMeasurable>false</notMeasurable>
+                <notDetectable>false</notDetectable>
+                <notDynamic>false</notDynamic>
+                <notRespondable>false</notRespondable>
+                <notReset>false</notReset>
+                <notVisible>false</notVisible>
+                <scriptsInactive>false</scriptsInactive>
+                <notShowAsInsideModel>false</notShowAsInsideModel>
+                <!-- 'notRenderable' tag for backward compatibility, set to 'false':-->
+                <notRenderable>false</notRenderable>
+            </localModelProperty>
+            <layer>4096</layer>
+            <childOrder>-1</childOrder>
+            <switches>
+                <modelBase>false</modelBase>
+                <ignoredByViewFitting>false</ignoredByViewFitting>
+            </switches>
+            <extensionString>povray {focalBlur {false} focalDist {2.00} aperture{0.05} blurSamples{10}}</extensionString>
+            <modelAcknowledgement></modelAcknowledgement>
+        </common>
+        <mainCamera>true</mainCamera>
+        <!-- 'trackedObject' tag only used for backward compatibility, use instead 'trackedObjectAlias' tag-->
+        <trackedObject></trackedObject>
+        <trackedObjectAlias></trackedObjectAlias>
+        <size>0.050000</size>
+        <orthoViewSize>2.000000</orthoViewSize>
+        <viewAngle>60.000000</viewAngle>
+        <clippingPlanes>0.050000 70.000000</clippingPlanes>
+        <switches>
+            <perspectiveMode>true</perspectiveMode>
+        </switches>
+        <objectColor>255 75 75</objectColor>
+    </camera>
+    <dummy>
+        <common>
+            <alias>XYZCameraProxy*1</alias>
+            <!-- 'name' and 'altName' tags only used for backward compatibility:-->
+            <name>XYZCameraProxy</name>
+            <altName>XYZCameraProxy</altName>
+            <localFrame>
+                <position>0.000000 0.000000 0.750000</position>
+                <euler>-0.000000 0.000000 -0.000000</euler>
+            </localFrame>
+            <hierarchyColorIndex>-1</hierarchyColorIndex>
+            <collectionSelfCollisionIndicator>0</collectionSelfCollisionIndicator>
+            <localObjectProperty>
+                <hierarchyCollapsed>true</hierarchyCollapsed>
+                <selectable>true</selectable>
+                <selectModelBaseInstead>false</selectModelBaseInstead>
+                <dontShowAsInsideModel>true</dontShowAsInsideModel>
+                <selectInvisible>false</selectInvisible>
+                <depthInvisible>false</depthInvisible>
+                <cannotDelete>false</cannotDelete>
+                <cannotDeleteDuringSimulation>false</cannotDeleteDuringSimulation>
+            </localObjectProperty>
+            <localObjectSpecialProperty>
+                <collidable>false</collidable>
+                <measurable>false</measurable>
+                <detectable>false</detectable>
+                <!-- 'renderable' tag for backward compatibility, set to 'true':-->
+                <renderable>false</renderable>
+                <!-- following 5 for backward compatibility:-->
+                <ultrasonicDetectable>false</ultrasonicDetectable>
+                <infraredDetectable>false</infraredDetectable>
+                <laserDetectable>false</laserDetectable>
+                <inductiveDetectable>false</inductiveDetectable>
+                <capacitiveDetectable>false</capacitiveDetectable>
+            </localObjectSpecialProperty>
+            <localModelProperty>
+                <notCollidable>false</notCollidable>
+                <notMeasurable>false</notMeasurable>
+                <notDetectable>false</notDetectable>
+                <notDynamic>false</notDynamic>
+                <notRespondable>false</notRespondable>
+                <notReset>false</notReset>
+                <notVisible>false</notVisible>
+                <scriptsInactive>false</scriptsInactive>
+                <notShowAsInsideModel>false</notShowAsInsideModel>
+                <!-- 'notRenderable' tag for backward compatibility, set to 'false':-->
+                <notRenderable>false</notRenderable>
+            </localModelProperty>
+            <layer>1024</layer>
+            <childOrder>-1</childOrder>
+            <switches>
+                <modelBase>true</modelBase>
+                <ignoredByViewFitting>false</ignoredByViewFitting>
+            </switches>
+            <extensionString></extensionString>
+            <modelAcknowledgement></modelAcknowledgement>
+        </common>
+        <size>0.010000</size>
+        <!-- 'linkedDummy' tag only used for backward compatibility, use instead 'linkedDummyAlias' tag-->
+        <linkedDummy></linkedDummy>
+        <linkedDummyAlias></linkedDummyAlias>
+        <!-- 'linkType' tag: can be 'dynamics_loopClosure'' -->
+        <linkType>dynamics_loopClosure</linkType>
+        <color>
+            <object>255 196 138</object>
+        </color>
+        <camera>
+            <common>
+                <alias>XViewCamera*2</alias>
+                <!-- 'name' and 'altName' tags only used for backward compatibility:-->
+                <name>DefaultXViewCamera</name>
+                <altName>DefaultXViewCamera</altName>
+                <localFrame>
+                    <position>20.000000 0.000000 0.000000</position>
+                    <euler>0.000000 -90.000000 -90.000000</euler>
+                </localFrame>
+                <hierarchyColorIndex>-1</hierarchyColorIndex>
+                <collectionSelfCollisionIndicator>0</collectionSelfCollisionIndicator>
+                <localObjectProperty>
+                    <hierarchyCollapsed>false</hierarchyCollapsed>
+                    <selectable>true</selectable>
+                    <selectModelBaseInstead>false</selectModelBaseInstead>
+                    <dontShowAsInsideModel>true</dontShowAsInsideModel>
+                    <selectInvisible>false</selectInvisible>
+                    <depthInvisible>false</depthInvisible>
+                    <cannotDelete>false</cannotDelete>
+                    <cannotDeleteDuringSimulation>false</cannotDeleteDuringSimulation>
+                </localObjectProperty>
+                <localObjectSpecialProperty>
+                    <collidable>false</collidable>
+                    <measurable>false</measurable>
+                    <detectable>false</detectable>
+                    <!-- 'renderable' tag for backward compatibility, set to 'true':-->
+                    <renderable>false</renderable>
+                    <!-- following 5 for backward compatibility:-->
+                    <ultrasonicDetectable>false</ultrasonicDetectable>
+                    <infraredDetectable>false</infraredDetectable>
+                    <laserDetectable>false</laserDetectable>
+                    <inductiveDetectable>false</inductiveDetectable>
+                    <capacitiveDetectable>false</capacitiveDetectable>
+                </localObjectSpecialProperty>
+                <localModelProperty>
+                    <notCollidable>false</notCollidable>
+                    <notMeasurable>false</notMeasurable>
+                    <notDetectable>false</notDetectable>
+                    <notDynamic>false</notDynamic>
+                    <notRespondable>false</notRespondable>
+                    <notReset>false</notReset>
+                    <notVisible>false</notVisible>
+                    <scriptsInactive>false</scriptsInactive>
+                    <notShowAsInsideModel>false</notShowAsInsideModel>
+                    <!-- 'notRenderable' tag for backward compatibility, set to 'false':-->
+                    <notRenderable>false</notRenderable>
+                </localModelProperty>
+                <layer>4096</layer>
+                <childOrder>-1</childOrder>
+                <switches>
+                    <modelBase>false</modelBase>
+                    <ignoredByViewFitting>false</ignoredByViewFitting>
+                </switches>
+                <extensionString>povray {focalBlur {false} focalDist {2.00} aperture{0.05} blurSamples{10}}</extensionString>
+                <modelAcknowledgement></modelAcknowledgement>
+            </common>
+            <mainCamera>false</mainCamera>
+            <!-- 'trackedObject' tag only used for backward compatibility, use instead 'trackedObjectAlias' tag-->
+            <trackedObject></trackedObject>
+            <trackedObjectAlias></trackedObjectAlias>
+            <size>0.050000</size>
+            <orthoViewSize>7.531251</orthoViewSize>
+            <viewAngle>60.000000</viewAngle>
+            <clippingPlanes>0.050000 30.000000</clippingPlanes>
+            <switches/>
+            <objectColor>255 75 75</objectColor>
+        </camera>
+        <camera>
+            <common>
+                <alias>YViewCamera*3</alias>
+                <!-- 'name' and 'altName' tags only used for backward compatibility:-->
+                <name>DefaultYViewCamera</name>
+                <altName>DefaultYViewCamera</altName>
+                <localFrame>
+                    <position>0.000000 20.000000 0.000000</position>
+                    <euler>89.999992 0.000000 -0.000000</euler>
+                </localFrame>
+                <hierarchyColorIndex>-1</hierarchyColorIndex>
+                <collectionSelfCollisionIndicator>0</collectionSelfCollisionIndicator>
+                <localObjectProperty>
+                    <hierarchyCollapsed>false</hierarchyCollapsed>
+                    <selectable>true</selectable>
+                    <selectModelBaseInstead>false</selectModelBaseInstead>
+                    <dontShowAsInsideModel>true</dontShowAsInsideModel>
+                    <selectInvisible>false</selectInvisible>
+                    <depthInvisible>false</depthInvisible>
+                    <cannotDelete>false</cannotDelete>
+                    <cannotDeleteDuringSimulation>false</cannotDeleteDuringSimulation>
+                </localObjectProperty>
+                <localObjectSpecialProperty>
+                    <collidable>false</collidable>
+                    <measurable>false</measurable>
+                    <detectable>false</detectable>
+                    <!-- 'renderable' tag for backward compatibility, set to 'true':-->
+                    <renderable>false</renderable>
+                    <!-- following 5 for backward compatibility:-->
+                    <ultrasonicDetectable>false</ultrasonicDetectable>
+                    <infraredDetectable>false</infraredDetectable>
+                    <laserDetectable>false</laserDetectable>
+                    <inductiveDetectable>false</inductiveDetectable>
+                    <capacitiveDetectable>false</capacitiveDetectable>
+                </localObjectSpecialProperty>
+                <localModelProperty>
+                    <notCollidable>false</notCollidable>
+                    <notMeasurable>false</notMeasurable>
+                    <notDetectable>false</notDetectable>
+                    <notDynamic>false</notDynamic>
+                    <notRespondable>false</notRespondable>
+                    <notReset>false</notReset>
+                    <notVisible>false</notVisible>
+                    <scriptsInactive>false</scriptsInactive>
+                    <notShowAsInsideModel>false</notShowAsInsideModel>
+                    <!-- 'notRenderable' tag for backward compatibility, set to 'false':-->
+                    <notRenderable>false</notRenderable>
+                </localModelProperty>
+                <layer>4096</layer>
+                <childOrder>-1</childOrder>
+                <switches>
+                    <modelBase>false</modelBase>
+                    <ignoredByViewFitting>false</ignoredByViewFitting>
+                </switches>
+                <extensionString>povray {focalBlur {false} focalDist {2.00} aperture{0.05} blurSamples{10}}</extensionString>
+                <modelAcknowledgement></modelAcknowledgement>
+            </common>
+            <mainCamera>false</mainCamera>
+            <!-- 'trackedObject' tag only used for backward compatibility, use instead 'trackedObjectAlias' tag-->
+            <trackedObject></trackedObject>
+            <trackedObjectAlias></trackedObjectAlias>
+            <size>0.050000</size>
+            <orthoViewSize>7.531251</orthoViewSize>
+            <viewAngle>60.000000</viewAngle>
+            <clippingPlanes>0.050000 30.000000</clippingPlanes>
+            <switches/>
+            <objectColor>255 75 75</objectColor>
+        </camera>
+        <camera>
+            <common>
+                <alias>ZViewCamera*4</alias>
+                <!-- 'name' and 'altName' tags only used for backward compatibility:-->
+                <name>DefaultZViewCamera</name>
+                <altName>DefaultZViewCamera</altName>
+                <localFrame>
+                    <position>0.000000 0.000000 20.000000</position>
+                    <euler>-179.999985 0.000000 -0.000000</euler>
+                </localFrame>
+                <hierarchyColorIndex>-1</hierarchyColorIndex>
+                <collectionSelfCollisionIndicator>0</collectionSelfCollisionIndicator>
+                <localObjectProperty>
+                    <hierarchyCollapsed>false</hierarchyCollapsed>
+                    <selectable>true</selectable>
+                    <selectModelBaseInstead>false</selectModelBaseInstead>
+                    <dontShowAsInsideModel>true</dontShowAsInsideModel>
+                    <selectInvisible>false</selectInvisible>
+                    <depthInvisible>false</depthInvisible>
+                    <cannotDelete>false</cannotDelete>
+                    <cannotDeleteDuringSimulation>false</cannotDeleteDuringSimulation>
+                </localObjectProperty>
+                <localObjectSpecialProperty>
+                    <collidable>false</collidable>
+                    <measurable>false</measurable>
+                    <detectable>false</detectable>
+                    <!-- 'renderable' tag for backward compatibility, set to 'true':-->
+                    <renderable>false</renderable>
+                    <!-- following 5 for backward compatibility:-->
+                    <ultrasonicDetectable>false</ultrasonicDetectable>
+                    <infraredDetectable>false</infraredDetectable>
+                    <laserDetectable>false</laserDetectable>
+                    <inductiveDetectable>false</inductiveDetectable>
+                    <capacitiveDetectable>false</capacitiveDetectable>
+                </localObjectSpecialProperty>
+                <localModelProperty>
+                    <notCollidable>false</notCollidable>
+                    <notMeasurable>false</notMeasurable>
+                    <notDetectable>false</notDetectable>
+                    <notDynamic>false</notDynamic>
+                    <notRespondable>false</notRespondable>
+                    <notReset>false</notReset>
+                    <notVisible>false</notVisible>
+                    <scriptsInactive>false</scriptsInactive>
+                    <notShowAsInsideModel>false</notShowAsInsideModel>
+                    <!-- 'notRenderable' tag for backward compatibility, set to 'false':-->
+                    <notRenderable>false</notRenderable>
+                </localModelProperty>
+                <layer>4096</layer>
+                <childOrder>-1</childOrder>
+                <switches>
+                    <modelBase>false</modelBase>
+                    <ignoredByViewFitting>false</ignoredByViewFitting>
+                </switches>
+                <extensionString>povray {focalBlur {false} focalDist {2.00} aperture{0.05} blurSamples{10}}</extensionString>
+                <modelAcknowledgement></modelAcknowledgement>
+            </common>
+            <mainCamera>false</mainCamera>
+            <!-- 'trackedObject' tag only used for backward compatibility, use instead 'trackedObjectAlias' tag-->
+            <trackedObject></trackedObject>
+            <trackedObjectAlias></trackedObjectAlias>
+            <size>0.050000</size>
+            <orthoViewSize>7.531251</orthoViewSize>
+            <viewAngle>60.000000</viewAngle>
+            <clippingPlanes>0.050000 30.000000</clippingPlanes>
+            <switches/>
+            <objectColor>255 75 75</objectColor>
+        </camera>
+        <camera>
+            <common>
+                <alias>NXViewCamera*5</alias>
+                <!-- 'name' and 'altName' tags only used for backward compatibility:-->
+                <name>DefaultNXViewCamera</name>
+                <altName>DefaultNXViewCamera</altName>
+                <localFrame>
+                    <position>-20.000000 -0.000002 0.000000</position>
+                    <euler>0.000000 90.000000 90.000008</euler>
+                </localFrame>
+                <hierarchyColorIndex>-1</hierarchyColorIndex>
+                <collectionSelfCollisionIndicator>0</collectionSelfCollisionIndicator>
+                <localObjectProperty>
+                    <hierarchyCollapsed>false</hierarchyCollapsed>
+                    <selectable>true</selectable>
+                    <selectModelBaseInstead>false</selectModelBaseInstead>
+                    <dontShowAsInsideModel>true</dontShowAsInsideModel>
+                    <selectInvisible>false</selectInvisible>
+                    <depthInvisible>false</depthInvisible>
+                    <cannotDelete>false</cannotDelete>
+                    <cannotDeleteDuringSimulation>false</cannotDeleteDuringSimulation>
+                </localObjectProperty>
+                <localObjectSpecialProperty>
+                    <collidable>false</collidable>
+                    <measurable>false</measurable>
+                    <detectable>false</detectable>
+                    <!-- 'renderable' tag for backward compatibility, set to 'true':-->
+                    <renderable>false</renderable>
+                    <!-- following 5 for backward compatibility:-->
+                    <ultrasonicDetectable>false</ultrasonicDetectable>
+                    <infraredDetectable>false</infraredDetectable>
+                    <laserDetectable>false</laserDetectable>
+                    <inductiveDetectable>false</inductiveDetectable>
+                    <capacitiveDetectable>false</capacitiveDetectable>
+                </localObjectSpecialProperty>
+                <localModelProperty>
+                    <notCollidable>false</notCollidable>
+                    <notMeasurable>false</notMeasurable>
+                    <notDetectable>false</notDetectable>
+                    <notDynamic>false</notDynamic>
+                    <notRespondable>false</notRespondable>
+                    <notReset>false</notReset>
+                    <notVisible>false</notVisible>
+                    <scriptsInactive>false</scriptsInactive>
+                    <notShowAsInsideModel>false</notShowAsInsideModel>
+                    <!-- 'notRenderable' tag for backward compatibility, set to 'false':-->
+                    <notRenderable>false</notRenderable>
+                </localModelProperty>
+                <layer>4096</layer>
+                <childOrder>-1</childOrder>
+                <switches>
+                    <modelBase>false</modelBase>
+                    <ignoredByViewFitting>false</ignoredByViewFitting>
+                </switches>
+                <extensionString>povray {focalBlur {false} focalDist {2.00} aperture{0.05} blurSamples{10}}</extensionString>
+                <modelAcknowledgement></modelAcknowledgement>
+            </common>
+            <mainCamera>false</mainCamera>
+            <!-- 'trackedObject' tag only used for backward compatibility, use instead 'trackedObjectAlias' tag-->
+            <trackedObject></trackedObject>
+            <trackedObjectAlias></trackedObjectAlias>
+            <size>0.050000</size>
+            <orthoViewSize>7.531251</orthoViewSize>
+            <viewAngle>60.000000</viewAngle>
+            <clippingPlanes>0.050000 30.000000</clippingPlanes>
+            <switches/>
+            <objectColor>255 75 75</objectColor>
+        </camera>
+        <camera>
+            <common>
+                <alias>NYViewCamera*6</alias>
+                <!-- 'name' and 'altName' tags only used for backward compatibility:-->
+                <name>DefaultNYViewCamera</name>
+                <altName>DefaultNYViewCamera</altName>
+                <localFrame>
+                    <position>0.000002 -20.000000 0.000000</position>
+                    <euler>-90.000008 -0.000005 -180.000000</euler>
+                </localFrame>
+                <hierarchyColorIndex>-1</hierarchyColorIndex>
+                <collectionSelfCollisionIndicator>0</collectionSelfCollisionIndicator>
+                <localObjectProperty>
+                    <hierarchyCollapsed>false</hierarchyCollapsed>
+                    <selectable>true</selectable>
+                    <selectModelBaseInstead>false</selectModelBaseInstead>
+                    <dontShowAsInsideModel>true</dontShowAsInsideModel>
+                    <selectInvisible>false</selectInvisible>
+                    <depthInvisible>false</depthInvisible>
+                    <cannotDelete>false</cannotDelete>
+                    <cannotDeleteDuringSimulation>false</cannotDeleteDuringSimulation>
+                </localObjectProperty>
+                <localObjectSpecialProperty>
+                    <collidable>false</collidable>
+                    <measurable>false</measurable>
+                    <detectable>false</detectable>
+                    <!-- 'renderable' tag for backward compatibility, set to 'true':-->
+                    <renderable>false</renderable>
+                    <!-- following 5 for backward compatibility:-->
+                    <ultrasonicDetectable>false</ultrasonicDetectable>
+                    <infraredDetectable>false</infraredDetectable>
+                    <laserDetectable>false</laserDetectable>
+                    <inductiveDetectable>false</inductiveDetectable>
+                    <capacitiveDetectable>false</capacitiveDetectable>
+                </localObjectSpecialProperty>
+                <localModelProperty>
+                    <notCollidable>false</notCollidable>
+                    <notMeasurable>false</notMeasurable>
+                    <notDetectable>false</notDetectable>
+                    <notDynamic>false</notDynamic>
+                    <notRespondable>false</notRespondable>
+                    <notReset>false</notReset>
+                    <notVisible>false</notVisible>
+                    <scriptsInactive>false</scriptsInactive>
+                    <notShowAsInsideModel>false</notShowAsInsideModel>
+                    <!-- 'notRenderable' tag for backward compatibility, set to 'false':-->
+                    <notRenderable>false</notRenderable>
+                </localModelProperty>
+                <layer>4096</layer>
+                <childOrder>-1</childOrder>
+                <switches>
+                    <modelBase>false</modelBase>
+                    <ignoredByViewFitting>false</ignoredByViewFitting>
+                </switches>
+                <extensionString>povray {focalBlur {false} focalDist {2.00} aperture{0.05} blurSamples{10}}</extensionString>
+                <modelAcknowledgement></modelAcknowledgement>
+            </common>
+            <mainCamera>false</mainCamera>
+            <!-- 'trackedObject' tag only used for backward compatibility, use instead 'trackedObjectAlias' tag-->
+            <trackedObject></trackedObject>
+            <trackedObjectAlias></trackedObjectAlias>
+            <size>0.050000</size>
+            <orthoViewSize>7.531251</orthoViewSize>
+            <viewAngle>60.000000</viewAngle>
+            <clippingPlanes>0.050000 30.000000</clippingPlanes>
+            <switches/>
+            <objectColor>255 75 75</objectColor>
+        </camera>
+        <camera>
+            <common>
+                <alias>NZViewCamera*7</alias>
+                <!-- 'name' and 'altName' tags only used for backward compatibility:-->
+                <name>DefaultNZViewCamera</name>
+                <altName>DefaultNZViewCamera</altName>
+                <localFrame>
+                    <position>0.000002 0.000000 -21.500000</position>
+                    <euler>0.000005 -0.000005 0.000005</euler>
+                </localFrame>
+                <hierarchyColorIndex>-1</hierarchyColorIndex>
+                <collectionSelfCollisionIndicator>0</collectionSelfCollisionIndicator>
+                <localObjectProperty>
+                    <hierarchyCollapsed>false</hierarchyCollapsed>
+                    <selectable>true</selectable>
+                    <selectModelBaseInstead>false</selectModelBaseInstead>
+                    <dontShowAsInsideModel>true</dontShowAsInsideModel>
+                    <selectInvisible>false</selectInvisible>
+                    <depthInvisible>false</depthInvisible>
+                    <cannotDelete>false</cannotDelete>
+                    <cannotDeleteDuringSimulation>false</cannotDeleteDuringSimulation>
+                </localObjectProperty>
+                <localObjectSpecialProperty>
+                    <collidable>false</collidable>
+                    <measurable>false</measurable>
+                    <detectable>false</detectable>
+                    <!-- 'renderable' tag for backward compatibility, set to 'true':-->
+                    <renderable>false</renderable>
+                    <!-- following 5 for backward compatibility:-->
+                    <ultrasonicDetectable>false</ultrasonicDetectable>
+                    <infraredDetectable>false</infraredDetectable>
+                    <laserDetectable>false</laserDetectable>
+                    <inductiveDetectable>false</inductiveDetectable>
+                    <capacitiveDetectable>false</capacitiveDetectable>
+                </localObjectSpecialProperty>
+                <localModelProperty>
+                    <notCollidable>false</notCollidable>
+                    <notMeasurable>false</notMeasurable>
+                    <notDetectable>false</notDetectable>
+                    <notDynamic>false</notDynamic>
+                    <notRespondable>false</notRespondable>
+                    <notReset>false</notReset>
+                    <notVisible>false</notVisible>
+                    <scriptsInactive>false</scriptsInactive>
+                    <notShowAsInsideModel>false</notShowAsInsideModel>
+                    <!-- 'notRenderable' tag for backward compatibility, set to 'false':-->
+                    <notRenderable>false</notRenderable>
+                </localModelProperty>
+                <layer>4096</layer>
+                <childOrder>-1</childOrder>
+                <switches>
+                    <modelBase>false</modelBase>
+                    <ignoredByViewFitting>false</ignoredByViewFitting>
+                </switches>
+                <extensionString>povray {focalBlur {false} focalDist {2.00} aperture{0.05} blurSamples{10}}</extensionString>
+                <modelAcknowledgement></modelAcknowledgement>
+            </common>
+            <mainCamera>false</mainCamera>
+            <!-- 'trackedObject' tag only used for backward compatibility, use instead 'trackedObjectAlias' tag-->
+            <trackedObject></trackedObject>
+            <trackedObjectAlias></trackedObjectAlias>
+            <size>0.050000</size>
+            <orthoViewSize>7.531251</orthoViewSize>
+            <viewAngle>60.000000</viewAngle>
+            <clippingPlanes>0.050000 30.000000</clippingPlanes>
+            <switches/>
+            <objectColor>255 75 75</objectColor>
+        </camera>
+    </dummy>
+    <dummy>
+        <common>
+            <alias>DefaultLights*8</alias>
+            <!-- 'name' and 'altName' tags only used for backward compatibility:-->
+            <name>DefaultLights</name>
+            <altName>DefaultLights</altName>
+            <localFrame>
+                <position>0.000000 0.000000 0.000000</position>
+                <euler>-0.000000 0.000000 -0.000000</euler>
+            </localFrame>
+            <hierarchyColorIndex>-1</hierarchyColorIndex>
+            <collectionSelfCollisionIndicator>0</collectionSelfCollisionIndicator>
+            <localObjectProperty>
+                <hierarchyCollapsed>true</hierarchyCollapsed>
+                <selectable>true</selectable>
+                <selectModelBaseInstead>false</selectModelBaseInstead>
+                <dontShowAsInsideModel>false</dontShowAsInsideModel>
+                <selectInvisible>false</selectInvisible>
+                <depthInvisible>false</depthInvisible>
+                <cannotDelete>false</cannotDelete>
+                <cannotDeleteDuringSimulation>false</cannotDeleteDuringSimulation>
+            </localObjectProperty>
+            <localObjectSpecialProperty>
+                <collidable>false</collidable>
+                <measurable>false</measurable>
+                <detectable>false</detectable>
+                <!-- 'renderable' tag for backward compatibility, set to 'true':-->
+                <renderable>false</renderable>
+                <!-- following 5 for backward compatibility:-->
+                <ultrasonicDetectable>false</ultrasonicDetectable>
+                <infraredDetectable>false</infraredDetectable>
+                <laserDetectable>false</laserDetectable>
+                <inductiveDetectable>false</inductiveDetectable>
+                <capacitiveDetectable>false</capacitiveDetectable>
+            </localObjectSpecialProperty>
+            <localModelProperty>
+                <notCollidable>false</notCollidable>
+                <notMeasurable>false</notMeasurable>
+                <notDetectable>false</notDetectable>
+                <notDynamic>false</notDynamic>
+                <notRespondable>false</notRespondable>
+                <notReset>false</notReset>
+                <notVisible>false</notVisible>
+                <scriptsInactive>false</scriptsInactive>
+                <notShowAsInsideModel>false</notShowAsInsideModel>
+                <!-- 'notRenderable' tag for backward compatibility, set to 'false':-->
+                <notRenderable>false</notRenderable>
+            </localModelProperty>
+            <layer>1024</layer>
+            <childOrder>-1</childOrder>
+            <switches>
+                <modelBase>true</modelBase>
+                <ignoredByViewFitting>false</ignoredByViewFitting>
+            </switches>
+            <extensionString></extensionString>
+            <modelAcknowledgement></modelAcknowledgement>
+        </common>
+        <size>0.010000</size>
+        <!-- 'linkedDummy' tag only used for backward compatibility, use instead 'linkedDummyAlias' tag-->
+        <linkedDummy></linkedDummy>
+        <linkedDummyAlias></linkedDummyAlias>
+        <!-- 'linkType' tag: can be 'dynamics_loopClosure'' -->
+        <linkType>dynamics_loopClosure</linkType>
+        <color>
+            <object>255 204 140</object>
+        </color>
+        <light>
+            <common>
+                <alias>LightA*9</alias>
+                <!-- 'name' and 'altName' tags only used for backward compatibility:-->
+                <name>DefaultLightA</name>
+                <altName>DefaultLightA</altName>
+                <localFrame>
+                    <position>1.553546 -0.839107 2.500000</position>
+                    <euler>-138.226334 -50.966064 117.469955</euler>
+                </localFrame>
+                <hierarchyColorIndex>-1</hierarchyColorIndex>
+                <collectionSelfCollisionIndicator>0</collectionSelfCollisionIndicator>
+                <localObjectProperty>
+                    <hierarchyCollapsed>false</hierarchyCollapsed>
+                    <selectable>true</selectable>
+                    <selectModelBaseInstead>false</selectModelBaseInstead>
+                    <dontShowAsInsideModel>true</dontShowAsInsideModel>
+                    <selectInvisible>false</selectInvisible>
+                    <depthInvisible>false</depthInvisible>
+                    <cannotDelete>false</cannotDelete>
+                    <cannotDeleteDuringSimulation>false</cannotDeleteDuringSimulation>
+                </localObjectProperty>
+                <localObjectSpecialProperty>
+                    <collidable>false</collidable>
+                    <measurable>false</measurable>
+                    <detectable>false</detectable>
+                    <!-- 'renderable' tag for backward compatibility, set to 'true':-->
+                    <renderable>false</renderable>
+                    <!-- following 5 for backward compatibility:-->
+                    <ultrasonicDetectable>false</ultrasonicDetectable>
+                    <infraredDetectable>false</infraredDetectable>
+                    <laserDetectable>false</laserDetectable>
+                    <inductiveDetectable>false</inductiveDetectable>
+                    <capacitiveDetectable>false</capacitiveDetectable>
+                </localObjectSpecialProperty>
+                <localModelProperty>
+                    <notCollidable>false</notCollidable>
+                    <notMeasurable>false</notMeasurable>
+                    <notDetectable>false</notDetectable>
+                    <notDynamic>false</notDynamic>
+                    <notRespondable>false</notRespondable>
+                    <notReset>false</notReset>
+                    <notVisible>false</notVisible>
+                    <scriptsInactive>false</scriptsInactive>
+                    <notShowAsInsideModel>false</notShowAsInsideModel>
+                    <!-- 'notRenderable' tag for backward compatibility, set to 'false':-->
+                    <notRenderable>false</notRenderable>
+                </localModelProperty>
+                <layer>4096</layer>
+                <childOrder>-1</childOrder>
+                <switches>
+                    <modelBase>false</modelBase>
+                    <ignoredByViewFitting>false</ignoredByViewFitting>
+                </switches>
+                <extensionString>povray {shadow {true} fadeXDist {0.00}} openGL3 {lightProjection {nearPlane {0.1} farPlane {10} orthoSize {8} bias {0.001} normalBias {0.005} shadowTextureSize {2048}}}</extensionString>
+                <modelAcknowledgement></modelAcknowledgement>
+            </common>
+            <!-- 'type' tag: can be 'omnidirectional', 'spotlight' or 'directional' -->
+            <type>directional</type>
+            <size>0.100000</size>
+            <spotExponent>5</spotExponent>
+            <cutoffAngle>90.000000</cutoffAngle>
+            <attenuationFactors>
+                <constant>0.500000</constant>
+                <linear>0.000000</linear>
+                <quadratic>0.250000</quadratic>
+            </attenuationFactors>
+            <switches>
+                <lightIsActive>true</lightIsActive>
+            </switches>
+            <color>
+                <object>180 180 253</object>
+                <light>
+                    <ambientDiffuse>63 63 63</ambientDiffuse>
+                    <specular>127 127 127</specular>
+                </light>
+            </color>
+        </light>
+        <light>
+            <common>
+                <alias>LightB*10</alias>
+                <!-- 'name' and 'altName' tags only used for backward compatibility:-->
+                <name>DefaultLightB</name>
+                <altName>DefaultLightB</altName>
+                <localFrame>
+                    <position>-0.182812 1.843093 2.500000</position>
+                    <euler>112.268143 5.244510 19.218817</euler>
+                </localFrame>
+                <hierarchyColorIndex>-1</hierarchyColorIndex>
+                <collectionSelfCollisionIndicator>0</collectionSelfCollisionIndicator>
+                <localObjectProperty>
+                    <hierarchyCollapsed>false</hierarchyCollapsed>
+                    <selectable>true</selectable>
+                    <selectModelBaseInstead>false</selectModelBaseInstead>
+                    <dontShowAsInsideModel>true</dontShowAsInsideModel>
+                    <selectInvisible>false</selectInvisible>
+                    <depthInvisible>false</depthInvisible>
+                    <cannotDelete>false</cannotDelete>
+                    <cannotDeleteDuringSimulation>false</cannotDeleteDuringSimulation>
+                </localObjectProperty>
+                <localObjectSpecialProperty>
+                    <collidable>false</collidable>
+                    <measurable>false</measurable>
+                    <detectable>false</detectable>
+                    <!-- 'renderable' tag for backward compatibility, set to 'true':-->
+                    <renderable>false</renderable>
+                    <!-- following 5 for backward compatibility:-->
+                    <ultrasonicDetectable>false</ultrasonicDetectable>
+                    <infraredDetectable>false</infraredDetectable>
+                    <laserDetectable>false</laserDetectable>
+                    <inductiveDetectable>false</inductiveDetectable>
+                    <capacitiveDetectable>false</capacitiveDetectable>
+                </localObjectSpecialProperty>
+                <localModelProperty>
+                    <notCollidable>false</notCollidable>
+                    <notMeasurable>false</notMeasurable>
+                    <notDetectable>false</notDetectable>
+                    <notDynamic>false</notDynamic>
+                    <notRespondable>false</notRespondable>
+                    <notReset>false</notReset>
+                    <notVisible>false</notVisible>
+                    <scriptsInactive>false</scriptsInactive>
+                    <notShowAsInsideModel>false</notShowAsInsideModel>
+                    <!-- 'notRenderable' tag for backward compatibility, set to 'false':-->
+                    <notRenderable>false</notRenderable>
+                </localModelProperty>
+                <layer>4096</layer>
+                <childOrder>-1</childOrder>
+                <switches>
+                    <modelBase>false</modelBase>
+                    <ignoredByViewFitting>false</ignoredByViewFitting>
+                </switches>
+                <extensionString>povray {shadow {true} fadeXDist {0.00}} openGL3 {lightProjection {nearPlane {0.1} farPlane {10} orthoSize {8} bias {0.001} normalBias {0.005} shadowTextureSize {2048}}}</extensionString>
+                <modelAcknowledgement></modelAcknowledgement>
+            </common>
+            <!-- 'type' tag: can be 'omnidirectional', 'spotlight' or 'directional' -->
+            <type>directional</type>
+            <size>0.100000</size>
+            <spotExponent>5</spotExponent>
+            <cutoffAngle>90.000000</cutoffAngle>
+            <attenuationFactors>
+                <constant>0.500000</constant>
+                <linear>0.000000</linear>
+                <quadratic>0.250000</quadratic>
+            </attenuationFactors>
+            <switches>
+                <lightIsActive>true</lightIsActive>
+            </switches>
+            <color>
+                <object>180 180 253</object>
+                <light>
+                    <ambientDiffuse>63 63 63</ambientDiffuse>
+                    <specular>127 127 127</specular>
+                </light>
+            </color>
+        </light>
+        <light>
+            <common>
+                <alias>LightC*11</alias>
+                <!-- 'name' and 'altName' tags only used for backward compatibility:-->
+                <name>DefaultLightC</name>
+                <altName>DefaultLightC</altName>
+                <localFrame>
+                    <position>-1.150916 -1.217711 2.500000</position>
+                    <euler>-131.885895 35.131718 -127.483414</euler>
+                </localFrame>
+                <hierarchyColorIndex>-1</hierarchyColorIndex>
+                <collectionSelfCollisionIndicator>0</collectionSelfCollisionIndicator>
+                <localObjectProperty>
+                    <hierarchyCollapsed>false</hierarchyCollapsed>
+                    <selectable>true</selectable>
+                    <selectModelBaseInstead>false</selectModelBaseInstead>
+                    <dontShowAsInsideModel>true</dontShowAsInsideModel>
+                    <selectInvisible>false</selectInvisible>
+                    <depthInvisible>false</depthInvisible>
+                    <cannotDelete>false</cannotDelete>
+                    <cannotDeleteDuringSimulation>false</cannotDeleteDuringSimulation>
+                </localObjectProperty>
+                <localObjectSpecialProperty>
+                    <collidable>false</collidable>
+                    <measurable>false</measurable>
+                    <detectable>false</detectable>
+                    <!-- 'renderable' tag for backward compatibility, set to 'true':-->
+                    <renderable>false</renderable>
+                    <!-- following 5 for backward compatibility:-->
+                    <ultrasonicDetectable>false</ultrasonicDetectable>
+                    <infraredDetectable>false</infraredDetectable>
+                    <laserDetectable>false</laserDetectable>
+                    <inductiveDetectable>false</inductiveDetectable>
+                    <capacitiveDetectable>false</capacitiveDetectable>
+                </localObjectSpecialProperty>
+                <localModelProperty>
+                    <notCollidable>false</notCollidable>
+                    <notMeasurable>false</notMeasurable>
+                    <notDetectable>false</notDetectable>
+                    <notDynamic>false</notDynamic>
+                    <notRespondable>false</notRespondable>
+                    <notReset>false</notReset>
+                    <notVisible>false</notVisible>
+                    <scriptsInactive>false</scriptsInactive>
+                    <notShowAsInsideModel>false</notShowAsInsideModel>
+                    <!-- 'notRenderable' tag for backward compatibility, set to 'false':-->
+                    <notRenderable>false</notRenderable>
+                </localModelProperty>
+                <layer>4096</layer>
+                <childOrder>-1</childOrder>
+                <switches>
+                    <modelBase>false</modelBase>
+                    <ignoredByViewFitting>false</ignoredByViewFitting>
+                </switches>
+                <extensionString>povray {shadow {true} fadeXDist {0.00}} openGL3 {lightProjection {nearPlane {0.1} farPlane {10} orthoSize {8} bias {0.001} normalBias {0.005} shadowTextureSize {2048}}}</extensionString>
+                <modelAcknowledgement></modelAcknowledgement>
+            </common>
+            <!-- 'type' tag: can be 'omnidirectional', 'spotlight' or 'directional' -->
+            <type>directional</type>
+            <size>0.100000</size>
+            <spotExponent>5</spotExponent>
+            <cutoffAngle>90.000000</cutoffAngle>
+            <attenuationFactors>
+                <constant>0.500000</constant>
+                <linear>0.000000</linear>
+                <quadratic>0.250000</quadratic>
+            </attenuationFactors>
+            <switches>
+                <lightIsActive>true</lightIsActive>
+            </switches>
+            <color>
+                <object>180 180 253</object>
+                <light>
+                    <ambientDiffuse>63 63 63</ambientDiffuse>
+                    <specular>127 127 127</specular>
+                </light>
+            </color>
+        </light>
+        <light>
+            <common>
+                <alias>LightD*12</alias>
+                <!-- 'name' and 'altName' tags only used for backward compatibility:-->
+                <name>DefaultLightD</name>
+                <altName>DefaultLightD</altName>
+                <localFrame>
+                    <position>0.000000 -0.000000 2.500000</position>
+                    <euler>-179.999985 0.000000 -0.000000</euler>
+                </localFrame>
+                <hierarchyColorIndex>-1</hierarchyColorIndex>
+                <collectionSelfCollisionIndicator>0</collectionSelfCollisionIndicator>
+                <localObjectProperty>
+                    <hierarchyCollapsed>false</hierarchyCollapsed>
+                    <selectable>true</selectable>
+                    <selectModelBaseInstead>false</selectModelBaseInstead>
+                    <dontShowAsInsideModel>true</dontShowAsInsideModel>
+                    <selectInvisible>false</selectInvisible>
+                    <depthInvisible>false</depthInvisible>
+                    <cannotDelete>false</cannotDelete>
+                    <cannotDeleteDuringSimulation>false</cannotDeleteDuringSimulation>
+                </localObjectProperty>
+                <localObjectSpecialProperty>
+                    <collidable>false</collidable>
+                    <measurable>false</measurable>
+                    <detectable>false</detectable>
+                    <!-- 'renderable' tag for backward compatibility, set to 'true':-->
+                    <renderable>false</renderable>
+                    <!-- following 5 for backward compatibility:-->
+                    <ultrasonicDetectable>false</ultrasonicDetectable>
+                    <infraredDetectable>false</infraredDetectable>
+                    <laserDetectable>false</laserDetectable>
+                    <inductiveDetectable>false</inductiveDetectable>
+                    <capacitiveDetectable>false</capacitiveDetectable>
+                </localObjectSpecialProperty>
+                <localModelProperty>
+                    <notCollidable>false</notCollidable>
+                    <notMeasurable>false</notMeasurable>
+                    <notDetectable>false</notDetectable>
+                    <notDynamic>false</notDynamic>
+                    <notRespondable>false</notRespondable>
+                    <notReset>false</notReset>
+                    <notVisible>false</notVisible>
+                    <scriptsInactive>false</scriptsInactive>
+                    <notShowAsInsideModel>false</notShowAsInsideModel>
+                    <!-- 'notRenderable' tag for backward compatibility, set to 'false':-->
+                    <notRenderable>false</notRenderable>
+                </localModelProperty>
+                <layer>4096</layer>
+                <childOrder>-1</childOrder>
+                <switches>
+                    <modelBase>false</modelBase>
+                    <ignoredByViewFitting>false</ignoredByViewFitting>
+                </switches>
+                <extensionString>povray {shadow {true} fadeXDist {0.00}} openGL3 {lightProjection {nearPlane {0.1} farPlane {10} orthoSize {8} bias {0.001} normalBias {0.005} shadowTextureSize {2048}}}</extensionString>
+                <modelAcknowledgement></modelAcknowledgement>
+            </common>
+            <!-- 'type' tag: can be 'omnidirectional', 'spotlight' or 'directional' -->
+            <type>directional</type>
+            <size>0.100000</size>
+            <spotExponent>5</spotExponent>
+            <cutoffAngle>90.000000</cutoffAngle>
+            <attenuationFactors>
+                <constant>0.500000</constant>
+                <linear>0.000000</linear>
+                <quadratic>0.250000</quadratic>
+            </attenuationFactors>
+            <switches>
+                <lightIsActive>true</lightIsActive>
+            </switches>
+            <color>
+                <object>180 180 253</object>
+                <light>
+                    <ambientDiffuse>51 51 51</ambientDiffuse>
+                    <specular>91 91 91</specular>
+                </light>
+            </color>
+        </light>
+    </dummy>
+    <shape>
+        <common>
+            <alias>Floor*13</alias>
+            <!-- 'name' and 'altName' tags only used for backward compatibility:-->
+            <name>Floor</name>
+            <altName>ResizableFloor_5_25_element</altName>
+            <localFrame>
+                <!-- 'position' tag (in case of a shape): the value of this tag will be used to correctly build the shape, relative to its parent (or children), -->
+                <!-- however, when load operation is finished, the local position of the shape will very probably be different (because the position of the shape -->
+                <!-- is automatically selected to be at the geometric center of the shape) -->
+                <position>0.000000 0.000000 -0.100000</position>
+                <!-- 'euler' tag (in case of a shape): the value of this tag will be used to correctly build the shape, relative to its parent (or children), -->
+                <!-- however, when load operation is finished, the local orientation of the shape might be different (primitive shapes have a fixed orientation) -->
+                <euler>-0.000000 0.000000 -0.000000</euler>
+            </localFrame>
+            <hierarchyColorIndex>-1</hierarchyColorIndex>
+            <collectionSelfCollisionIndicator>0</collectionSelfCollisionIndicator>
+            <localObjectProperty>
+                <hierarchyCollapsed>true</hierarchyCollapsed>
+                <selectable>true</selectable>
+                <selectModelBaseInstead>false</selectModelBaseInstead>
+                <dontShowAsInsideModel>false</dontShowAsInsideModel>
+                <selectInvisible>false</selectInvisible>
+                <depthInvisible>false</depthInvisible>
+                <cannotDelete>false</cannotDelete>
+                <cannotDeleteDuringSimulation>false</cannotDeleteDuringSimulation>
+            </localObjectProperty>
+            <localObjectSpecialProperty>
+                <collidable>false</collidable>
+                <measurable>false</measurable>
+                <detectable>false</detectable>
+                <!-- 'renderable' tag for backward compatibility, set to 'true':-->
+                <renderable>false</renderable>
+                <!-- following 5 for backward compatibility:-->
+                <ultrasonicDetectable>false</ultrasonicDetectable>
+                <infraredDetectable>false</infraredDetectable>
+                <laserDetectable>false</laserDetectable>
+                <inductiveDetectable>false</inductiveDetectable>
+                <capacitiveDetectable>false</capacitiveDetectable>
+            </localObjectSpecialProperty>
+            <localModelProperty>
+                <notCollidable>false</notCollidable>
+                <notMeasurable>false</notMeasurable>
+                <notDetectable>false</notDetectable>
+                <notDynamic>false</notDynamic>
+                <notRespondable>false</notRespondable>
+                <notReset>false</notReset>
+                <notVisible>false</notVisible>
+                <scriptsInactive>false</scriptsInactive>
+                <notShowAsInsideModel>false</notShowAsInsideModel>
+                <!-- 'notRenderable' tag for backward compatibility, set to 'false':-->
+                <notRenderable>false</notRenderable>
+            </localModelProperty>
+            <layer>32768</layer>
+            <childOrder>-1</childOrder>
+            <switches>
+                <modelBase>true</modelBase>
+                <ignoredByViewFitting>true</ignoredByViewFitting>
+            </switches>
+            <extensionString></extensionString>
+            <modelAcknowledgement></modelAcknowledgement>
+        </common>
+        <!-- one of following tags is required: 'compound', 'primitive', 'heightfield' or 'mesh'. 'compound' itself requires at least two of those tags as children -->
+        <primitive>
+            <!-- 'type' tag: required. Can be one of following: 'cuboid', 'sphere', 'cylinder', 'cone', 'plane' or 'disc' -->
+            <type>cuboid</type>
+            <size>5.000000 5.000000 0.200000</size>
+            <localFrame>
+                <position>0.000000 0.000000 0.000000</position>
+                <euler>-0.000000 0.000000 -0.000000</euler>
+            </localFrame>
+            <shadingAngle>0.000000</shadingAngle>
+            <culling>false</culling>
+            <wireframe>false</wireframe>
+            <color>
+                <ambientDiffuse>176 176 176</ambientDiffuse>
+                <specular>38 38 38</specular>
+                <emission>0 0 0</emission>
+            </color>
+        </primitive>
+        <dynamics>
+            <respondableMask>65535</respondableMask>
+            <initialLinearVelocity>0.000000 0.000000 0.000000</initialLinearVelocity>
+            <initialAngularVelocity>0.000000 0.000000 0.000000</initialAngularVelocity>
+            <mass>5000.004883</mass>
+            <localInertiaFrame>
+                <position>0.000000 0.000000 0.000000</position>
+                <euler>-0.000000 0.000000 -0.000000</euler>
+            </localInertiaFrame>
+            <principalMomentOfInertia>10.417344 10.417344 4.166667</principalMomentOfInertia>
+            <switches>
+                <static>true</static>
+                <respondable>true</respondable>
+                <startSleeping>false</startSleeping>
+                <setToDynamicIfGetsParent>false</setToDynamicIfGetsParent>
+            </switches>
+            <material>
+                <engines>
+                    <bullet>
+                        <restitution>0.500000</restitution>
+                        <friction>1.000000</friction>
+                        <oldfriction>1.000000</oldfriction>
+                        <lineardamping>0.000000</lineardamping>
+                        <angulardamping>0.000000</angulardamping>
+                        <nondefaultcollisionmargingfactor>0.100000</nondefaultcollisionmargingfactor>
+                        <nondefaultcollisionmargingfactorconvex>0.002000</nondefaultcollisionmargingfactorconvex>
+                        <sticky>false</sticky>
+                        <usenondefaultcollisionmargin>false</usenondefaultcollisionmargin>
+                        <usenondefaultcollisionmarginconvex>true</usenondefaultcollisionmarginconvex>
+                        <autoshrinkconvex>false</autoshrinkconvex>
+                    </bullet>
+                    <ode>
+                        <friction>1.000000</friction>
+                        <softerp>0.200000</softerp>
+                        <softcfm>0.000000</softcfm>
+                        <lineardamping>0.000000</lineardamping>
+                        <angulardamping>0.000000</angulardamping>
+                        <maxcontacts>64</maxcontacts>
+                    </ode>
+                    <vortex>
+                        <primlinearaxisfriction>1.000000</primlinearaxisfriction>
+                        <seclinearaxisfriction>1.000000</seclinearaxisfriction>
+                        <primangularaxisfriction>0.000000</primangularaxisfriction>
+                        <secangularaxisfriction>0.000000</secangularaxisfriction>
+                        <normalangularaxisfriction>0.000000</normalangularaxisfriction>
+                        <primlinearaxisstaticfrictionscale>1.100000</primlinearaxisstaticfrictionscale>
+                        <seclinearaxisstaticfrictionscale>1.100000</seclinearaxisstaticfrictionscale>
+                        <primangularaxisstaticfrictionscale>1.000000</primangularaxisstaticfrictionscale>
+                        <secangularaxisstaticfrictionscale>1.000000</secangularaxisstaticfrictionscale>
+                        <normalangularaxisstaticfrictionscale>1.000000</normalangularaxisstaticfrictionscale>
+                        <compliance>0.000000</compliance>
+                        <damping>10000000.000000</damping>
+                        <restitution>0.000000</restitution>
+                        <restitutionthreshold>0.500000</restitutionthreshold>
+                        <adhesiveforce>0.000000</adhesiveforce>
+                        <linearvelocitydamping>0.000000</linearvelocitydamping>
+                        <angularvelocitydamping>0.000000</angularvelocitydamping>
+                        <primlinearaxisslide>0.000000</primlinearaxisslide>
+                        <seclinearaxisslide>0.000000</seclinearaxisslide>
+                        <primangularaxisslide>0.000000</primangularaxisslide>
+                        <secangularaxisslide>0.000000</secangularaxisslide>
+                        <normalangularaxisslide>0.000000</normalangularaxisslide>
+                        <primlinearaxisslip>0.000000</primlinearaxisslip>
+                        <seclinearaxisslip>0.000000</seclinearaxisslip>
+                        <primangularaxisslip>0.000000</primangularaxisslip>
+                        <secangularaxisslip>0.000000</secangularaxisslip>
+                        <normalangularaxisslip>0.000000</normalangularaxisslip>
+                        <autosleeplinearspeedthreshold>0.140000</autosleeplinearspeedthreshold>
+                        <autosleeplinearaccelthreshold>0.045000</autosleeplinearaccelthreshold>
+                        <autosleepangularspeedthreshold>0.030000</autosleepangularspeedthreshold>
+                        <autosleepangularaccelthreshold>0.045000</autosleepangularaccelthreshold>
+                        <skinthickness>0.002000</skinthickness>
+                        <autoangulardampingtensionratio>0.010000</autoangulardampingtensionratio>
+                        <primaxisvectorx>0.000000</primaxisvectorx>
+                        <primaxisvectory>0.000000</primaxisvectory>
+                        <primaxisvectorz>1.000000</primaxisvectorz>
+                        <primlinearaxisfrictionmodel>4</primlinearaxisfrictionmodel>
+                        <seclinearaxisfrictionmodel>4</seclinearaxisfrictionmodel>
+                        <primangulararaxisfrictionmodel>6</primangulararaxisfrictionmodel>
+                        <secmangulararaxisfrictionmodel>6</secmangulararaxisfrictionmodel>
+                        <normalmangulararaxisfrictionmodel>6</normalmangulararaxisfrictionmodel>
+                        <autosleepsteplivethreshold>10</autosleepsteplivethreshold>
+                        <materialuniqueid>2976</materialuniqueid>
+                        <pureshapesasconvex>false</pureshapesasconvex>
+                        <convexshapesasrandom>false</convexshapesasrandom>
+                        <randomshapesasterrain>false</randomshapesasterrain>
+                        <fastmoving>true</fastmoving>
+                        <autoslip>false</autoslip>
+                        <seclinaxissameasprimlinaxis>true</seclinaxissameasprimlinaxis>
+                        <secangaxissameasprimangaxis>true</secangaxissameasprimangaxis>
+                        <normangaxissameasprimangaxis>true</normangaxissameasprimangaxis>
+                        <autoangulardamping>false</autoangulardamping>
+                    </vortex>
+                    <newton>
+                        <staticfriction>1.000000</staticfriction>
+                        <kineticfriction>1.000000</kineticfriction>
+                        <restitution>0.000000</restitution>
+                        <lineardrag>0.000000</lineardrag>
+                        <angulardrag>0.000000</angulardrag>
+                        <fastmoving>false</fastmoving>
+                    </newton>
+                </engines>
+            </material>
+        </dynamics>
+        <shape>
+            <common>
+                <alias>box*14</alias>
+                <!-- 'name' and 'altName' tags only used for backward compatibility:-->
+                <name>box</name>
+                <altName>box</altName>
+                <localFrame>
+                    <!-- 'position' tag (in case of a shape): the value of this tag will be used to correctly build the shape, relative to its parent (or children), -->
+                    <!-- however, when load operation is finished, the local position of the shape will very probably be different (because the position of the shape -->
+                    <!-- is automatically selected to be at the geometric center of the shape) -->
+                    <position>0.000000 0.000000 -0.000000</position>
+                    <!-- 'euler' tag (in case of a shape): the value of this tag will be used to correctly build the shape, relative to its parent (or children), -->
+                    <!-- however, when load operation is finished, the local orientation of the shape might be different (primitive shapes have a fixed orientation) -->
+                    <euler>-0.000000 0.000000 -0.000000</euler>
+                </localFrame>
+                <hierarchyColorIndex>-1</hierarchyColorIndex>
+                <collectionSelfCollisionIndicator>0</collectionSelfCollisionIndicator>
+                <localObjectProperty>
+                    <hierarchyCollapsed>false</hierarchyCollapsed>
+                    <selectable>false</selectable>
+                    <selectModelBaseInstead>false</selectModelBaseInstead>
+                    <dontShowAsInsideModel>false</dontShowAsInsideModel>
+                    <selectInvisible>false</selectInvisible>
+                    <depthInvisible>false</depthInvisible>
+                    <cannotDelete>false</cannotDelete>
+                    <cannotDeleteDuringSimulation>false</cannotDeleteDuringSimulation>
+                </localObjectProperty>
+                <localObjectSpecialProperty>
+                    <collidable>false</collidable>
+                    <measurable>false</measurable>
+                    <detectable>true</detectable>
+                    <!-- 'renderable' tag for backward compatibility, set to 'true':-->
+                    <renderable>true</renderable>
+                    <!-- following 5 for backward compatibility:-->
+                    <ultrasonicDetectable>true</ultrasonicDetectable>
+                    <infraredDetectable>true</infraredDetectable>
+                    <laserDetectable>true</laserDetectable>
+                    <inductiveDetectable>true</inductiveDetectable>
+                    <capacitiveDetectable>true</capacitiveDetectable>
+                </localObjectSpecialProperty>
+                <localModelProperty>
+                    <notCollidable>false</notCollidable>
+                    <notMeasurable>false</notMeasurable>
+                    <notDetectable>false</notDetectable>
+                    <notDynamic>false</notDynamic>
+                    <notRespondable>false</notRespondable>
+                    <notReset>false</notReset>
+                    <notVisible>false</notVisible>
+                    <scriptsInactive>false</scriptsInactive>
+                    <notShowAsInsideModel>false</notShowAsInsideModel>
+                    <!-- 'notRenderable' tag for backward compatibility, set to 'false':-->
+                    <notRenderable>false</notRenderable>
+                </localModelProperty>
+                <layer>128</layer>
+                <childOrder>-1</childOrder>
+                <switches>
+                    <modelBase>false</modelBase>
+                    <ignoredByViewFitting>true</ignoredByViewFitting>
+                </switches>
+                <extensionString></extensionString>
+                <modelAcknowledgement></modelAcknowledgement>
+            </common>
+            <!-- one of following tags is required: 'compound', 'primitive', 'heightfield' or 'mesh'. 'compound' itself requires at least two of those tags as children -->
+            <compound>
+                <mesh>
+                    <!-- one of following tags is required: 'fileName' or 'vertices' and 'indices' -->
+                    <vertices>2.500000 2.500000 0.000000 -2.500000 2.500000 0.000000 2.500000 -2.500000 0.000000 -2.500000 -2.500000 0.000000</vertices>
+                    <indices>0 1 2 2 1 3</indices>
+                    <localFrame>
+                        <position>0.000000 0.000000 0.100000</position>
+                        <euler>-0.000000 0.000000 -0.000000</euler>
+                    </localFrame>
+                    <shadingAngle>20.000000</shadingAngle>
+                    <culling>false</culling>
+                    <wireframe>false</wireframe>
+                    <color>
+                        <ambientDiffuse>242 242 242</ambientDiffuse>
+                        <specular>25 25 25</specular>
+                        <emission>0 0 0</emission>
+                    </color>
+                </mesh>
+                <mesh>
+                    <!-- one of following tags is required: 'fileName' or 'vertices' and 'indices' -->
+                    <vertices>2.500000 -2.500000 -0.100000 -2.500000 -2.500000 -0.100000 2.500000 2.500000 -0.100000 -2.500000 2.500000 -0.100000 2.500000 -2.500000 0.100000 -2.500000 -2.500000 0.100000 2.500000 2.500000 0.100000 -2.500000 2.500000 0.100000</vertices>
+                    <indices>0 1 2 2 1 3 1 0 4 1 4 5 2 3 6 6 3 7 3 1 7 7 1 5 0 2 6 0 6 4</indices>
+                    <localFrame>
+                        <position>0.000000 0.000000 -0.000000</position>
+                        <euler>-0.000000 0.000000 -0.000000</euler>
+                    </localFrame>
+                    <shadingAngle>0.000000</shadingAngle>
+                    <culling>false</culling>
+                    <wireframe>false</wireframe>
+                    <color>
+                        <ambientDiffuse>163 163 163</ambientDiffuse>
+                        <specular>63 63 63</specular>
+                        <emission>0 0 0</emission>
+                    </color>
+                </mesh>
+            </compound>
+            <dynamics>
+                <respondableMask>65535</respondableMask>
+                <initialLinearVelocity>0.000000 0.000000 0.000000</initialLinearVelocity>
+                <initialAngularVelocity>0.000000 0.000000 0.000000</initialAngularVelocity>
+                <mass>12500.400391</mass>
+                <localInertiaFrame>
+                    <position>0.000000 0.000000 -0.149998</position>
+                    <euler>-0.000000 0.000000 -0.000000</euler>
+                </localInertiaFrame>
+                <principalMomentOfInertia>2.104099 2.104099 4.166533</principalMomentOfInertia>
+                <switches>
+                    <static>true</static>
+                    <respondable>false</respondable>
+                    <startSleeping>false</startSleeping>
+                    <setToDynamicIfGetsParent>false</setToDynamicIfGetsParent>
+                </switches>
+                <material>
+                    <engines>
+                        <bullet>
+                            <restitution>0.000000</restitution>
+                            <friction>0.500000</friction>
+                            <oldfriction>1.000000</oldfriction>
+                            <lineardamping>0.000000</lineardamping>
+                            <angulardamping>0.000000</angulardamping>
+                            <nondefaultcollisionmargingfactor>0.100000</nondefaultcollisionmargingfactor>
+                            <nondefaultcollisionmargingfactorconvex>0.002000</nondefaultcollisionmargingfactorconvex>
+                            <sticky>false</sticky>
+                            <usenondefaultcollisionmargin>false</usenondefaultcollisionmargin>
+                            <usenondefaultcollisionmarginconvex>true</usenondefaultcollisionmarginconvex>
+                            <autoshrinkconvex>false</autoshrinkconvex>
+                        </bullet>
+                        <ode>
+                            <friction>1.000000</friction>
+                            <softerp>0.200000</softerp>
+                            <softcfm>0.000000</softcfm>
+                            <lineardamping>0.000000</lineardamping>
+                            <angulardamping>0.000000</angulardamping>
+                            <maxcontacts>64</maxcontacts>
+                        </ode>
+                        <vortex>
+                            <primlinearaxisfriction>1.000000</primlinearaxisfriction>
+                            <seclinearaxisfriction>1.000000</seclinearaxisfriction>
+                            <primangularaxisfriction>0.000000</primangularaxisfriction>
+                            <secangularaxisfriction>0.000000</secangularaxisfriction>
+                            <normalangularaxisfriction>0.000000</normalangularaxisfriction>
+                            <primlinearaxisstaticfrictionscale>1.100000</primlinearaxisstaticfrictionscale>
+                            <seclinearaxisstaticfrictionscale>1.100000</seclinearaxisstaticfrictionscale>
+                            <primangularaxisstaticfrictionscale>1.000000</primangularaxisstaticfrictionscale>
+                            <secangularaxisstaticfrictionscale>1.000000</secangularaxisstaticfrictionscale>
+                            <normalangularaxisstaticfrictionscale>1.000000</normalangularaxisstaticfrictionscale>
+                            <compliance>0.000000</compliance>
+                            <damping>10000000.000000</damping>
+                            <restitution>0.000000</restitution>
+                            <restitutionthreshold>0.500000</restitutionthreshold>
+                            <adhesiveforce>0.000000</adhesiveforce>
+                            <linearvelocitydamping>0.000000</linearvelocitydamping>
+                            <angularvelocitydamping>0.000000</angularvelocitydamping>
+                            <primlinearaxisslide>0.000000</primlinearaxisslide>
+                            <seclinearaxisslide>0.000000</seclinearaxisslide>
+                            <primangularaxisslide>0.000000</primangularaxisslide>
+                            <secangularaxisslide>0.000000</secangularaxisslide>
+                            <normalangularaxisslide>0.000000</normalangularaxisslide>
+                            <primlinearaxisslip>0.000000</primlinearaxisslip>
+                            <seclinearaxisslip>0.000000</seclinearaxisslip>
+                            <primangularaxisslip>0.000000</primangularaxisslip>
+                            <secangularaxisslip>0.000000</secangularaxisslip>
+                            <normalangularaxisslip>0.000000</normalangularaxisslip>
+                            <autosleeplinearspeedthreshold>0.140000</autosleeplinearspeedthreshold>
+                            <autosleeplinearaccelthreshold>0.045000</autosleeplinearaccelthreshold>
+                            <autosleepangularspeedthreshold>0.030000</autosleepangularspeedthreshold>
+                            <autosleepangularaccelthreshold>0.045000</autosleepangularaccelthreshold>
+                            <skinthickness>0.002000</skinthickness>
+                            <autoangulardampingtensionratio>0.010000</autoangulardampingtensionratio>
+                            <primaxisvectorx>0.000000</primaxisvectorx>
+                            <primaxisvectory>0.000000</primaxisvectory>
+                            <primaxisvectorz>1.000000</primaxisvectorz>
+                            <primlinearaxisfrictionmodel>4</primlinearaxisfrictionmodel>
+                            <seclinearaxisfrictionmodel>4</seclinearaxisfrictionmodel>
+                            <primangulararaxisfrictionmodel>6</primangulararaxisfrictionmodel>
+                            <secmangulararaxisfrictionmodel>6</secmangulararaxisfrictionmodel>
+                            <normalmangulararaxisfrictionmodel>6</normalmangulararaxisfrictionmodel>
+                            <autosleepsteplivethreshold>10</autosleepsteplivethreshold>
+                            <materialuniqueid>2984</materialuniqueid>
+                            <pureshapesasconvex>false</pureshapesasconvex>
+                            <convexshapesasrandom>false</convexshapesasrandom>
+                            <randomshapesasterrain>false</randomshapesasterrain>
+                            <fastmoving>true</fastmoving>
+                            <autoslip>false</autoslip>
+                            <seclinaxissameasprimlinaxis>true</seclinaxissameasprimlinaxis>
+                            <secangaxissameasprimangaxis>true</secangaxissameasprimangaxis>
+                            <normangaxissameasprimangaxis>true</normangaxissameasprimangaxis>
+                            <autoangulardamping>true</autoangulardamping>
+                        </vortex>
+                        <newton>
+                            <staticfriction>1.000000</staticfriction>
+                            <kineticfriction>1.000000</kineticfriction>
+                            <restitution>0.000000</restitution>
+                            <lineardrag>0.000000</lineardrag>
+                            <angulardrag>0.000000</angulardrag>
+                            <fastmoving>false</fastmoving>
+                        </newton>
+                    </engines>
+                </material>
+            </dynamics>
+        </shape>
+    </shape>
+    <shape>
+        <common>
+            <alias>Shape*15</alias>
+            <!-- 'name' and 'altName' tags only used for backward compatibility:-->
+            <name>Shape</name>
+            <altName>Shape</altName>
+            <localFrame>
+                <!-- 'position' tag (in case of a shape): the value of this tag will be used to correctly build the shape, relative to its parent (or children), -->
+                <!-- however, when load operation is finished, the local position of the shape will very probably be different (because the position of the shape -->
+                <!-- is automatically selected to be at the geometric center of the shape) -->
+                <position>-0.255109 0.032194 -0.050000</position>
+                <!-- 'euler' tag (in case of a shape): the value of this tag will be used to correctly build the shape, relative to its parent (or children), -->
+                <!-- however, when load operation is finished, the local orientation of the shape might be different (primitive shapes have a fixed orientation) -->
+                <euler>89.999969 82.799950 90.000053</euler>
+            </localFrame>
+            <hierarchyColorIndex>-1</hierarchyColorIndex>
+            <collectionSelfCollisionIndicator>0</collectionSelfCollisionIndicator>
+            <localObjectProperty>
+                <hierarchyCollapsed>false</hierarchyCollapsed>
+                <selectable>true</selectable>
+                <selectModelBaseInstead>false</selectModelBaseInstead>
+                <dontShowAsInsideModel>false</dontShowAsInsideModel>
+                <selectInvisible>false</selectInvisible>
+                <depthInvisible>false</depthInvisible>
+                <cannotDelete>false</cannotDelete>
+                <cannotDeleteDuringSimulation>false</cannotDeleteDuringSimulation>
+            </localObjectProperty>
+            <localObjectSpecialProperty>
+                <collidable>true</collidable>
+                <measurable>true</measurable>
+                <detectable>true</detectable>
+                <!-- 'renderable' tag for backward compatibility, set to 'true':-->
+                <renderable>true</renderable>
+                <!-- following 5 for backward compatibility:-->
+                <ultrasonicDetectable>true</ultrasonicDetectable>
+                <infraredDetectable>true</infraredDetectable>
+                <laserDetectable>true</laserDetectable>
+                <inductiveDetectable>true</inductiveDetectable>
+                <capacitiveDetectable>true</capacitiveDetectable>
+            </localObjectSpecialProperty>
+            <localModelProperty>
+                <notCollidable>false</notCollidable>
+                <notMeasurable>false</notMeasurable>
+                <notDetectable>false</notDetectable>
+                <notDynamic>false</notDynamic>
+                <notRespondable>false</notRespondable>
+                <notReset>false</notReset>
+                <notVisible>false</notVisible>
+                <scriptsInactive>false</scriptsInactive>
+                <notShowAsInsideModel>false</notShowAsInsideModel>
+                <!-- 'notRenderable' tag for backward compatibility, set to 'false':-->
+                <notRenderable>false</notRenderable>
+            </localModelProperty>
+            <layer>1</layer>
+            <childOrder>-1</childOrder>
+            <switches>
+                <modelBase>false</modelBase>
+                <ignoredByViewFitting>false</ignoredByViewFitting>
+            </switches>
+            <extensionString></extensionString>
+            <modelAcknowledgement></modelAcknowledgement>
+        </common>
+        <!-- one of following tags is required: 'compound', 'primitive', 'heightfield' or 'mesh'. 'compound' itself requires at least two of those tags as children -->
+        <mesh>
+            <!-- one of following tags is required: 'fileName' or 'vertices' and 'indices' -->
+            <vertices>-0.050000 -0.189595 0.350806 -0.050000 -0.201143 0.322425 0.050000 -0.189595 0.350806 -0.050000 -0.111423 0.436856 0.050000 -0.085137 0.450692 -0.050000 -0.085137 0.450692 0.050000 -0.111423 0.436856 0.050000 0.063160 0.458911 -0.050000 0.034259 0.465776 0.050000 0.034259 0.465776 -0.050000 0.063160 0.458911 -0.050000 -0.134831 0.420036 0.050000 -0.134832 0.420036 0.050000 0.090016 0.448441 -0.050000 0.090016 0.448441 0.050000 -0.201143 0.322425 -0.050000 -0.208468 0.292673 0.050000 -0.208468 0.292673 -0.050000 0.004062 0.468535 -0.050000 -0.211409 0.262494 0.050000 -0.211409 0.262494 0.050000 -0.174246 0.376957 -0.050000 -0.174246 0.376957 -0.050000 -0.210074 0.232819 0.050000 -0.210074 0.232819 0.050000 -0.155735 0.400189 -0.050000 -0.155735 0.400189 -0.050000 -0.204816 0.204478 0.050000 -0.204816 0.204478 -0.050000 0.209454 0.285818 -0.050000 0.203367 0.314892 0.050000 0.209454 0.285818 0.050000 0.178519 0.370388 -0.050000 0.160275 0.395006 0.050000 0.160275 0.395006 -0.050000 0.178519 0.370388 0.050000 0.193013 0.343392 -0.050000 0.193013 0.343392 -0.050000 0.138906 0.416518 0.050000 0.138906 0.416518 0.050000 0.203367 0.314892 -0.050000 0.115198 0.434416 0.050000 0.115198 0.434416 0.050000 0.211409 0.257060 -0.050000 0.211409 0.257060 0.050000 -0.026535 0.466908 -0.050000 -0.056576 0.460875 0.050000 -0.056576 0.460875 -0.050000 -0.026535 0.466908 0.050000 0.004062 0.468535 -0.050000 0.211206 -0.331883 0.050000 0.211206 -0.331883 0.050000 0.136913 -0.453542 -0.050000 0.158238 -0.439957 0.050000 0.158238 -0.439957 -0.050000 0.136913 -0.453542 -0.050000 0.209221 -0.355061 0.050000 0.202940 -0.378675 -0.050000 0.202940 -0.378675 0.050000 0.209221 -0.355061 0.050000 0.114269 -0.462725 -0.050000 0.114269 -0.462725 0.050000 0.091521 -0.467592 -0.050000 0.091521 -0.467592 0.050000 0.192127 -0.401531 -0.050000 -0.024120 0.300948 -0.050000 -0.032424 0.295223 -0.050000 -0.006301 0.306738 -0.050000 -0.039542 0.287778 -0.050000 0.012399 0.305562 -0.050000 -0.044983 0.279032 -0.050000 0.021866 0.302081 -0.050000 -0.048464 0.269565 -0.050000 0.030611 0.296640 -0.050000 -0.049640 0.250866 -0.050000 0.038057 0.289522 0.050000 0.068277 -0.468535 0.050000 0.044061 -0.465272 -0.050000 0.068277 -0.468535 -0.050000 -0.058154 -0.365911 0.050000 -0.058154 -0.365911 0.050000 -0.002523 -0.445023 -0.050000 0.020027 -0.457417 0.050000 0.020027 -0.457417 -0.050000 -0.002523 -0.445023 0.050000 -0.022354 -0.428626 -0.050000 -0.022354 -0.428626 -0.050000 0.044061 -0.465272 0.050000 -0.038511 -0.409177 -0.050000 -0.038511 -0.409177 -0.050000 -0.006301 0.306738 0.050000 -0.006301 0.306738 0.050000 -0.050467 -0.387867 -0.050000 -0.050467 -0.387867 0.050000 0.176997 -0.422344 -0.050000 0.192127 -0.401531 -0.050000 0.176997 -0.422344 -0.050000 0.123976 -0.325569 -0.050000 0.122800 -0.344269 0.050000 0.123976 -0.325569 0.050000 0.098457 -0.375652 -0.050000 0.080637 -0.381441 0.050000 0.080637 -0.381441 -0.050000 0.098457 -0.375652 0.050000 0.106761 -0.369926 -0.050000 0.106761 -0.369926 0.050000 0.113878 -0.362481 -0.050000 0.113878 -0.362481 0.050000 0.119320 -0.353735 -0.050000 0.119320 -0.353735 0.050000 0.122800 -0.344269 -0.050000 0.061938 -0.380265 0.050000 0.118187 -0.307749 -0.050000 0.118187 -0.307749 0.050000 0.112461 -0.299446 -0.050000 0.112461 -0.299446 0.050000 0.105016 -0.292328 -0.050000 0.105016 -0.292328 0.050000 0.096270 -0.286887 -0.050000 0.096270 -0.286887 0.050000 0.086804 -0.283406 -0.050000 0.086803 -0.283406 0.050000 0.068104 -0.282230 -0.050000 0.024765 -0.338102 -0.050000 0.025941 -0.319403 0.050000 0.024765 -0.338102 0.050000 0.050284 -0.288020 -0.050000 0.068104 -0.282230 0.050000 0.068104 -0.282230 -0.050000 0.050284 -0.288020 0.050000 0.041981 -0.293745 -0.050000 0.041981 -0.293745 0.050000 0.034863 -0.301190 -0.050000 0.034863 -0.301190 0.050000 0.029422 -0.309936 -0.050000 0.029422 -0.309936 0.050000 0.025941 -0.319403 -0.050000 0.068104 -0.282230 0.050000 0.030554 -0.355922 -0.050000 0.030555 -0.355922 0.050000 0.036280 -0.364226 -0.050000 0.036280 -0.364226 0.050000 0.043725 -0.371343 -0.050000 0.043725 -0.371343 0.050000 0.052471 -0.376785 -0.050000 0.052471 -0.376785 0.050000 0.061938 -0.380265 -0.050000 0.049572 0.263399 -0.050000 0.048396 0.244699 0.050000 0.049572 0.263399 0.050000 0.024052 0.213316 -0.050000 0.006233 0.207527 0.050000 0.006233 0.207527 -0.050000 0.024052 0.213316 0.050000 0.032356 0.219042 -0.050000 0.032356 0.219042 0.050000 0.039474 0.226487 -0.050000 0.039474 0.226487 0.050000 0.044915 0.235233 -0.050000 0.044915 0.235233 0.050000 0.048396 0.244699 -0.050000 -0.012467 0.208703 0.050000 0.043782 0.281219 -0.050000 0.049572 0.263399 0.050000 0.049572 0.263399 -0.050000 0.043782 0.281219 0.050000 0.038057 0.289522 0.050000 0.030611 0.296640 0.050000 0.021866 0.302081 0.050000 0.012399 0.305562 -0.050000 -0.049640 0.250866 0.050000 -0.049640 0.250866 0.050000 -0.024120 0.300948 -0.050000 -0.006301 0.306738 0.050000 -0.006301 0.306738 0.050000 -0.032424 0.295223 0.050000 -0.039542 0.287778 0.050000 -0.044983 0.279032 0.050000 -0.048464 0.269565 0.050000 -0.043850 0.233046 -0.050000 -0.043850 0.233046 0.050000 -0.038125 0.224742 -0.050000 -0.038125 0.224742 0.050000 -0.030679 0.217625 -0.050000 -0.030679 0.217625 0.050000 -0.021934 0.212183 -0.050000 -0.021934 0.212183 0.050000 -0.012467 0.208703 0.050000 0.068104 -0.282230 0.050000 -0.049640 0.250866 0.050000 0.049572 0.263399 0.050000 0.006233 0.207527 0.050000 -0.006301 0.306738 0.050000 0.068219 0.402134 0.050000 0.090487 -0.459407 0.050000 0.091521 -0.467592 0.050000 0.193109 -0.388702 0.050000 -0.026535 0.466908 0.050000 -0.192160 0.304888 0.050000 -0.026495 -0.416445 -0.050000 0.006233 0.207527 -0.050000 0.068104 -0.282230 -0.050000 0.080637 -0.381441 -0.050000 0.049572 0.263399 -0.050000 0.123500 -0.421973 -0.050000 0.149735 0.367130 -0.050000 0.091521 -0.467592 -0.050000 -0.026495 -0.416445 0.050000 0.080637 -0.381441 -0.050000 -0.026535 0.466908 -0.050000 -0.011159 0.463325 -0.050000 -0.159946 0.364764</vertices>
+            <indices>0 1 2 3 4 5 6 4 3 7 8 9 10 8 7 11 6 3 12 6 11 13 10 7 14 10 13 15 16 17 1 16 15 2 1 15 8 18 9 19 17 16 20 17 19 21 0 2 22 0 21 23 20 19 24 20 23 25 22 21 26 22 25 27 24 23 28 24 27 12 26 25 29 30 31 32 33 34 35 33 32 36 35 32 37 35 36 38 34 33 39 34 38 40 37 36 30 37 40 41 39 38 42 39 41 31 30 40 11 26 12 14 42 41 13 42 14 43 29 31 44 29 43 45 46 47 48 46 45 49 48 45 18 48 49 5 47 46 4 47 5 9 18 49 50 44 51 52 53 54 55 53 52 56 57 58 59 57 56 60 55 52 61 55 60 50 59 56 51 59 50 62 61 60 63 61 62 51 44 43 57 64 58 5 65 66 67 65 5 68 5 66 69 67 5 70 5 68 71 69 5 72 5 70 73 71 5 74 5 72 75 73 5 10 75 5 76 77 78 28 79 80 27 79 28 81 82 83 84 82 81 85 84 81 86 84 85 87 83 82 77 83 87 88 86 85 89 86 88 78 77 87 90 69 91 92 89 88 93 89 92 63 76 78 62 76 63 80 93 92 79 93 80 94 95 64 96 95 94 54 96 94 53 96 54 58 64 95 97 98 99 100 101 102 103 101 100 104 103 100 105 103 104 106 105 104 107 105 106 108 107 106 109 107 108 110 109 108 98 109 110 99 98 110 101 111 102 112 97 99 113 97 112 114 113 112 115 113 114 116 115 114 117 115 116 118 117 116 119 117 118 120 119 118 121 119 120 122 121 120 123 124 125 126 127 128 129 127 126 130 129 126 131 129 130 132 131 130 133 131 132 134 133 132 135 133 134 136 135 134 124 135 136 125 124 136 137 121 122 138 123 125 139 123 138 140 139 138 141 139 140 142 141 140 143 141 142 144 143 142 145 143 144 146 145 144 111 145 146 102 111 146 147 148 149 150 151 152 153 151 150 154 153 150 155 153 154 156 155 154 157 155 156 158 157 156 159 157 158 160 159 158 148 159 160 149 148 160 151 161 152 162 163 164 165 163 162 166 165 162 75 165 166 167 75 166 73 75 167 168 73 167 71 73 168 169 71 168 69 71 169 91 69 169 170 72 171 172 173 174 65 173 172 175 65 172 66 65 175 176 66 175 68 66 176 177 68 176 70 68 177 178 70 177 72 70 178 171 72 178 165 75 10 179 170 171 180 170 179 181 180 179 182 180 181 183 182 181 184 182 183 185 184 183 186 184 185 187 186 185 161 186 187 152 161 187 188 120 150 189 178 4 112 99 190 160 112 190 114 112 160 158 114 160 116 114 158 156 116 158 118 116 156 154 118 156 120 118 154 150 120 154 178 177 4 191 188 150 126 188 191 187 126 191 130 126 187 185 130 187 132 130 185 183 132 185 134 132 183 181 134 183 136 134 181 179 136 181 190 99 40 54 104 83 106 104 54 138 83 140 108 106 54 125 83 138 110 108 54 51 110 54 43 110 51 31 110 43 99 110 31 40 99 31 125 136 179 162 190 40 166 162 40 4 166 40 167 166 4 168 167 4 169 168 4 192 169 4 172 192 4 175 172 4 176 175 4 177 176 4 40 193 4 76 194 77 195 194 76 60 194 195 52 194 60 54 194 52 54 196 51 94 196 54 64 196 94 57 196 64 59 196 57 51 196 59 77 194 83 36 193 40 32 193 36 34 193 32 39 193 34 42 193 39 13 193 42 7 193 13 9 193 7 49 193 9 197 193 49 47 193 197 15 198 2 189 125 179 83 125 189 4 83 189 80 83 4 6 80 4 28 80 6 12 28 6 25 28 12 25 198 28 21 198 25 2 198 21 104 100 83 17 198 15 20 198 17 24 198 20 28 198 24 80 199 83 92 199 80 88 199 92 85 199 88 81 199 85 83 199 81 83 194 54 182 184 131 117 155 115 153 155 117 119 153 117 200 153 119 121 200 119 161 200 121 201 161 121 186 161 201 129 186 201 184 186 129 131 184 129 155 157 115 133 182 131 180 182 133 135 180 133 74 180 135 124 74 135 5 74 124 123 5 124 19 5 123 82 19 123 23 19 82 79 23 82 202 103 82 44 165 10 203 165 44 50 203 44 56 203 50 97 203 56 98 97 56 109 98 56 107 109 56 105 107 56 82 105 56 103 105 82 27 23 79 111 202 82 145 111 82 143 145 82 141 143 82 139 141 82 148 203 97 123 139 82 159 148 97 113 159 97 157 159 113 115 157 113 82 204 87 44 205 29 56 204 82 58 204 56 95 204 58 96 204 95 53 204 96 55 204 53 61 204 55 206 204 61 78 204 206 87 204 78 29 205 30 82 207 79 84 207 82 86 207 84 89 207 86 93 207 89 79 207 93 83 146 144 208 146 83 142 83 144 100 208 83 140 83 142 209 210 46 19 211 5 16 211 19 1 211 16 0 211 1 22 211 0 26 211 22 11 211 26 3 211 11 5 211 3 5 210 10 46 210 5 4 193 47 18 210 209 8 210 18 10 210 8 10 205 44 14 205 10 41 205 14 38 205 41 33 205 38 35 205 33 37 205 35 30 205 37</indices>
+            <localFrame>
+                <position>0.000000 0.000000 0.000000</position>
+                <euler>-0.000000 0.000000 -0.000000</euler>
+            </localFrame>
+            <shadingAngle>0.000000</shadingAngle>
+            <culling>false</culling>
+            <wireframe>false</wireframe>
+            <color>
+                <ambientDiffuse>255 255 255</ambientDiffuse>
+                <specular>255 255 255</specular>
+                <emission>0 0 0</emission>
+            </color>
+        </mesh>
+        <dynamics>
+            <respondableMask>65535</respondableMask>
+            <initialLinearVelocity>0.000000 0.000000 0.000000</initialLinearVelocity>
+            <initialAngularVelocity>0.000000 0.000000 0.000000</initialAngularVelocity>
+            <mass>1.000000</mass>
+            <localInertiaFrame>
+                <position>0.000000 0.000000 0.000000</position>
+                <euler>-0.000000 0.000000 -0.000000</euler>
+            </localInertiaFrame>
+            <principalMomentOfInertia>0.001000 0.001000 0.001000</principalMomentOfInertia>
+            <switches>
+                <static>true</static>
+                <respondable>false</respondable>
+                <startSleeping>false</startSleeping>
+                <setToDynamicIfGetsParent>false</setToDynamicIfGetsParent>
+            </switches>
+            <material>
+                <engines>
+                    <bullet>
+                        <restitution>0.000000</restitution>
+                        <friction>0.710000</friction>
+                        <oldfriction>0.710000</oldfriction>
+                        <lineardamping>0.000000</lineardamping>
+                        <angulardamping>0.000000</angulardamping>
+                        <nondefaultcollisionmargingfactor>0.100000</nondefaultcollisionmargingfactor>
+                        <nondefaultcollisionmargingfactorconvex>0.002000</nondefaultcollisionmargingfactorconvex>
+                        <sticky>false</sticky>
+                        <usenondefaultcollisionmargin>false</usenondefaultcollisionmargin>
+                        <usenondefaultcollisionmarginconvex>true</usenondefaultcollisionmarginconvex>
+                        <autoshrinkconvex>false</autoshrinkconvex>
+                    </bullet>
+                    <ode>
+                        <friction>0.710000</friction>
+                        <softerp>0.200000</softerp>
+                        <softcfm>0.000000</softcfm>
+                        <lineardamping>0.000000</lineardamping>
+                        <angulardamping>0.000000</angulardamping>
+                        <maxcontacts>64</maxcontacts>
+                    </ode>
+                    <vortex>
+                        <primlinearaxisfriction>0.500000</primlinearaxisfriction>
+                        <seclinearaxisfriction>0.500000</seclinearaxisfriction>
+                        <primangularaxisfriction>0.000000</primangularaxisfriction>
+                        <secangularaxisfriction>0.000000</secangularaxisfriction>
+                        <normalangularaxisfriction>0.000000</normalangularaxisfriction>
+                        <primlinearaxisstaticfrictionscale>1.100000</primlinearaxisstaticfrictionscale>
+                        <seclinearaxisstaticfrictionscale>1.100000</seclinearaxisstaticfrictionscale>
+                        <primangularaxisstaticfrictionscale>1.000000</primangularaxisstaticfrictionscale>
+                        <secangularaxisstaticfrictionscale>1.000000</secangularaxisstaticfrictionscale>
+                        <normalangularaxisstaticfrictionscale>1.000000</normalangularaxisstaticfrictionscale>
+                        <compliance>0.000000</compliance>
+                        <damping>10000000.000000</damping>
+                        <restitution>0.000000</restitution>
+                        <restitutionthreshold>0.500000</restitutionthreshold>
+                        <adhesiveforce>0.000000</adhesiveforce>
+                        <linearvelocitydamping>0.000000</linearvelocitydamping>
+                        <angularvelocitydamping>0.000000</angularvelocitydamping>
+                        <primlinearaxisslide>0.000000</primlinearaxisslide>
+                        <seclinearaxisslide>0.000000</seclinearaxisslide>
+                        <primangularaxisslide>0.000000</primangularaxisslide>
+                        <secangularaxisslide>0.000000</secangularaxisslide>
+                        <normalangularaxisslide>0.000000</normalangularaxisslide>
+                        <primlinearaxisslip>0.000000</primlinearaxisslip>
+                        <seclinearaxisslip>0.000000</seclinearaxisslip>
+                        <primangularaxisslip>0.000000</primangularaxisslip>
+                        <secangularaxisslip>0.000000</secangularaxisslip>
+                        <normalangularaxisslip>0.000000</normalangularaxisslip>
+                        <autosleeplinearspeedthreshold>0.140000</autosleeplinearspeedthreshold>
+                        <autosleeplinearaccelthreshold>0.045000</autosleeplinearaccelthreshold>
+                        <autosleepangularspeedthreshold>0.030000</autosleepangularspeedthreshold>
+                        <autosleepangularaccelthreshold>0.045000</autosleepangularaccelthreshold>
+                        <skinthickness>0.000000</skinthickness>
+                        <autoangulardampingtensionratio>0.010000</autoangulardampingtensionratio>
+                        <primaxisvectorx>0.000000</primaxisvectorx>
+                        <primaxisvectory>0.000000</primaxisvectory>
+                        <primaxisvectorz>1.000000</primaxisvectorz>
+                        <primlinearaxisfrictionmodel>4</primlinearaxisfrictionmodel>
+                        <seclinearaxisfrictionmodel>4</seclinearaxisfrictionmodel>
+                        <primangulararaxisfrictionmodel>6</primangulararaxisfrictionmodel>
+                        <secmangulararaxisfrictionmodel>6</secmangulararaxisfrictionmodel>
+                        <normalmangulararaxisfrictionmodel>6</normalmangulararaxisfrictionmodel>
+                        <autosleepsteplivethreshold>10</autosleepsteplivethreshold>
+                        <materialuniqueid>480</materialuniqueid>
+                        <pureshapesasconvex>false</pureshapesasconvex>
+                        <convexshapesasrandom>false</convexshapesasrandom>
+                        <randomshapesasterrain>false</randomshapesasterrain>
+                        <fastmoving>true</fastmoving>
+                        <autoslip>false</autoslip>
+                        <seclinaxissameasprimlinaxis>true</seclinaxissameasprimlinaxis>
+                        <secangaxissameasprimangaxis>true</secangaxissameasprimangaxis>
+                        <normangaxissameasprimangaxis>true</normangaxissameasprimangaxis>
+                        <autoangulardamping>false</autoangulardamping>
+                    </vortex>
+                    <newton>
+                        <staticfriction>0.500000</staticfriction>
+                        <kineticfriction>0.500000</kineticfriction>
+                        <restitution>0.000000</restitution>
+                        <lineardrag>0.000000</lineardrag>
+                        <angulardrag>0.000000</angulardrag>
+                        <fastmoving>false</fastmoving>
+                    </newton>
+                </engines>
+            </material>
+        </dynamics>
+    </shape>
+</CoppeliaSim>

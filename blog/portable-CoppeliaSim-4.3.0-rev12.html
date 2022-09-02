@@ -59,7 +59,7 @@
 <meta property="og:url" content="https://mde.tw/blog/portable-CoppeliaSim-4.3.0-rev12.html"/>
 <meta property="og:type" content="article"/>
 <meta property="article:published_time" content="2022-08-23 11:00:00+08:00"/>
-<meta property="article:modified_time" content="2022-08-24 20:35:58.286840+08:00"/>
+<meta property="article:modified_time" content="2022-09-02 16:41:06.157860+08:00"/>
 <meta property="article:author" content="https://mde.tw/blog/author/mdecycu.html">
 <meta property="article:section" content="cad2022"/>
 <meta property="article:tag" content="Coppeliasim"/>
@@ -74,7 +74,7 @@
   "name": "可攜 CoppeliaSim 4.3.0 rev12",
   "headline": "可攜 CoppeliaSim 4.3.0 rev12",
   "datePublished": "2022-08-23 11:00:00+08:00",
-  "dateModified": "2022-08-24 20:35:58.286840+08:00",
+  "dateModified": "2022-09-02 16:41:06.157860+08:00",
   "author": {
     "@type": "Person",
     "name": "mdecycu",
@@ -204,7 +204,7 @@ init_mathjax();
             | <time datetime="週二 23 八月 2022">週二 23 八月 2022</time>
         </span>
         <!-- TODO : Modified check -->
-            <span class="post-meta"> | Updated on 週三 24 八月 2022</span>
+            <span class="post-meta"> | Updated on 週五 02 九月 2022</span>
             <div class="post-cover cover" style="background-image: url('https://mde.tw/blog/theme/images/post-bg.jpg')">
       </div>
     </header>
@@ -228,7 +228,7 @@ init_mathjax();
 
 
 <h1>Portable CoppeliaSim</h1>
-<p>因此這裡所謂的可攜 CoppeliaSim, 其實就是從操作系統完成安裝的目錄中取出資料, 然後加上存入操作系統中的 redistributable dll 檔案製作而成.</p>
+<p>因此這裡所謂的可攜 <a href="https://www.coppeliarobotics.com/">CoppeliaSim</a>, 其實就是從操作系統完成安裝的目錄中取出資料, 然後加上存入操作系統中的 redistributable dll 檔案製作而成.</p>
 <p>其中的 vcRedist/vc2019redist_x64.exe 需要利用 <a href="https://github.com/wixtoolset/wix3/releases/tag/wix3112rtm">Wix</a> 解出 .msi 之後, 再利用 <a href="https://github.com/Bioruebe/UniExtract2">UniExtract2</a> 解出所需要的 .dll, 並將所有的 .dll 檔案放入可攜 CoppeliaSim 的根目錄中.</p>
 <p>解開 vc2019redist_x64.exe 的指令:</p>
 <pre class="brush: jscript">
@@ -236,6 +236,42 @@ wix311-binaries\dark.exe vc2019redist_x64.exe -x extracted
 </pre>
 
 <p>表示要在 extracted 目錄中取得 extracted\AttachedContainer\packages\vcRuntimeMinimum_amd64\vc_runtimeMinimum_x64.msi 之後, 再利用 <a href="https://github.com/Bioruebe/UniExtract2">UniExtract2</a> 解開所需的 dll 檔案, 最後再放入 CoppeliaSim 根目錄. 啟動時直接執行 coppeliaSim.exe 即可.</p>
+<h1 id="simscene">simscene XML</h1>
+
+<p><a href="https://www.coppeliarobotics.com/">CoppeliaSim</a> 從 <a href="https://www.coppeliarobotics.com/helpFiles/en/versionInfo.htm#coppeliaSim4.0.0">4.0.0 版</a>開始, 提供 <a href="https://mde.tw/pjcopsim/content/xmlFormat.html">XML 檔案格式</a>的輸出入, 此功能允許使用者透過 <a href="https://en.wikipedia.org/wiki/ASCII">ASCII</a> 檔案格式建構 <a href="https://www.coppeliarobotics.com/">CoppeliaSim</a> 的<a href="https://mde.tw/pjcopsim/content/scenes.html">場景</a>. 其中與機電產品開發過程中的電腦輔助設計架構最直接關聯的就是, 使用者可以直接透過程式方法, 將設計零件以 <a href="https://en.wikipedia.org/wiki/STL_(file_format)">STL</a> 格式輸出後, 套接在使用者所建構的機電資<a href="https://mde.tw/pjcopsim/content/scenes.html">場景</a>中. 意即: 使用者可以直接從 MCAD 套件中將組立檔案轉進具有 <a href="https://mde.tw/pjcopsim/content/joints.html">joints</a>、<a href="https://mde.tw/pjcopsim/content/cameras.html">Camera</a>、<a href="https://mde.tw/pjcopsim/content/visionSensors.html">Vision sensors</a>、<a href="https://mde.tw/pjcopsim/content/forceSensors.html">Force sensors</a>、<a href="https://mde.tw/pjcopsim/content/proximitySensors.html">Proximity sensors</a>與控制 <a href="https://mde.tw/pjcopsim/content/scripts.html">Scripts</a> 的模擬環境, 而無需全部採手動轉檔方式, 在 <a href="https://www.coppeliarobotics.com/">CoppeliaSim</a> 圖形介面中進行組立、設定參數或配接各項模擬元件樹狀架構.</p>
+<p>當使用者從 <a href="https://www.coppeliarobotics.com/">CoppeliaSim</a> 將<a href="https://mde.tw/pjcopsim/content/scenes.html">場景</a> 存為 exhaustive sinscent <a href="https://mde.tw/pjcopsim/content/xmlFormat.html">XML 檔案格式</a> 後, 可以利用下列 Python 程式讀出其中的標註 (總數超過 326 個), 之後再設法利用 <a href="https://www.leoeditor.com/">Leo Editor</a> 的 import-xml-tags data 設定解讀所有 tags 內容, 並以階層式架構呈現 :</p>
+<pre class="brush: python">
+# from https://stackoverflow.com/questions/29596584/getting-a-list-of-xml-tags-in-file-using-xml-etree-elementtree
+import xml.etree.ElementTree as ET
+
+def leo_print(x):
+    try:
+        print(x)
+    except:
+        g.es(x)
+
+# load and parse the file
+xmlTree = ET.parse('two_link_slvs_shaft_simple.simscene.xml')
+
+elemList = []
+
+for elem in xmlTree.iter():
+    elemList.append(elem.tag)
+
+# now I remove duplicities - by convertion to set and back to list
+elemList = list(set(elemList))
+
+# Just printing out the result
+try:
+    print(elemList)
+except:
+    # echo string
+    g.es(elemList)
+
+for i in elemList:
+    leo_print(i)
+</pre>
+
 <p><a href="https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/yen_gm_nfu_edu_tw/ESXbxhDmlUhBmPTUqAdTrLEBjvaqzZupKcgviAmxWGQdjQ">CoppeliaSimEdu_4.3.0_rev12.7z</a> (for @gm users only)</p>
             </section>
 

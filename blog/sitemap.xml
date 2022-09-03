@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://mde.tw/blog/</loc>
-<lastmod>2022-09-03T20:52:29-00:00</lastmod>
+<lastmod>2022-09-04T01:31:38-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://mde.tw/blog/archives.html</loc>
-<lastmod>2022-09-03T20:52:29-00:00</lastmod>
+<lastmod>2022-09-04T01:31:38-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://mde.tw/blog/tags.html</loc>
-<lastmod>2022-09-03T20:52:29-00:00</lastmod>
+<lastmod>2022-09-04T01:31:38-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://mde.tw/blog/categories.html</loc>
-<lastmod>2022-09-03T20:52:29-00:00</lastmod>
+<lastmod>2022-09-04T01:31:38-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -34,6 +34,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://mde.tw/blog/pages/about/</loc>
 <lastmod>2022-08-27T20:22:54+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://mde.tw/blog/about-classroom.html</loc>
+<lastmod>2022-09-04T01:31:04+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -186,6 +193,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>https://mde.tw/blog/category/github.html</loc>
+<lastmod>2022-09-04T01:31:04+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>https://mde.tw/blog/category/nx.html</loc>
 <lastmod>2022-09-03T20:42:43+08:06</lastmod>
 <changefreq>daily</changefreq>
@@ -202,6 +216,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://mde.tw/blog/category/windows.html</loc>
 <lastmod>2022-09-01T11:00:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://mde.tw/blog/tag/classroom.html</loc>
+<lastmod>2022-09-04T01:31:04+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -369,7 +390,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://mde.tw/blog/author/mdecycu.html</loc>
-<lastmod>2022-09-03T20:51:47+08:06</lastmod>
+<lastmod>2022-09-04T01:31:04+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

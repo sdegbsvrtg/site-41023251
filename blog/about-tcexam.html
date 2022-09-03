@@ -62,7 +62,7 @@
 <meta property="og:url" content="https://mde.tw/blog/about-tcexam.html"/>
 <meta property="og:type" content="article"/>
 <meta property="article:published_time" content="2022-09-01 12:00:00+08:00"/>
-<meta property="article:modified_time" content="2022-09-01 02:38:14.727810+08:00"/>
+<meta property="article:modified_time" content="2022-09-03 20:50:11.899119+08:00"/>
 <meta property="article:author" content="https://mde.tw/blog/author/mdecycu.html">
 <meta property="article:section" content="tcexam"/>
 <meta property="article:tag" content="exam"/>
@@ -80,7 +80,7 @@
   "name": "有關 TCExam",
   "headline": "有關 TCExam",
   "datePublished": "2022-09-01 12:00:00+08:00",
-  "dateModified": "2022-09-01 02:38:14.727810+08:00",
+  "dateModified": "2022-09-03 20:50:11.899119+08:00",
   "author": {
     "@type": "Person",
     "name": "mdecycu",
@@ -210,7 +210,7 @@ init_mathjax();
             | <time datetime="週四 01 九月 2022">週四 01 九月 2022</time>
         </span>
         <!-- TODO : Modified check -->
-            <span class="post-meta"> | Updated on 週四 01 九月 2022</span>
+            <span class="post-meta"> | Updated on 週六 03 九月 2022</span>
             <div class="post-cover cover" style="background-image: url('https://mde.tw/blog/theme/images/post-bg.jpg')">
       </div>
     </header>
@@ -265,33 +265,26 @@ server {
 <p>pgsql 以手動 start.bat 啟動, 設定檔案如下:</p>
 <pre class="brush: jscript">
 @echo off
-set /p DATA=<PGDATA.txt
+set /p DATA=&lt;PGDATA.txt
 cd %~dp0
 bin\postgres -V
 bin\pg_ctl -D %DATA% -l logfile.txt start
 </pre>
 
-其中的 PGDATA.txt 內容為 .\data, 表示資料庫內容存在 .\data 目錄中.
-
-一旦考試結束後, 以 stop.bat 關閉 pgsql:
-
+<p>其中的 PGDATA.txt 內容為 .\data, 表示資料庫內容存在 .\data 目錄中.</p>
+<p>一旦考試結束後, 以 stop.bat 關閉 pgsql:</p>
 <pre class="brush: jscript">
 @echo off
-set /p DATA=<PGDATA.txt
+set /p DATA=&lt;PGDATA.txt
 cd %~dp0
 bin\pg_ctl -D %DATA% -l logfile.txt stop
 </pre>
 
-TCExam 原始碼
-====
-
-由於目前所啟動的線上 TCExam 採用 2022.06.9 釋出的 PHP 8.1.7 版, 而 <https://github.com/tecnickcom/tcexam> 最近修改日期為 2021.08.05, 因此直接從 TCExam github 網站 clone 下來的原始碼無法在最新版的 PHP 解譯環境中執行.
-
-因此啟動修改 TCExam, 令其可以在 PHP 8.1.7 中執行, 且 pdf 轉檔的部分, 也自行建立中文字型, 以便正確將考試內容轉為中英並存的格式.
-
-目前尚未完成的設定為 send mail 的部分.
-
-總結上述說明, 要啟動 TCExam 考試系統, 必須確認 nginx 已經啟動, 然後手動執行 pgsql 目錄下的 start.bat, 並且注意 c:\certbot 目錄下有關 https 數位簽章每 90 天必須設法手動或自動更新.
+<h1>TCExam 原始碼</h1>
+<p>由於目前所啟動的線上 TCExam 採用 2022.06.9 釋出的 PHP 8.1.7 版, 而 <a href="https://github.com/tecnickcom/tcexam">https://github.com/tecnickcom/tcexam</a> 最近修改日期為 2021.08.05, 因此直接從 TCExam github 網站 clone 下來的原始碼無法在最新版的 PHP 解譯環境中執行.</p>
+<p>因此啟動修改 TCExam, 令其可以在 PHP 8.1.7 中執行, 且 pdf 轉檔的部分, 也自行建立中文字型, 以便正確將考試內容轉為中英並存的格式.</p>
+<p>目前尚未完成的設定為 send mail 的部分.</p>
+<p>總結上述說明, 要啟動 TCExam 考試系統, 必須確認 nginx 已經啟動, 然後手動執行 pgsql 目錄下的 start.bat, 並且注意 c:\certbot 目錄下有關 https 數位簽章每 90 天必須設法手動或自動更新.</p>
             </section>
 
             <section class="post-info">

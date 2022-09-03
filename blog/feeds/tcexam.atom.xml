@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Mde.tw - tcexam</title><link href="https://mde.tw/blog/" rel="alternate"></link><link href="https://mde.tw/blog/feeds/tcexam.atom.xml" rel="self"></link><id>https://mde.tw/blog/</id><updated>2022-09-01T12:00:00+08:00</updated><entry><title>有關 TCExam</title><link href="https://mde.tw/blog/about-tcexam.html" rel="alternate"></link><published>2022-09-01T12:00:00+08:00</published><updated>2022-09-01T02:38:14+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-09-01:/blog/about-tcexam.html</id><summary type="html">&lt;p&gt;這裡將收集與 TCExam 有關的資料內容.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Mde.tw - tcexam</title><link href="https://mde.tw/blog/" rel="alternate"></link><link href="https://mde.tw/blog/feeds/tcexam.atom.xml" rel="self"></link><id>https://mde.tw/blog/</id><updated>2022-09-03T20:50:11+08:00</updated><entry><title>有關 TCExam</title><link href="https://mde.tw/blog/about-tcexam.html" rel="alternate"></link><published>2022-09-01T12:00:00+08:00</published><updated>2022-09-03T20:50:11+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-09-01:/blog/about-tcexam.html</id><summary type="html">&lt;p&gt;這裡將收集與 TCExam 有關的資料內容.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;這裡將收集與 TCExam 有關的資料內容.&lt;/p&gt;
 
 
@@ -35,30 +35,23 @@ server {
 &lt;p&gt;pgsql 以手動 start.bat 啟動, 設定檔案如下:&lt;/p&gt;
 &lt;pre class="brush: jscript"&gt;
 @echo off
-set /p DATA=&lt;PGDATA.txt
+set /p DATA=&amp;lt;PGDATA.txt
 cd %~dp0
 bin\postgres -V
 bin\pg_ctl -D %DATA% -l logfile.txt start
 &lt;/pre&gt;
 
-其中的 PGDATA.txt 內容為 .\data, 表示資料庫內容存在 .\data 目錄中.
-
-一旦考試結束後, 以 stop.bat 關閉 pgsql:
-
+&lt;p&gt;其中的 PGDATA.txt 內容為 .\data, 表示資料庫內容存在 .\data 目錄中.&lt;/p&gt;
+&lt;p&gt;一旦考試結束後, 以 stop.bat 關閉 pgsql:&lt;/p&gt;
 &lt;pre class="brush: jscript"&gt;
 @echo off
-set /p DATA=&lt;PGDATA.txt
+set /p DATA=&amp;lt;PGDATA.txt
 cd %~dp0
 bin\pg_ctl -D %DATA% -l logfile.txt stop
 &lt;/pre&gt;
 
-TCExam 原始碼
-====
-
-由於目前所啟動的線上 TCExam 採用 2022.06.9 釋出的 PHP 8.1.7 版, 而 &lt;https://github.com/tecnickcom/tcexam&gt; 最近修改日期為 2021.08.05, 因此直接從 TCExam github 網站 clone 下來的原始碼無法在最新版的 PHP 解譯環境中執行.
-
-因此啟動修改 TCExam, 令其可以在 PHP 8.1.7 中執行, 且 pdf 轉檔的部分, 也自行建立中文字型, 以便正確將考試內容轉為中英並存的格式.
-
-目前尚未完成的設定為 send mail 的部分.
-
-總結上述說明, 要啟動 TCExam 考試系統, 必須確認 nginx 已經啟動, 然後手動執行 pgsql 目錄下的 start.bat, 並且注意 c:\certbot 目錄下有關 https 數位簽章每 90 天必須設法手動或自動更新.</content><category term="tcexam"></category><category term="exam"></category><category term="php"></category><category term="pgsql"></category><category term="nginx"></category></entry></feed>
+&lt;h1&gt;TCExam 原始碼&lt;/h1&gt;
+&lt;p&gt;由於目前所啟動的線上 TCExam 採用 2022.06.9 釋出的 PHP 8.1.7 版, 而 &lt;a href="https://github.com/tecnickcom/tcexam"&gt;https://github.com/tecnickcom/tcexam&lt;/a&gt; 最近修改日期為 2021.08.05, 因此直接從 TCExam github 網站 clone 下來的原始碼無法在最新版的 PHP 解譯環境中執行.&lt;/p&gt;
+&lt;p&gt;因此啟動修改 TCExam, 令其可以在 PHP 8.1.7 中執行, 且 pdf 轉檔的部分, 也自行建立中文字型, 以便正確將考試內容轉為中英並存的格式.&lt;/p&gt;
+&lt;p&gt;目前尚未完成的設定為 send mail 的部分.&lt;/p&gt;
+&lt;p&gt;總結上述說明, 要啟動 TCExam 考試系統, 必須確認 nginx 已經啟動, 然後手動執行 pgsql 目錄下的 start.bat, 並且注意 c:\certbot 目錄下有關 https 數位簽章每 90 天必須設法手動或自動更新.&lt;/p&gt;</content><category term="tcexam"></category><category term="exam"></category><category term="php"></category><category term="pgsql"></category><category term="nginx"></category></entry></feed>

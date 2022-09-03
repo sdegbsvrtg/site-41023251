@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Mde.tw</title><link href="https://mde.tw/blog/" rel="alternate"></link><link href="https://mde.tw/blog/feeds/all.atom.xml" rel="self"></link><id>https://mde.tw/blog/</id><updated>2022-09-03T20:30:06+08:00</updated><entry><title>有關 NX</title><link href="https://mde.tw/blog/about-nx.html" rel="alternate"></link><published>2022-09-02T11:00:00+08:00</published><updated>2022-09-03T15:15:16+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-09-02:/blog/about-nx.html</id><summary type="html">&lt;p&gt;這裡將收集與 NX 有關的資料內容. Siemens NX 在 2022.09.01 釋出最新版本為 NX2206.4020, 幾乎同步釋出的 NX2027 最新版本則為 build 3401. cd2022 電腦輔助設計與實習將使用 NX2027.3401 可攜版本.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Mde.tw</title><link href="https://mde.tw/blog/" rel="alternate"></link><link href="https://mde.tw/blog/feeds/all.atom.xml" rel="self"></link><id>https://mde.tw/blog/</id><updated>2022-09-03T20:51:47+08:00</updated><entry><title>有關 NX</title><link href="https://mde.tw/blog/about-nx.html" rel="alternate"></link><published>2022-09-02T11:00:00+08:00</published><updated>2022-09-03T20:42:43+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-09-02:/blog/about-nx.html</id><summary type="html">&lt;p&gt;這裡將收集與 NX 有關的資料內容. Siemens NX 在 2022.09.01 釋出最新版本為 NX2206.4020, 幾乎同步釋出的 NX2027 最新版本則為 build 3401. cd2022 電腦輔助設計與實習將使用 NX2027.3401 可攜版本.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;這裡將收集與 NX 有關的資料內容. Siemens NX 在 2022.09.01 釋出最新版本為 NX2206.4020, 幾乎同步釋出的 NX2027 最新版本則為 build 3401. cd2022 電腦輔助設計與實習將使用 NX2027.3401 可攜版本.&lt;/p&gt;
 
 
@@ -49,8 +49,8 @@ total: 7.49 GB
 &lt;h1 id="portablenx"&gt;Portable NX&lt;/h1&gt;
 
 &lt;p&gt;在 Windows 10 配置可攜 NX2027.3401 程式, 需要:&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://github.com/Bioruebe/UniExtract2"&gt;https://github.com/Bioruebe/UniExtract2&lt;/a&gt;
-&lt;a href="https://github.com/wixtoolset/wix3/releases/tag/wix3112rtm"&gt;https://github.com/wixtoolset/wix3/releases/tag/wix3112rtm&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/Bioruebe/UniExtract2"&gt;https://github.com/Bioruebe/UniExtract2&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/wixtoolset/wix3/releases/tag/wix3112rtm"&gt;https://github.com/wixtoolset/wix3/releases/tag/wix3112rtm&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;等兩項工具, UniExtract2 用來解開 SiemensNX-2027_wntx64\nx\SiemensNX.msi, 以及 .msi, 而 wix 則用來解開 SiemensNX-2027_wntx64\nx\VC_redist.x64.exe, 指令為:&lt;/p&gt;
 &lt;p&gt;wix311-binaries\dark.exe vc_redist.x64.exe -x x64-extracted&lt;/p&gt;
 &lt;p&gt;表示要在 x64-extracted 目錄中取得 x64-extracted\AttachedContainer\packages\vcRuntimeMinimum_amd64\vc_runtimeMinimum_x64.msi 之後, 再利用 UniExtract2 解開所需的 dll 檔案後, 再放入 NXBIN 目錄.&lt;/p&gt;
@@ -162,7 +162,7 @@ total: 28.29 GB
 &lt;h1 id="nx2007doc"&gt;NX2007 Documentation&lt;/h1&gt;
 
 &lt;p&gt;2022.09 &lt;a href="https://support.sw.siemens.com/en-US/"&gt;https://support.sw.siemens.com/en-US/&lt;/a&gt; 只提供 NX2206 與 NX2007 的 Documentation, 這裡將採用 NX2007 的英文手冊.&lt;/p&gt;
-&lt;p&gt;下載 &lt;a href="https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/yen_gm_nfu_edu_tw/EU-fmibMpBZKg2ZiXmBlK-oBQj7wLV5YeMGI8rCI60NhmQ?e=EuxlyD"&gt;NX2007_documentation.7z&lt;/a&gt; (for @gm users only, 2.18 GB, 解開後 2.86 GB), 使用時執行 start_static.py 後, 以瀏覽器 http://localhost:7443 開啟.&lt;/p&gt;
+&lt;p&gt;下載 &lt;a href="https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/yen_gm_nfu_edu_tw/EU-fmibMpBZKg2ZiXmBlK-oBQj7wLV5YeMGI8rCI60NhmQ?e=EuxlyD"&gt;NX2007_documentation.7z&lt;/a&gt; (for @gm users only, 2.18 GB, 解開後 2.86 GB), 使用時執行 start_static.py 後, 以瀏覽器 http://localhost:7443 開啟. 也可以透過 &lt;a href="http://c1.cycu.org:88"&gt;http://c1.cycu.org:88&lt;/a&gt; 查看內容.&lt;/p&gt;
 &lt;p&gt;線上 &lt;a href="https://docs.sw.siemens.com/en-US/release/209349590/NX%202007%20Series"&gt;NX2007 EN Documentation&lt;/a&gt;&lt;/p&gt;</content><category term="NX"></category><category term="Siemens"></category></entry><entry><title>cp2022_w1</title><link href="https://mde.tw/blog/cp2022-w1.html" rel="alternate"></link><published>2022-09-01T13:00:00+08:00</published><updated>2022-09-02T00:01:57+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-09-01:/blog/cp2022-w1.html</id><summary type="html">&lt;p&gt;計算機程式課程第一週, 只有 1b 有課, 1a 因為中秋節放假.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;計算機程式課程第一週, 只有 1b 有課, 1a 因為中秋節放假.&lt;/p&gt;
 
@@ -178,7 +178,7 @@ total: 28.29 GB
 &lt;p&gt;上計算機程式課程時, 當使用瀏覽器與執行 git 指令時, 該如何正確設定網路協定?&lt;/p&gt;
 &lt;h1 id="learnbrython"&gt;線上學習 Brython&lt;/h1&gt;
 
-&lt;p&gt;當你完成電腦輔助設計室中的&lt;a href="https://mde.tw/blog/2022-Fall-Intro-to-computer-programming.html#networksetup"&gt;網路設定&lt;/a&gt;後, 就可以利用瀏覽器連線到&lt;a href="https://mde.tw/content/Python.html"&gt;這裡&lt;/a&gt;, 直接在線上學習 &lt;a href="https://brython.info/"&gt;Brython&lt;/a&gt;.&lt;/p&gt;</content><category term="cp2022"></category><category term="w1"></category><category term="portable python"></category><category term="計算機程式"></category></entry><entry><title>有關 TCExam</title><link href="https://mde.tw/blog/about-tcexam.html" rel="alternate"></link><published>2022-09-01T12:00:00+08:00</published><updated>2022-09-01T02:38:14+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-09-01:/blog/about-tcexam.html</id><summary type="html">&lt;p&gt;這裡將收集與 TCExam 有關的資料內容.&lt;/p&gt;
+&lt;p&gt;當你完成電腦輔助設計室中的&lt;a href="https://mde.tw/blog/2022-Fall-Intro-to-computer-programming.html#networksetup"&gt;網路設定&lt;/a&gt;後, 就可以利用瀏覽器連線到&lt;a href="https://mde.tw/content/Python.html"&gt;這裡&lt;/a&gt;, 直接在線上學習 &lt;a href="https://brython.info/"&gt;Brython&lt;/a&gt;.&lt;/p&gt;</content><category term="cp2022"></category><category term="w1"></category><category term="portable python"></category><category term="計算機程式"></category></entry><entry><title>有關 TCExam</title><link href="https://mde.tw/blog/about-tcexam.html" rel="alternate"></link><published>2022-09-01T12:00:00+08:00</published><updated>2022-09-03T20:50:11+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-09-01:/blog/about-tcexam.html</id><summary type="html">&lt;p&gt;這裡將收集與 TCExam 有關的資料內容.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;這裡將收集與 TCExam 有關的資料內容.&lt;/p&gt;
 
 
@@ -214,33 +214,26 @@ server {
 &lt;p&gt;pgsql 以手動 start.bat 啟動, 設定檔案如下:&lt;/p&gt;
 &lt;pre class="brush: jscript"&gt;
 @echo off
-set /p DATA=&lt;PGDATA.txt
+set /p DATA=&amp;lt;PGDATA.txt
 cd %~dp0
 bin\postgres -V
 bin\pg_ctl -D %DATA% -l logfile.txt start
 &lt;/pre&gt;
 
-其中的 PGDATA.txt 內容為 .\data, 表示資料庫內容存在 .\data 目錄中.
-
-一旦考試結束後, 以 stop.bat 關閉 pgsql:
-
+&lt;p&gt;其中的 PGDATA.txt 內容為 .\data, 表示資料庫內容存在 .\data 目錄中.&lt;/p&gt;
+&lt;p&gt;一旦考試結束後, 以 stop.bat 關閉 pgsql:&lt;/p&gt;
 &lt;pre class="brush: jscript"&gt;
 @echo off
-set /p DATA=&lt;PGDATA.txt
+set /p DATA=&amp;lt;PGDATA.txt
 cd %~dp0
 bin\pg_ctl -D %DATA% -l logfile.txt stop
 &lt;/pre&gt;
 
-TCExam 原始碼
-====
-
-由於目前所啟動的線上 TCExam 採用 2022.06.9 釋出的 PHP 8.1.7 版, 而 &lt;https://github.com/tecnickcom/tcexam&gt; 最近修改日期為 2021.08.05, 因此直接從 TCExam github 網站 clone 下來的原始碼無法在最新版的 PHP 解譯環境中執行.
-
-因此啟動修改 TCExam, 令其可以在 PHP 8.1.7 中執行, 且 pdf 轉檔的部分, 也自行建立中文字型, 以便正確將考試內容轉為中英並存的格式.
-
-目前尚未完成的設定為 send mail 的部分.
-
-總結上述說明, 要啟動 TCExam 考試系統, 必須確認 nginx 已經啟動, 然後手動執行 pgsql 目錄下的 start.bat, 並且注意 c:\certbot 目錄下有關 https 數位簽章每 90 天必須設法手動或自動更新.</content><category term="tcexam"></category><category term="exam"></category><category term="php"></category><category term="pgsql"></category><category term="nginx"></category></entry><entry><title>Windows 常用指令</title><link href="https://mde.tw/blog/useful-windows-commands.html" rel="alternate"></link><published>2022-09-01T11:00:00+08:00</published><updated>2022-09-01T02:10:52+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-09-01:/blog/useful-windows-commands.html</id><summary type="html">&lt;p&gt;根據使用情境將常用的 Windows 指令加以整理.&lt;/p&gt;
+&lt;h1&gt;TCExam 原始碼&lt;/h1&gt;
+&lt;p&gt;由於目前所啟動的線上 TCExam 採用 2022.06.9 釋出的 PHP 8.1.7 版, 而 &lt;a href="https://github.com/tecnickcom/tcexam"&gt;https://github.com/tecnickcom/tcexam&lt;/a&gt; 最近修改日期為 2021.08.05, 因此直接從 TCExam github 網站 clone 下來的原始碼無法在最新版的 PHP 解譯環境中執行.&lt;/p&gt;
+&lt;p&gt;因此啟動修改 TCExam, 令其可以在 PHP 8.1.7 中執行, 且 pdf 轉檔的部分, 也自行建立中文字型, 以便正確將考試內容轉為中英並存的格式.&lt;/p&gt;
+&lt;p&gt;目前尚未完成的設定為 send mail 的部分.&lt;/p&gt;
+&lt;p&gt;總結上述說明, 要啟動 TCExam 考試系統, 必須確認 nginx 已經啟動, 然後手動執行 pgsql 目錄下的 start.bat, 並且注意 c:\certbot 目錄下有關 https 數位簽章每 90 天必須設法手動或自動更新.&lt;/p&gt;</content><category term="tcexam"></category><category term="exam"></category><category term="php"></category><category term="pgsql"></category><category term="nginx"></category></entry><entry><title>Windows 常用指令</title><link href="https://mde.tw/blog/useful-windows-commands.html" rel="alternate"></link><published>2022-09-01T11:00:00+08:00</published><updated>2022-09-01T02:10:52+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-09-01:/blog/useful-windows-commands.html</id><summary type="html">&lt;p&gt;根據使用情境將常用的 Windows 指令加以整理.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;根據使用情境將常用的 Windows 指令加以整理.&lt;/p&gt;
 
 
@@ -267,7 +260,7 @@ TCExam 原始碼
 &lt;h1&gt;submodule add&lt;/h1&gt;
 &lt;p&gt;git submodule add 隨後要加入 URL 指向某一倉儲, 表示要將該倉儲設為子模組, 然後指令還要再加上該子模組連結的對應代號.&lt;/p&gt;
 &lt;p&gt;git submodule add https://github.com/mdecycu/cmsimde.git cmsimde&lt;/p&gt;
-&lt;p&gt;表示要將 cmsimde 倉儲設為子模組, 且放入 cmsimde 目錄中.&lt;/p&gt;</content><category term="git"></category><category term="remote-add"></category><category term="recurse-submodules"></category></entry><entry><title>有關 Fossil SCM</title><link href="https://mde.tw/blog/about-fossil-scm.html" rel="alternate"></link><published>2022-08-27T13:00:00+08:00</published><updated>2022-08-27T23:39:56+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-08-27:/blog/about-fossil-scm.html</id><summary type="html">&lt;p&gt;&lt;a href="https://www.fossil-scm.org"&gt;Fossil SCM&lt;/a&gt; 是一套 Software Configuration Management 套件, 專門用於 &lt;a href="https://sqlite.org"&gt;SQLite&lt;/a&gt; 的原始碼管理.&lt;/p&gt;
+&lt;p&gt;表示要將 cmsimde 倉儲設為子模組, 且放入 cmsimde 目錄中.&lt;/p&gt;</content><category term="git"></category><category term="remote-add"></category><category term="recurse-submodules"></category></entry><entry><title>有關 Fossil SCM</title><link href="https://mde.tw/blog/about-fossil-scm.html" rel="alternate"></link><published>2022-08-27T13:00:00+08:00</published><updated>2022-09-03T20:51:47+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-08-27:/blog/about-fossil-scm.html</id><summary type="html">&lt;p&gt;&lt;a href="https://www.fossil-scm.org"&gt;Fossil SCM&lt;/a&gt; 是一套 Software Configuration Management 套件, 專門用於 &lt;a href="https://sqlite.org"&gt;SQLite&lt;/a&gt; 的原始碼管理.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;&lt;a href="https://www.fossil-scm.org"&gt;Fossil SCM&lt;/a&gt; 是一套 Software Configuration Management 套件, 專門用於 &lt;a href="https://sqlite.org"&gt;SQLite&lt;/a&gt; 的原始碼管理.&lt;/p&gt;
 
 
@@ -282,8 +275,8 @@ TCExam 原始碼
 &lt;p&gt;表示要將位於 fossil.kmol.info 主機上的 repository 倉儲, 以 https 協定 clone 至近端且存為 repository.fossil&lt;/p&gt;
 &lt;p&gt;以一位於近端檔案架構的 repository.fossil 本身會帶有管理者的密碼設定, 而此一管理者帳號下對應的 local password 與 remote passwors 分屬於兩個不同的 repository.fossil, 當使用者要將近端改版資料推向遠端時, 依據的是遠端的管理者 passwors, 而近端的管理者密碼則在近端倉儲以 fossil web 進行網際啟動時之用. 換言之, 各個 Fossil SCM 倉儲壓縮檔案內所儲存的管理者帳號密碼, 主針對下游啟動服務時採用.&lt;/p&gt;
 &lt;p&gt;至於在工作目錄下倉儲資料檔案中的改版資料, 一旦新增提交推送後, 不僅會將版本更新資料註記在近端對應的 .fossil 檔案中, 也會推向遠端對應的 .fossil 倉儲檔案.&lt;/p&gt;
-&lt;p&gt;Fossil SCM project documentation: &lt;a href="https://www.fossil-scm.org/home/doc/trunk/www/embeddeddoc.wiki"&gt;https://www.fossil-scm.org/home/doc/trunk/www/embeddeddoc.wiki&lt;/a&gt;
-Fossil SCM unversioned content: &lt;a href="https://www.fossil-scm.org/home/doc/trunk/www/unvers.wiki"&gt;https://www.fossil-scm.org/home/doc/trunk/www/unvers.wiki&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Fossil SCM project documentation: &lt;a href="https://www.fossil-scm.org/home/doc/trunk/www/embeddeddoc.wiki"&gt;https://www.fossil-scm.org/home/doc/trunk/www/embeddeddoc.wiki&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Fossil SCM unversioned content: &lt;a href="https://www.fossil-scm.org/home/doc/trunk/www/unvers.wiki"&gt;https://www.fossil-scm.org/home/doc/trunk/www/unvers.wiki&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;在 Fossil SCM 倉儲中, 所謂的 unversioned content 指在改版紀錄中沒有保留改版資料的檔案, 倉儲中的 unversioned 內容只保留最新的版本, 且可以透過網際 /uvlist 列出無改版歷程的檔案列表, 並能透過網際 /uv/檔案名稱 進行下載.&lt;/p&gt;
 &lt;p&gt;Fossil SCM 中的帳號必須具備 y capabilities 的權限才能 fossil uv sync -v 對倉儲中先前所加入的無版本檔案送到倉儲資料中.&lt;/p&gt;
 &lt;p&gt;Fossil SCM 中的帳號最高管理者必須具備 s capabilities (setup 權限).&lt;/p&gt;
@@ -818,7 +811,7 @@ Disable-NetAdapterBinding -Name "*" -ComponentID ms_tcpip
 &lt;p&gt;Python is a high-level, interpreted, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation.&lt;/p&gt;
 &lt;p&gt;Python is dynamically-typed and garbage-collected. It supports multiple programming paradigms, including structured (particularly procedural), object-oriented and functional programming. It is often described as a "batteries included" language due to its comprehensive standard library.&lt;/p&gt;
 &lt;p&gt;Guido van Rossum began working on Python in the late 1980s as a successor to the ABC programming language and first released it in 1991 as Python 0.9.0. Python 2.0 was released in 2000 and introduced new features such as list comprehensions, cycle-detecting garbage collection, reference counting, and Unicode support. Python 3.0, released in 2008, was a major revision that is not completely backward-compatible with earlier versions. Python 2 was discontinued with version 2.7.18 in 2020.&lt;/p&gt;
-&lt;p&gt;Python consistently ranks as one of the most popular programming languages.&lt;/p&gt;</content><category term="cp2022"></category><category term="cp2022-Syllabus"></category><category term="計算機程式"></category></entry><entry><title>2022 Fall CAD 課程</title><link href="https://mde.tw/blog/2022-Fall-computer-aided-design-and-practices.html" rel="alternate"></link><published>2022-08-14T11:00:00+08:00</published><updated>2022-09-03T20:30:06+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-08-14:/blog/2022-Fall-computer-aided-design-and-practices.html</id><summary type="html">&lt;p&gt;2022 Fall 電腦輔助設計與實習的教學主要介紹 NX 與 CoppeliaSim 在機械設計流程中的應用.&lt;/p&gt;
+&lt;p&gt;Python consistently ranks as one of the most popular programming languages.&lt;/p&gt;</content><category term="cp2022"></category><category term="cp2022-Syllabus"></category><category term="計算機程式"></category></entry><entry><title>2022 Fall CAD 課程</title><link href="https://mde.tw/blog/2022-Fall-computer-aided-design-and-practices.html" rel="alternate"></link><published>2022-08-14T11:00:00+08:00</published><updated>2022-09-03T20:36:49+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-08-14:/blog/2022-Fall-computer-aided-design-and-practices.html</id><summary type="html">&lt;p&gt;2022 Fall 電腦輔助設計與實習的教學主要介紹 NX 與 CoppeliaSim 在機械設計流程中的應用.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;2022 Fall 電腦輔助設計與實習的教學主要介紹 NX 與 CoppeliaSim 在機械設計流程中的應用.&lt;/p&gt;
 
 
@@ -834,13 +827,12 @@ Disable-NetAdapterBinding -Name "*" -ComponentID ms_tcpip
 &lt;p&gt;下載 &lt;a href="https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/yen_gm_nfu_edu_tw/EU-fmibMpBZKg2ZiXmBlK-oBQj7wLV5YeMGI8rCI60NhmQ?e=EuxlyD"&gt;NX2007_documentation.7z&lt;/a&gt; (for @gm users only, 2.18 GB, 解開後 2.86 GB), 使用時執行 start_static.py 後, 以瀏覽器 http://localhost:7443 開啟, 或直接在 &lt;a href="http://c1.cycu.org:88"&gt;http://c1.cycu.org:88&lt;/a&gt; 開啟.&lt;/p&gt;
 &lt;p&gt;線上 &lt;a href="https://docs.sw.siemens.com/en-US/release/209349590/NX%202007%20Series"&gt;NX2007 EN Documentation&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;NX 零組件練習&lt;/h2&gt;
-&lt;p&gt;請參考 &lt;a href="http://c1.cycu.org:88/static/design_day_one/index.html"&gt;Design Day One&lt;/a&gt; 資料, 並根據以 &lt;a href="http://www.ap242.org/"&gt;STEP 242&lt;/a&gt; 格式轉入 NX2027 之 [Drill Press 零組件檔案]各零件尺寸, 重新繪製各零組件, 過程請以 &lt;a href="https://www.debugmode.com/wink/"&gt;Wink3&lt;/a&gt; 影片錄製繪圖步驟並加入說明文字內容.&lt;/p&gt;
+&lt;p&gt;請參考 &lt;a href="http://c1.cycu.org:88/static/design_day_one/index.html"&gt;Design Day One&lt;/a&gt; 資料, 並根據以 &lt;a href="http://www.ap242.org/"&gt;STEP 242&lt;/a&gt; 格式轉入 NX2027 之 &lt;a href="https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/yen_gm_nfu_edu_tw/EZO40xkPvQlOlZ1hayUaCFIBVSmv7wOZ2_WQHadb5k-PVA"&gt;Drill Press 零組件檔案&lt;/a&gt;各零件尺寸, 重新繪製各零組件, 過程請以 &lt;a href="https://www.debugmode.com/wink/"&gt;Wink3&lt;/a&gt; 影片錄製繪圖步驟並加入說明文字內容.&lt;/p&gt;
 &lt;p&gt;&lt;img src="./../images/drill_press.png" width="600"&gt;&lt;/img&gt;&lt;/p&gt;
 &lt;p&gt;以 &lt;a href="https://www.onshape.com"&gt;Onshape&lt;/a&gt; 建立 &lt;a href="https://cad.onshape.com/documents/f942bc02bd60de603095cd9d/w/e3af941ed5245875e39138d0/e/af657625f78911e9e727c91a?renderMode=0&amp;amp;uiState=630373bdbf13ba67fd289e74"&gt;Foosball Table 零組件&lt;/a&gt;, &lt;a href="https://cad.onshape.com/documents/0c152a911938d7352961b194/w/be224609ad39a35fc1439f95/e/a88aca1714001e9f86f16e49?renderMode=0&amp;amp;uiState=630374f7bf13ba67fd28a339"&gt;Foosball Table&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;以 &lt;a href="https://solvespace.com"&gt;Solvespace&lt;/a&gt; (含套件編譯) 建立 Foosball Table 零組件.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://link.springer.com/book/10.1007/978-3-658-29589-9"&gt;Siemens NX for beginners – in a nutshell&lt;/a&gt; (in German) &lt;a href="https://storage.googleapis.com/sgw-extras/zip/2020/978-3-658-29589-9.zip"&gt;Extra Materials&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://link.springer.com/book/10.1007/978-3-658-31561-0"&gt;Siemens NX for advanced users - in a nutshell&lt;/a&gt; (in German) &lt;a href="https://storage.googleapis.com/sgw-extras/zip/2020/978-3-658-31561-0.zip"&gt;Extra Materials&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;[Drill Press 零組件檔案] : https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/yen_gm_nfu_edu_tw/EZO40xkPvQlOlZ1hayUaCFIBVSmv7wOZ2_WQHadb5k-PVA&lt;/p&gt;
 &lt;h1&gt;機電模擬&lt;/h1&gt;
 &lt;p&gt;Robotic Simulator 部分將利用 &lt;a href="https://www.coppeliarobotics.com/"&gt;CoppeliaSim&lt;/a&gt; 4.3.0 rev12 建立 &lt;a href="https://cad.onshape.com/documents/0c152a911938d7352961b194/w/be224609ad39a35fc1439f95/e/a88aca1714001e9f86f16e49?renderMode=0&amp;amp;uiState=630374f7bf13ba67fd28a339"&gt;Foosball Table&lt;/a&gt; 模擬場景.&lt;/p&gt;
 &lt;p&gt;下載 &lt;a href="https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/yen_gm_nfu_edu_tw/ESXbxhDmlUhBmPTUqAdTrLEBjvaqzZupKcgviAmxWGQdjQ"&gt;CoppeliaSim 4.3.0 rev12.7z&lt;/a&gt; (for @gm users only)&lt;/p&gt;

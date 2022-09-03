@@ -48,7 +48,7 @@ pgsql 以手動 start.bat 啟動, 設定檔案如下:
 
 <pre class="brush: jscript">
 @echo off
-set /p DATA=<PGDATA.txt
+set /p DATA=&lt;PGDATA.txt
 cd %~dp0
 bin\postgres -V
 bin\pg_ctl -D %DATA% -l logfile.txt start
@@ -60,7 +60,7 @@ bin\pg_ctl -D %DATA% -l logfile.txt start
 
 <pre class="brush: jscript">
 @echo off
-set /p DATA=<PGDATA.txt
+set /p DATA=&lt;PGDATA.txt
 cd %~dp0
 bin\pg_ctl -D %DATA% -l logfile.txt stop
 </pre>

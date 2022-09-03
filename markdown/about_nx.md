@@ -71,6 +71,7 @@ SHA512 hash: f180a6c97b9599af0bc6068d344eeb8ea065f79648f64fea9c782fd41e00e430e04
 在 Windows 10 配置可攜 NX2027.3401 程式, 需要:
 
 <https://github.com/Bioruebe/UniExtract2>
+
 <https://github.com/wixtoolset/wix3/releases/tag/wix3112rtm>
 
 等兩項工具, UniExtract2 用來解開 SiemensNX-2027_wntx64\nx\SiemensNX.msi, 以及 .msi, 而 wix 則用來解開 SiemensNX-2027_wntx64\nx\VC_redist.x64.exe, 指令為:
@@ -202,7 +203,7 @@ total: 28.29 GB
 
 2022.09 <https://support.sw.siemens.com/en-US/> 只提供 NX2206 與 NX2007 的 Documentation, 這裡將採用 NX2007 的英文手冊.
 
-下載 [NX2007_documentation.7z] (for @gm users only, 2.18 GB, 解開後 2.86 GB), 使用時執行 start_static.py 後, 以瀏覽器 http://localhost:7443 開啟.
+下載 [NX2007_documentation.7z] (for @gm users only, 2.18 GB, 解開後 2.86 GB), 使用時執行 start_static.py 後, 以瀏覽器 http://localhost:7443 開啟. 也可以透過 <http://c1.cycu.org:88> 查看內容.
 
 線上 [NX2007 EN Documentation]
 

@@ -1066,7 +1066,7 @@ pgsql 以手動 start.bat 啟動, 設定檔案如下:
 
 &lt;pre class="brush: jscript"&gt;
 @echo off
-set /p DATA=&lt;PGDATA.txt
+set /p DATA=&amp;lt;PGDATA.txt
 cd %~dp0
 bin\postgres -V
 bin\pg_ctl -D %DATA% -l logfile.txt start
@@ -1078,7 +1078,7 @@ bin\pg_ctl -D %DATA% -l logfile.txt start
 
 &lt;pre class="brush: jscript"&gt;
 @echo off
-set /p DATA=&lt;PGDATA.txt
+set /p DATA=&amp;lt;PGDATA.txt
 cd %~dp0
 bin\pg_ctl -D %DATA% -l logfile.txt stop
 &lt;/pre&gt;
@@ -1217,6 +1217,7 @@ SHA512 hash: f180a6c97b9599af0bc6068d344eeb8ea065f79648f64fea9c782fd41e00e430e04
 在 Windows 10 配置可攜 NX2027.3401 程式, 需要:
 
 &lt;https://github.com/Bioruebe/UniExtract2&gt;
+
 &lt;https://github.com/wixtoolset/wix3/releases/tag/wix3112rtm&gt;
 
 等兩項工具, UniExtract2 用來解開 SiemensNX-2027_wntx64\nx\SiemensNX.msi, 以及 .msi, 而 wix 則用來解開 SiemensNX-2027_wntx64\nx\VC_redist.x64.exe, 指令為:
@@ -1348,7 +1349,7 @@ total: 28.29 GB
 
 2022.09 &lt;https://support.sw.siemens.com/en-US/&gt; 只提供 NX2206 與 NX2007 的 Documentation, 這裡將採用 NX2007 的英文手冊.
 
-下載 [NX2007_documentation.7z] (for @gm users only, 2.18 GB, 解開後 2.86 GB), 使用時執行 start_static.py 後, 以瀏覽器 http://localhost:7443 開啟.
+下載 [NX2007_documentation.7z] (for @gm users only, 2.18 GB, 解開後 2.86 GB), 使用時執行 start_static.py 後, 以瀏覽器 http://localhost:7443 開啟. 也可以透過 &lt;http://c1.cycu.org:88&gt; 查看內容.
 
 線上 [NX2007 EN Documentation]
 

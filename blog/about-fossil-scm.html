@@ -60,7 +60,7 @@
 <meta property="og:url" content="https://mde.tw/blog/about-fossil-scm.html"/>
 <meta property="og:type" content="article"/>
 <meta property="article:published_time" content="2022-08-27 13:00:00+08:00"/>
-<meta property="article:modified_time" content="2022-08-27 23:39:56.402085+08:00"/>
+<meta property="article:modified_time" content="2022-09-03 20:51:47.310318+08:00"/>
 <meta property="article:author" content="https://mde.tw/blog/author/mdecycu.html">
 <meta property="article:section" content="fossil-scm"/>
 <meta property="article:tag" content="repository"/>
@@ -76,7 +76,7 @@
   "name": "有關 Fossil SCM",
   "headline": "有關 Fossil SCM",
   "datePublished": "2022-08-27 13:00:00+08:00",
-  "dateModified": "2022-08-27 23:39:56.402085+08:00",
+  "dateModified": "2022-09-03 20:51:47.310318+08:00",
   "author": {
     "@type": "Person",
     "name": "mdecycu",
@@ -206,7 +206,7 @@ init_mathjax();
             | <time datetime="週六 27 八月 2022">週六 27 八月 2022</time>
         </span>
         <!-- TODO : Modified check -->
-            <span class="post-meta"> | Updated on 週六 27 八月 2022</span>
+            <span class="post-meta"> | Updated on 週六 03 九月 2022</span>
             <div class="post-cover cover" style="background-image: url('https://mde.tw/blog/theme/images/post-bg.jpg')">
       </div>
     </header>
@@ -240,8 +240,8 @@ init_mathjax();
 <p>表示要將位於 fossil.kmol.info 主機上的 repository 倉儲, 以 https 協定 clone 至近端且存為 repository.fossil</p>
 <p>以一位於近端檔案架構的 repository.fossil 本身會帶有管理者的密碼設定, 而此一管理者帳號下對應的 local password 與 remote passwors 分屬於兩個不同的 repository.fossil, 當使用者要將近端改版資料推向遠端時, 依據的是遠端的管理者 passwors, 而近端的管理者密碼則在近端倉儲以 fossil web 進行網際啟動時之用. 換言之, 各個 Fossil SCM 倉儲壓縮檔案內所儲存的管理者帳號密碼, 主針對下游啟動服務時採用.</p>
 <p>至於在工作目錄下倉儲資料檔案中的改版資料, 一旦新增提交推送後, 不僅會將版本更新資料註記在近端對應的 .fossil 檔案中, 也會推向遠端對應的 .fossil 倉儲檔案.</p>
-<p>Fossil SCM project documentation: <a href="https://www.fossil-scm.org/home/doc/trunk/www/embeddeddoc.wiki">https://www.fossil-scm.org/home/doc/trunk/www/embeddeddoc.wiki</a>
-Fossil SCM unversioned content: <a href="https://www.fossil-scm.org/home/doc/trunk/www/unvers.wiki">https://www.fossil-scm.org/home/doc/trunk/www/unvers.wiki</a></p>
+<p>Fossil SCM project documentation: <a href="https://www.fossil-scm.org/home/doc/trunk/www/embeddeddoc.wiki">https://www.fossil-scm.org/home/doc/trunk/www/embeddeddoc.wiki</a></p>
+<p>Fossil SCM unversioned content: <a href="https://www.fossil-scm.org/home/doc/trunk/www/unvers.wiki">https://www.fossil-scm.org/home/doc/trunk/www/unvers.wiki</a></p>
 <p>在 Fossil SCM 倉儲中, 所謂的 unversioned content 指在改版紀錄中沒有保留改版資料的檔案, 倉儲中的 unversioned 內容只保留最新的版本, 且可以透過網際 /uvlist 列出無改版歷程的檔案列表, 並能透過網際 /uv/檔案名稱 進行下載.</p>
 <p>Fossil SCM 中的帳號必須具備 y capabilities 的權限才能 fossil uv sync -v 對倉儲中先前所加入的無版本檔案送到倉儲資料中.</p>
 <p>Fossil SCM 中的帳號最高管理者必須具備 s capabilities (setup 權限).</p>

@@ -26,31 +26,32 @@ set UGII_TMP_DIR=%cd%\Temp\
 NX 繪圖與組立
 ----
 
-基本的 NX 繪圖與組立, 只需要下列目錄:
+基本的 NX2027.3401 繪圖與組立, 只需要下列目錄:
 
 <pre class="brush: jscript">
-DESIGNSPACEEXPLORER
-DESIGN_TOOLS
-DIAGRAMCORE
-DIAGRAMMING
-DRAFTING
-DXFDWG
-IGES
-INSTALL
-MECHATRONICS
-NXASSEMBLY
-NXBIN
-NXPARTS
-STEP203UG
-STEP214UG
-Temp
-TRANSLATORS
-UGFLEXLM
-UGII
-UGMANAGER
-UGOPEN
-UGOPENPP
-UNFOLD
+DESIGNSPACEEXPLORER : 7.31 KB
+DESIGN_TOOLS : 275.8 MB
+DIAGRAMCORE : 5.81 MB
+DIAGRAMMING : 64.65 MB
+DRAFTING : 123.65 MB
+DXFDWG : 206.79 MB
+IGES : 5.2 MB
+INSTALL : 55.55 KB
+MECHATRONICS : 212.81 MB
+NXASSEMBLY : 120.98 MB
+NXBIN : 5.07 GB
+NXPARTS : 53.76 MB
+STEP203UG : 1.28 MB
+STEP214UG : 1.27 MB
+temp : 0B
+TRANSLATORS : 157.87 MB
+UGFLEXLM : 29.4 MB
+UGII : 677.93 MB
+UGMANAGER : 117.29 MB
+UGOPEN : 425.32 MB
+UGOPENPP : 567.28 KB
+UNFOLD : 71.92 KB
+total: 7.49 GB
 </pre>
 
 <h1 id="siemenssupportcenter">Siemens Support Center</h1>
@@ -67,18 +68,20 @@ SHA512 hash: f180a6c97b9599af0bc6068d344eeb8ea065f79648f64fea9c782fd41e00e430e04
 
 <h1 id="portablenx">Portable NX</h1>
 
-在 Windows 10 配置可攜 NX2207.3401 程式, 需要:
+在 Windows 10 配置可攜 NX2027.3401 程式, 需要:
 
-    <https://github.com/Bioruebe/UniExtract2>
-    <https://github.com/wixtoolset/wix3/releases/tag/wix3112rtm>
+<https://github.com/Bioruebe/UniExtract2>
+<https://github.com/wixtoolset/wix3/releases/tag/wix3112rtm>
 
-等兩項工具, UniExtract2 用來解開 SiemensNX-2207_wntx64\nx\SiemensNX.msi, 以及 .msi, 而 wix 則用來解開 SiemensNX-2207_wntx64\nx\VC_redist.x64.exe, 指令為:
+等兩項工具, UniExtract2 用來解開 SiemensNX-2027_wntx64\nx\SiemensNX.msi, 以及 .msi, 而 wix 則用來解開 SiemensNX-2027_wntx64\nx\VC_redist.x64.exe, 指令為:
 
 wix311-binaries\dark.exe vc_redist.x64.exe -x x64-extracted
 
 表示要在 x64-extracted 目錄中取得 x64-extracted\AttachedContainer\packages\vcRuntimeMinimum_amd64\vc_runtimeMinimum_x64.msi 之後, 再利用 UniExtract2 解開所需的 dll 檔案後, 再放入 NXBIN 目錄.
 
 製作 Portable NX2207 的步驟請參考以下影片(以 NX1980 為例):
+
+解開 SiemensNX.msi 合計得到 151803 個檔案, 而將 VC_redist.x64.exe 解開後的 52 個 dll 檔案放入 NXBIN 目錄中.
 
 <script>
 var winkVideoData = {
@@ -95,6 +98,108 @@ var winkVideoData = {
 <div class="winkVideoContainerClass"><video autoplay="autoplay" class="winkVideoClass" controls="controls" data-dirname="./../cmsimde/static" data-varname="winkVideoData" height="630" muted="true" width="1008">
 <source src="./../downloads/w5_portable_nx1980.mp4" type="video/mp4"/></video></div>
 <br />
+
+完成 NX2027.3401 可攜系統製作後, 各目錄檔案容量如下:
+
+<pre class="brush: jscript">
+AUTOMATED_TESTING : 1.52 MB
+AUTOMATION_DESIGNER : 254.08 MB
+CAPITALINTEGRATION : 2.04 MB
+CATIAV5 : 784.01 KB
+CLOUDDM : 31.07 KB
+CMM_INSPECTION : 143.31 MB
+DESIGNSPACEEXPLORER : 7.31 KB
+DESIGN_TOOLS : 275.8 MB
+DIAGRAMCORE : 5.81 MB
+DIAGRAMMING : 64.65 MB
+DRAFTING : 123.65 MB
+DXFDWG : 206.79 MB
+IGES : 5.2 MB
+INSTALL : 55.55 KB
+LOCALIZATION : 1.09 GB
+MACH : 1.96 GB
+MANUFACTURING_PLANNING : 141.66 MB
+MBD : 54.05 MB
+MECH : 793.28 MB
+MECHATRONICS : 212.81 MB
+MENDIXREPORTING : 1.04 MB
+MOLDCOOLING : 12.28 KB
+MOLDWIZARD : 226.71 MB
+MPA : 1.5 MB
+NXAECDESIGN : 15.48 KB
+NXASSEMBLY : 120.98 MB
+NXBIN : 5.04 GB
+NXCABLEROUTER : 190.45 KB
+NXCAE_EXTRAS : 2.36 GB
+NXCOATINGS : 645.3 KB
+NXCREO : 6.17 MB
+NXHUMAN : 247.51 MB
+NXJOIN : 16.38 MB
+NXNASTRAN : 2.93 GB
+NXPARTS : 53.76 MB
+NXPLOT : 151.34 MB
+NXPROE : 6.17 MB
+NXREPORTS : 9.42 MB
+NXSHIP : 359.0 MB
+NXSTRUCTUREDESIGN : 106.47 MB
+NXVR : 441.53 MB
+NX_VSA : 13.88 MB
+OCCUPANTSAFETY : 514.74 MB
+POSTBUILD : 37.65 MB
+PSTUDIO : 35.5 MB
+PVTRANS : 102.46 KB
+REL_INFO : 36.92 KB
+ROUTING : 315.47 MB
+RULE : 316.7 KB
+SIMULATION : 4.19 GB
+STAGE_MODEL : 3.53 MB
+STAMPING_TOOLS : 77.06 MB
+STEP203UG : 1.28 MB
+STEP214UG : 1.27 MB
+TDP : 237.62 MB
+TOOLING_BASE : 970.0 KB
+TRANSLATORS : 157.87 MB
+UGALLIANCE : 82.9 KB
+UGAUTOMOTIVE : 99.41 MB
+UGCATIA : 6.53 MB
+UGFLEXLM : 29.4 MB
+UGFPCD : 35.19 KB
+UGII : 677.93 MB
+UGIMW : 8.45 MB
+UGMANAGER : 117.29 MB
+UGOPEN : 425.32 MB
+UGOPENPP : 567.28 KB
+UGPCBX : 3.42 MB
+UGPCBXCHANGE : 90.23 MB
+UGPHOTO : 2.98 GB
+UGSTRUCTURES : 735.35 MB
+UGSTUDIO : 14.03 MB
+UGTIPS : 278.35 MB
+UGTO2D : 911.38 KB
+UGWEB : 9.08 MB
+UGWELD : 2.07 MB
+UNFOLD : 71.92 KB
+VDA : 25.44 KB
+VDV : 13.11 KB
+total: 28.29 GB
+</pre>
+
+請注意: 新版 NX 所建立的零組件無法由舊版的 NX 開啟.
+
+下載 [NX12.0.2.9_lite_cad2022.7z] (for @gm users only, 1.20 GB, 解開後 6.24 GB)
+
+下載 [NX2027.3401_lite_cad2022.7z] (for @gm users only, 1.97 GB, 解開後 7.49 GB)
+
+下載 [NX2027.3401_cad2022.7z] (for @gm users only, 8.02 GB, 解開後 28.32 GB)
+
+[NX12.0.2.9_lite_cad2022.7z]: https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/yen_gm_nfu_edu_tw/Eb7GeAUGMANEkijnWXGNH60BltYzKwkkffas3JhzgwnmxQ?e=K4HKXF
+[NX2027.3401_lite_cad2022.7z]: https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/yen_gm_nfu_edu_tw/EfvS63_7udVPhe-xlXrYPCMBVTUEEona5_QXwHdZD_8Vww?e=LNczOS
+[NX2027.3401_cad2022.7z]: https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/yen_gm_nfu_edu_tw/EfC-9gy1PN9MmJtpD9VO5KcB3kehP6VVVgmQt3ej5D_BIQ?e=deXuWs
+
+<h1 id="nx2007doc">NX2007 Documentation</h1>
+
+2022.09 <https://support.sw.siemens.com/en-US/> 只提供 NX2206 與 NX2007 的 Documentation, 這裡將採用 NX2007 的中英文手冊.
+
 
 
 

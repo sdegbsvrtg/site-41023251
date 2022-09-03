@@ -1341,10 +1341,21 @@ total: 28.29 GB
 [NX12.0.2.9_lite_cad2022.7z]: https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/yen_gm_nfu_edu_tw/Eb7GeAUGMANEkijnWXGNH60BltYzKwkkffas3JhzgwnmxQ?e=K4HKXF
 [NX2027.3401_lite_cad2022.7z]: https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/yen_gm_nfu_edu_tw/EfvS63_7udVPhe-xlXrYPCMBVTUEEona5_QXwHdZD_8Vww?e=LNczOS
 [NX2027.3401_cad2022.7z]: https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/yen_gm_nfu_edu_tw/EfC-9gy1PN9MmJtpD9VO5KcB3kehP6VVVgmQt3ej5D_BIQ?e=deXuWs
+[NX2007 EN Documentation]: https://docs.sw.siemens.com/en-US/release/209349590/NX%202007%20Series
+[NX2007_documentation.7z]: https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/yen_gm_nfu_edu_tw/EaB-i6asiRdNnaTBAsjnw1EBiDqBMyHlWo-RiXglNgYPRA?e=cy51X7
 
 &lt;h1 id="nx2007doc"&gt;NX2007 Documentation&lt;/h1&gt;
 
-2022.09 &lt;https://support.sw.siemens.com/en-US/&gt; 只提供 NX2206 與 NX2007 的 Documentation, 這裡將採用 NX2007 的中英文手冊.
+2022.09 &lt;https://support.sw.siemens.com/en-US/&gt; 只提供 NX2206 與 NX2007 的 Documentation, 這裡將採用 NX2007 的英文手冊.
+
+下載 [NX2007_documentation.7z] (for @gm users only, 2.18 GB, 解開後 2.86 GB), 使用時執行 start_static.py 後, 以瀏覽器 http://localhost:7443 開啟.
+
+線上 [NX2007 EN Documentation]
+
+
+
+
+
 
 
 

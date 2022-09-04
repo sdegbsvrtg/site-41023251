@@ -34,3 +34,13 @@ invite link 時效
 
 當課程中止, 由於學員僅具備管理作業倉儲改版與 Github Pages 設定權限, 因此可以永久保留該學員所繳交的作業倉儲內容.
 
+Github Classroom 功能
+====
+
+<https://github.com/education/classroom> 採用 Ruby 編寫, 是一套輔助教學的 Web-based 程式, 其功能如下:
+
+1. 利用管理者的 organization 當作 Github 帳號, 以 invite link 讓學員自行建立 assignment 或 協同 project 倉儲.
+2. assignment 倉儲的 template 可由管理者指定, 且學員對 assignment 倉儲所具備的管理權限, 可由管理者事前統一設定.
+3. 管理者可以控制學員所建立的 assignment 倉儲, 令其無法 delete, 因此課堂結束後管理者仍可完整保留學員的課程倉儲.
+4. 當管理者賦予學員對 assignment 倉儲擁有 admin 權限後, 學員可自行啟用倉儲的 Github Pages 功能, 利用倉儲內容建立課程網站.
+

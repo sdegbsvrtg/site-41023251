@@ -60,7 +60,7 @@
 <meta property="og:url" content="https://mde.tw/blog/useful-git-commands.html"/>
 <meta property="og:type" content="article"/>
 <meta property="article:published_time" content="2022-08-28 11:00:00+08:00"/>
-<meta property="article:modified_time" content="2022-08-28 11:58:17.633062+08:00"/>
+<meta property="article:modified_time" content="2022-09-05 01:11:11.292913+08:00"/>
 <meta property="article:author" content="https://mde.tw/blog/author/mdecycu.html">
 <meta property="article:section" content="git"/>
 <meta property="article:tag" content="remote-add"/>
@@ -76,7 +76,7 @@
   "name": "Git 常用指令",
   "headline": "Git 常用指令",
   "datePublished": "2022-08-28 11:00:00+08:00",
-  "dateModified": "2022-08-28 11:58:17.633062+08:00",
+  "dateModified": "2022-09-05 01:11:11.292913+08:00",
   "author": {
     "@type": "Person",
     "name": "mdecycu",
@@ -206,7 +206,7 @@ init_mathjax();
             | <time datetime="週日 28 八月 2022">週日 28 八月 2022</time>
         </span>
         <!-- TODO : Modified check -->
-            <span class="post-meta"> | Updated on 週日 28 八月 2022</span>
+            <span class="post-meta"> | Updated on 週一 05 九月 2022</span>
             <div class="post-cover cover" style="background-image: url('https://mde.tw/blog/theme/images/post-bg.jpg')">
       </div>
     </header>
@@ -229,6 +229,50 @@ init_mathjax();
                 <p>根據使用情境將常用的 git 指令加以整理.</p>
 
 
+<h1>Git 簡介</h1>
+<p>Git 是一套分散式版次管理工具, 可在各種電腦操作系統中使用, 其目的是用來管理資料改版過程中的所有細節, 最常被用來管理程式套件的開發流程. 能夠配合 Git 使用常見的 Web based 服務有 Github, Gitlab 與 Bitbucket.</p>
+<p>由於利用電腦輔助各種產品設計開發的過程, 不僅牽涉許多文字與數位資料, 而且通常在不同時段, 會與許多不同專業的人士進行協同設計. 過程中若沒有完善的分散版次管理系統, 比較可能產生資料紛亂, 難以追蹤問題, 且團隊成員間針對協同資料間的權利與義務不容易有效釐清.</p>
+<p>以下列出使用 Git 分散式版次管理的優點:</p>
+<ol>
+<li>各開發者可以同步對同一文件或程式進行改版, 改版時無需上網</li>
+<li>所有提交的改版內容均會存檔, 一旦納入管理的資料不會丟失, 也不會查不出資料被誰改寫</li>
+<li>系統中明確儲存各階段各檔案的改版歷程</li>
+</ol>
+<p>上列所謂同步開發的意思是, 只要各團隊成員了解專案的目標, 以及每次改版的動機, 就可以各自在同一時間, 直接對倉儲進行改版, 等到各成員分別將改版內容提交推送至遠端倉儲時, 若各改版內容產生衝突, 就可以依照實際需求進行處理後合併.</p>
+<h1>Git 基本概念</h1>
+<p>以下 Git 專有名詞說明翻譯自<a href="https://hipert.unimore.it/people/paolob/pub/Calcolo_Parallelo/Slides/Git_Tutorial.pdf">這裡</a>:</p>
+<p>Snapshots (快照)</p>
+<ol>
+<li>快照是 git 追踪資料歷程的方式</li>
+<li>快照主要是記錄所有文件在特定時間點的狀態</li>
+<li>使用者可以決定何時拍快照以及拍那些文件資料</li>
+<li>使用者能夠擷取先前所拍的任何快照</li>
+</ol>
+<p>Commits (提交)</p>
+<ol>
+<li>對資料拍快照的動作稱為提交</li>
+<li>提交可以是動詞, 也可以是名詞, 例如: 提交這個程式, 或者已經完成幾次提交</li>
+<li>基本上改版專案就是由每次的提交所組成</li>
+<li>每一個提交都包含三種資料: 檔案的更動內容、與上一個提交的參照資料 (即所謂 parent commit)、一組 hash code.</li>
+</ol>
+<p>其中 hash code 長得像這樣: f2d2ec5069fc6776c80b3ad6b7cbde3cade4e</p>
+<p>Repositories (儲存庫或倉儲)</p>
+<ol>
+<li>可以簡寫為 repo</li>
+<li>倉儲指所有檔案與檔案改版歷程</li>
+<li>檔案改版歷程包含所有的提交</li>
+<li>倉儲資料可以存放在近端或遠端 (例如: Github 或 Gitlab)</li>
+<li>從遠端將倉儲內容取下的動作稱為 clone</li>
+<li>clone 倉儲的功能, 讓多人可以協同對同一倉儲改版</li>
+<li>從遠端將倉儲之外的提交內容取下的動作稱為 pulling 改版內容</li>
+<li>將近端的改版資料納入遠端倉儲的動作稱為 push 改版內容</li>
+</ol>
+<p>Branches (分支)</p>
+<ol>
+<li>git 中的所有提交都存在某個分支上</li>
+<li>一個倉儲可以有許多的分支</li>
+<li>Github 目前的主要分支稱為 main</li>
+</ol>
 <h1>remote add</h1>
 <p>git remote add 的使用情境是希望將某一個倉儲的完整歷程資料, 改存至另一個倉儲.</p>
 <p>假設原來的 cad2021_final 倉儲位於 mdecourse 帳號下, 現在想要將此倉儲的完整歷程資料, 轉存至 mdecycu 帳號下.</p>
@@ -248,6 +292,14 @@ init_mathjax();
 <p>git submodule add 隨後要加入 URL 指向某一倉儲, 表示要將該倉儲設為子模組, 然後指令還要再加上該子模組連結的對應代號.</p>
 <p>git submodule add https://github.com/mdecycu/cmsimde.git cmsimde</p>
 <p>表示要將 cmsimde 倉儲設為子模組, 且放入 cmsimde 目錄中.</p>
+<h1>Git 參考資料</h1>
+<ol>
+<li><a href="https://git-scm.com/book/zh-tw/v2">https://git-scm.com/book/zh-tw/v2</a></li>
+<li><a href="https://www.tutorialspoint.com/git/git_tutorial.pdf">https://www.tutorialspoint.com/git/git_tutorial.pdf</a></li>
+<li><a href="https://people.irisa.fr/Anthony.Baire/git/git-for-beginners-handout.pdf">https://people.irisa.fr/Anthony.Baire/git/git-for-beginners-handout.pdf</a></li>
+<li><a href="https://indico.cern.ch/event/724719/contributions/2981043/attachments/1638054/2754736/Git_tutorial.pdf">https://indico.cern.ch/event/724719/contributions/2981043/attachments/1638054/2754736/Git_tutorial.pdf</a></li>
+<li><a href="https://hipert.unimore.it/people/paolob/pub/Calcolo_Parallelo/Slides/Git_Tutorial.pdf">https://hipert.unimore.it/people/paolob/pub/Calcolo_Parallelo/Slides/Git_Tutorial.pdf</a></li>
+</ol>
             </section>
 
             <section class="post-info">

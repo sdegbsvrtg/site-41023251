@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://mde.tw/blog/</loc>
-<lastmod>2022-09-04T01:31:38-00:00</lastmod>
+<lastmod>2022-09-04T13:17:17-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://mde.tw/blog/archives.html</loc>
-<lastmod>2022-09-04T01:31:38-00:00</lastmod>
+<lastmod>2022-09-04T13:17:17-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://mde.tw/blog/tags.html</loc>
-<lastmod>2022-09-04T01:31:38-00:00</lastmod>
+<lastmod>2022-09-04T13:17:17-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://mde.tw/blog/categories.html</loc>
-<lastmod>2022-09-04T01:31:38-00:00</lastmod>
+<lastmod>2022-09-04T13:17:17-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -54,7 +54,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://mde.tw/blog/cp2022-w1.html</loc>
-<lastmod>2022-09-02T00:01:57+08:00</lastmod>
+<lastmod>2022-09-04T12:17:17+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -131,21 +131,21 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://mde.tw/blog/2022-Fall-Intro-to-computer-programming.html</loc>
-<lastmod>2022-09-01T23:40:17+08:00</lastmod>
+<lastmod>2022-09-04T11:32:16+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://mde.tw/blog/2022-Fall-computer-aided-design-and-practices.html</loc>
-<lastmod>2022-09-03T20:36:49+08:00</lastmod>
+<lastmod>2022-09-04T11:28:21+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://mde.tw/blog/category/cad2022.html</loc>
-<lastmod>2022-09-03T20:36:49+08:06</lastmod>
+<lastmod>2022-09-04T11:28:21+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -166,7 +166,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://mde.tw/blog/category/cp2022.html</loc>
-<lastmod>2022-09-02T00:01:57+08:06</lastmod>
+<lastmod>2022-09-04T12:17:17+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -236,21 +236,21 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://mde.tw/blog/tag/w1.html</loc>
-<lastmod>2022-09-02T00:01:57+08:06</lastmod>
+<lastmod>2022-09-04T12:17:17+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://mde.tw/blog/tag/portable-python.html</loc>
-<lastmod>2022-09-02T00:01:57+08:06</lastmod>
+<lastmod>2022-09-04T12:17:17+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://mde.tw/blog/tag/ji-suan-ji-cheng-shi.html</loc>
-<lastmod>2022-09-02T00:01:57+08:06</lastmod>
+<lastmod>2022-09-04T12:17:17+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -362,35 +362,35 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://mde.tw/blog/tag/cp2022-syllabus.html</loc>
-<lastmod>2022-09-01T23:40:17+08:06</lastmod>
+<lastmod>2022-09-04T11:32:16+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://mde.tw/blog/tag/ke-cheng-jian-jie.html</loc>
-<lastmod>2022-09-03T20:36:49+08:06</lastmod>
+<lastmod>2022-09-04T11:28:21+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://mde.tw/blog/tag/w0.html</loc>
-<lastmod>2022-09-03T20:36:49+08:06</lastmod>
+<lastmod>2022-09-04T11:28:21+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://mde.tw/blog/tag/dian-nao-fu-zhu-she-ji-yu-shi-xi.html</loc>
-<lastmod>2022-09-03T20:36:49+08:06</lastmod>
+<lastmod>2022-09-04T11:28:21+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://mde.tw/blog/author/mdecycu.html</loc>
-<lastmod>2022-09-04T01:31:04+08:06</lastmod>
+<lastmod>2022-09-04T12:17:17+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

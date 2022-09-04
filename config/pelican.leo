@@ -529,7 +529,7 @@ Author: mdecycu
 
 @others</t>
 <t tx="leo.20220827125802.2">課程評分
-----
+====
 
 cp2022 課程評分項目請參考: [syllabus]
  
@@ -613,23 +613,24 @@ Disable-NetAdapterBinding -Name "*" -ComponentID ms_tcpip
 [OneDrive]: https://en.wikipedia.org/wiki/OneDrive
 [proxy server]: https://en.wikipedia.org/wiki/Proxy_server
 [template]: https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template
+[Github Classroom]: https://classroom.github.com
 
 建立 Github 帳號
-----
+====
 
-&lt;https://github.com/join&gt;
+請尚未建立 Github 帳號的學員, 至 &lt;https://github.com/join&gt; 申請帳號. 課程評分項目將包含利用 [Github Classroom] 建立的倉儲與網站內容 (透過 invite link). 2022fall Github 帳號與學號對照的倉儲位於 &lt;https://github.com/mdecycu/studlist/tree/main/2022fall&gt;, w2 起將利用 &lt;https://ethercalc.net/&gt; 在線由各學員自行輸入, 之後若 Github 更動, 則可以透過 [Pull Requests] 提出修改請求.
 
 建立 Onedrive 帳號
-----
+====
 
-請各學員登入 @gm 帳號後, 至 &lt;https://www.microsoft.com/zh-tw/education/products/office&gt;, 以 @gm 帳號申請 [OneDrive] 5TB 儲存權限. 
+請尚未建立 Onedrive 帳號的學員登入 @gm 帳號後, 至 &lt;https://www.microsoft.com/zh-tw/education/products/office&gt;, 以 @gm 帳號申請 [OneDrive] 5TB 儲存權限. 
 
 利用 [Github] 建立網頁
-----
+====
 
-只要在 [Github] 倉儲中放入 [HTML], [css] 與 [Javascript], 並且設定 [Github Pages] 對應的分支, [Github] 就會給定 Github_帳號.github.io 作為網址, 以 WWW 伺服器 server 使用者所提供的網頁內容.
+只要在 [Github] 倉儲中放入 [HTML], [css] 與 [Javascript], 並且設定 [Github Pages] 對應的分支, [Github] 就會給定 Github_帳號.github.io/倉儲名稱 作為網址 (各學員課程網址將為: https://mdecp2022.github.io/site-學員_Github_帳號), 以 WWW 伺服器 server 使用者所提供的網頁內容.
 
-登入 [Github] 後, 利用 &lt;https://github.com/mdecycu/cmsite&gt; 作為 [template], 使用 &lt;https://pages.github.com/&gt; 建立個人網頁, 並利用網頁建立個人簡歷 ([Curriculum Vitae]).
+除了配置在 [Github Classroom] 的課程倉儲與網頁外, 學員也可以在登入 [Github] 後, 利用 &lt;https://github.com/mdecycu/cmsite&gt; 作為 [template], 使用 &lt;https://pages.github.com/&gt; 建立個人網頁, 並利用網頁 (https://Github_帳號.github.io) 建立個人簡歷 ([Curriculum Vitae]) 網站.
 
 維護 [Github] 上的網頁
 ----
@@ -1143,6 +1144,24 @@ Author: mdecycu
 &lt;h1 id="learnbrython"&gt;線上學習 Brython&lt;/h1&gt;
 
 當你完成電腦輔助設計室中的[網路設定]後, 就可以利用瀏覽器連線到[這裡], 直接在線上學習 [Brython].
+
+學員課程網頁
+====
+
+cp2022 課程中的 cp 為 computer programming 的縮寫, 每一位學員各自建立 Github 帳號後, 將在 &lt;https://ethercalc.net/&gt; 中登錄用於課程的 Github 帳號. 之後將配合 Github Classroom 建立學員課程網頁. 此一網頁倉儲分為靜態與動態等兩個部分, 靜態網頁是配合 Github Pages, 直接由 Github.com 提供對應網址, 而動態網頁則可在近端用於網站內容編輯改版, 也可以在 Windows 或 Ubuntu 操作系統中進行配置, 成為可多人協同維護的網際內容管理系統.
+
+完成配置後的學員課程網頁, 將位於組織 (organization) 名稱為 mdecp2022 的帳號下, 且倉儲名稱將為: site-個人帳號名稱 (site 為 assignment 名稱). 至於個人 Github 帳號與學號的對應關聯則將登錄於 &lt;https://github.com/mdecycu/studlist/tree/main/2022fall&gt; 目錄中的班級對應檔案.
+
+建立個人課程網頁示範:
+
+有關筆記型電腦
+====
+
+綜一館八樓的電腦輔助設計室所配置的 PC, 雖然裝有還原卡, 但只要配合 USB 隨身碟與可攜套件, 應該足以應付 cp2022 計算機程式課程所需. 所以一般並不建議大一就購買筆記型電腦, 而是先善用系上所提供的 PC. 至於課外使用時段, 請參考系上電腦教室借用規定辦理, 通常週四與週五晚間未排課時段可以外借.
+
+至於符合機械設計工程系需求的筆記型電腦, 一般建議 i7 等級以上, 16 GB 記憶體, 並配置中階以上獨立顯卡. Windows 操作系統則建議使用專業 (Professional) 以上版本.
+
+校外電腦連接部分, 則需要每學年申請 VPN 使用授權, 下載學校購買的軟體或電子書, 只要設定校內 Proxy 即可, 但若要連網認證 SolidWorks 或 Matlab, 則需透過校內 VPN 連網.
 
 </t>
 <t tx="leo.20220902013935.1">@language md

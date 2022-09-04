@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Mde.tw - cp2022</title><link href="https://mde.tw/blog/" rel="alternate"></link><link href="https://mde.tw/blog/feeds/cp2022.atom.xml" rel="self"></link><id>https://mde.tw/blog/</id><updated>2022-09-02T00:01:57+08:00</updated><entry><title>cp2022_w1</title><link href="https://mde.tw/blog/cp2022-w1.html" rel="alternate"></link><published>2022-09-01T13:00:00+08:00</published><updated>2022-09-02T00:01:57+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-09-01:/blog/cp2022-w1.html</id><summary type="html">&lt;p&gt;計算機程式課程第一週, 只有 1b 有課, 1a 因為中秋節放假.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Mde.tw - cp2022</title><link href="https://mde.tw/blog/" rel="alternate"></link><link href="https://mde.tw/blog/feeds/cp2022.atom.xml" rel="self"></link><id>https://mde.tw/blog/</id><updated>2022-09-04T12:17:17+08:00</updated><entry><title>cp2022_w1</title><link href="https://mde.tw/blog/cp2022-w1.html" rel="alternate"></link><published>2022-09-01T13:00:00+08:00</published><updated>2022-09-04T12:17:17+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-09-01:/blog/cp2022-w1.html</id><summary type="html">&lt;p&gt;計算機程式課程第一週, 只有 1b 有課, 1a 因為中秋節放假.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;計算機程式課程第一週, 只有 1b 有課, 1a 因為中秋節放假.&lt;/p&gt;
 
 
@@ -14,7 +14,15 @@
 &lt;p&gt;上計算機程式課程時, 當使用瀏覽器與執行 git 指令時, 該如何正確設定網路協定?&lt;/p&gt;
 &lt;h1 id="learnbrython"&gt;線上學習 Brython&lt;/h1&gt;
 
-&lt;p&gt;當你完成電腦輔助設計室中的&lt;a href="https://mde.tw/blog/2022-Fall-Intro-to-computer-programming.html#networksetup"&gt;網路設定&lt;/a&gt;後, 就可以利用瀏覽器連線到&lt;a href="https://mde.tw/content/Python.html"&gt;這裡&lt;/a&gt;, 直接在線上學習 &lt;a href="https://brython.info/"&gt;Brython&lt;/a&gt;.&lt;/p&gt;</content><category term="cp2022"></category><category term="w1"></category><category term="portable python"></category><category term="計算機程式"></category></entry><entry><title>建立可攜 Python 系統</title><link href="https://mde.tw/blog/Create-a-portable-python-system.html" rel="alternate"></link><published>2022-08-23T11:00:00+08:00</published><updated>2022-08-27T13:01:18+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-08-23:/blog/Create-a-portable-python-system.html</id><summary type="html">&lt;p&gt;這裡所謂的可攜 Python 系統, 是指能夠放入 USB 隨身碟中的 Python 解譯器. 整個過程分為三個部分. 包括 Python 核心程式, pip 以及安裝常用模組等過程.&lt;/p&gt;
+&lt;p&gt;當你完成電腦輔助設計室中的&lt;a href="https://mde.tw/blog/2022-Fall-Intro-to-computer-programming.html#networksetup"&gt;網路設定&lt;/a&gt;後, 就可以利用瀏覽器連線到&lt;a href="https://mde.tw/content/Python.html"&gt;這裡&lt;/a&gt;, 直接在線上學習 &lt;a href="https://brython.info/"&gt;Brython&lt;/a&gt;.&lt;/p&gt;
+&lt;h1&gt;學員課程網頁&lt;/h1&gt;
+&lt;p&gt;cp2022 課程中的 cp 為 computer programming 的縮寫, 每一位學員各自建立 Github 帳號後, 將在 &lt;a href="https://ethercalc.net/"&gt;https://ethercalc.net/&lt;/a&gt; 中登錄用於課程的 Github 帳號. 之後將配合 Github Classroom 建立學員課程網頁. 此一網頁倉儲分為靜態與動態等兩個部分, 靜態網頁是配合 Github Pages, 直接由 Github.com 提供對應網址, 而動態網頁則可在近端用於網站內容編輯改版, 也可以在 Windows 或 Ubuntu 操作系統中進行配置, 成為可多人協同維護的網際內容管理系統.&lt;/p&gt;
+&lt;p&gt;完成配置後的學員課程網頁, 將位於組織 (organization) 名稱為 mdecp2022 的帳號下, 且倉儲名稱將為: site-個人帳號名稱 (site 為 assignment 名稱). 至於個人 Github 帳號與學號的對應關聯則將登錄於 &lt;a href="https://github.com/mdecycu/studlist/tree/main/2022fall"&gt;https://github.com/mdecycu/studlist/tree/main/2022fall&lt;/a&gt; 目錄中的班級對應檔案.&lt;/p&gt;
+&lt;p&gt;建立個人課程網頁示範:&lt;/p&gt;
+&lt;h1&gt;有關筆記型電腦&lt;/h1&gt;
+&lt;p&gt;綜一館八樓的電腦輔助設計室所配置的 PC, 雖然裝有還原卡, 但只要配合 USB 隨身碟與可攜套件, 應該足以應付 cp2022 計算機程式課程所需. 所以一般並不建議大一就購買筆記型電腦, 而是先善用系上所提供的 PC. 至於課外使用時段, 請參考系上電腦教室借用規定辦理, 通常週四與週五晚間未排課時段可以外借.&lt;/p&gt;
+&lt;p&gt;至於符合機械設計工程系需求的筆記型電腦, 一般建議 i7 等級以上, 16 GB 記憶體, 並配置中階以上獨立顯卡. Windows 操作系統則建議使用專業 (Professional) 以上版本.&lt;/p&gt;
+&lt;p&gt;校外電腦連接部分, 則需要每學年申請 VPN 使用授權, 下載學校購買的軟體或電子書, 只要設定校內 Proxy 即可, 但若要連網認證 SolidWorks 或 Matlab, 則需透過校內 VPN 連網.&lt;/p&gt;</content><category term="cp2022"></category><category term="w1"></category><category term="portable python"></category><category term="計算機程式"></category></entry><entry><title>建立可攜 Python 系統</title><link href="https://mde.tw/blog/Create-a-portable-python-system.html" rel="alternate"></link><published>2022-08-23T11:00:00+08:00</published><updated>2022-08-27T13:01:18+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-08-23:/blog/Create-a-portable-python-system.html</id><summary type="html">&lt;p&gt;這裡所謂的可攜 Python 系統, 是指能夠放入 USB 隨身碟中的 Python 解譯器. 整個過程分為三個部分. 包括 Python 核心程式, pip 以及安裝常用模組等過程.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;這裡所謂的可攜 Python 系統, 是指能夠放入 USB 隨身碟中的 Python 解譯器. 整個過程分為三個部分. 包括 Python 核心程式, pip 以及安裝常用模組等過程.&lt;/p&gt;
 
 
@@ -150,11 +158,11 @@ EXIT
 &lt;h2&gt;安裝模組&lt;/h2&gt;
 &lt;p&gt;pip install flask flask_cors bs4 lxml pelican markdown leo pyopenssl&lt;/p&gt;
 &lt;p&gt;上述配置 pip 與模組&lt;a href="./../downloads/install_get-pip.py_and_cmsimde_modules.txt"&gt;安裝詳細過程紀錄&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/yen_gm_nfu_edu_tw/EeE98pBYWN9CkSCX6CQ4Hc0B3ATux7DfglRSGLBw2AL0cQ?e=ju1KyO"&gt;portable_python_3.10.6.7z&lt;/a&gt; (for @gm users only)&lt;/p&gt;</content><category term="cp2022"></category><category term="portable-Python"></category></entry><entry><title>2022 Fall CP 課程</title><link href="https://mde.tw/blog/2022-Fall-Intro-to-computer-programming.html" rel="alternate"></link><published>2022-08-19T11:00:00+08:00</published><updated>2022-09-01T23:40:17+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-08-19:/blog/2022-Fall-Intro-to-computer-programming.html</id><summary type="html">&lt;p&gt;2022 Fall 計算機程式開場, 這學期的課程進度將放在 Weblog, 並且使用 mdecycu At cycu 登記 disqus. 所有與課程相關的問題, 都希望在各週 Weblog 下方的 disqus 詢答.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/yen_gm_nfu_edu_tw/EeE98pBYWN9CkSCX6CQ4Hc0B3ATux7DfglRSGLBw2AL0cQ?e=ju1KyO"&gt;portable_python_3.10.6.7z&lt;/a&gt; (for @gm users only)&lt;/p&gt;</content><category term="cp2022"></category><category term="portable-Python"></category></entry><entry><title>2022 Fall CP 課程</title><link href="https://mde.tw/blog/2022-Fall-Intro-to-computer-programming.html" rel="alternate"></link><published>2022-08-19T11:00:00+08:00</published><updated>2022-09-04T11:32:16+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-08-19:/blog/2022-Fall-Intro-to-computer-programming.html</id><summary type="html">&lt;p&gt;2022 Fall 計算機程式開場, 這學期的課程進度將放在 Weblog, 並且使用 mdecycu At cycu 登記 disqus. 所有與課程相關的問題, 都希望在各週 Weblog 下方的 disqus 詢答.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;2022 Fall 計算機程式開場, 這學期的課程進度將放在 Weblog, 並且使用 mdecycu At cycu 登記 disqus. 所有與課程相關的問題, 都希望在各週 Weblog 下方的 disqus 詢答.&lt;/p&gt;
 
 
-&lt;h2&gt;課程評分&lt;/h2&gt;
+&lt;h1&gt;課程評分&lt;/h1&gt;
 &lt;p&gt;cp2022 課程評分項目請參考: &lt;a href="https://mde.tw/content/cp-syllabus.html"&gt;syllabus&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id="commandline"&gt;命令提示字元&lt;/h2&gt;
 
@@ -197,13 +205,13 @@ Disable-NetAdapterBinding -Name "*" -ComponentID ms_tcpip
 &lt;/pre&gt;
 
 &lt;p&gt;上述相關設定檔案: &lt;a href="./../downloads/cadlab_network_setup.zip"&gt;cadlab_network_setup.zip&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;建立 Github 帳號&lt;/h2&gt;
-&lt;p&gt;&lt;a href="https://github.com/join"&gt;https://github.com/join&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;建立 Onedrive 帳號&lt;/h2&gt;
-&lt;p&gt;請各學員登入 @gm 帳號後, 至 &lt;a href="https://www.microsoft.com/zh-tw/education/products/office"&gt;https://www.microsoft.com/zh-tw/education/products/office&lt;/a&gt;, 以 @gm 帳號申請 &lt;a href="https://en.wikipedia.org/wiki/OneDrive"&gt;OneDrive&lt;/a&gt; 5TB 儲存權限. &lt;/p&gt;
-&lt;h2&gt;利用 &lt;a href="https://github.com"&gt;Github&lt;/a&gt; 建立網頁&lt;/h2&gt;
-&lt;p&gt;只要在 &lt;a href="https://github.com"&gt;Github&lt;/a&gt; 倉儲中放入 &lt;a href="https://en.wikipedia.org/wiki/HTML"&gt;HTML&lt;/a&gt;, &lt;a href="https://en.wikipedia.org/wiki/CSS"&gt;css&lt;/a&gt; 與 &lt;a href="https://en.wikipedia.org/wiki/JavaScript"&gt;Javascript&lt;/a&gt;, 並且設定 &lt;a href="https://pages.github.com/"&gt;Github Pages&lt;/a&gt; 對應的分支, &lt;a href="https://github.com"&gt;Github&lt;/a&gt; 就會給定 Github_帳號.github.io 作為網址, 以 WWW 伺服器 server 使用者所提供的網頁內容.&lt;/p&gt;
-&lt;p&gt;登入 &lt;a href="https://github.com"&gt;Github&lt;/a&gt; 後, 利用 &lt;a href="https://github.com/mdecycu/cmsite"&gt;https://github.com/mdecycu/cmsite&lt;/a&gt; 作為 &lt;a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template"&gt;template&lt;/a&gt;, 使用 &lt;a href="https://pages.github.com/"&gt;https://pages.github.com/&lt;/a&gt; 建立個人網頁, 並利用網頁建立個人簡歷 (&lt;a href="https://www.thebalancecareers.com/cv-vs-resume-2058495"&gt;Curriculum Vitae&lt;/a&gt;).&lt;/p&gt;
+&lt;h1&gt;建立 Github 帳號&lt;/h1&gt;
+&lt;p&gt;請尚未建立 Github 帳號的學員, 至 &lt;a href="https://github.com/join"&gt;https://github.com/join&lt;/a&gt; 申請帳號. 課程評分項目將包含利用 &lt;a href="https://classroom.github.com"&gt;Github Classroom&lt;/a&gt; 建立的倉儲與網站內容 (透過 invite link). 2022fall Github 帳號與學號對照的倉儲位於 &lt;a href="https://github.com/mdecycu/studlist/tree/main/2022fall"&gt;https://github.com/mdecycu/studlist/tree/main/2022fall&lt;/a&gt;, w2 起將利用 &lt;a href="https://ethercalc.net/"&gt;https://ethercalc.net/&lt;/a&gt; 在線由各學員自行輸入, 之後若 Github 更動, 則可以透過 [Pull Requests] 提出修改請求.&lt;/p&gt;
+&lt;h1&gt;建立 Onedrive 帳號&lt;/h1&gt;
+&lt;p&gt;請尚未建立 Onedrive 帳號的學員登入 @gm 帳號後, 至 &lt;a href="https://www.microsoft.com/zh-tw/education/products/office"&gt;https://www.microsoft.com/zh-tw/education/products/office&lt;/a&gt;, 以 @gm 帳號申請 &lt;a href="https://en.wikipedia.org/wiki/OneDrive"&gt;OneDrive&lt;/a&gt; 5TB 儲存權限. &lt;/p&gt;
+&lt;h1&gt;利用 &lt;a href="https://github.com"&gt;Github&lt;/a&gt; 建立網頁&lt;/h1&gt;
+&lt;p&gt;只要在 &lt;a href="https://github.com"&gt;Github&lt;/a&gt; 倉儲中放入 &lt;a href="https://en.wikipedia.org/wiki/HTML"&gt;HTML&lt;/a&gt;, &lt;a href="https://en.wikipedia.org/wiki/CSS"&gt;css&lt;/a&gt; 與 &lt;a href="https://en.wikipedia.org/wiki/JavaScript"&gt;Javascript&lt;/a&gt;, 並且設定 &lt;a href="https://pages.github.com/"&gt;Github Pages&lt;/a&gt; 對應的分支, &lt;a href="https://github.com"&gt;Github&lt;/a&gt; 就會給定 Github_帳號.github.io/倉儲名稱 作為網址 (各學員課程網址將為: https://mdecp2022.github.io/site-學員_Github_帳號), 以 WWW 伺服器 server 使用者所提供的網頁內容.&lt;/p&gt;
+&lt;p&gt;除了配置在 &lt;a href="https://classroom.github.com"&gt;Github Classroom&lt;/a&gt; 的課程倉儲與網頁外, 學員也可以在登入 &lt;a href="https://github.com"&gt;Github&lt;/a&gt; 後, 利用 &lt;a href="https://github.com/mdecycu/cmsite"&gt;https://github.com/mdecycu/cmsite&lt;/a&gt; 作為 &lt;a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template"&gt;template&lt;/a&gt;, 使用 &lt;a href="https://pages.github.com/"&gt;https://pages.github.com/&lt;/a&gt; 建立個人網頁, 並利用網頁 (https://Github_帳號.github.io) 建立個人簡歷 (&lt;a href="https://www.thebalancecareers.com/cv-vs-resume-2058495"&gt;Curriculum Vitae&lt;/a&gt;) 網站.&lt;/p&gt;
 &lt;h2&gt;維護 &lt;a href="https://github.com"&gt;Github&lt;/a&gt; 上的網頁&lt;/h2&gt;
 &lt;p&gt;在近端將動態網頁轉為靜態網頁後, &lt;a href="https://github.com/mdecycu/cmsimde/blob/4cf035f4dc75bafc2791b67e630ee34533ae50c4/up_dir/acp.bat"&gt;acp&lt;/a&gt; 至 &lt;a href="https://github.com"&gt;Github&lt;/a&gt; 倉儲.&lt;/p&gt;
 &lt;h2&gt;Computer 簡介&lt;/h2&gt;

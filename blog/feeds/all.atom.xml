@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Mde.tw</title><link href="https://mde.tw/blog/" rel="alternate"></link><link href="https://mde.tw/blog/feeds/all.atom.xml" rel="self"></link><id>https://mde.tw/blog/</id><updated>2022-09-04T12:17:17+08:00</updated><entry><title>有關 Github Classroom</title><link href="https://mde.tw/blog/about-classroom.html" rel="alternate"></link><published>2022-09-03T11:00:00+08:00</published><updated>2022-09-04T01:31:04+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-09-03:/blog/about-classroom.html</id><summary type="html">&lt;p&gt;這裡將收集與 Github Classroom 有關的資料內容. &lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Mde.tw</title><link href="https://mde.tw/blog/" rel="alternate"></link><link href="https://mde.tw/blog/feeds/all.atom.xml" rel="self"></link><id>https://mde.tw/blog/</id><updated>2022-09-04T20:19:49+08:00</updated><entry><title>有關 Github Classroom</title><link href="https://mde.tw/blog/about-classroom.html" rel="alternate"></link><published>2022-09-03T11:00:00+08:00</published><updated>2022-09-04T01:31:04+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-09-03:/blog/about-classroom.html</id><summary type="html">&lt;p&gt;這裡將收集與 Github Classroom 有關的資料內容. &lt;/p&gt;
 </summary><content type="html">&lt;p&gt;這裡將收集與 Github Classroom 有關的資料內容. &lt;/p&gt;
 
 
@@ -12,7 +12,7 @@
 &lt;h2&gt;invite link 時效&lt;/h2&gt;
 &lt;p&gt;當所有修課學員都參與指定作業後, 可以進入 assignment 設定, 取消 invite link.&lt;/p&gt;
 &lt;h2&gt;學員作業倉儲權限&lt;/h2&gt;
-&lt;p&gt;當課程中止, 由於學員僅具備管理作業倉儲改版與 Github Pages 設定權限, 因此可以永久保留該學員所繳交的作業倉儲內容.&lt;/p&gt;</content><category term="Github"></category><category term="Classroom"></category></entry><entry><title>有關 NX</title><link href="https://mde.tw/blog/about-nx.html" rel="alternate"></link><published>2022-09-02T11:00:00+08:00</published><updated>2022-09-03T20:42:43+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-09-02:/blog/about-nx.html</id><summary type="html">&lt;p&gt;這裡將收集與 NX 有關的資料內容. Siemens NX 在 2022.09.01 釋出最新版本為 NX2206.4020, 幾乎同步釋出的 NX2027 最新版本則為 build 3401. cd2022 電腦輔助設計與實習將使用 NX2027.3401 可攜版本.&lt;/p&gt;
+&lt;p&gt;當課程中止, 由於學員僅具備管理作業倉儲改版與 Github Pages 設定權限, 因此可以永久保留該學員所繳交的作業倉儲內容.&lt;/p&gt;</content><category term="Github"></category><category term="Classroom"></category></entry><entry><title>有關 NX</title><link href="https://mde.tw/blog/about-nx.html" rel="alternate"></link><published>2022-09-02T11:00:00+08:00</published><updated>2022-09-04T20:19:49+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-09-02:/blog/about-nx.html</id><summary type="html">&lt;p&gt;這裡將收集與 NX 有關的資料內容. Siemens NX 在 2022.09.01 釋出最新版本為 NX2206.4020, 幾乎同步釋出的 NX2027 最新版本則為 build 3401. cd2022 電腦輔助設計與實習將使用 NX2027.3401 可攜版本.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;這裡將收集與 NX 有關的資料內容. Siemens NX 在 2022.09.01 釋出最新版本為 NX2206.4020, 幾乎同步釋出的 NX2027 最新版本則為 build 3401. cd2022 電腦輔助設計與實習將使用 NX2027.3401 可攜版本.&lt;/p&gt;
 
 
@@ -176,7 +176,30 @@ total: 28.29 GB
 
 &lt;p&gt;2022.09 &lt;a href="https://support.sw.siemens.com/en-US/"&gt;https://support.sw.siemens.com/en-US/&lt;/a&gt; 只提供 NX2206 與 NX2007 的 Documentation, 這裡將採用 NX2007 的英文手冊.&lt;/p&gt;
 &lt;p&gt;下載 &lt;a href="https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/yen_gm_nfu_edu_tw/EU-fmibMpBZKg2ZiXmBlK-oBQj7wLV5YeMGI8rCI60NhmQ?e=EuxlyD"&gt;NX2007_documentation.7z&lt;/a&gt; (for @gm users only, 2.18 GB, 解開後 2.86 GB), 使用時執行 start_static.py 後, 以瀏覽器 http://localhost:7443 開啟. 也可以透過 &lt;a href="http://c1.cycu.org:88"&gt;http://c1.cycu.org:88&lt;/a&gt; 查看內容.&lt;/p&gt;
-&lt;p&gt;線上 &lt;a href="https://docs.sw.siemens.com/en-US/release/209349590/NX%202007%20Series"&gt;NX2007 EN Documentation&lt;/a&gt;&lt;/p&gt;</content><category term="NX"></category><category term="Siemens"></category></entry><entry><title>cp2022_w1</title><link href="https://mde.tw/blog/cp2022-w1.html" rel="alternate"></link><published>2022-09-01T13:00:00+08:00</published><updated>2022-09-04T12:17:17+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-09-01:/blog/cp2022-w1.html</id><summary type="html">&lt;p&gt;計算機程式課程第一週, 只有 1b 有課, 1a 因為中秋節放假.&lt;/p&gt;
+&lt;p&gt;線上 &lt;a href="https://docs.sw.siemens.com/en-US/release/209349590/NX%202007%20Series"&gt;NX2007 EN Documentation&lt;/a&gt;&lt;/p&gt;
+&lt;h1&gt;滑鼠&lt;/h1&gt;
+&lt;p&gt;LMB - 滑鼠左鍵, 一般元件選擇, 可以連續使用滑鼠左鍵選擇多個元件&lt;/p&gt;
+&lt;p&gt;Shitf + LMB - 可以去除利用滑鼠左鍵已經選擇的元件&lt;/p&gt;
+&lt;p&gt;RMB - 滑鼠右鍵, 在視圖空白按住滑鼠右鍵, 可以帶出相關 menu&lt;/p&gt;
+&lt;p&gt;MMB - 滑鼠中鍵, 單擊表示 confirm 確認, 按住中鍵移動則可以旋轉觀測視圖 (rotate), 前後滑動中鍵則可放大縮小觀測視圖 (zoom in or out)&lt;/p&gt;
+&lt;p&gt;MMB + RMB - 同時按住滑鼠中鍵與右鍵後移動, 可以平移觀測視圖 (pan), 相同功能也可以同時按住 Shift 與滑鼠中鍵後移動滑鼠, 以執行 pan 動作&lt;/p&gt;
+&lt;p&gt;ESC - 取消&lt;/p&gt;
+&lt;p&gt;F4 - 帶出上一個執行功能&lt;/p&gt;
+&lt;p&gt;F6 - Zoom, 以滑鼠左鍵在視圖中選擇放大的區域&lt;/p&gt;
+&lt;p&gt;F7 - Rotate, 進入此功能後, 可以使用任一滑鼠鍵移動, 執行旋轉視圖功能&lt;/p&gt;
+&lt;p&gt;F8 - Snap view, 轉到與目前視圖最接近的正向視圖&lt;/p&gt;
+&lt;p&gt;Ctrl + f - Fit&lt;/p&gt;
+&lt;p&gt;Ctrl + l - Layer Settings&lt;/p&gt;
+&lt;h1&gt;Layers&lt;/h1&gt;
+&lt;p&gt;NX 提供 256 個圖層 (Layers)&lt;/p&gt;
+&lt;p&gt;layers objects&lt;/p&gt;
+&lt;p&gt;1 - 20 solids&lt;/p&gt;
+&lt;p&gt;21 - 40 sketches&lt;/p&gt;
+&lt;p&gt;41 - 60 curves&lt;/p&gt;
+&lt;p&gt;61 - 80 reference elements&lt;/p&gt;
+&lt;p&gt;81 - 100 faces&lt;/p&gt;
+&lt;p&gt;101 - 120 PMI&lt;/p&gt;
+&lt;p&gt;Ctrl + l - Layer Settings&lt;/p&gt;</content><category term="NX"></category><category term="Siemens"></category></entry><entry><title>cp2022_w1</title><link href="https://mde.tw/blog/cp2022-w1.html" rel="alternate"></link><published>2022-09-01T13:00:00+08:00</published><updated>2022-09-04T12:17:17+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-09-01:/blog/cp2022-w1.html</id><summary type="html">&lt;p&gt;計算機程式課程第一週, 只有 1b 有課, 1a 因為中秋節放假.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;計算機程式課程第一週, 只有 1b 有課, 1a 因為中秋節放假.&lt;/p&gt;
 
 

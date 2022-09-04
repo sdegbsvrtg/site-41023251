@@ -207,6 +207,54 @@ total: 28.29 GB
 
 線上 [NX2007 EN Documentation]
 
+滑鼠
+====
+
+LMB - 滑鼠左鍵, 一般元件選擇, 可以連續使用滑鼠左鍵選擇多個元件
+
+Shitf + LMB - 可以去除利用滑鼠左鍵已經選擇的元件
+
+RMB - 滑鼠右鍵, 在視圖空白按住滑鼠右鍵, 可以帶出相關 menu
+
+MMB - 滑鼠中鍵, 單擊表示 confirm 確認, 按住中鍵移動則可以旋轉觀測視圖 (rotate), 前後滑動中鍵則可放大縮小觀測視圖 (zoom in or out)
+
+MMB + RMB - 同時按住滑鼠中鍵與右鍵後移動, 可以平移觀測視圖 (pan), 相同功能也可以同時按住 Shift 與滑鼠中鍵後移動滑鼠, 以執行 pan 動作
+
+ESC - 取消
+
+F4 - 帶出上一個執行功能
+
+F6 - Zoom, 以滑鼠左鍵在視圖中選擇放大的區域
+
+F7 - Rotate, 進入此功能後, 可以使用任一滑鼠鍵移動, 執行旋轉視圖功能
+
+F8 - Snap view, 轉到與目前視圖最接近的正向視圖
+
+Ctrl + f - Fit
+
+Ctrl + l - Layer Settings
+
+Layers
+====
+
+NX 提供 256 個圖層 (Layers)
+
+layers objects
+
+1 - 20 solids
+
+21 - 40 sketches
+
+41 - 60 curves
+
+61 - 80 reference elements
+
+81 - 100 faces
+
+101 - 120 PMI
+
+Ctrl + l - Layer Settings
+
 
 
 

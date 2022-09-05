@@ -79,7 +79,7 @@
 <v t="leo.20220827213616.1"><vh>@edit 20220827-1.md</vh></v>
 <v t="leo.20220827231014.1"><vh>@edit 20220827-2.md</vh></v>
 <v t="leo.20220828113010.1"><vh>@clean useful_git_commands.md</vh>
-<v t="leo.20220828113236.1"><vh>Git 常用指令</vh></v>
+<v t="leo.20220828113236.1"><vh>有關 Git</vh></v>
 </v>
 <v t="leo.20220901020048.1"><vh>@clean useful_windows_commands.md</vh>
 <v t="leo.20220901020212.1"><vh>Windows 常用指令</vh></v>
@@ -1008,6 +1008,32 @@ Branches (分支)
 1. git 中的所有提交都存在某個分支上
 2. 一個倉儲可以有許多的分支
 3. Github 目前的主要分支稱為 main
+4. 在不影響主分支內容的情況下, 可以針對特定提交切出分支進行修改
+
+從特定提交切出分支的示意圖如下:
+
+&lt;img src="./../images/git_branching_off.png" width="600"&gt;&lt;/img&gt;
+
+HEAD 
+
+HEAD 通常指 A reference to the most recent commit.
+
+Merging (合併)
+
+分支合併示意圖如下:
+
+&lt;img src="./../images/git_merging_branches.png" width="600"&gt;&lt;/img&gt;
+
+如何提交?
+
+1. 在近端電腦上的資料版本稱為 Working Directory (工作目錄)
+2. 準備將已經修改完的資料納入特定提交的動作稱為 Staging (暫存)
+3. 將修改後的檔案放入暫存檔的指令為 git add, 可以利用 git add file.txt 暫存單一檔案或 git add . 暫存所有已經修改的檔案
+4. 改版檔案進入暫存區之後, 可利用 git commit -m 加上提交字串完成提交, 意即對這些檔案拍快照 (Snapshots)
+
+git add . 之後執行 git commit -m "提交說明訊息" 的流程示意圖如下:
+
+&lt;img src="./../images/git_commit_process.png" width="600"&gt;&lt;/img&gt;
 
 remote add
 ====

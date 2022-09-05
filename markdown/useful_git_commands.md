@@ -65,6 +65,32 @@ Branches (分支)
 1. git 中的所有提交都存在某個分支上
 2. 一個倉儲可以有許多的分支
 3. Github 目前的主要分支稱為 main
+4. 在不影響主分支內容的情況下, 可以針對特定提交切出分支進行修改
+
+從特定提交切出分支的示意圖如下:
+
+<img src="./../images/git_branching_off.png" width="600"></img>
+
+HEAD 
+
+HEAD 通常指 A reference to the most recent commit.
+
+Merging (合併)
+
+分支合併示意圖如下:
+
+<img src="./../images/git_merging_branches.png" width="600"></img>
+
+如何提交?
+
+1. 在近端電腦上的資料版本稱為 Working Directory (工作目錄)
+2. 準備將已經修改完的資料納入特定提交的動作稱為 Staging (暫存)
+3. 將修改後的檔案放入暫存檔的指令為 git add, 可以利用 git add file.txt 暫存單一檔案或 git add . 暫存所有已經修改的檔案
+4. 改版檔案進入暫存區之後, 可利用 git commit -m 加上提交字串完成提交, 意即對這些檔案拍快照 (Snapshots)
+
+git add . 之後執行 git commit -m "提交說明訊息" 的流程示意圖如下:
+
+<img src="./../images/git_commit_process.png" width="600"></img>
 
 remote add
 ====

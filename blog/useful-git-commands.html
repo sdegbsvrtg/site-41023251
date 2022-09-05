@@ -60,7 +60,7 @@
 <meta property="og:url" content="https://mde.tw/blog/useful-git-commands.html"/>
 <meta property="og:type" content="article"/>
 <meta property="article:published_time" content="2022-08-28 11:00:00+08:00"/>
-<meta property="article:modified_time" content="2022-09-05 01:11:11.292913+08:00"/>
+<meta property="article:modified_time" content="2022-09-05 09:10:38.269347+08:00"/>
 <meta property="article:author" content="https://mde.tw/blog/author/mdecycu.html">
 <meta property="article:section" content="git"/>
 <meta property="article:tag" content="remote-add"/>
@@ -76,7 +76,7 @@
   "name": "Git 常用指令",
   "headline": "Git 常用指令",
   "datePublished": "2022-08-28 11:00:00+08:00",
-  "dateModified": "2022-09-05 01:11:11.292913+08:00",
+  "dateModified": "2022-09-05 09:10:38.269347+08:00",
   "author": {
     "@type": "Person",
     "name": "mdecycu",
@@ -272,7 +272,24 @@ init_mathjax();
 <li>git 中的所有提交都存在某個分支上</li>
 <li>一個倉儲可以有許多的分支</li>
 <li>Github 目前的主要分支稱為 main</li>
+<li>在不影響主分支內容的情況下, 可以針對特定提交切出分支進行修改</li>
 </ol>
+<p>從特定提交切出分支的示意圖如下:</p>
+<p><img src="./../images/git_branching_off.png" width="600"></img></p>
+<p>HEAD </p>
+<p>HEAD 通常指 A reference to the most recent commit.</p>
+<p>Merging (合併)</p>
+<p>分支合併示意圖如下:</p>
+<p><img src="./../images/git_merging_branches.png" width="600"></img></p>
+<p>如何提交?</p>
+<ol>
+<li>在近端電腦上的資料版本稱為 Working Directory (工作目錄)</li>
+<li>準備將已經修改完的資料納入特定提交的動作稱為 Staging (暫存)</li>
+<li>將修改後的檔案放入暫存檔的指令為 git add, 可以利用 git add file.txt 暫存單一檔案或 git add . 暫存所有已經修改的檔案</li>
+<li>改版檔案進入暫存區之後, 可利用 git commit -m 加上提交字串完成提交, 意即對這些檔案拍快照 (Snapshots)</li>
+</ol>
+<p>git add . 之後執行 git commit -m "提交說明訊息" 的流程示意圖如下:</p>
+<p><img src="./../images/git_commit_process.png" width="600"></img></p>
 <h1>remote add</h1>
 <p>git remote add 的使用情境是希望將某一個倉儲的完整歷程資料, 改存至另一個倉儲.</p>
 <p>假設原來的 cad2021_final 倉儲位於 mdecourse 帳號下, 現在想要將此倉儲的完整歷程資料, 轉存至 mdecycu 帳號下.</p>

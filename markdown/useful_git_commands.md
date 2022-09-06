@@ -45,7 +45,7 @@ Commits (提交)
 1. 對資料拍快照的動作稱為提交
 2. 提交可以是動詞, 也可以是名詞, 例如: 提交這個程式, 或者已經完成幾次提交
 3. 基本上改版專案就是由每次的提交所組成
-4. 每一個提交都包含三種資料: 檔案的更動內容、與上一個提交的參照資料 (即所謂 parent commit)、一組 hash code.
+4. 每一個提交都包含三種資料: 檔案的更動內容、與上一個提交的參照資料 (即所謂 parent commit)、一組 hash code (SHA-1 hashes).
 
 其中 hash code 長得像這樣: f2d2ec5069fc6776c80b3ad6b7cbde3cade4e
 
@@ -91,6 +91,20 @@ Merging (合併)
 git add . 之後執行 git commit -m "提交說明訊息" 的流程示意圖如下:
 
 <img src="./../images/git_commit_process.png" width="600"></img>
+
+Rebasing、Revert and Cherry picking
+
+Rebase (資料取自 <https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase>)
+
+What is git rebase? From a content perspective, rebasing is changing the base of your branch from one commit to another making it appear as if you'd created your branch from a different commit. Internally, Git accomplishes this by creating new commits and applying them to the specified base.
+
+以下為 git rebase 示意圖:
+
+<img src="./../images/git_rebase.png" width="600"></img>
+
+Revert: <https://www.atlassian.com/git/tutorials/undoing-changes/git-revert>
+
+Git cherry pick: <https://www.atlassian.com/git/tutorials/cherry-pick>
 
 remote add
 ====

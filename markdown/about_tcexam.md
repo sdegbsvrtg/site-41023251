@@ -75,3 +75,8 @@ TCExam 原始碼
 目前尚未完成的設定為 send mail 的部分.
 
 總結上述說明, 要啟動 TCExam 考試系統, 必須確認 nginx 已經啟動, 然後手動執行 pgsql 目錄下的 start.bat, 並且注意 c:\certbot 目錄下有關 https 數位簽章每 90 天必須設法手動或自動更新.
+
+CYCU TCExam 主機
+====
+
+目前 exam dot cycu dot org 採用 10ff:1:0::1 設定, 使用 8GB 虛擬主機測試是否合用. 目前透過 nginx 管制, 只允許系上 IPv6 網段連線.

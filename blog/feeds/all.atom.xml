@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Mde.tw</title><link href="https://mde.tw/blog/" rel="alternate"></link><link href="https://mde.tw/blog/feeds/all.atom.xml" rel="self"></link><id>https://mde.tw/blog/</id><updated>2022-09-05T09:10:38+08:00</updated><entry><title>有關 Github Classroom</title><link href="https://mde.tw/blog/about-classroom.html" rel="alternate"></link><published>2022-09-03T11:00:00+08:00</published><updated>2022-09-05T00:11:42+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-09-03:/blog/about-classroom.html</id><summary type="html">&lt;p&gt;這裡將收集與 Github Classroom 有關的資料內容. &lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Mde.tw</title><link href="https://mde.tw/blog/" rel="alternate"></link><link href="https://mde.tw/blog/feeds/all.atom.xml" rel="self"></link><id>https://mde.tw/blog/</id><updated>2022-09-06T22:44:59+08:00</updated><entry><title>有關 Github Classroom</title><link href="https://mde.tw/blog/about-classroom.html" rel="alternate"></link><published>2022-09-03T11:00:00+08:00</published><updated>2022-09-05T00:11:42+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-09-03:/blog/about-classroom.html</id><summary type="html">&lt;p&gt;這裡將收集與 Github Classroom 有關的資料內容. &lt;/p&gt;
 </summary><content type="html">&lt;p&gt;這裡將收集與 Github Classroom 有關的資料內容. &lt;/p&gt;
 
 
@@ -230,7 +230,7 @@ total: 28.29 GB
 &lt;h1&gt;有關筆記型電腦&lt;/h1&gt;
 &lt;p&gt;綜一館八樓的電腦輔助設計室所配置的 PC, 雖然裝有還原卡, 但只要配合 USB 隨身碟與可攜套件, 應該足以應付 cp2022 計算機程式課程所需. 所以一般並不建議大一就購買筆記型電腦, 而是先善用系上所提供的 PC. 至於課外使用時段, 請參考系上電腦教室借用規定辦理, 通常週四與週五晚間未排課時段可以外借.&lt;/p&gt;
 &lt;p&gt;至於符合機械設計工程系需求的筆記型電腦, 一般建議 i7 等級以上, 16 GB 記憶體, 並配置中階以上獨立顯卡. Windows 操作系統則建議使用專業 (Professional) 以上版本.&lt;/p&gt;
-&lt;p&gt;校外電腦連接部分, 則需要每學年申請 VPN 使用授權, 下載學校購買的軟體或電子書, 只要設定校內 Proxy 即可, 但若要連網認證 SolidWorks 或 Matlab, 則需透過校內 VPN 連網.&lt;/p&gt;</content><category term="cp2022"></category><category term="w1"></category><category term="portable python"></category><category term="計算機程式"></category></entry><entry><title>有關 TCExam</title><link href="https://mde.tw/blog/about-tcexam.html" rel="alternate"></link><published>2022-09-01T12:00:00+08:00</published><updated>2022-09-03T20:50:11+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-09-01:/blog/about-tcexam.html</id><summary type="html">&lt;p&gt;這裡將收集與 TCExam 有關的資料內容.&lt;/p&gt;
+&lt;p&gt;校外電腦連接部分, 則需要每學年申請 VPN 使用授權, 下載學校購買的軟體或電子書, 只要設定校內 Proxy 即可, 但若要連網認證 SolidWorks 或 Matlab, 則需透過校內 VPN 連網.&lt;/p&gt;</content><category term="cp2022"></category><category term="w1"></category><category term="portable python"></category><category term="計算機程式"></category></entry><entry><title>有關 TCExam</title><link href="https://mde.tw/blog/about-tcexam.html" rel="alternate"></link><published>2022-09-01T12:00:00+08:00</published><updated>2022-09-06T22:44:59+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-09-01:/blog/about-tcexam.html</id><summary type="html">&lt;p&gt;這裡將收集與 TCExam 有關的資料內容.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;這裡將收集與 TCExam 有關的資料內容.&lt;/p&gt;
 
 
@@ -285,12 +285,14 @@ bin\pg_ctl -D %DATA% -l logfile.txt stop
 &lt;p&gt;由於目前所啟動的線上 TCExam 採用 2022.06.9 釋出的 PHP 8.1.7 版, 而 &lt;a href="https://github.com/tecnickcom/tcexam"&gt;https://github.com/tecnickcom/tcexam&lt;/a&gt; 最近修改日期為 2021.08.05, 因此直接從 TCExam github 網站 clone 下來的原始碼無法在最新版的 PHP 解譯環境中執行.&lt;/p&gt;
 &lt;p&gt;因此啟動修改 TCExam, 令其可以在 PHP 8.1.7 中執行, 且 pdf 轉檔的部分, 也自行建立中文字型, 以便正確將考試內容轉為中英並存的格式.&lt;/p&gt;
 &lt;p&gt;目前尚未完成的設定為 send mail 的部分.&lt;/p&gt;
-&lt;p&gt;總結上述說明, 要啟動 TCExam 考試系統, 必須確認 nginx 已經啟動, 然後手動執行 pgsql 目錄下的 start.bat, 並且注意 c:\certbot 目錄下有關 https 數位簽章每 90 天必須設法手動或自動更新.&lt;/p&gt;</content><category term="tcexam"></category><category term="exam"></category><category term="php"></category><category term="pgsql"></category><category term="nginx"></category></entry><entry><title>Windows 常用指令</title><link href="https://mde.tw/blog/useful-windows-commands.html" rel="alternate"></link><published>2022-09-01T11:00:00+08:00</published><updated>2022-09-01T02:10:52+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-09-01:/blog/useful-windows-commands.html</id><summary type="html">&lt;p&gt;根據使用情境將常用的 Windows 指令加以整理.&lt;/p&gt;
+&lt;p&gt;總結上述說明, 要啟動 TCExam 考試系統, 必須確認 nginx 已經啟動, 然後手動執行 pgsql 目錄下的 start.bat, 並且注意 c:\certbot 目錄下有關 https 數位簽章每 90 天必須設法手動或自動更新.&lt;/p&gt;
+&lt;h1&gt;CYCU TCExam 主機&lt;/h1&gt;
+&lt;p&gt;目前 exam dot cycu dot org 採用 10ff:1:0::1 設定, 使用 8GB 虛擬主機測試是否合用. 目前透過 nginx 管制, 只允許系上 IPv6 網段連線.&lt;/p&gt;</content><category term="tcexam"></category><category term="exam"></category><category term="php"></category><category term="pgsql"></category><category term="nginx"></category></entry><entry><title>Windows 常用指令</title><link href="https://mde.tw/blog/useful-windows-commands.html" rel="alternate"></link><published>2022-09-01T11:00:00+08:00</published><updated>2022-09-01T02:10:52+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-09-01:/blog/useful-windows-commands.html</id><summary type="html">&lt;p&gt;根據使用情境將常用的 Windows 指令加以整理.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;根據使用情境將常用的 Windows 指令加以整理.&lt;/p&gt;
 
 
 &lt;h1&gt;密碼最長使用期限&lt;/h1&gt;
-&lt;p&gt;Windows 10 &lt;a href="https://docs.microsoft.com/zh-tw/windows/security/threat-protection/security-policy-settings/maximum-password-age"&gt;密碼最長使用期限&lt;/a&gt; 內定為 42 天, 假如此一設定對使用者造成困擾, 可以從系統管理者執行的 cmd 中, 輸入 secpol.msc 開啟 &lt;a href="https://mitblog.pixnet.net/blog/post/40807765-%5Bwindows%5D-%E6%9C%AC%E6%A9%9F%E5%AE%89%E5%85%A8%E6%80%A7%E5%8E%9F%E5%89%87%28secpol.msc%29%E3%80%81%E7%BE%A4%E7%B5%84%E5%8E%9F%E5%89%87"&gt;本機安全性設定&lt;/a&gt;, 開啟"帳戶原則"中的"密碼原則", 然後將"密碼最長使用期限"從內定的  42 天改為 0, 表示密碼永不過期.&lt;/p&gt;</content><category term="windows"></category><category term="batch"></category><category term="commands"></category></entry><entry><title>Git 常用指令</title><link href="https://mde.tw/blog/useful-git-commands.html" rel="alternate"></link><published>2022-08-28T11:00:00+08:00</published><updated>2022-09-05T09:10:38+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-08-28:/blog/useful-git-commands.html</id><summary type="html">&lt;p&gt;根據使用情境將常用的 git 指令加以整理.&lt;/p&gt;
+&lt;p&gt;Windows 10 &lt;a href="https://docs.microsoft.com/zh-tw/windows/security/threat-protection/security-policy-settings/maximum-password-age"&gt;密碼最長使用期限&lt;/a&gt; 內定為 42 天, 假如此一設定對使用者造成困擾, 可以從系統管理者執行的 cmd 中, 輸入 secpol.msc 開啟 &lt;a href="https://mitblog.pixnet.net/blog/post/40807765-%5Bwindows%5D-%E6%9C%AC%E6%A9%9F%E5%AE%89%E5%85%A8%E6%80%A7%E5%8E%9F%E5%89%87%28secpol.msc%29%E3%80%81%E7%BE%A4%E7%B5%84%E5%8E%9F%E5%89%87"&gt;本機安全性設定&lt;/a&gt;, 開啟"帳戶原則"中的"密碼原則", 然後將"密碼最長使用期限"從內定的  42 天改為 0, 表示密碼永不過期.&lt;/p&gt;</content><category term="windows"></category><category term="batch"></category><category term="commands"></category></entry><entry><title>Git 常用指令</title><link href="https://mde.tw/blog/useful-git-commands.html" rel="alternate"></link><published>2022-08-28T11:00:00+08:00</published><updated>2022-09-05T11:10:15+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-08-28:/blog/useful-git-commands.html</id><summary type="html">&lt;p&gt;根據使用情境將常用的 git 指令加以整理.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;根據使用情境將常用的 git 指令加以整理.&lt;/p&gt;
 
 
@@ -318,7 +320,7 @@ bin\pg_ctl -D %DATA% -l logfile.txt stop
 &lt;li&gt;對資料拍快照的動作稱為提交&lt;/li&gt;
 &lt;li&gt;提交可以是動詞, 也可以是名詞, 例如: 提交這個程式, 或者已經完成幾次提交&lt;/li&gt;
 &lt;li&gt;基本上改版專案就是由每次的提交所組成&lt;/li&gt;
-&lt;li&gt;每一個提交都包含三種資料: 檔案的更動內容、與上一個提交的參照資料 (即所謂 parent commit)、一組 hash code.&lt;/li&gt;
+&lt;li&gt;每一個提交都包含三種資料: 檔案的更動內容、與上一個提交的參照資料 (即所謂 parent commit)、一組 hash code (SHA-1 hashes).&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;其中 hash code 長得像這樣: f2d2ec5069fc6776c80b3ad6b7cbde3cade4e&lt;/p&gt;
 &lt;p&gt;Repositories (儲存庫或倉儲)&lt;/p&gt;
@@ -355,6 +357,13 @@ bin\pg_ctl -D %DATA% -l logfile.txt stop
 &lt;/ol&gt;
 &lt;p&gt;git add . 之後執行 git commit -m "提交說明訊息" 的流程示意圖如下:&lt;/p&gt;
 &lt;p&gt;&lt;img src="./../images/git_commit_process.png" width="600"&gt;&lt;/img&gt;&lt;/p&gt;
+&lt;p&gt;Rebasing、Revert and Cherry picking&lt;/p&gt;
+&lt;p&gt;Rebase (資料取自 &lt;a href="https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase"&gt;https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;What is git rebase? From a content perspective, rebasing is changing the base of your branch from one commit to another making it appear as if you'd created your branch from a different commit. Internally, Git accomplishes this by creating new commits and applying them to the specified base.&lt;/p&gt;
+&lt;p&gt;以下為 git rebase 示意圖:&lt;/p&gt;
+&lt;p&gt;&lt;img src="./../images/git_rebase.png" width="600"&gt;&lt;/img&gt;&lt;/p&gt;
+&lt;p&gt;Revert: &lt;a href="https://www.atlassian.com/git/tutorials/undoing-changes/git-revert"&gt;https://www.atlassian.com/git/tutorials/undoing-changes/git-revert&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Git cherry pick: &lt;a href="https://www.atlassian.com/git/tutorials/cherry-pick"&gt;https://www.atlassian.com/git/tutorials/cherry-pick&lt;/a&gt;&lt;/p&gt;
 &lt;h1&gt;remote add&lt;/h1&gt;
 &lt;p&gt;git remote add 的使用情境是希望將某一個倉儲的完整歷程資料, 改存至另一個倉儲.&lt;/p&gt;
 &lt;p&gt;假設原來的 cad2021_final 倉儲位於 mdecourse 帳號下, 現在想要將此倉儲的完整歷程資料, 轉存至 mdecycu 帳號下.&lt;/p&gt;

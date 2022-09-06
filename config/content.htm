@@ -70,6 +70,7 @@
 <h4>Reference:</h4>
 <p style="padding-left: 30px;"><a href="https://c1.cycu.org/doc/trunk/content/index.html">cp2021</a></p>
 <h2>cmsimde</h2>
+<p>WCM (Web based Content Management) 網際內容管理課程主要在研究改進 <a href="https://github.com/mdecycu/cmsimde">cmsimde</a> 的功能與應用.</p>
 <p><a href="https://github.com/mdecycu/cmsimde">cmsimde</a> 是一套 Web-based content management system, 也就是基於全球資訊網的內容管理系統.</p>
 <p>由於全球資訊網頁中主要使用 html, css 與 javascript 控制網頁內容, 因此在利用 <a href="https://github.com/mdecycu/cmsimde">cmsimde</a> 管理數位內容時, 必須同時對這三種語言有一定的認識.</p>
 <h4>有關 html (html5) 請參考:</h4>
@@ -103,8 +104,7 @@ REM 利用 acp.bat 中的 git add, git commit 與 git push 將更新資料送到
 acp "update cmsimde submodule"</pre>
 <h4>Are we living in a smart city (University, College, Department, Class, Group)?</h4>
 <h4>我們生活在智慧城市 (大學, 學院, 科系, 班級, 團隊) 嗎?</h4>
-<p style="padding-left: 30px;"><a href="https://link.springer.com/referencework/10.1007/978-3-030-69698-6">Handbook of Smart Cities</a></p>
-<h3>Portable Python</h3>
+<p style="padding-left: 30px;"><a href="https://link.springer.com/referencework/10.1007/978-3-030-69698-6">Handbook of Smart Cities</a></p><h3>Portable Python</h3>
 <h4>何謂可攜式 Python 程式環境?</h4>
 <h4 style="padding-left: 30px;">Python 程式是如何執行的?</h4>
 <p style="padding-left: 30px;">首先 Python 是一種解譯式 (Interpreted) 程式語言, 與 C 或 C++ 程式語言最大的差別是, C/C++ 程式碼通常必須透過編譯 (Compile) 與連結 (Link) 的過程, 將原始碼轉為可執行的格式 (在 Windows 操作系統為 .exe 檔案), 而 Python 程式寫好後, 可以直接利用解譯器執行, 使用者不需要手動執行程式碼的編譯, 而是由解譯器在執行前即時將程式碼轉換為可執行檔案.</p>
@@ -2637,6 +2637,7 @@ wire_edm_machining</pre>
 <p>Supporting a functional design approach, Mechatronics Concept Designer integrates upstream and downstream engineering domains, including requirements management, mechanical design, electrical design, and software/automation engineering.</p>
 <p>Mechatronics Concept Designer accelerates development of products that involve mechanical, electrical, and software design disciplines, allowing them to work in parallel, focused on a concept<br/>design that includes mechanical components, sensors, actuators, and motion. </p>
 <h1>CoppeliaSim</h1>
+<p>CD (Collaborative Design) 協同產品設計實習課程, 旨在探討多名設計人員, 從利用 NX 及 Solvespace 等單機套件, 過渡到採用 Onshape 雲端 MCAD 套件執行零組件繪製後, 並匯入 CoppeliaSim 建立機電資系統整合模擬流程中, 該如何執行同步 (Simultaneous) 協同設計?</p>
 <p><a href="/downloads/pythonBubbleRob.pdf">Controlling your robot with Python</a></p>
 <p><a href="https://www.sciencedirect.com/science/article/pii/S1569190X22001046">How to pick a mobile robot simulator: A quantitative comparison of</a><br/><a href="https://www.sciencedirect.com/science/article/pii/S1569190X22001046">CoppeliaSim, Gazebo, MORSE and Webots with a focus on accuracy</a><br/><a href="https://www.sciencedirect.com/science/article/pii/S1569190X22001046">of motion</a></p>
 <p>User Manual: <a href="https://mde.tw/pjcopsim">https://mde.tw/pjcopsim</a> (相關專題: <a href="https://mde.tw/pj5083">https://mde.tw/pj5083</a>)</p>
@@ -2751,7 +2752,18 @@ wire_edm_machining</pre>
 <p style="padding-left: 30px;"><a href="https://github.com/mdecycu/cmsimde">https://github.com/mdecycu/cmsimde</a></p>
 <p style="padding-left: 30px;"><a href="https://github.com/KmolYuan/reveal-yaml-rs">https://github.com/KmolYuan/reveal-yaml-rs</a> </p>
 <p style="padding-left: 30px;"><a href="https://github.com/KmolYuan/latex-paper">https://github.com/KmolYuan/latex-paper</a> </p>
-<p> </p><h2>pyslvs</h2>
+<p> </p><h2>pjexam</h2>
+<p>以 Python Flask 改寫 <a href="https://tcexam.org/">TCExam</a>.</p>
+<p>執行步驟:</p>
+<ol>
+<li>利用 <a href="https://github.com/pgsql-tw/portable-pgsql">https://github.com/pgsql-tw/portable-pgsql</a> 啟動資料庫系統.</li>
+<li>利用 Python Flask 讀取 TCExam PostgreSQL 資料庫資料.</li>
+<li>利用 Python Flask 改寫部分 TCExam 模組.</li>
+</ol>
+<p>參考資料:</p>
+<p style="padding-left: 30px;"><a href="/downloads/tcexam_12_eng.pdf">tcexam_12_eng.pdf</a></p>
+<p style="padding-left: 30px;"><a href="/downloads/Quality_features_of_TCExam.pdf">Quality_features_of_TCExam.pdf</a></p>
+<p style="padding-left: 30px;"><a href="https://mde.tw/blog/about-tcexam.html">https://mde.tw/blog/about-tcexam.html</a> </p><h2>pyslvs</h2>
 <p>平面摺疊機構應用研究</p>
 <p style="padding-left: 30px;"><a href="https://github.com/KmolYuan/Pyslvs-UI">https://github.com/KmolYuan/Pyslvs-UI</a></p>
 <p>摺疊自行車研究:</p>

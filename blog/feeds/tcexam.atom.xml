@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Mde.tw - tcexam</title><link href="https://mde.tw/blog/" rel="alternate"></link><link href="https://mde.tw/blog/feeds/tcexam.atom.xml" rel="self"></link><id>https://mde.tw/blog/</id><updated>2022-09-03T20:50:11+08:00</updated><entry><title>有關 TCExam</title><link href="https://mde.tw/blog/about-tcexam.html" rel="alternate"></link><published>2022-09-01T12:00:00+08:00</published><updated>2022-09-03T20:50:11+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-09-01:/blog/about-tcexam.html</id><summary type="html">&lt;p&gt;這裡將收集與 TCExam 有關的資料內容.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Mde.tw - tcexam</title><link href="https://mde.tw/blog/" rel="alternate"></link><link href="https://mde.tw/blog/feeds/tcexam.atom.xml" rel="self"></link><id>https://mde.tw/blog/</id><updated>2022-09-06T22:44:59+08:00</updated><entry><title>有關 TCExam</title><link href="https://mde.tw/blog/about-tcexam.html" rel="alternate"></link><published>2022-09-01T12:00:00+08:00</published><updated>2022-09-06T22:44:59+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-09-01:/blog/about-tcexam.html</id><summary type="html">&lt;p&gt;這裡將收集與 TCExam 有關的資料內容.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;這裡將收集與 TCExam 有關的資料內容.&lt;/p&gt;
 
 
@@ -54,4 +54,6 @@ bin\pg_ctl -D %DATA% -l logfile.txt stop
 &lt;p&gt;由於目前所啟動的線上 TCExam 採用 2022.06.9 釋出的 PHP 8.1.7 版, 而 &lt;a href="https://github.com/tecnickcom/tcexam"&gt;https://github.com/tecnickcom/tcexam&lt;/a&gt; 最近修改日期為 2021.08.05, 因此直接從 TCExam github 網站 clone 下來的原始碼無法在最新版的 PHP 解譯環境中執行.&lt;/p&gt;
 &lt;p&gt;因此啟動修改 TCExam, 令其可以在 PHP 8.1.7 中執行, 且 pdf 轉檔的部分, 也自行建立中文字型, 以便正確將考試內容轉為中英並存的格式.&lt;/p&gt;
 &lt;p&gt;目前尚未完成的設定為 send mail 的部分.&lt;/p&gt;
-&lt;p&gt;總結上述說明, 要啟動 TCExam 考試系統, 必須確認 nginx 已經啟動, 然後手動執行 pgsql 目錄下的 start.bat, 並且注意 c:\certbot 目錄下有關 https 數位簽章每 90 天必須設法手動或自動更新.&lt;/p&gt;</content><category term="tcexam"></category><category term="exam"></category><category term="php"></category><category term="pgsql"></category><category term="nginx"></category></entry></feed>
+&lt;p&gt;總結上述說明, 要啟動 TCExam 考試系統, 必須確認 nginx 已經啟動, 然後手動執行 pgsql 目錄下的 start.bat, 並且注意 c:\certbot 目錄下有關 https 數位簽章每 90 天必須設法手動或自動更新.&lt;/p&gt;
+&lt;h1&gt;CYCU TCExam 主機&lt;/h1&gt;
+&lt;p&gt;目前 exam dot cycu dot org 採用 10ff:1:0::1 設定, 使用 8GB 虛擬主機測試是否合用. 目前透過 nginx 管制, 只允許系上 IPv6 網段連線.&lt;/p&gt;</content><category term="tcexam"></category><category term="exam"></category><category term="php"></category><category term="pgsql"></category><category term="nginx"></category></entry></feed>

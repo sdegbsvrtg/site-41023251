@@ -49,9 +49,9 @@ Replit can do it all. It can replace your:
 ====
 
 1. 選擇以 import from github 的方式建立 repl.
-2. 選擇從 https://github.com/mdecycu/cmsimde_site import 檔案
+2. 選擇從 <https://github.com/mdecycu/cmsimde_site> import 檔案
 3. language 選擇 html, css 與 javascript 類別
 4. 將 repl 名稱從 cmsimte_site 改為 scrum1 (即與 account 名稱相同)
-5. 隨即可以在 https://scrum1.repl.co 看到靜態網頁
+5. 隨即可以在 <https://scrum1.repl.co> 看到靜態網頁
 
 

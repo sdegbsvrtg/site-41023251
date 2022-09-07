@@ -1,5 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Mde.tw</title><link href="https://mde.tw/blog/" rel="alternate"></link><link href="https://mde.tw/blog/feeds/all.atom.xml" rel="self"></link><id>https://mde.tw/blog/</id><updated>2022-09-07T14:37:06+08:00</updated><entry><title>有關 Wink</title><link href="https://mde.tw/blog/about-wink.html" rel="alternate"></link><published>2022-09-07T11:00:00+08:00</published><updated>2022-09-07T14:37:06+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-09-07:/blog/about-wink.html</id><summary type="html">&lt;p&gt;這裡將收集與 Wink 有關的資料內容. Wink 是一套製作電腦操作展示的 freeware. 從 3.0 版之後, 所製作的教學影片以 ffmpeg 存為 mp4 格式, 並透過 Javascript 在網頁上與使用者進行互動.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Mde.tw</title><link href="https://mde.tw/blog/" rel="alternate"></link><link href="https://mde.tw/blog/feeds/all.atom.xml" rel="self"></link><id>https://mde.tw/blog/</id><updated>2022-09-07T21:29:54+08:00</updated><entry><title>免付費完結篇</title><link href="https://mde.tw/blog/the_end_of_free_service.html" rel="alternate"></link><published>2022-09-07T12:00:00+08:00</published><updated>2022-09-07T21:29:54+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-09-07:/blog/the_end_of_free_service.html</id><summary type="html">&lt;p&gt;天下沒有白吃的午餐. 2017 年 OpenShift 就曾經終止過免付費雲端應用服務, 2022 年GDrive 也才剛終止教育單位無限空間, &lt;a href="https://blog.heroku.com/next-chapter"&gt;上個月&lt;/a&gt;, 終於輪到 Heroku.&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;天下沒有白吃的午餐. 2017 年 OpenShift 就曾經終止過免付費雲端應用服務, 2022 年GDrive 也才剛終止教育單位無限空間, &lt;a href="https://blog.heroku.com/next-chapter"&gt;上個月&lt;/a&gt;, 終於輪到 Heroku.&lt;/p&gt;
+
+
+&lt;h1&gt;Heroku 的宣布&lt;/h1&gt;
+&lt;p&gt;Starting October 26, 2022, we will begin deleting inactive accounts and associated storage for accounts that have been inactive for over a year. Starting November 28, 2022, we plan to stop offering free product plans and plan to start shutting down free dynos and data services. &lt;/p&gt;
+&lt;p&gt;Heroku 進入所謂 next chapter 之後, 希望持續使用免費雲端應用程式服務的用戶, 可以轉往 &lt;a href="https://blog.replit.com/heroku-alternatives"&gt;https://blog.replit.com/heroku-alternatives&lt;/a&gt;.&lt;/p&gt;
+&lt;h1&gt;註冊 Replit 帳號&lt;/h1&gt;
+&lt;p&gt;首先以 scrum1 與 cadlab 註冊帳號後, 將 cmsimde_site 透過 &lt;a href="https://replit.com/heroku"&gt;https://replit.com/heroku&lt;/a&gt; 轉換服務. 在 &lt;a href="https://docs.replit.com/hosting/deploying-http-servers"&gt;https://docs.replit.com/hosting/deploying-http-servers&lt;/a&gt; 的協助下, 應該就可以設法執行動態網頁或靜態網頁.&lt;/p&gt;
+&lt;h1&gt;Replit 簡介&lt;/h1&gt;
+&lt;p&gt;根據 &lt;a href="https://docs.replit.com/"&gt;https://docs.replit.com/&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;Replit is a platform for creating and sharing software. You can write your code and host it all in the same place. Replit is also a place to learn how to code, so we have some awesome built-in educational features as well.&lt;/p&gt;
+&lt;p&gt;Replit can do it all. It can replace your:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;code editor (e.g. VS Code, Sublime Text, IntelliJ IDEA)&lt;/li&gt;
+&lt;li&gt;development environment (e.g. your operating system, and build tools like npm or pip)&lt;/li&gt;
+&lt;li&gt;cloud provider (e.g. AWS, Netlify)&lt;/li&gt;
+&lt;li&gt;team collaboration tools (e.g. Google Docs, GitHub)&lt;/li&gt;
+&lt;li&gt;teaching tools (e.g. Canva, Moodle, Blackboard)&lt;/li&gt;
+&lt;li&gt;learning tools (e.g. Codecademy, Coursera, Udemy, Udacity)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;免費帳號可建立不限數量的倉儲, 但只提供 500 MB 容量, 以及 500 MB 的記憶體, 加上 0.2-0.5 vCPUs, 因此大概只夠讓使用者測試了解 Replit 的使用流程以及配置方法.&lt;/p&gt;
+&lt;p&gt;希望利用 Replit 配置靜態網頁者, 可以參考 &lt;a href="https://docs.replit.com/hosting/hosting-web-pages"&gt;https://docs.replit.com/hosting/hosting-web-pages&lt;/a&gt;.&lt;/p&gt;
+&lt;h1&gt;以 Replit 建立靜態網頁&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;選擇以 import from github 的方式建立 repl.&lt;/li&gt;
+&lt;li&gt;選擇從 https://github.com/mdecycu/cmsimde_site import 檔案&lt;/li&gt;
+&lt;li&gt;language 選擇 html, css 與 javascript 類別&lt;/li&gt;
+&lt;li&gt;將 repl 名稱從 cmsimte_site 改為 scrum1 (即與 account 名稱相同)&lt;/li&gt;
+&lt;li&gt;隨即可以在 https://scrum1.repl.co 看到靜態網頁&lt;/li&gt;
+&lt;/ol&gt;</content><category term="Free"></category><category term="heroku"></category><category term="replit"></category></entry><entry><title>有關 Wink</title><link href="https://mde.tw/blog/about-wink.html" rel="alternate"></link><published>2022-09-07T11:00:00+08:00</published><updated>2022-09-07T14:37:06+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-09-07:/blog/about-wink.html</id><summary type="html">&lt;p&gt;這裡將收集與 Wink 有關的資料內容. Wink 是一套製作電腦操作展示的 freeware. 從 3.0 版之後, 所製作的教學影片以 ffmpeg 存為 mp4 格式, 並透過 Javascript 在網頁上與使用者進行互動.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;這裡將收集與 Wink 有關的資料內容. Wink 是一套製作電腦操作展示的 freeware. 從 3.0 版之後, 所製作的教學影片以 ffmpeg 存為 mp4 格式, 並透過 Javascript 在網頁上與使用者進行互動.&lt;/p&gt;
 
 

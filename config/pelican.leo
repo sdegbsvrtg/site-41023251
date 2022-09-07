@@ -97,7 +97,7 @@
 <v t="leo.20220903233110.1"><vh>有關 Github Classroom</vh></v>
 </v>
 <v t="leo.20220907072921.1"><vh>@clean about_wink.md</vh>
-<v t="leo.20220907093741.1"><vh>newHeadline</vh></v>
+<v t="leo.20220907093741.1"><vh>有關 Wink</vh></v>
 </v>
 </v>
 </v>
@@ -1601,7 +1601,7 @@ Title: 有關 Wink
 Date: 2022-09-07 11:00
 Category: Wink
 Tags: mp4, ffmpeg, javascript
-Slug: about-nx
+Slug: about-wink
 Author: mdecycu
 ---
 
@@ -1610,7 +1610,87 @@ Author: mdecycu
 &lt;!-- PELICAN_END_SUMMARY --&gt;
 
 @others</t>
-<t tx="leo.20220907093741.1"></t>
+<t tx="leo.20220907093741.1">Wink 下載
+====
+
+Wink 3.0 可直接從 &lt;https://www.debugmode.com/wink/&gt; 下載. ffmpeg.exe 則可從[這裡]下載.
+
+[這裡]: https://github.com/BtbN/FFmpeg-Builds/releases
+
+每一個 wink 影片嵌入網頁時, 在同一頁面下的多個影片檔案, 都要有獨一的 data-varname 變數名稱, 在 cmsimde 架構下:
+data-dirname 動態網頁 - 使用 /static
+
+靜態網頁 - 使用 ./../cmsimde/static
+
+然後動態網頁 mp4 video 標註 src - 使用 /downloads/影片名稱.mp4
+
+靜態網頁 mp4 video 標註 src - 使用 ./../downloads/影片名稱.mp4
+
+在 Blog 架構下, 則一律先將 .mp4 檔案 acp (git add, git commit and git push) 至 Github 倉儲後, 再使用靜態網頁連結 .mp4 與 data-dirname 設定.
+
+以下為兩個 Wink3 官方釋出的 Tutorial (已經全數刪除原先的 buttons, 並直接使用 html5 的 video controls):
+
+Tutorial1:
+
+&lt;script&gt;
+var winkVideoData_tutorial1 = {
+  dataVersion: 1,
+  frameRate: 10,
+  buttonFrameLength: 5,
+  buttonFrameOffset: 2,
+  frameStops: {
+  },
+};
+&lt;/script&gt;
+&lt;/p&gt;
+&lt;!-- 接下來將 mp4 檔案從 downloads 目錄取出 --&gt;
+&lt;div class="winkVideoContainerClass"&gt;&lt;video autoplay="autoplay" class="winkVideoClass" controls="controls" data-dirname="./../cmsimde/static" data-varname="winkVideoData_tutorial1" height="600" muted="true" width="800"&gt;
+&lt;source src="./../downloads/wink_tutorial/tutorial1.mp4" type="video/mp4"/&gt;&lt;/video&gt;
+&lt;/div&gt;
+
+Tutorial 2:
+
+&lt;!-- 每一個 wink 影片都要有獨立的 data-varname 變數名稱
+data-dirname 則區分動態網頁 - 使用 /static
+與靜態網頁 - 使用 ./../cmsimde/static
+然後動態網頁 mp4 - 使用 /downloads/影片名稱.mp4
+與靜態網頁 - 使用 ./../downloads/影片名稱.mp4
+ --&gt;
+&lt;script&gt;
+var winkVideoData_tutorial2 = {
+  dataVersion: 1,
+  frameRate: 10,
+  buttonFrameLength: 5,
+  buttonFrameOffset: 2,
+  frameStops: {
+  },
+};
+&lt;/script&gt;
+&lt;/p&gt;
+&lt;!-- 接下來將 mp4 檔案從 downloads 目錄取出 --&gt;
+&lt;div class="winkVideoContainerClass"&gt;&lt;video autoplay="autoplay" class="winkVideoClass" controls="controls" data-dirname="./../cmsimde/static" data-varname="winkVideoData_tutorial2" height="600" muted="true" width="800"&gt;
+&lt;source src="./../downloads/wink_tutorial/tutorial2.mp4" type="video/mp4"/&gt;&lt;/video&gt;&lt;/div&gt;
+
+上述嵌入 Tutorial1 Wink3 mp4 影片的超文件內容如下:
+
+&lt;pre class="brush: html"&gt;
+&amp;lt;script&amp;gt;
+var winkVideoData_tutorial1 = {
+  dataVersion: 1,
+  frameRate: 10,
+  buttonFrameLength: 5,
+  buttonFrameOffset: 2,
+  frameStops: {
+  },
+};
+&amp;lt;/script&amp;gt;
+&amp;lt;/p&amp;gt;
+&amp;lt;!-- 接下來將 mp4 檔案從 downloads 目錄取出 --&amp;gt;
+&amp;lt;div class="winkVideoContainerClass"&amp;gt;&amp;lt;video autoplay="autoplay" class="winkVideoClass" controls="controls" data-dirname="./../cmsimde/static" data-varname="winkVideoData_tutorial1" height="600" muted="true" width="800"&amp;gt;
+&amp;lt;source src="./../downloads/wink_tutorial/tutorial1.mp4" type="video/mp4"/&amp;gt;&amp;lt;/video&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;br \&amp;gt;
+&lt;/pre&gt;</t>
 <t tx="yen.20170108171605.1"></t>
 <t tx="yen.20170108171605.2">QTreeWidget {
     /* These apply to the selected item, but not to editing items.*/

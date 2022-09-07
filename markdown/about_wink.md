@@ -29,6 +29,8 @@ data-dirname 動態網頁 - 使用 /static
 
 在 Blog 架構下, 則一律先將 .mp4 檔案 acp (git add, git commit and git push) 至 Github 倉儲後, 再使用靜態網頁連結 .mp4 與 data-dirname 設定.
 
+假如 Wink 影片內容為單一程式視窗, 其導入影片寬高尺寸可使用 800 x 600, 若影片操作範圍擴及整個操作系統畫面, 則建議導入影片寬高尺寸為 1008 x 630.
+
 以下為兩個 Wink3 官方釋出的 Tutorial (已經全數刪除原先的 buttons, 並直接使用 html5 的 video controls):
 
 Tutorial1:

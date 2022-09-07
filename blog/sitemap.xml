@@ -4,428 +4,428 @@ xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitem
 xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-<loc>./</loc>
-<lastmod>2022-09-07T14:32:57-00:00</lastmod>
+<loc>https://mde.tw/blog/</loc>
+<lastmod>2022-09-07T14:37:22-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>./archives.html</loc>
-<lastmod>2022-09-07T14:32:57-00:00</lastmod>
+<loc>https://mde.tw/blog/archives.html</loc>
+<lastmod>2022-09-07T14:37:22-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>./tags.html</loc>
-<lastmod>2022-09-07T14:32:57-00:00</lastmod>
+<loc>https://mde.tw/blog/tags.html</loc>
+<lastmod>2022-09-07T14:37:22-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>./categories.html</loc>
-<lastmod>2022-09-07T14:32:57-00:00</lastmod>
+<loc>https://mde.tw/blog/categories.html</loc>
+<lastmod>2022-09-07T14:37:22-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>./pages/about/</loc>
+<loc>https://mde.tw/blog/pages/about/</loc>
 <lastmod>2022-08-27T20:22:54+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>./about-wink.html</loc>
-<lastmod>2022-09-07T14:32:49+08:00</lastmod>
+<loc>https://mde.tw/blog/about-wink.html</loc>
+<lastmod>2022-09-07T14:37:06+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>./about-classroom.html</loc>
+<loc>https://mde.tw/blog/about-classroom.html</loc>
 <lastmod>2022-09-05T00:11:42+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>./about-nx.html</loc>
+<loc>https://mde.tw/blog/about-nx.html</loc>
 <lastmod>2022-09-04T20:19:49+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>./cp2022-w1.html</loc>
+<loc>https://mde.tw/blog/cp2022-w1.html</loc>
 <lastmod>2022-09-04T12:17:17+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>./about-tcexam.html</loc>
+<loc>https://mde.tw/blog/about-tcexam.html</loc>
 <lastmod>2022-09-06T22:44:59+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>./useful-windows-commands.html</loc>
+<loc>https://mde.tw/blog/useful-windows-commands.html</loc>
 <lastmod>2022-09-01T02:10:52+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>./useful-git-commands.html</loc>
+<loc>https://mde.tw/blog/useful-git-commands.html</loc>
 <lastmod>2022-09-05T11:10:15+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>./about-fossil-scm.html</loc>
+<loc>https://mde.tw/blog/about-fossil-scm.html</loc>
 <lastmod>2022-09-03T20:51:47+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>./about-ethercalc.html</loc>
+<loc>https://mde.tw/blog/about-ethercalc.html</loc>
 <lastmod>2022-08-27T23:17:33+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>./compile-solvespace.html</loc>
+<loc>https://mde.tw/blog/compile-solvespace.html</loc>
 <lastmod>2022-08-27T21:57:37+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>./compile-coppeliasim-4.3.0-rev12.html</loc>
+<loc>https://mde.tw/blog/compile-coppeliasim-4.3.0-rev12.html</loc>
 <lastmod>2022-08-27T21:19:25+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>./renew-cad-lab-software.html</loc>
+<loc>https://mde.tw/blog/renew-cad-lab-software.html</loc>
 <lastmod>2022-09-01T23:37:09+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>./Create-a-portable-python-system.html</loc>
+<loc>https://mde.tw/blog/Create-a-portable-python-system.html</loc>
 <lastmod>2022-08-27T13:01:18+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>./portable-CoppeliaSim-4.3.0-rev12.html</loc>
+<loc>https://mde.tw/blog/portable-CoppeliaSim-4.3.0-rev12.html</loc>
 <lastmod>2022-09-02T16:41:06+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>./2022-Fall-Intro-to-computer-programming.html</loc>
+<loc>https://mde.tw/blog/2022-Fall-Intro-to-computer-programming.html</loc>
 <lastmod>2022-09-05T00:17:31+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>./2022-Fall-computer-aided-design-and-practices.html</loc>
+<loc>https://mde.tw/blog/2022-Fall-computer-aided-design-and-practices.html</loc>
 <lastmod>2022-09-05T00:17:31+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>./category/cad2022.html</loc>
+<loc>https://mde.tw/blog/category/cad2022.html</loc>
 <lastmod>2022-09-05T00:17:31+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>./category/chat.html</loc>
+<loc>https://mde.tw/blog/category/chat.html</loc>
 <lastmod>2022-09-01T23:37:09+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>./category/compilation.html</loc>
+<loc>https://mde.tw/blog/category/compilation.html</loc>
 <lastmod>2022-08-27T21:57:37+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>./category/cp2022.html</loc>
+<loc>https://mde.tw/blog/category/cp2022.html</loc>
 <lastmod>2022-09-05T00:17:31+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>./category/ethercalc.html</loc>
+<loc>https://mde.tw/blog/category/ethercalc.html</loc>
 <lastmod>2022-08-27T23:17:33+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>./category/fossil-scm.html</loc>
+<loc>https://mde.tw/blog/category/fossil-scm.html</loc>
 <lastmod>2022-09-03T20:51:47+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>./category/git.html</loc>
+<loc>https://mde.tw/blog/category/git.html</loc>
 <lastmod>2022-09-05T11:10:15+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>./category/github.html</loc>
+<loc>https://mde.tw/blog/category/github.html</loc>
 <lastmod>2022-09-05T00:11:42+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>./category/nx.html</loc>
+<loc>https://mde.tw/blog/category/nx.html</loc>
 <lastmod>2022-09-04T20:19:49+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>./category/tcexam.html</loc>
+<loc>https://mde.tw/blog/category/tcexam.html</loc>
 <lastmod>2022-09-06T22:44:59+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>./category/windows.html</loc>
+<loc>https://mde.tw/blog/category/windows.html</loc>
 <lastmod>2022-09-01T11:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>./category/wink.html</loc>
-<lastmod>2022-09-07T14:32:49+08:06</lastmod>
+<loc>https://mde.tw/blog/category/wink.html</loc>
+<lastmod>2022-09-07T14:37:06+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>./tag/mp4.html</loc>
-<lastmod>2022-09-07T14:32:49+08:06</lastmod>
+<loc>https://mde.tw/blog/tag/mp4.html</loc>
+<lastmod>2022-09-07T14:37:06+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>./tag/ffmpeg.html</loc>
-<lastmod>2022-09-07T14:32:49+08:06</lastmod>
+<loc>https://mde.tw/blog/tag/ffmpeg.html</loc>
+<lastmod>2022-09-07T14:37:06+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>./tag/javascript.html</loc>
-<lastmod>2022-09-07T14:32:49+08:06</lastmod>
+<loc>https://mde.tw/blog/tag/javascript.html</loc>
+<lastmod>2022-09-07T14:37:06+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>./tag/classroom.html</loc>
+<loc>https://mde.tw/blog/tag/classroom.html</loc>
 <lastmod>2022-09-05T00:11:42+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>./tag/siemens.html</loc>
+<loc>https://mde.tw/blog/tag/siemens.html</loc>
 <lastmod>2022-09-04T20:19:49+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>./tag/w1.html</loc>
+<loc>https://mde.tw/blog/tag/w1.html</loc>
 <lastmod>2022-09-04T12:17:17+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>./tag/portable-python.html</loc>
+<loc>https://mde.tw/blog/tag/portable-python.html</loc>
 <lastmod>2022-09-04T12:17:17+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>./tag/ji-suan-ji-cheng-shi.html</loc>
+<loc>https://mde.tw/blog/tag/ji-suan-ji-cheng-shi.html</loc>
 <lastmod>2022-09-05T00:17:31+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>./tag/exam.html</loc>
+<loc>https://mde.tw/blog/tag/exam.html</loc>
 <lastmod>2022-09-06T22:44:59+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>./tag/php.html</loc>
+<loc>https://mde.tw/blog/tag/php.html</loc>
 <lastmod>2022-09-06T22:44:59+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>./tag/pgsql.html</loc>
+<loc>https://mde.tw/blog/tag/pgsql.html</loc>
 <lastmod>2022-09-06T22:44:59+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>./tag/nginx.html</loc>
+<loc>https://mde.tw/blog/tag/nginx.html</loc>
 <lastmod>2022-09-06T22:44:59+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>./tag/batch.html</loc>
+<loc>https://mde.tw/blog/tag/batch.html</loc>
 <lastmod>2022-09-01T11:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>./tag/commands.html</loc>
+<loc>https://mde.tw/blog/tag/commands.html</loc>
 <lastmod>2022-09-01T11:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>./tag/remote-add.html</loc>
+<loc>https://mde.tw/blog/tag/remote-add.html</loc>
 <lastmod>2022-09-05T11:10:15+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>./tag/recurse-submodules.html</loc>
+<loc>https://mde.tw/blog/tag/recurse-submodules.html</loc>
 <lastmod>2022-09-05T11:10:15+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>./tag/repository.html</loc>
+<loc>https://mde.tw/blog/tag/repository.html</loc>
 <lastmod>2022-09-03T20:51:47+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>./tag/scm.html</loc>
+<loc>https://mde.tw/blog/tag/scm.html</loc>
 <lastmod>2022-09-03T20:51:47+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>./tag/redis.html</loc>
+<loc>https://mde.tw/blog/tag/redis.html</loc>
 <lastmod>2022-08-27T23:17:33+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>./tag/dump.html</loc>
+<loc>https://mde.tw/blog/tag/dump.html</loc>
 <lastmod>2022-08-27T23:17:33+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>./tag/solvespace.html</loc>
+<loc>https://mde.tw/blog/tag/solvespace.html</loc>
 <lastmod>2022-08-27T21:57:37+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>./tag/coppeliasim.html</loc>
+<loc>https://mde.tw/blog/tag/coppeliasim.html</loc>
 <lastmod>2022-09-02T16:41:06+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>./tag/dian-nao-fu-zhu-she-ji-shi.html</loc>
+<loc>https://mde.tw/blog/tag/dian-nao-fu-zhu-she-ji-shi.html</loc>
 <lastmod>2022-09-01T23:37:09+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>./tag/cp2022-syllabus.html</loc>
+<loc>https://mde.tw/blog/tag/cp2022-syllabus.html</loc>
 <lastmod>2022-09-05T00:17:31+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>./tag/ke-cheng-jian-jie.html</loc>
+<loc>https://mde.tw/blog/tag/ke-cheng-jian-jie.html</loc>
 <lastmod>2022-09-05T00:17:31+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>./tag/w0.html</loc>
+<loc>https://mde.tw/blog/tag/w0.html</loc>
 <lastmod>2022-09-05T00:17:31+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>./tag/dian-nao-fu-zhu-she-ji-yu-shi-xi.html</loc>
+<loc>https://mde.tw/blog/tag/dian-nao-fu-zhu-she-ji-yu-shi-xi.html</loc>
 <lastmod>2022-09-05T00:17:31+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>./author/mdecycu.html</loc>
-<lastmod>2022-09-07T14:32:49+08:06</lastmod>
+<loc>https://mde.tw/blog/author/mdecycu.html</loc>
+<lastmod>2022-09-07T14:37:06+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Mde.tw - Wink</title><link href="./" rel="alternate"></link><link href="./feeds/wink.atom.xml" rel="self"></link><id>./</id><updated>2022-09-07T14:32:49+08:00</updated><entry><title>有關 Wink</title><link href="./about-wink.html" rel="alternate"></link><published>2022-09-07T11:00:00+08:00</published><updated>2022-09-07T14:32:49+08:00</updated><author><name>mdecycu</name></author><id>tag:None,2022-09-07:./about-wink.html</id><summary type="html">&lt;p&gt;這裡將收集與 Wink 有關的資料內容. Wink 是一套製作電腦操作展示的 freeware. 從 3.0 版之後, 所製作的教學影片以 ffmpeg 存為 mp4 格式, 並透過 Javascript 在網頁上與使用者進行互動.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Mde.tw - Wink</title><link href="https://mde.tw/blog/" rel="alternate"></link><link href="https://mde.tw/blog/feeds/wink.atom.xml" rel="self"></link><id>https://mde.tw/blog/</id><updated>2022-09-07T14:37:06+08:00</updated><entry><title>有關 Wink</title><link href="https://mde.tw/blog/about-wink.html" rel="alternate"></link><published>2022-09-07T11:00:00+08:00</published><updated>2022-09-07T14:37:06+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-09-07:/blog/about-wink.html</id><summary type="html">&lt;p&gt;這裡將收集與 Wink 有關的資料內容. Wink 是一套製作電腦操作展示的 freeware. 從 3.0 版之後, 所製作的教學影片以 ffmpeg 存為 mp4 格式, 並透過 Javascript 在網頁上與使用者進行互動.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;這裡將收集與 Wink 有關的資料內容. Wink 是一套製作電腦操作展示的 freeware. 從 3.0 版之後, 所製作的教學影片以 ffmpeg 存為 mp4 格式, 並透過 Javascript 在網頁上與使用者進行互動.&lt;/p&gt;
 
 
@@ -11,6 +11,7 @@ data-dirname 動態網頁 - 使用 /static&lt;/p&gt;
 &lt;p&gt;然後動態網頁 mp4 video 標註 src - 使用 /downloads/影片名稱.mp4&lt;/p&gt;
 &lt;p&gt;靜態網頁 mp4 video 標註 src - 使用 ./../downloads/影片名稱.mp4&lt;/p&gt;
 &lt;p&gt;在 Blog 架構下, 則一律先將 .mp4 檔案 acp (git add, git commit and git push) 至 Github 倉儲後, 再使用靜態網頁連結 .mp4 與 data-dirname 設定.&lt;/p&gt;
+&lt;p&gt;假如 Wink 影片內容為單一程式視窗, 其導入影片寬高尺寸可使用 800 x 600, 若影片操作範圍擴及整個操作系統畫面, 則建議導入影片寬高尺寸為 1008 x 630.&lt;/p&gt;
 &lt;p&gt;以下為兩個 Wink3 官方釋出的 Tutorial (已經全數刪除原先的 buttons, 並直接使用 html5 的 video controls):&lt;/p&gt;
 &lt;p&gt;Tutorial1:&lt;/p&gt;
 &lt;script&gt;

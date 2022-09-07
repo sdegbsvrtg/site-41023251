@@ -96,6 +96,9 @@
 <v t="leo.20220903232957.1"><vh>@clean about classroom.md</vh>
 <v t="leo.20220903233110.1"><vh>有關 Github Classroom</vh></v>
 </v>
+<v t="leo.20220907072921.1"><vh>@clean about_wink.md</vh>
+<v t="leo.20220907093741.1"><vh>newHeadline</vh></v>
+</v>
 </v>
 </v>
 <v t="yen.20170108171733.83"><vh>產生 .key 與 .crt 指令</vh></v>
@@ -1592,6 +1595,22 @@ Github Classroom 功能
 4. 當管理者賦予學員對 assignment 倉儲擁有 admin 權限後, 學員可自行啟用倉儲的 Github Pages 功能, 利用倉儲內容建立課程網站.
 
 </t>
+<t tx="leo.20220907072921.1">@language md
+---
+Title: 有關 Wink
+Date: 2022-09-07 11:00
+Category: Wink
+Tags: mp4, ffmpeg, javascript
+Slug: about-nx
+Author: mdecycu
+---
+
+這裡將收集與 Wink 有關的資料內容. Wink 是一套製作電腦操作展示的 freeware. 從 3.0 版之後, 所製作的教學影片以 ffmpeg 存為 mp4 格式, 並透過 Javascript 在網頁上與使用者進行互動.
+
+&lt;!-- PELICAN_END_SUMMARY --&gt;
+
+@others</t>
+<t tx="leo.20220907093741.1"></t>
 <t tx="yen.20170108171605.1"></t>
 <t tx="yen.20170108171605.2">QTreeWidget {
     /* These apply to the selected item, but not to editing items.*/

@@ -60,7 +60,7 @@
 <meta property="og:url" content="https://mde.tw/blog/useful-git-commands.html"/>
 <meta property="og:type" content="article"/>
 <meta property="article:published_time" content="2022-08-28 11:00:00+08:00"/>
-<meta property="article:modified_time" content="2022-09-05 11:10:15.972112+08:00"/>
+<meta property="article:modified_time" content="2022-09-08 12:11:02+08:00"/>
 <meta property="article:author" content="https://mde.tw/blog/author/mdecycu.html">
 <meta property="article:section" content="git"/>
 <meta property="article:tag" content="remote-add"/>
@@ -76,7 +76,7 @@
   "name": "Git 常用指令",
   "headline": "Git 常用指令",
   "datePublished": "2022-08-28 11:00:00+08:00",
-  "dateModified": "2022-09-05 11:10:15.972112+08:00",
+  "dateModified": "2022-09-08 12:11:02+08:00",
   "author": {
     "@type": "Person",
     "name": "mdecycu",
@@ -206,7 +206,7 @@ init_mathjax();
             | <time datetime="週日 28 八月 2022">週日 28 八月 2022</time>
         </span>
         <!-- TODO : Modified check -->
-            <span class="post-meta"> | Updated on 週一 05 九月 2022</span>
+            <span class="post-meta"> | Updated on 週四 08 九月 2022</span>
             <div class="post-cover cover" style="background-image: url('https://mde.tw/blog/theme/images/post-bg.jpg')">
       </div>
     </header>
@@ -312,6 +312,7 @@ init_mathjax();
 <p>git push mdecycu</p>
 <h1>recurse-submodules</h1>
 <p>當使用 git clone 倉儲時, 之所以要宣告 --recurse-submodules 選項命令, 是針對該倉儲的所有子模組, 包括子模組下的所有子模組, 也要同時取下.</p>
+<p>假如在第一時間沒能取下子模組, 之後可以利用  git submodule update --init --recursive 將所有子模組內容取下.</p>
 <h1>submodule add</h1>
 <p>git submodule add 隨後要加入 URL 指向某一倉儲, 表示要將該倉儲設為子模組, 然後指令還要再加上該子模組連結的對應代號.</p>
 <p>git submodule add https://github.com/mdecycu/cmsimde.git cmsimde</p>

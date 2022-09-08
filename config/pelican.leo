@@ -621,6 +621,25 @@ Disable-NetAdapterBinding -Name "*" -ComponentID ms_tcpip
 [template]: https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template
 [Github Classroom]: https://classroom.github.com
 
+W1 教學影片
+----
+
+&lt;script&gt;
+var winkVideoData_w1_1 = {
+  dataVersion: 1,
+  frameRate: 10,
+  buttonFrameLength: 5,
+  buttonFrameOffset: 2,
+  frameStops: {
+  },
+};
+&lt;/script&gt;
+&lt;/p&gt;
+&lt;!-- 接下來將 mp4 檔案從 downloads 目錄取出 --&gt;
+&lt;div class="winkVideoContainerClass"&gt;&lt;video autoplay="autoplay" class="winkVideoClass" controls="controls" data-dirname="./../cmsimde/static" data-varname="winkVideoData_w1_1" height="600" muted="true" width="800"&gt;
+&lt;source src="./../downloads/cp/cp_w1_1.mp4" type="video/mp4"/&gt;&lt;/video&gt;
+&lt;/div&gt;
+
 建立 Github 帳號
 ====
 
@@ -1088,6 +1107,8 @@ recurse-submodules
 ====
 
 當使用 git clone 倉儲時, 之所以要宣告 --recurse-submodules 選項命令, 是針對該倉儲的所有子模組, 包括子模組下的所有子模組, 也要同時取下.
+
+假如在第一時間沒能取下子模組, 之後可以利用  git submodule update --init --recursive 將所有子模組內容取下.
 
 submodule add
 ====

@@ -878,7 +878,8 @@ pip install flask flask_cors bs4 lxml pelican markdown leo pyopenssl
 
 [portable_python_3.10.6.7z] (for @gm users only)
 
-[portable_python_3.10.6.7z]: https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/yen_gm_nfu_edu_tw/EeE98pBYWN9CkSCX6CQ4Hc0B3ATux7DfglRSGLBw2AL0cQ?e=ju1KyO</t>
+[portable_python_3.10.6.7z]: https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/yen_gm_nfu_edu_tw/ETQ0EKIxNeVJhfs8t2NvsCgBn0NmW_sx4OuM5_YR2CSFFQ?e=fywLSa
+</t>
 <t tx="leo.20220827212236.1">@language md
 ---
 Title: 編譯 Solvespace

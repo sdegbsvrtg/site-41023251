@@ -54,4 +54,173 @@ Replit can do it all. It can replace your:
 4. 將 repl 名稱從 cmsimte_site 改為 scrum1 (即與 account 名稱相同)
 5. 隨即可以在 <https://scrum1.repl.co> 看到靜態網頁
 
+Replit Flask 範例
+====
 
+Flask 基本範例
+
+<pre class="brush: python">
+from flask import Flask
+
+app = Flask('app')
+
+@app.route('/')
+def hello_world():
+    return 'Hello, World!'
+
+app.run(host='0.0.0.0', port=8080)
+</pre>
+
+Flask 以 wsgi 執行
+
+<pre class="brush: python">
+from flask import Flask
+from gevent.pywsgi import WSGIServer
+
+app = Flask('app')
+
+@app.route('/')
+def hello_world():
+    return 'Hello, World!'
+
+#app.run(host='0.0.0.0', port=8080)
+http_server = WSGIServer(('0.0.0.0', 8080), app)
+http_server.serve_forever()
+</pre>
+
+Flask, wsgi 並壓縮資料
+
+<pre class="brush: python">
+from gevent import monkey
+monkey.patch_all()
+from flask import Flask
+from gevent.pywsgi import WSGIServer
+from flask_compress import Compress
+
+app = Flask('app')
+compress = Compress()
+compress.init_app(app)
+
+@app.route('/')
+def hello_world():
+    return 'Hello, World!'
+
+#app.run(host='0.0.0.0', port=8080)
+http_server = WSGIServer(('0.0.0.0', 8080), app)
+http_server.serve_forever()
+</pre>
+
+Get from Google
+
+<pre class="brush: python">
+from flask import Flask, request 
+from flask_cors import CORS
+import requests
+
+app = Flask(__name__)
+CORS(app)
+  
+@app.route('/get_from_google')
+@app.route('/')
+def studlist():
+  r = requests.get("https://google.com")
+  return r.text
+
+app.run(host="0.0.0.0", debug=True)
+</pre>
+
+[Flask 與資料庫]
+
+[Flask 與資料庫]: https://replit.com/talk/ask/Can-someone-help-me-disable-cors-policy-so-other-repls-can-access-my-database/143997
+
+<pre class="brush: python">
+from flask import *
+from flask_cors import CORS
+from replit import db
+
+app = Flask(__name__)
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
+
+@app.route("/set/<name>/<data>/")
+def set(name, data):
+  print(name + " = " + data)
+  db[name] = data
+  return ""
+
+@app.route("/get/<name>/")
+def get(name):
+  return db[name]
+
+app.run(host="0.0.0.0", debug=True)
+</pre>
+
+nfulist 搬遷
+====
+
+<https://github.com/mdecourse/nfulist> 原先配置在 Heroku, 目前已經無法正常運作, 因此必須設法搬到 Replit.
+
+理論上, 在 Replit 可以將程式寫為:
+
+<pre class="brush: python">
+from flask import Flask, request 
+from flask_cors import CORS
+  
+import requests
+import bs4
+#import ssl
+  
+app = Flask(__name__)
+CORS(app)
+  
+@app.route('/studlist')
+@app.route('/')
+def studlist():
+    semester = request.args.get('semester')
+    courseno = request.args.get('courseno')
+    column = request.args.get('column')
+
+    if semester == None:
+        semester = '1091'
+    if courseno == None:
+        courseno = '0762'
+    
+    headers = {'X-Requested-With': 'XMLHttpRequest'}
+
+    url = 'https://qry.nfu.edu.tw/studlist.php?selyr=1091&seqno=0762'
+    try:
+        result = requests.get(url, verify=False, timeout=3)
+    except:
+        return "Connection refused"
+    soup = bs4.BeautifulSoup(result.text, 'lxml')
+    table = soup.find('table', {'class': 'tbcls'})
+    data = []
+    rows = table.find_all('tr')
+    for row in rows:
+        cols = row.find_all('td')
+        cols = [ele.text.strip() for ele in cols]
+        data.append([ele for ele in cols if ele]) # Get rid of empty values
+    output = ""
+    for i in data[2:]:
+        #print(i[0])
+        if column == "True":
+            output +=i[0] + "</br>"
+        else:
+            output +=i[0] + "\n"
+        
+    return output
+    #return  str(pselyr) + " + " +str(pseqno)
+  
+# 即使在近端仍希望以 https 模式下執行
+#context = ssl.SSLContext(ssl.PROTOCOL_TLSv1_2)
+#context.load_cert_chain('localhost.crt', 'localhost.key')
+
+app.run(host="0.0.0.0", debug=True)
+</pre>
+
+但是 qry.nfu.edu.tw 主機先前可以透過 Heroku 遠端連線, 但是卻拒絕 Replit 虛擬主機的連線取值, 因此 nfulist 網際程式必須另外配置在工作站室中的 Server 或另外再找合用的雲端應用程式伺服器.
+
+配置 cmsimde_site
+====
+
+在 Replit 配置 <https://github.com/mdecycu/cmsimde_site> 的隨選動態網站位於: <https://cmsimdesite.nfulist.repl.co>, 而常駐靜態網站則另外配置於 <https://scrum1.repl.co>. 假如兩個 repl 中的檔案可以設法同步, 應該就可以同時套用於協同產品設計實習流程.

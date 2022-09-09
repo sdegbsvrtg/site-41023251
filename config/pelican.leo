@@ -1252,19 +1252,23 @@ Author: mdecycu
 &lt;!-- PELICAN_END_SUMMARY --&gt;
 
 @others</t>
-<t tx="leo.20220901223953.1">電腦系統
+<t tx="leo.20220901223953.1">cadlab 網路設定
 ====
 
-目前電腦輔助設計室中絕大部分的電腦都只有一個磁區 (假如有三個磁區的電腦是上一代的舊電腦), 使用的操作系統是 Windows 10, 因為系上有四門課程在電腦輔助設計室上課時, 採用的是純 [IPv6] 網路連線, 因此各位學員在接觸到計算機程式課程時, 必須學會設定電腦系統的網路連線.
+目前電腦輔助設計室 (cadlab) 中絕大部分的電腦都只有一個磁區 (假如有三個磁區的電腦是上一代的舊電腦), 使用的操作系統是 Windows 10, 因為系上有四門課程在電腦輔助設計室上課時, 採用的是純 [IPv6] 網路連線, 因此各位學員在接觸到計算機程式課程時, 必須學會設定電腦系統的網路連線.
 
 [IPv4] 與 [IPv6]
 ----
 
 [IPv4] 與 [IPv6] 是兩種不相容的網路協定. 目前除了計算機程式課程, 還有網際內容管理、電腦輔助設計與實習以及協同產品設計實習等課程, 上課時都將電腦輔助設計室的連外網路直接與系上主幹連接. 目的是希望擴大每一台電腦的網路頻寬, 可以無需透過 [NAT] 轉址後再連接到系上.
 
-但是這樣做, 所要付出的代價是, 首先, 每一台電腦都直接以 [IPv6] 外部網路位址與網際網路相通, 若此時電腦中的 [IPv4] 也同時開啟的話, 安裝在操作系統中的某些軟體會以為已經取得 [IPv4] 的外部網路位址 (其實並沒有, 因此系上已經沒有額外的外部 [IPv4] 網路位址), 而啟動網路攻擊. 因而導致操作系統所安裝的防毒軟體作動, 關閉電腦的所有對外網路連線, 亦即, 當電腦輔助設計室網路線直接連到主幹時, 要設法關閉 [IPv4] 網路連線, 否則無法使用網路.
+但是這樣做, 所要付出的代價是, 首先, 每一台電腦都直接以 [IPv6] 外部網路位址與網際網路相通, 若此時電腦中的 [IPv4] 也同時開啟的話, 安裝在操作系統中的某些軟體會以為已經取得 [IPv4] 的外部網路位址 (其實並沒有, 因此系上已經沒有額外的外部 [IPv4] 網路位址), 而啟動網路攻擊. 因而導致操作系統所安裝的防毒軟體作動, 關閉電腦的所有對外網路連線.
 
-其次, [IPv6] 網路協定雖然已經逐漸普及, 但目前仍有許多網站只支援 [IPv4] 網路協定, 因此在純 [IPv6] 網路設定下, 若要連接至某些只支援 [IPv4] 的電腦或網站, 必須透過代理主機.
+結論是: 當電腦輔助設計室網路線直接連到外網主幹時, 要設法關閉 [IPv4] 網路連線, 否則無法使用網路.
+
+其次, [IPv6] 網路協定雖然已經逐漸普及, 但目前仍有許多網站只支援 [IPv4] 網路協定, 因此在純 [IPv6] 網路設定下, 若要連接至某些只支援 [IPv4] 的電腦或網站, 必須透過代理主機 (Proxy Server, 這裡所使用的代理主機執行 [Squid]).
+
+[Squid]: http://www.squid-cache.org/
 
 學習議題
 ----
@@ -1776,7 +1780,176 @@ Replit can do it all. It can replace your:
 4. 將 repl 名稱從 cmsimte_site 改為 scrum1 (即與 account 名稱相同)
 5. 隨即可以在 &lt;https://scrum1.repl.co&gt; 看到靜態網頁
 
+Replit Flask 範例
+====
 
+Flask 基本範例
+
+&lt;pre class="brush: python"&gt;
+from flask import Flask
+
+app = Flask('app')
+
+@app.route('/')
+def hello_world():
+    return 'Hello, World!'
+
+app.run(host='0.0.0.0', port=8080)
+&lt;/pre&gt;
+
+Flask 以 wsgi 執行
+
+&lt;pre class="brush: python"&gt;
+from flask import Flask
+from gevent.pywsgi import WSGIServer
+
+app = Flask('app')
+
+@app.route('/')
+def hello_world():
+    return 'Hello, World!'
+
+#app.run(host='0.0.0.0', port=8080)
+http_server = WSGIServer(('0.0.0.0', 8080), app)
+http_server.serve_forever()
+&lt;/pre&gt;
+
+Flask, wsgi 並壓縮資料
+
+&lt;pre class="brush: python"&gt;
+from gevent import monkey
+monkey.patch_all()
+from flask import Flask
+from gevent.pywsgi import WSGIServer
+from flask_compress import Compress
+
+app = Flask('app')
+compress = Compress()
+compress.init_app(app)
+
+@app.route('/')
+def hello_world():
+    return 'Hello, World!'
+
+#app.run(host='0.0.0.0', port=8080)
+http_server = WSGIServer(('0.0.0.0', 8080), app)
+http_server.serve_forever()
+&lt;/pre&gt;
+
+Get from Google
+
+&lt;pre class="brush: python"&gt;
+from flask import Flask, request 
+from flask_cors import CORS
+import requests
+
+app = Flask(__name__)
+CORS(app)
+  
+@app.route('/get_from_google')
+@app.route('/')
+def studlist():
+  r = requests.get("https://google.com")
+  return r.text
+
+app.run(host="0.0.0.0", debug=True)
+&lt;/pre&gt;
+
+[Flask 與資料庫]
+
+[Flask 與資料庫]: https://replit.com/talk/ask/Can-someone-help-me-disable-cors-policy-so-other-repls-can-access-my-database/143997
+
+&lt;pre class="brush: python"&gt;
+from flask import *
+from flask_cors import CORS
+from replit import db
+
+app = Flask(__name__)
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
+
+@app.route("/set/&lt;name&gt;/&lt;data&gt;/")
+def set(name, data):
+  print(name + " = " + data)
+  db[name] = data
+  return ""
+
+@app.route("/get/&lt;name&gt;/")
+def get(name):
+  return db[name]
+
+app.run(host="0.0.0.0", debug=True)
+&lt;/pre&gt;
+
+nfulist 搬遷
+====
+
+&lt;https://github.com/mdecourse/nfulist&gt; 原先配置在 Heroku, 目前已經無法正常運作, 因此必須設法搬到 Replit.
+
+理論上, 在 Replit 可以將程式寫為:
+
+&lt;pre class="brush: python"&gt;
+from flask import Flask, request 
+from flask_cors import CORS
+  
+import requests
+import bs4
+#import ssl
+  
+app = Flask(__name__)
+CORS(app)
+  
+@app.route('/studlist')
+@app.route('/')
+def studlist():
+    semester = request.args.get('semester')
+    courseno = request.args.get('courseno')
+    column = request.args.get('column')
+
+    if semester == None:
+        semester = '1091'
+    if courseno == None:
+        courseno = '0762'
+    
+    headers = {'X-Requested-With': 'XMLHttpRequest'}
+
+    url = 'https://qry.nfu.edu.tw/studlist.php?selyr=1091&amp;seqno=0762'
+    try:
+        result = requests.get(url, verify=False, timeout=3)
+    except:
+        return "Connection refused"
+    soup = bs4.BeautifulSoup(result.text, 'lxml')
+    table = soup.find('table', {'class': 'tbcls'})
+    data = []
+    rows = table.find_all('tr')
+    for row in rows:
+        cols = row.find_all('td')
+        cols = [ele.text.strip() for ele in cols]
+        data.append([ele for ele in cols if ele]) # Get rid of empty values
+    output = ""
+    for i in data[2:]:
+        #print(i[0])
+        if column == "True":
+            output +=i[0] + "&lt;/br&gt;"
+        else:
+            output +=i[0] + "\n"
+        
+    return output
+    #return  str(pselyr) + " + " +str(pseqno)
+  
+# 即使在近端仍希望以 https 模式下執行
+#context = ssl.SSLContext(ssl.PROTOCOL_TLSv1_2)
+#context.load_cert_chain('localhost.crt', 'localhost.key')
+
+app.run(host="0.0.0.0", debug=True)
+&lt;/pre&gt;
+
+但是 qry.nfu.edu.tw 主機先前可以透過 Heroku 遠端連線, 但是卻拒絕 Replit 虛擬主機的連線取值, 因此 nfulist 網際程式必須另外配置在工作站室中的 Server 或另外再找合用的雲端應用程式伺服器.
+
+配置 cmsimde_site
+====
+
+在 Replit 配置 &lt;https://github.com/mdecycu/cmsimde_site&gt; 的隨選動態網站位於: &lt;https://cmsimdesite.nfulist.repl.co&gt;, 而常駐靜態網站則另外配置於 &lt;https://scrum1.repl.co&gt;. 假如兩個 repl 中的檔案可以設法同步, 應該就可以同時套用於協同產品設計實習流程.
 </t>
 <t tx="yen.20170108171605.1"></t>
 <t tx="yen.20170108171605.2">QTreeWidget {

@@ -61,7 +61,7 @@
 <meta property="og:url" content="https://mde.tw/blog/cp2022-w1.html"/>
 <meta property="og:type" content="article"/>
 <meta property="article:published_time" content="2022-09-01 13:00:00+08:00"/>
-<meta property="article:modified_time" content="2022-09-04 12:17:17.433150+08:00"/>
+<meta property="article:modified_time" content="2022-09-09 11:26:07.399129+08:00"/>
 <meta property="article:author" content="https://mde.tw/blog/author/mdecycu.html">
 <meta property="article:section" content="cp2022"/>
 <meta property="article:tag" content="w1"/>
@@ -78,7 +78,7 @@
   "name": "cp2022_w1",
   "headline": "cp2022_w1",
   "datePublished": "2022-09-01 13:00:00+08:00",
-  "dateModified": "2022-09-04 12:17:17.433150+08:00",
+  "dateModified": "2022-09-09 11:26:07.399129+08:00",
   "author": {
     "@type": "Person",
     "name": "mdecycu",
@@ -208,7 +208,7 @@ init_mathjax();
             | <time datetime="週四 01 九月 2022">週四 01 九月 2022</time>
         </span>
         <!-- TODO : Modified check -->
-            <span class="post-meta"> | Updated on 週日 04 九月 2022</span>
+            <span class="post-meta"> | Updated on 週五 09 九月 2022</span>
             <div class="post-cover cover" style="background-image: url('https://mde.tw/blog/theme/images/post-bg.jpg')">
       </div>
     </header>
@@ -231,12 +231,13 @@ init_mathjax();
                 <p>計算機程式課程第一週, 只有 1b 有課, 1a 因為中秋節放假.</p>
 
 
-<h1>電腦系統</h1>
-<p>目前電腦輔助設計室中絕大部分的電腦都只有一個磁區 (假如有三個磁區的電腦是上一代的舊電腦), 使用的操作系統是 Windows 10, 因為系上有四門課程在電腦輔助設計室上課時, 採用的是純 <a href="https://zh.wikipedia.org/zh-tw/IPv6">IPv6</a> 網路連線, 因此各位學員在接觸到計算機程式課程時, 必須學會設定電腦系統的網路連線.</p>
+<h1>cadlab 網路設定</h1>
+<p>目前電腦輔助設計室 (cadlab) 中絕大部分的電腦都只有一個磁區 (假如有三個磁區的電腦是上一代的舊電腦), 使用的操作系統是 Windows 10, 因為系上有四門課程在電腦輔助設計室上課時, 採用的是純 <a href="https://zh.wikipedia.org/zh-tw/IPv6">IPv6</a> 網路連線, 因此各位學員在接觸到計算機程式課程時, 必須學會設定電腦系統的網路連線.</p>
 <h2><a href="https://zh.wikipedia.org/zh-tw/IPv4">IPv4</a> 與 <a href="https://zh.wikipedia.org/zh-tw/IPv6">IPv6</a></h2>
 <p><a href="https://zh.wikipedia.org/zh-tw/IPv4">IPv4</a> 與 <a href="https://zh.wikipedia.org/zh-tw/IPv6">IPv6</a> 是兩種不相容的網路協定. 目前除了計算機程式課程, 還有網際內容管理、電腦輔助設計與實習以及協同產品設計實習等課程, 上課時都將電腦輔助設計室的連外網路直接與系上主幹連接. 目的是希望擴大每一台電腦的網路頻寬, 可以無需透過 <a href="https://en.wikipedia.org/wiki/Network_address_translation">NAT</a> 轉址後再連接到系上.</p>
-<p>但是這樣做, 所要付出的代價是, 首先, 每一台電腦都直接以 <a href="https://zh.wikipedia.org/zh-tw/IPv6">IPv6</a> 外部網路位址與網際網路相通, 若此時電腦中的 <a href="https://zh.wikipedia.org/zh-tw/IPv4">IPv4</a> 也同時開啟的話, 安裝在操作系統中的某些軟體會以為已經取得 <a href="https://zh.wikipedia.org/zh-tw/IPv4">IPv4</a> 的外部網路位址 (其實並沒有, 因此系上已經沒有額外的外部 <a href="https://zh.wikipedia.org/zh-tw/IPv4">IPv4</a> 網路位址), 而啟動網路攻擊. 因而導致操作系統所安裝的防毒軟體作動, 關閉電腦的所有對外網路連線, 亦即, 當電腦輔助設計室網路線直接連到主幹時, 要設法關閉 <a href="https://zh.wikipedia.org/zh-tw/IPv4">IPv4</a> 網路連線, 否則無法使用網路.</p>
-<p>其次, <a href="https://zh.wikipedia.org/zh-tw/IPv6">IPv6</a> 網路協定雖然已經逐漸普及, 但目前仍有許多網站只支援 <a href="https://zh.wikipedia.org/zh-tw/IPv4">IPv4</a> 網路協定, 因此在純 <a href="https://zh.wikipedia.org/zh-tw/IPv6">IPv6</a> 網路設定下, 若要連接至某些只支援 <a href="https://zh.wikipedia.org/zh-tw/IPv4">IPv4</a> 的電腦或網站, 必須透過代理主機.</p>
+<p>但是這樣做, 所要付出的代價是, 首先, 每一台電腦都直接以 <a href="https://zh.wikipedia.org/zh-tw/IPv6">IPv6</a> 外部網路位址與網際網路相通, 若此時電腦中的 <a href="https://zh.wikipedia.org/zh-tw/IPv4">IPv4</a> 也同時開啟的話, 安裝在操作系統中的某些軟體會以為已經取得 <a href="https://zh.wikipedia.org/zh-tw/IPv4">IPv4</a> 的外部網路位址 (其實並沒有, 因此系上已經沒有額外的外部 <a href="https://zh.wikipedia.org/zh-tw/IPv4">IPv4</a> 網路位址), 而啟動網路攻擊. 因而導致操作系統所安裝的防毒軟體作動, 關閉電腦的所有對外網路連線.</p>
+<p>結論是: 當電腦輔助設計室網路線直接連到外網主幹時, 要設法關閉 <a href="https://zh.wikipedia.org/zh-tw/IPv4">IPv4</a> 網路連線, 否則無法使用網路.</p>
+<p>其次, <a href="https://zh.wikipedia.org/zh-tw/IPv6">IPv6</a> 網路協定雖然已經逐漸普及, 但目前仍有許多網站只支援 <a href="https://zh.wikipedia.org/zh-tw/IPv4">IPv4</a> 網路協定, 因此在純 <a href="https://zh.wikipedia.org/zh-tw/IPv6">IPv6</a> 網路設定下, 若要連接至某些只支援 <a href="https://zh.wikipedia.org/zh-tw/IPv4">IPv4</a> 的電腦或網站, 必須透過代理主機 (Proxy Server, 這裡所使用的代理主機執行 <a href="http://www.squid-cache.org/">Squid</a>).</p>
 <h2>學習議題</h2>
 <p>為什麼會有 <a href="https://zh.wikipedia.org/zh-tw/IPv4">IPv4</a> 與 <a href="https://zh.wikipedia.org/zh-tw/IPv6">IPv6</a> 兩種網路協定並存?</p>
 <p>上計算機程式課程時, 當使用瀏覽器與執行 git 指令時, 該如何正確設定網路協定?</p>

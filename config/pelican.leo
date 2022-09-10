@@ -1306,6 +1306,24 @@ cp2022 課程中的 cp 為 computer programming 的縮寫, 每一位學員各自
 
 校外電腦連接部分, 則需要每學年申請 VPN 使用授權, 下載學校購買的軟體或電子書, 只要設定校內 Proxy 即可, 但若要連網認證 SolidWorks 或 Matlab, 則需透過校內 VPN 連網.
 
+Python Learning
+====
+
+&lt;https://coderslegacy.com/python/learning-the-basics/&gt;
+
+&lt;https://coderslegacy.com/python/python-intermediate/&gt;
+
+&lt;https://coderslegacy.com/python/python-advanced/&gt;
+
+Coding with Python and Repl.it: &lt;https://i.ritzastatic.com/codewithreplit/e-books/coding-with-replit-export.pdf&gt;
+
+&lt;https://www.freecodecamp.org/news/how-to-use-replit/&gt;
+
+Python curriculum: &lt;https://hackpacific.gitbooks.io/pythonium/content/&gt;
+
+&lt;https://www.codementor.io/@garethdwyer/introduction-to-machine-learning-with-python-and-repl-it-rln7ywkhc&gt;
+
+
 </t>
 <t tx="leo.20220902013935.1">@language md
 ---

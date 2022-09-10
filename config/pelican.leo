@@ -1861,6 +1861,7 @@ app.run(host="0.0.0.0", debug=True)
 [Flask 與資料庫]
 
 [Flask 與資料庫]: https://replit.com/talk/ask/Can-someone-help-me-disable-cors-policy-so-other-repls-can-access-my-database/143997
+[nfulist_local_8080.py]: ./../downloads/nfulist_local_8080.py
 
 &lt;pre class="brush: python"&gt;
 from flask import *
@@ -1949,6 +1950,67 @@ app.run(host="0.0.0.0", debug=True)
 
 但是 qry.nfu.edu.tw 主機先前可以透過 Heroku 遠端連線, 但是卻拒絕 Replit 虛擬主機的連線取值, 因此 nfulist 網際程式必須另外配置在工作站室中的 Server 或另外再找合用的雲端應用程式伺服器.
 
+在近端執行的 nfulist 程式碼為 ([nfulist_local_8080.py]):
+
+&lt;pre class="brush: python"&gt;
+import os
+from flask import Flask, request 
+from flask_cors import CORS
+import requests
+import bs4
+#import ssl
+# cpa: http://localhost:8080/?semester=1111&amp;courseno=0747&amp;column=True
+# cpb: http://localhost:8080/?semester=1111&amp;courseno=0761&amp;column=True
+# cada: http://localhost:8080/?semester=1111&amp;courseno=0773&amp;column=True
+# cadb: http://localhost:8080/?semester=1111&amp;courseno=0786&amp;column=True
+
+app = Flask(__name__)
+CORS(app)
+  
+@app.route('/studlist')
+@app.route('/')
+def studlist():
+    semester = request.args.get('semester')
+    courseno = request.args.get('courseno')
+    column = request.args.get('column')
+
+    if semester == None:
+        semester = '1091'
+    if courseno == None:
+        courseno = '0762'
+
+    url = 'https://qry.nfu.edu.tw/studlist.php?selyr=' + semester+ '&amp;seqno=' + courseno
+    try:
+        result = requests.get(url, timeout=3)
+    except:
+        return "Connection refused"
+    return result.text
+    soup = bs4.BeautifulSoup(result.text, 'lxml')
+    table = soup.find('table', {'class': 'tbcls'})
+    data = []
+    rows = table.find_all('tr')
+    for row in rows:
+        cols = row.find_all('td')
+        cols = [ele.text.strip() for ele in cols]
+        data.append([ele for ele in cols if ele]) # Get rid of empty values
+    output = ""
+    for i in data[2:]:
+        #print(i[0])
+        if column == "True":
+            output +=i[0] + "&lt;/br&gt;"
+        else:
+            output +=i[0] + "\n"
+        
+    return output
+    #return  str(pselyr) + " + " +str(pseqno)
+  
+# 即使在近端仍希望以 https 模式下執行
+#context = ssl.SSLContext(ssl.PROTOCOL_TLSv1_2)
+#context.load_cert_chain('localhost.crt', 'localhost.key')
+
+app.run(host="0.0.0.0", port=8080, debug=True)
+&lt;/pre&gt;
+
 配置 cmsimde_site
 ====
 
@@ -1967,10 +2029,6 @@ app.run(host="0.0.0.0", debug=True)
  # Byte-compiled
 __pycache__/
 venv/
-.replit
-*.nix
-*.toml
-*.lock
  &lt;/pre&gt;
  
 表示在 Github Pages 端的倉儲, 並不需要 [Replit] 端的虛擬 Python 與設定檔案, 只要提供 cmsimde 的完整倉儲資料即可.
@@ -1985,16 +2043,21 @@ pip install lxml
 
 from .nocache import nocache
 
+或者 cmsimde 子模組中的程式內容不變, 但必須將 cmsimde/nocache.py 複製一份至根目錄.
+
 最後再執行 main.py:
 
 &lt;pre class="brush: python"&gt;
 from cmsimde import flaskapp
+
 flaskapp.app.run(host='0.0.0.0', port=8080)
 &lt;/pre&gt;
 
 [Replit] 端的動態網站就可以啟動: &lt;https://c.scrum1.repl.co&gt;
 
 只要再處理 Github Pages 端倉儲的同步, 就可以得到靜態網站: &lt;https://scrum-1.github.io/c&gt;
+
+若資料直接先從 Github 倉儲進行改版, 則在 [Replit] 端的 Version Control, 可以利用 pull, 將改版內容取回合併.
 </t>
 <t tx="yen.20170108171605.1"></t>
 <t tx="yen.20170108171605.2">QTreeWidget {

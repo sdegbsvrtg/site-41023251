@@ -135,7 +135,7 @@ app.run(host="0.0.0.0", debug=True)
 [Flask 與資料庫]
 
 [Flask 與資料庫]: https://replit.com/talk/ask/Can-someone-help-me-disable-cors-policy-so-other-repls-can-access-my-database/143997
-[nfulist_local_8080.py]: ./../downloads/nfulist_local_8080.py
+[nfulist_local_8080.py]: ./../downloads/flask/nfulist_local_8080.py
 
 <pre class="brush: python">
 from flask import *

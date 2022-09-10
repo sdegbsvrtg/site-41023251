@@ -102,6 +102,9 @@
 <v t="leo.20220907151614.1"><vh>@clean the_end_of_free_service.md</vh>
 <v t="leo.20220907151704.1"><vh>免付費完結篇</vh></v>
 </v>
+<v t="leo.20220911074530.1"><vh>@clean replit_cms_tutorial.md</vh>
+<v t="leo.20220911074613.1"><vh>Replit 建立網站導引</vh></v>
+</v>
 </v>
 </v>
 <v t="yen.20170108171733.83"><vh>產生 .key 與 .crt 指令</vh></v>
@@ -1317,6 +1320,8 @@ Python Learning
 
 Coding with Python and Repl.it: &lt;https://i.ritzastatic.com/codewithreplit/e-books/coding-with-replit-export.pdf&gt;
 
+Learn Python the right way: &lt;https://learnpythontherightway.com/#read&gt;
+
 &lt;https://www.freecodecamp.org/news/how-to-use-replit/&gt;
 
 Python curriculum: &lt;https://hackpacific.gitbooks.io/pythonium/content/&gt;
@@ -2077,6 +2082,39 @@ flaskapp.app.run(host='0.0.0.0', port=8080)
 
 若資料直接先從 Github 倉儲進行改版, 則在 [Replit] 端的 Version Control, 可以利用 pull, 將改版內容取回合併.
 </t>
+<t tx="leo.20220911074530.1">@language md
+---
+Title: Replit 建立網站導引
+Date: 2022-09-11 12:00
+Category: Replit
+Tags: cmsimde, replit
+Slug: replit_cmsimde_tutorial
+Author: mdecycu
+---
+
+這裡將說明如何利用 [Replit] 與 [cmsimde_site] 建立動態與靜態網頁&gt;
+
+[Replit]: https://replit.com
+[cmsimde_site]: https://github.com/mdecycu/cmsimde_site
+
+&lt;!-- PELICAN_END_SUMMARY --&gt;
+
+@others</t>
+<t tx="leo.20220911074613.1">&lt;script&gt;
+var winkVideoData_replit1 = {
+  dataVersion: 1,
+  frameRate: 10,
+  buttonFrameLength: 5,
+  buttonFrameOffset: 2,
+  frameStops: {
+  },
+};
+&lt;/script&gt;
+&lt;/p&gt;
+&lt;!-- 接下來將 mp4 檔案從 downloads 目錄取出 --&gt;
+&lt;div class="winkVideoContainerClass"&gt;&lt;video autoplay="autoplay" class="winkVideoClass" controls="controls" data-dirname="./../cmsimde/static" data-varname="winkVideoData_replit1" height="600" muted="true" width="800"&gt;
+&lt;source src="./../downloads/replit/cmsimde_site_on_replit_for_scrum3.mp4" type="video/mp4"/&gt;&lt;/video&gt;
+&lt;/div&gt;</t>
 <t tx="yen.20170108171605.1"></t>
 <t tx="yen.20170108171605.2">QTreeWidget {
     /* These apply to the selected item, but not to editing items.*/

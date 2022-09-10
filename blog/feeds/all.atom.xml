@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Mde.tw</title><link href="https://mde.tw/blog/" rel="alternate"></link><link href="https://mde.tw/blog/feeds/all.atom.xml" rel="self"></link><id>https://mde.tw/blog/</id><updated>2022-09-10T23:18:24+08:00</updated><entry><title>免付費完結篇</title><link href="https://mde.tw/blog/the_end_of_free_service.html" rel="alternate"></link><published>2022-09-07T12:00:00+08:00</published><updated>2022-09-10T22:00:55+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-09-07:/blog/the_end_of_free_service.html</id><summary type="html">&lt;p&gt;天下沒有白吃的午餐. 2017 年 OpenShift 就曾經終止過免付費雲端應用服務, 2022 年GDrive 也才剛終止教育單位無限空間, &lt;a href="https://blog.heroku.com/next-chapter"&gt;上個月&lt;/a&gt;, 終於輪到 Heroku.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Mde.tw</title><link href="https://mde.tw/blog/" rel="alternate"></link><link href="https://mde.tw/blog/feeds/all.atom.xml" rel="self"></link><id>https://mde.tw/blog/</id><updated>2022-09-11T12:00:00+08:00</updated><entry><title>Replit 建立網站導引</title><link href="https://mde.tw/blog/replit_cmsimde_tutorial.html" rel="alternate"></link><published>2022-09-11T12:00:00+08:00</published><updated>2022-09-11T07:50:23+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-09-11:/blog/replit_cmsimde_tutorial.html</id><summary type="html">&lt;p&gt;這裡將說明如何利用 &lt;a href="https://replit.com"&gt;Replit&lt;/a&gt; 與 &lt;a href="https://github.com/mdecycu/cmsimde_site"&gt;cmsimde_site&lt;/a&gt; 建立動態與靜態網頁&amp;gt;&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;這裡將說明如何利用 &lt;a href="https://replit.com"&gt;Replit&lt;/a&gt; 與 &lt;a href="https://github.com/mdecycu/cmsimde_site"&gt;cmsimde_site&lt;/a&gt; 建立動態與靜態網頁&amp;gt;&lt;/p&gt;
+
+
+&lt;script&gt;
+var winkVideoData_replit1 = {
+  dataVersion: 1,
+  frameRate: 10,
+  buttonFrameLength: 5,
+  buttonFrameOffset: 2,
+  frameStops: {
+  },
+};
+&lt;/script&gt;
+&lt;/p&gt;
+&lt;!-- 接下來將 mp4 檔案從 downloads 目錄取出 --&gt;
+&lt;div class="winkVideoContainerClass"&gt;&lt;video autoplay="autoplay" class="winkVideoClass" controls="controls" data-dirname="./../cmsimde/static" data-varname="winkVideoData_replit1" height="600" muted="true" width="800"&gt;
+&lt;source src="./../downloads/replit/cmsimde_site_on_replit_for_scrum3.mp4" type="video/mp4"/&gt;&lt;/video&gt;
+&lt;/div&gt;</content><category term="Replit"></category><category term="cmsimde"></category><category term="replit"></category></entry><entry><title>免付費完結篇</title><link href="https://mde.tw/blog/the_end_of_free_service.html" rel="alternate"></link><published>2022-09-07T12:00:00+08:00</published><updated>2022-09-10T22:00:55+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-09-07:/blog/the_end_of_free_service.html</id><summary type="html">&lt;p&gt;天下沒有白吃的午餐. 2017 年 OpenShift 就曾經終止過免付費雲端應用服務, 2022 年GDrive 也才剛終止教育單位無限空間, &lt;a href="https://blog.heroku.com/next-chapter"&gt;上個月&lt;/a&gt;, 終於輪到 Heroku.&lt;/p&gt;
 &lt;p&gt;不過就在此時, &lt;a href="https://replit.com"&gt;Replit&lt;/a&gt; 即將在雲端應用程式服務界, 取而代之.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;天下沒有白吃的午餐. 2017 年 OpenShift 就曾經終止過免付費雲端應用服務, 2022 年GDrive 也才剛終止教育單位無限空間, &lt;a href="https://blog.heroku.com/next-chapter"&gt;上個月&lt;/a&gt;, 終於輪到 Heroku.&lt;/p&gt;
 &lt;p&gt;不過就在此時, &lt;a href="https://replit.com"&gt;Replit&lt;/a&gt; 即將在雲端應用程式服務界, 取而代之.&lt;/p&gt;
@@ -551,7 +569,7 @@ total: 28.29 GB
 &lt;p&gt;61 - 80 reference elements&lt;/p&gt;
 &lt;p&gt;81 - 100 faces&lt;/p&gt;
 &lt;p&gt;101 - 120 PMI&lt;/p&gt;
-&lt;p&gt;Ctrl + l - Layer Settings&lt;/p&gt;</content><category term="NX"></category><category term="Siemens"></category></entry><entry><title>cp2022_w1</title><link href="https://mde.tw/blog/cp2022-w1.html" rel="alternate"></link><published>2022-09-01T13:00:00+08:00</published><updated>2022-09-10T23:18:24+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-09-01:/blog/cp2022-w1.html</id><summary type="html">&lt;p&gt;計算機程式課程第一週, 只有 1b 有課, 1a 因為中秋節放假.&lt;/p&gt;
+&lt;p&gt;Ctrl + l - Layer Settings&lt;/p&gt;</content><category term="NX"></category><category term="Siemens"></category></entry><entry><title>cp2022_w1</title><link href="https://mde.tw/blog/cp2022-w1.html" rel="alternate"></link><published>2022-09-01T13:00:00+08:00</published><updated>2022-09-11T07:50:23+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-09-01:/blog/cp2022-w1.html</id><summary type="html">&lt;p&gt;計算機程式課程第一週, 只有 1b 有課, 1a 因為中秋節放假.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;計算機程式課程第一週, 只有 1b 有課, 1a 因為中秋節放假.&lt;/p&gt;
 
 
@@ -581,6 +599,7 @@ total: 28.29 GB
 &lt;p&gt;&lt;a href="https://coderslegacy.com/python/python-intermediate/"&gt;https://coderslegacy.com/python/python-intermediate/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://coderslegacy.com/python/python-advanced/"&gt;https://coderslegacy.com/python/python-advanced/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Coding with Python and Repl.it: &lt;a href="https://i.ritzastatic.com/codewithreplit/e-books/coding-with-replit-export.pdf"&gt;https://i.ritzastatic.com/codewithreplit/e-books/coding-with-replit-export.pdf&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Learn Python the right way: &lt;a href="https://learnpythontherightway.com/#read"&gt;https://learnpythontherightway.com/#read&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://www.freecodecamp.org/news/how-to-use-replit/"&gt;https://www.freecodecamp.org/news/how-to-use-replit/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Python curriculum: &lt;a href="https://hackpacific.gitbooks.io/pythonium/content/"&gt;https://hackpacific.gitbooks.io/pythonium/content/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://www.codementor.io/@garethdwyer/introduction-to-machine-learning-with-python-and-repl-it-rln7ywkhc"&gt;https://www.codementor.io/@garethdwyer/introduction-to-machine-learning-with-python-and-repl-it-rln7ywkhc&lt;/a&gt;&lt;/p&gt;</content><category term="cp2022"></category><category term="w1"></category><category term="portable python"></category><category term="計算機程式"></category></entry><entry><title>有關 TCExam</title><link href="https://mde.tw/blog/about-tcexam.html" rel="alternate"></link><published>2022-09-01T12:00:00+08:00</published><updated>2022-09-06T22:44:59+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-09-01:/blog/about-tcexam.html</id><summary type="html">&lt;p&gt;這裡將收集與 TCExam 有關的資料內容.&lt;/p&gt;

@@ -9,7 +9,10 @@ Author: mdecycu
 
 天下沒有白吃的午餐. 2017 年 OpenShift 就曾經終止過免付費雲端應用服務, 2022 年GDrive 也才剛終止教育單位無限空間, [上個月], 終於輪到 Heroku.
 
+不過就在此時, [Replit] 即將在雲端應用程式服務界, 取而代之.
+
 [上個月]: https://blog.heroku.com/next-chapter
+[Replit]: https://replit.com
 
 <!-- PELICAN_END_SUMMARY -->
 
@@ -223,4 +226,46 @@ app.run(host="0.0.0.0", debug=True)
 配置 cmsimde_site
 ====
 
-在 Replit 配置 <https://github.com/mdecycu/cmsimde_site> 的隨選動態網站位於: <https://cmsimdesite.nfulist.repl.co>, 而常駐靜態網站則另外配置於 <https://scrum1.repl.co>. 假如兩個 repl 中的檔案可以設法同步, 應該就可以同時套用於協同產品設計實習流程.
+在 Replit 配置 <https://github.com/mdecycu/cmsimde_site> 的隨選動態網站位於: <https://cmsimdesite.nfulist.repl.co>, 而常駐靜態網站則另外配置於 <https://scrum1.repl.co>. 由於這兩個 repl 中的檔案並沒能同步, 因此在 [Replit] 目前針對 repl 無法直接更改執行的 language 情況下, 配置 cmsimde 網際內容管理的方式如下.
+
+[Replit] 與 Github Pages 結合
+====
+
+[Replit] 雖然以雲端 IDE 自稱, 其實是一個使用者友善的雲端應用程式服務, 使用者在各種 language 設定下, 儘管目前只能選定一種執行模式, 但多重的應用服務, 可以藉著 Version Control 功能, 與 Github 倉儲結合, 能夠採下列流程, 部署 cmsimde 網際內容管理的動態與靜態網站內容.
+
+基本的使用流程是: 將動態網站部署在 [Replit], 且使用該動態網站內容建立對應的 Github 倉儲, 並且在 Github 端設定 Pages, 以便用來伺服與 [Replit] 動態網站同步的靜態網站.
+
+ 結合兩者的前提是, cmsimde 網站的 .gitignore 必須事先修改為:
+ 
+ <pre class="brush: jscript">
+ # Byte-compiled
+__pycache__/
+venv/
+.replit
+*.nix
+*.toml
+*.lock
+ </pre>
+ 
+表示在 Github Pages 端的倉儲, 並不需要 [Replit] 端的虛擬 Python 與設定檔案, 只要提供 cmsimde 的完整倉儲資料即可.
+
+另外一個重點是: 雖然 cmsimde 所需要的 Python modules, 在利用 main.py 啟動 [Replit] 端的動態網站時, 會自動安裝, 但 lxml 模組卻不會隨之安裝.
+
+因此必須手動進入 shell, 以 pip 安裝 lxml.
+
+pip install lxml
+
+完成上述準備動作後, 接著修改 cmsimde 目錄下的  flaskapp.py, 處理 nocache.py 導入模組為:
+
+from .nocache import nocache
+
+最後再執行 main.py:
+
+<pre class="brush: python">
+from cmsimde import flaskapp
+flaskapp.app.run(host='0.0.0.0', port=8080)
+</pre>
+
+[Replit] 端的動態網站就可以啟動: <https://c.scrum1.repl.co>
+
+只要再處理 Github Pages 端倉儲的同步, 就可以得到靜態網站: <https://scrum-1.github.io/c>

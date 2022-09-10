@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Mde.tw - Free</title><link href="https://mde.tw/blog/" rel="alternate"></link><link href="https://mde.tw/blog/feeds/free.atom.xml" rel="self"></link><id>https://mde.tw/blog/</id><updated>2022-09-09T23:57:56+08:00</updated><entry><title>免付費完結篇</title><link href="https://mde.tw/blog/the_end_of_free_service.html" rel="alternate"></link><published>2022-09-07T12:00:00+08:00</published><updated>2022-09-09T23:57:56+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-09-07:/blog/the_end_of_free_service.html</id><summary type="html">&lt;p&gt;天下沒有白吃的午餐. 2017 年 OpenShift 就曾經終止過免付費雲端應用服務, 2022 年GDrive 也才剛終止教育單位無限空間, &lt;a href="https://blog.heroku.com/next-chapter"&gt;上個月&lt;/a&gt;, 終於輪到 Heroku.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Mde.tw - Free</title><link href="https://mde.tw/blog/" rel="alternate"></link><link href="https://mde.tw/blog/feeds/free.atom.xml" rel="self"></link><id>https://mde.tw/blog/</id><updated>2022-09-10T14:27:42+08:00</updated><entry><title>免付費完結篇</title><link href="https://mde.tw/blog/the_end_of_free_service.html" rel="alternate"></link><published>2022-09-07T12:00:00+08:00</published><updated>2022-09-10T14:27:42+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-09-07:/blog/the_end_of_free_service.html</id><summary type="html">&lt;p&gt;天下沒有白吃的午餐. 2017 年 OpenShift 就曾經終止過免付費雲端應用服務, 2022 年GDrive 也才剛終止教育單位無限空間, &lt;a href="https://blog.heroku.com/next-chapter"&gt;上個月&lt;/a&gt;, 終於輪到 Heroku.&lt;/p&gt;
+&lt;p&gt;不過就在此時, &lt;a href="https://replit.com"&gt;Replit&lt;/a&gt; 即將在雲端應用程式服務界, 取而代之.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;天下沒有白吃的午餐. 2017 年 OpenShift 就曾經終止過免付費雲端應用服務, 2022 年GDrive 也才剛終止教育單位無限空間, &lt;a href="https://blog.heroku.com/next-chapter"&gt;上個月&lt;/a&gt;, 終於輪到 Heroku.&lt;/p&gt;
+&lt;p&gt;不過就在此時, &lt;a href="https://replit.com"&gt;Replit&lt;/a&gt; 即將在雲端應用程式服務界, 取而代之.&lt;/p&gt;
 
 
 &lt;h1&gt;Heroku 的宣布&lt;/h1&gt;
@@ -183,4 +185,32 @@ app.run(host="0.0.0.0", debug=True)
 
 &lt;p&gt;但是 qry.nfu.edu.tw 主機先前可以透過 Heroku 遠端連線, 但是卻拒絕 Replit 虛擬主機的連線取值, 因此 nfulist 網際程式必須另外配置在工作站室中的 Server 或另外再找合用的雲端應用程式伺服器.&lt;/p&gt;
 &lt;h1&gt;配置 cmsimde_site&lt;/h1&gt;
-&lt;p&gt;在 Replit 配置 &lt;a href="https://github.com/mdecycu/cmsimde_site"&gt;https://github.com/mdecycu/cmsimde_site&lt;/a&gt; 的隨選動態網站位於: &lt;a href="https://cmsimdesite.nfulist.repl.co"&gt;https://cmsimdesite.nfulist.repl.co&lt;/a&gt;, 而常駐靜態網站則另外配置於 &lt;a href="https://scrum1.repl.co"&gt;https://scrum1.repl.co&lt;/a&gt;. 假如兩個 repl 中的檔案可以設法同步, 應該就可以同時套用於協同產品設計實習流程.&lt;/p&gt;</content><category term="Free"></category><category term="heroku"></category><category term="replit"></category></entry></feed>
+&lt;p&gt;在 Replit 配置 &lt;a href="https://github.com/mdecycu/cmsimde_site"&gt;https://github.com/mdecycu/cmsimde_site&lt;/a&gt; 的隨選動態網站位於: &lt;a href="https://cmsimdesite.nfulist.repl.co"&gt;https://cmsimdesite.nfulist.repl.co&lt;/a&gt;, 而常駐靜態網站則另外配置於 &lt;a href="https://scrum1.repl.co"&gt;https://scrum1.repl.co&lt;/a&gt;. 由於這兩個 repl 中的檔案並沒能同步, 因此在 &lt;a href="https://replit.com"&gt;Replit&lt;/a&gt; 目前針對 repl 無法直接更改執行的 language 情況下, 配置 cmsimde 網際內容管理的方式如下.&lt;/p&gt;
+&lt;h1&gt;&lt;a href="https://replit.com"&gt;Replit&lt;/a&gt; 與 Github Pages 結合&lt;/h1&gt;
+&lt;p&gt;&lt;a href="https://replit.com"&gt;Replit&lt;/a&gt; 雖然以雲端 IDE 自稱, 其實是一個使用者友善的雲端應用程式服務, 使用者在各種 language 設定下, 儘管目前只能選定一種執行模式, 但多重的應用服務, 可以藉著 Version Control 功能, 與 Github 倉儲結合, 能夠採下列流程, 部署 cmsimde 網際內容管理的動態與靜態網站內容.&lt;/p&gt;
+&lt;p&gt;基本的使用流程是: 將動態網站部署在 &lt;a href="https://replit.com"&gt;Replit&lt;/a&gt;, 且使用該動態網站內容建立對應的 Github 倉儲, 並且在 Github 端設定 Pages, 以便用來伺服與 &lt;a href="https://replit.com"&gt;Replit&lt;/a&gt; 動態網站同步的靜態網站.&lt;/p&gt;
+&lt;p&gt;結合兩者的前提是, cmsimde 網站的 .gitignore 必須事先修改為:&lt;/p&gt;
+&lt;pre class="brush: jscript"&gt;
+ # Byte-compiled
+__pycache__/
+venv/
+.replit
+*.nix
+*.toml
+*.lock
+ &lt;/pre&gt;
+
+&lt;p&gt;表示在 Github Pages 端的倉儲, 並不需要 &lt;a href="https://replit.com"&gt;Replit&lt;/a&gt; 端的虛擬 Python 與設定檔案, 只要提供 cmsimde 的完整倉儲資料即可.&lt;/p&gt;
+&lt;p&gt;另外一個重點是: 雖然 cmsimde 所需要的 Python modules, 在利用 main.py 啟動 &lt;a href="https://replit.com"&gt;Replit&lt;/a&gt; 端的動態網站時, 會自動安裝, 但 lxml 模組卻不會隨之安裝.&lt;/p&gt;
+&lt;p&gt;因此必須手動進入 shell, 以 pip 安裝 lxml.&lt;/p&gt;
+&lt;p&gt;pip install lxml&lt;/p&gt;
+&lt;p&gt;完成上述準備動作後, 接著修改 cmsimde 目錄下的  flaskapp.py, 處理 nocache.py 導入模組為:&lt;/p&gt;
+&lt;p&gt;from .nocache import nocache&lt;/p&gt;
+&lt;p&gt;最後再執行 main.py:&lt;/p&gt;
+&lt;pre class="brush: python"&gt;
+from cmsimde import flaskapp
+flaskapp.app.run(host='0.0.0.0', port=8080)
+&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href="https://replit.com"&gt;Replit&lt;/a&gt; 端的動態網站就可以啟動: &lt;a href="https://c.scrum1.repl.co"&gt;https://c.scrum1.repl.co&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;只要再處理 Github Pages 端倉儲的同步, 就可以得到靜態網站: &lt;a href="https://scrum-1.github.io/c"&gt;https://scrum-1.github.io/c&lt;/a&gt;&lt;/p&gt;</content><category term="Free"></category><category term="heroku"></category><category term="replit"></category></entry></feed>

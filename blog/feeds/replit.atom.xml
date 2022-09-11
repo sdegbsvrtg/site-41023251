@@ -1,8 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Mde.tw - Replit</title><link href="https://mde.tw/blog/" rel="alternate"></link><link href="https://mde.tw/blog/feeds/replit.atom.xml" rel="self"></link><id>https://mde.tw/blog/</id><updated>2022-09-11T12:00:00+08:00</updated><entry><title>Replit 建立網站導引</title><link href="https://mde.tw/blog/replit_cmsimde_tutorial.html" rel="alternate"></link><published>2022-09-11T12:00:00+08:00</published><updated>2022-09-11T07:50:23+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-09-11:/blog/replit_cmsimde_tutorial.html</id><summary type="html">&lt;p&gt;這裡將說明如何利用 &lt;a href="https://replit.com"&gt;Replit&lt;/a&gt; 與 &lt;a href="https://github.com/mdecycu/cmsimde_site"&gt;cmsimde_site&lt;/a&gt; 建立動態與靜態網頁&amp;gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Mde.tw - Replit</title><link href="https://mde.tw/blog/" rel="alternate"></link><link href="https://mde.tw/blog/feeds/replit.atom.xml" rel="self"></link><id>https://mde.tw/blog/</id><updated>2022-09-11T18:51:11+08:00</updated><entry><title>Replit 建立網站導引</title><link href="https://mde.tw/blog/replit_cmsimde_tutorial.html" rel="alternate"></link><published>2022-09-11T12:00:00+08:00</published><updated>2022-09-11T18:51:11+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-09-11:/blog/replit_cmsimde_tutorial.html</id><summary type="html">&lt;p&gt;這裡將說明如何利用 &lt;a href="https://replit.com"&gt;Replit&lt;/a&gt; 與 &lt;a href="https://github.com/mdecycu/cmsimde_site"&gt;cmsimde_site&lt;/a&gt; 建立動態與靜態網頁&amp;gt;&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;這裡將說明如何利用 &lt;a href="https://replit.com"&gt;Replit&lt;/a&gt; 與 &lt;a href="https://github.com/mdecycu/cmsimde_site"&gt;cmsimde_site&lt;/a&gt; 建立動態與靜態網頁&amp;gt;&lt;/p&gt;
 
 
+&lt;h1&gt;在 Replit 上執行 cmsimde&lt;/h1&gt;
+&lt;p&gt;&lt;a href="https://github.com/mdecycu/cmsite"&gt;cmsite&lt;/a&gt; 動態網站可以在 &lt;a href="https://replit.com"&gt;Replit&lt;/a&gt; 環境執行, 以下為設定步驟:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;建立 &lt;a href="https://replit.com"&gt;Replit&lt;/a&gt; 帳號&lt;/li&gt;
+&lt;li&gt;登入 Email 驗證 &lt;a href="https://replit.com"&gt;Replit&lt;/a&gt; 寄出的註冊確認電子郵件&lt;/li&gt;
+&lt;li&gt;利用 import repository, 以 &lt;a href="https://github.com/mdecycu/cmsite"&gt;cmsite&lt;/a&gt; 倉儲內容, 建立 repl&lt;/li&gt;
+&lt;li&gt;進入 .replit 檔案設定頁面, 將 main.py 設定為啟動程式&lt;/li&gt;
+&lt;li&gt;在 shell 介面執行 git submodule update --init --recursive, 取下 &lt;a href="https://github.com/mdecycu/cmsite"&gt;cmsite&lt;/a&gt; 倉儲中 cmsimde 子模組檔案&lt;/li&gt;
+&lt;li&gt;在 shell 介面執行 pip install flask flask_cors bs4 lxml pelican markdown, 安裝 cmsimde 所需要的模組&lt;/li&gt;
+&lt;li&gt;按下 Run, 啟動 main.py&lt;/li&gt;
+&lt;li&gt;登入 &lt;a href="https://github.com/mdecycu/cmsite"&gt;cmsite&lt;/a&gt; 動態網站, 修改管理者密碼, 修改標題與內容後, 以 generate_pages 將動態網頁內容轉為靜態格式&lt;/li&gt;
+&lt;li&gt;利用 &lt;a href="https://replit.com"&gt;Replit&lt;/a&gt; 中的 Version Control 功能, 將改版資料推向遠端倉儲&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;將 main.py 設定為啟動程式畫面:&lt;/p&gt;
+&lt;p&gt;&lt;img src="./../images/replit_start_with_main_py.png" width="800"&gt;&lt;/img&gt;&lt;/p&gt;
+&lt;p&gt;在 shell 介面安裝模組化面:&lt;/p&gt;
+&lt;p&gt;&lt;img src="./../images/replit_pip_install_lxml.png" width="800"&gt;&lt;/img&gt;&lt;/p&gt;
 &lt;script&gt;
 var winkVideoData_replit1 = {
   dataVersion: 1,

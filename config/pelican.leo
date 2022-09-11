@@ -2122,6 +2122,8 @@ Author: mdecycu
 
 &lt;img src="./../images/replit_pip_install_lxml.png" width="800"&gt;&lt;/img&gt;
 
+以下則是從註冊 [Replit] 帳號, 到執行 cmsimde_site 動態網站的示範影片:
+
 &lt;script&gt;
 var winkVideoData_replit1 = {
   dataVersion: 1,
@@ -2136,7 +2138,8 @@ var winkVideoData_replit1 = {
 &lt;!-- 接下來將 mp4 檔案從 downloads 目錄取出 --&gt;
 &lt;div class="winkVideoContainerClass"&gt;&lt;video autoplay="autoplay" class="winkVideoClass" controls="controls" data-dirname="./../cmsimde/static" data-varname="winkVideoData_replit1" height="600" muted="true" width="800"&gt;
 &lt;source src="./../downloads/replit/cmsimde_site_on_replit_for_scrum3.mp4" type="video/mp4"/&gt;&lt;/video&gt;
-&lt;/div&gt;</t>
+&lt;/div&gt;
+</t>
 <t tx="yen.20170108171605.1"></t>
 <t tx="yen.20170108171605.2">QTreeWidget {
     /* These apply to the selected item, but not to editing items.*/

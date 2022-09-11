@@ -36,6 +36,8 @@ Author: mdecycu
 
 <img src="./../images/replit_pip_install_lxml.png" width="800"></img>
 
+以下則是從註冊 [Replit] 帳號, 到執行 cmsimde_site 動態網站的示範影片:
+
 <script>
 var winkVideoData_replit1 = {
   dataVersion: 1,

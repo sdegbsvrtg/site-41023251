@@ -2092,10 +2092,7 @@ Slug: replit_cmsimde_tutorial
 Author: mdecycu
 ---
 
-這裡將說明如何利用 [Replit] 與 [cmsimde_site] 建立動態與靜態網頁&gt;
-
-[Replit]: https://replit.com
-[cmsimde_site]: https://github.com/mdecycu/cmsimde_site
+這裡將說明如何利用 [Replit] 與 [cmsite] 建立動態與靜態網頁.
 
 &lt;!-- PELICAN_END_SUMMARY --&gt;
 

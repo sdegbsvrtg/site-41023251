@@ -619,7 +619,7 @@ Disable-NetAdapterBinding -Name "*" -ComponentID ms_tcpip
 [acp]: https://github.com/mdecycu/cmsimde/blob/4cf035f4dc75bafc2791b67e630ee34533ae50c4/up_dir/acp.bat
 [IPv6]: https://en.wikipedia.org/wiki/IPv6
 [IPv4]: https://en.wikipedia.org/wiki/IPv4
-[OneDrive]: https://en.wikipedia.org/wiki/OneDrive
+[Onedrive]: https://en.wikipedia.org/wiki/OneDrive
 [proxy server]: https://en.wikipedia.org/wiki/Proxy_server
 [template]: https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template
 [Github Classroom]: https://classroom.github.com
@@ -651,7 +651,7 @@ var winkVideoData_w1_1 = {
 建立 Onedrive 帳號
 ====
 
-請尚未建立 Onedrive 帳號的學員登入 @gm 帳號後, 至 &lt;https://www.microsoft.com/zh-tw/education/products/office&gt;, 以 @gm 帳號申請 OneDrive 5TB 儲存權限. 
+請尚未建立 Onedrive 帳號的學員登入 @gm 帳號後, 至 &lt;https://www.microsoft.com/zh-tw/education/products/office&gt;, 以 @gm 帳號申請 Onedrive 5TB 儲存權限. 課程中所提供的檔案, 需要登入以 @gm 註冊的 Onedrive 帳號後, 才能下載.
 
 利用 [Github] 建立網頁
 ====
@@ -2139,6 +2139,14 @@ var winkVideoData_replit1 = {
 &lt;div class="winkVideoContainerClass"&gt;&lt;video autoplay="autoplay" class="winkVideoClass" controls="controls" data-dirname="./../cmsimde/static" data-varname="winkVideoData_replit1" height="600" muted="true" width="800"&gt;
 &lt;source src="./../downloads/replit/cmsimde_site_on_replit_for_scrum3.mp4" type="video/mp4"/&gt;&lt;/video&gt;
 &lt;/div&gt;
+
+Replit references:
+
+1. &lt;https://replit.com/site/teams-for-education&gt;
+2. &lt;https://www.cs.carleton.edu/faculty/dmusicant/blog/replit-during-spring-2020/&gt;
+3. &lt;https://www.cs.carleton.edu/faculty/dmusicant/blog/replit-following-spring-2021/&gt;
+
+
 </t>
 <t tx="yen.20170108171605.1"></t>
 <t tx="yen.20170108171605.2">QTreeWidget {

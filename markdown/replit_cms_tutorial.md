@@ -53,3 +53,11 @@ var winkVideoData_replit1 = {
 <div class="winkVideoContainerClass"><video autoplay="autoplay" class="winkVideoClass" controls="controls" data-dirname="./../cmsimde/static" data-varname="winkVideoData_replit1" height="600" muted="true" width="800">
 <source src="./../downloads/replit/cmsimde_site_on_replit_for_scrum3.mp4" type="video/mp4"/></video>
 </div>
+
+Replit references:
+
+1. <https://replit.com/site/teams-for-education>
+2. <https://www.cs.carleton.edu/faculty/dmusicant/blog/replit-during-spring-2020/>
+3. <https://www.cs.carleton.edu/faculty/dmusicant/blog/replit-following-spring-2021/>
+
+

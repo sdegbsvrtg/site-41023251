@@ -62,7 +62,7 @@
 <meta property="og:url" content="https://mde.tw/blog/2022_fall_semester_week2.html"/>
 <meta property="og:type" content="article"/>
 <meta property="article:published_time" content="2022-09-13 12:00:00+08:00"/>
-<meta property="article:modified_time" content="2022-09-13 10:59:51.766682+08:00"/>
+<meta property="article:modified_time" content="2022-09-13 14:57:26.659698+08:00"/>
 <meta property="article:author" content="https://mde.tw/blog/author/mdecycu.html">
 <meta property="article:section" content="Fall"/>
 <meta property="article:tag" content="2022"/>
@@ -80,7 +80,7 @@
   "name": "2022 秋季學期第二週",
   "headline": "2022 秋季學期第二週",
   "datePublished": "2022-09-13 12:00:00+08:00",
-  "dateModified": "2022-09-13 10:59:51.766682+08:00",
+  "dateModified": "2022-09-13 14:57:26.659698+08:00",
   "author": {
     "@type": "Person",
     "name": "mdecycu",
@@ -235,19 +235,21 @@ init_mathjax();
 
 <h1>課程網站</h1>
 <p>目前將課程網站放在同一個倉儲, 相關連結可以參考 <a href="https://mde.tw/blog/pages/about/index.html">https://mde.tw/blog/pages/about/index.html</a>.</p>
-<p>現在 mde.tw 的倉儲容量大約 800 MB, 每次在新的環境重新 git clone --recurse-submodules 會有一些負擔, 但若使用隨身碟進行逐次改版, 應該還好.</p>
+<p>現在 <a href="https://github.com/mdecycu/mdecycu.github.io">mde.tw</a> 的倉儲容量大約 800 MB, 每次在新的環境重新 git clone --recurse-submodules 會有一些負擔, 但若使用隨身碟進行逐次改版, 應該還好.</p>
 <p>Fall 學期上的課程為大一的計算機程式, 還有大二的電腦輔助設計與實習.</p>
-<p>計算機程式是從網頁上的 Python 語法教起, 採用的解譯器為 Brython, 學員可以直接從 https://mde.tw/content/Python.html 進入, 直接在線上練習 Brython 所支援的 Python 語法. 由於是在瀏覽器上, 必須要對 HTML 與 Javascript 有些基本認識, 才能充份使用 Brython.</p>
+<p>計算機程式是從網頁上的 Python 語法教起, 採用的解譯器為 <a href="https://www.brython.info/">Brython</a>, 終極目標是希望能夠利用 <a href="https://www.brython.info/">Brython</a> 與 <a href="https://threejs.org/">Three.js</a>, 開發出類似 <a href="https://sim.firialabs.com/">https://sim.firialabs.com/</a> 的網際套件, 直接在瀏覽器上透過 <a href="https://www.brython.info/">Brython</a> 程式控制 Robot 模擬場景.</p>
+<p><img src="./../images/sim_firialabs_com.png" width="800"></img></p>
+<p>計算機程式課程學員可以直接從 <a href="https://mde.tw/content/Python.html">https://mde.tw/content/Python.html</a> 進入, 直接在線上練習 <a href="https://www.brython.info/">Brython</a> 所支援的 Python 語法. 由於是在瀏覽器上, 必須要對 HTML 與 Javascript 有些基本認識, 才能充份使用 <a href="https://www.brython.info/">Brython</a>.</p>
 <p>學員在計算機程式課程所寫的程式, 被要求要設法放入自己管理的 Github 倉儲, 而倉儲是採用 Github Classroom 建立, 並且直接導入 cmsimde 子模組. 假如要將個人倉儲 git clone 到近端電腦上改版, 就必須使用:</p>
 <p>git clone --recurse-submodules 加上擷取倉儲內容的網路_URL 或 SSH 連線字串</p>
 <p>假如第一階段只用 git clone, 而沒有 --recurse-submodules 附屬指令選項, 則可以在取下主倉儲內容後, 以 git submodule update --init --recursive 取下所有子模組的內容.</p>
-<p>光是要能以 git 取下倉儲檔案, 使用者的近端電腦就必須能夠執行 git, 可以使用操作系統安裝版, 或者使用課堂上所推薦的可攜程式套件中的 portablegit.</p>
+<p>光是要能以 git 取下倉儲檔案, 使用者的近端電腦就必須能夠執行 git, 可以使用操作系統安裝版, 或者使用課堂上所推薦的可攜程式套件中的 <a href="https://git-scm.com/download/win">portablegit</a>.</p>
 <p>至於要使用 https 或 ssh 協定進行 git, 主要牽涉到隨後改版 push 時的權限驗證, 因為只有具備倉儲管理權的用戶, 才能對 Github 上的倉儲進行改版.</p>
 <h2>網路協定</h2>
 <p>所有網路上的應用, 都牽涉網路協定, 以 https 而言, 所使用的網路協定就是 http, 也就是超文件傳輸協定. 而 https 就是在利用超文件傳輸的過程中, 將傳送的資料加以加密編碼後, 直到接收後再解開, 是相較於 http 嚴謹安全的傳送.</p>
-<p>以 https 擷取 Github 倉儲的時候, 需要在 URL 中加上帳號 token, 而這串連線驗證身分用的字串, 還帶有權限範圍, 以及時效, 使用者可以在 Github 帳號設定頁中取得.</p>
-<p>由於 Github 目前只支援 IPv4 協定, 而在電腦輔助設計室為了擴大可用頻寬, 採用 IPv6 協定, 要讓 IPv6 協定下的 git 指令, 正確與 Github 倉儲連線, 必須透過 Proxy server, 而且是能同時支援 IPv4 與 IPv6 協定的代理主機. 以 https 對 git 指令的 Proxy 設定, 位於可攜程式環境中的 home_ipv6 目錄下, 檔案名稱為 .gitconfig, 使用者執行 git config 後的設定就是存入 home_ipv6/.gitconfig 檔案中.</p>
-<p>至於 git 所使用的 SSH 連線協定, 在 Windows 操作系統, 可以透過 Putty session 設定達成, 其中的 session 包含連線到 github.com, 所使用的 SSH 認證用 private key 位置, 還有 Proxy 設定.</p>
+<p>以 https 擷取 Github 倉儲的時候, 需要在 URL 中加上帳號 <a href="https://mde.tw/content/Token%20and%20SSH.html">token</a>, 而這串連線驗證身分用的字串, 還帶有權限範圍, 以及時效, 使用者可以在 Github 帳號設定頁中取得.</p>
+<p>由於 Github 目前只支援 IPv4 協定, 而在電腦輔助設計室為了擴大可用頻寬, 採用 IPv6 協定, 要讓 IPv6 協定下的 git 指令, 正確與 Github 倉儲連線, 必須透過 Proxy server (使用 <a href="http://www.squid-cache.org/">Squid</a>), 而且是能同時支援 IPv4 與 IPv6 協定的代理主機. 以 https 對 git 指令的 Proxy 設定, 位於可攜程式環境中的 home_ipv6 目錄下, 檔案名稱為 .gitconfig, 使用者執行 git config 後的設定就是存入 home_ipv6/.gitconfig 檔案中.</p>
+<p>至於 git 所使用的 <a href="https://mde.tw/content/Token%20and%20SSH.html">SSH</a> 連線協定, 在 Windows 操作系統, 可以透過 <a href="https://www.putty.org/">Putty</a> session 設定達成, 其中的 session 包含連線到 github.com, 所使用的 <a href="https://mde.tw/content/Token%20and%20SSH.html">SSH</a> 認證用 private key 位置, 還有 Proxy 設定.</p>
 <p>上述將使用 cmsimde 作為子模組的倉儲取至近端電腦的目的, 共有兩個: 進行改版以及進行協同.</p>
 <p>在近端進行倉儲內容改版的意思是, 利用 Python 與必要模組, 可以執行 cmsimde 網站中的動態系統, 其中所需要的模組為:</p>
 <p>flask flask_cors bs4 lxml pelican markdown leo pyopenssl</p>
@@ -256,14 +258,25 @@ init_mathjax();
 <p>lxml 是將動態網頁內容轉為靜態網頁內容時所需要的解讀模組.</p>
 <p>pelican 是用來建立網誌的工具, 可以將使用者所寫的 Markdown 轉為網誌格式的內容.</p>
 <p>markdown 是用來解讀 .md 檔案的工具.</p>
-<p>leo 是大綱管理模組, 用來作為編寫網誌或簡報的工具, 也可以當作程式開發的 IDE.</p>
+<p><a href="https://www.leoeditor.com/">leo</a> 是大綱管理模組, 用來作為編寫網誌或簡報的工具, 也可以當作程式開發的 IDE.</p>
 <p>pyopenssl 則是在動態網頁中, 以程式方法伺服靜態網頁內容時, 建立 SSL 連線時所需.</p>
 <h2>Replit 作為應用程式伺服器</h2>
-<p>除了將 Github 上的倉儲, git clone 到近端改版外, 也可以利用 Replit, 直接在瀏覽器上以 wsgi 模式, 執行 cmsimde 的動態網站. 如此可以免除在近端執行動態網站所需要的網路協定與 git 指令. 只不過 Replit 只給免費帳號 500 MB 的儲存空間, 過大的倉儲並不適合採用 Replit 執行 cmsimde 的動態網站.</p>
-<p>使用 Replit 執行 cmsimde 的過程, 需要在 shell 執行:</p>
+<p>除了將 Github 上的倉儲, git clone 到近端改版外, 也可以利用 <a href="https://replit.com/">Replit</a>, 直接在瀏覽器上以 wsgi 模式, 執行 cmsimde 的動態網站. 如此可以免除在近端執行動態網站所需要的網路協定與 git 指令. 只不過 <a href="https://replit.com/">Replit</a> 只給免費帳號 500 MB 的儲存空間, 過大的倉儲並不適合採用 <a href="https://replit.com/">Replit</a> 執行 cmsimde 的動態網站.</p>
+<p>使用 <a href="https://replit.com/">Replit</a> 執行 cmsimde 的過程, 需要在 shell 執行:</p>
 <p>git submodule update --init --recursive</p>
-<p>目的是取下子模組資料, 因為 Replit 與 Github 的連結, 似乎只使用 git clone, 並沒有加上 --recurse-submodules, 使用者必須手動執行.</p>
-<p>另外則是利用 pip install flask flask_cors bs4 lxml pelican markdown 安裝 cmsimde 所需模組, 與上述近端改版的差異是: 無需安裝 leo 與 pyopenssl, 因為系統是在雲端 Replit 的主機上執行,  目前還無法在 Replit 系統上使用 leo, 也無需自行配置近端伺服器的 SSL.</p>
+<p>目的是取下子模組資料, 因為 <a href="https://replit.com/">Replit</a> 與 Github 的連結, 似乎只使用 git clone, 並沒有加上 --recurse-submodules, 使用者必須手動執行.</p>
+<p>另外則是利用 pip install flask flask_cors bs4 lxml pelican markdown 安裝 cmsimde 所需模組, 與上述近端改版的差異是: 無需安裝 <a href="https://www.leoeditor.com/">leo</a> 與 pyopenssl, 因為系統是在雲端 Replit 的主機上執行,  目前還無法在 <a href="https://replit.com/">Replit</a> 系統上使用 <a href="https://www.leoeditor.com/">leo</a>, 也無需自行配置近端伺服器的 SSL.</p>
+<p>一旦將動態網站配置到 <a href="https://replit.com/">Replit</a> 之後, 可以將動態網頁改版內容, 同步到對應的 Github 倉儲, 主要利用倉儲的 <a href="https://pages.github.com/">Github Pages</a> 伺服靜態網頁.</p>
+<h1>電腦輔助設計與實習</h1>
+<p>相較於計算機程式所有上課的內容均為自由開源軟體, 電腦輔助設計與實習課程所採用的 NX 與 <a href="https://www.coppeliarobotics.com/">Coppeliasim</a> 則分別是商用套件與教育開源工具.</p>
+<p>2022 Fall 所使用的 NX 為 2027.3401 版:</p>
+<p>下載 <a href="https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/yen_gm_nfu_edu_tw/EfvS63_7udVPhe-xlXrYPCMBVTUEEona5_QXwHdZD_8Vww?e=LNczOS">NX2027.3401_lite_cad2022.7z</a> (for @gm users only, 1.97 GB, 解開後 7.49 GB)</p>
+<p>下載 <a href="https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/yen_gm_nfu_edu_tw/EfC-9gy1PN9MmJtpD9VO5KcB3kehP6VVVgmQt3ej5D_BIQ?e=deXuWs">NX2027.3401_cad2022.7z</a> (for @gm users only, 8.02 GB, 解開後 28.32 GB)</p>
+<p>下載 <a href="https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/yen_gm_nfu_edu_tw/EU-fmibMpBZKg2ZiXmBlK-oBQj7wLV5YeMGI8rCI60NhmQ?e=EuxlyD">NX2007_documentation.7z</a> (for @gm users only, 2.18 GB, 解開後 2.86 GB), 使用時執行 start_static.py 後, 以瀏覽器 http://localhost:7443 開啟.</p>
+<p>線上 <a href="https://docs.sw.siemens.com/en-US/release/209349590/NX%202007%20Series">NX2007 EN Documentation</a>.</p>
+<p><a href="https://www.coppeliarobotics.com/">Coppeliasim</a> 所使用的版本則為 4.3.0 rev12:</p>
+<p>下載 <a href="https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/yen_gm_nfu_edu_tw/ESXbxhDmlUhBmPTUqAdTrLEBjvaqzZupKcgviAmxWGQdjQ">CoppeliaSim 4.3.0 rev12.7z</a> (for @gm users only)</p>
+<p>本學期的電腦輔助與實習課程, 零組件繪圖的部分將從 <a href="https://docs.sw.siemens.com/documentation/external/PL20200605194735749/en-US/static/design_day_one/index.html#">design day one</a> (或 <a href="http://c1.cycu.org:88">http://c1.cycu.org:88</a>) 的練習開始. 其中包括觀看各英文教學影片.</p>
             </section>
 
             <section class="post-info">

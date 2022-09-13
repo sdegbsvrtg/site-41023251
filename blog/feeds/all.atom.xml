@@ -1,23 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Mde.tw</title><link href="https://mde.tw/blog/" rel="alternate"></link><link href="https://mde.tw/blog/feeds/all.atom.xml" rel="self"></link><id>https://mde.tw/blog/</id><updated>2022-09-13T12:00:00+08:00</updated><entry><title>2022 秋季學期第二週</title><link href="https://mde.tw/blog/2022_fall_semester_week2.html" rel="alternate"></link><published>2022-09-13T12:00:00+08:00</published><updated>2022-09-13T10:59:51+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-09-13:/blog/2022_fall_semester_week2.html</id><summary type="html">&lt;p&gt;簡要說明 2022 Fall 與計算機程式及電腦輔助設計與實習課程的相關規劃與期程安排.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Mde.tw</title><link href="https://mde.tw/blog/" rel="alternate"></link><link href="https://mde.tw/blog/feeds/all.atom.xml" rel="self"></link><id>https://mde.tw/blog/</id><updated>2022-09-13T14:57:26+08:00</updated><entry><title>2022 秋季學期第二週</title><link href="https://mde.tw/blog/2022_fall_semester_week2.html" rel="alternate"></link><published>2022-09-13T12:00:00+08:00</published><updated>2022-09-13T14:57:26+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-09-13:/blog/2022_fall_semester_week2.html</id><summary type="html">&lt;p&gt;簡要說明 2022 Fall 與計算機程式及電腦輔助設計與實習課程的相關規劃與期程安排.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;簡要說明 2022 Fall 與計算機程式及電腦輔助設計與實習課程的相關規劃與期程安排.&lt;/p&gt;
 
 
 &lt;h1&gt;課程網站&lt;/h1&gt;
 &lt;p&gt;目前將課程網站放在同一個倉儲, 相關連結可以參考 &lt;a href="https://mde.tw/blog/pages/about/index.html"&gt;https://mde.tw/blog/pages/about/index.html&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;現在 mde.tw 的倉儲容量大約 800 MB, 每次在新的環境重新 git clone --recurse-submodules 會有一些負擔, 但若使用隨身碟進行逐次改版, 應該還好.&lt;/p&gt;
+&lt;p&gt;現在 &lt;a href="https://github.com/mdecycu/mdecycu.github.io"&gt;mde.tw&lt;/a&gt; 的倉儲容量大約 800 MB, 每次在新的環境重新 git clone --recurse-submodules 會有一些負擔, 但若使用隨身碟進行逐次改版, 應該還好.&lt;/p&gt;
 &lt;p&gt;Fall 學期上的課程為大一的計算機程式, 還有大二的電腦輔助設計與實習.&lt;/p&gt;
-&lt;p&gt;計算機程式是從網頁上的 Python 語法教起, 採用的解譯器為 Brython, 學員可以直接從 https://mde.tw/content/Python.html 進入, 直接在線上練習 Brython 所支援的 Python 語法. 由於是在瀏覽器上, 必須要對 HTML 與 Javascript 有些基本認識, 才能充份使用 Brython.&lt;/p&gt;
+&lt;p&gt;計算機程式是從網頁上的 Python 語法教起, 採用的解譯器為 &lt;a href="https://www.brython.info/"&gt;Brython&lt;/a&gt;, 終極目標是希望能夠利用 &lt;a href="https://www.brython.info/"&gt;Brython&lt;/a&gt; 與 &lt;a href="https://threejs.org/"&gt;Three.js&lt;/a&gt;, 開發出類似 &lt;a href="https://sim.firialabs.com/"&gt;https://sim.firialabs.com/&lt;/a&gt; 的網際套件, 直接在瀏覽器上透過 &lt;a href="https://www.brython.info/"&gt;Brython&lt;/a&gt; 程式控制 Robot 模擬場景.&lt;/p&gt;
+&lt;p&gt;&lt;img src="./../images/sim_firialabs_com.png" width="800"&gt;&lt;/img&gt;&lt;/p&gt;
+&lt;p&gt;計算機程式課程學員可以直接從 &lt;a href="https://mde.tw/content/Python.html"&gt;https://mde.tw/content/Python.html&lt;/a&gt; 進入, 直接在線上練習 &lt;a href="https://www.brython.info/"&gt;Brython&lt;/a&gt; 所支援的 Python 語法. 由於是在瀏覽器上, 必須要對 HTML 與 Javascript 有些基本認識, 才能充份使用 &lt;a href="https://www.brython.info/"&gt;Brython&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;學員在計算機程式課程所寫的程式, 被要求要設法放入自己管理的 Github 倉儲, 而倉儲是採用 Github Classroom 建立, 並且直接導入 cmsimde 子模組. 假如要將個人倉儲 git clone 到近端電腦上改版, 就必須使用:&lt;/p&gt;
 &lt;p&gt;git clone --recurse-submodules 加上擷取倉儲內容的網路_URL 或 SSH 連線字串&lt;/p&gt;
 &lt;p&gt;假如第一階段只用 git clone, 而沒有 --recurse-submodules 附屬指令選項, 則可以在取下主倉儲內容後, 以 git submodule update --init --recursive 取下所有子模組的內容.&lt;/p&gt;
-&lt;p&gt;光是要能以 git 取下倉儲檔案, 使用者的近端電腦就必須能夠執行 git, 可以使用操作系統安裝版, 或者使用課堂上所推薦的可攜程式套件中的 portablegit.&lt;/p&gt;
+&lt;p&gt;光是要能以 git 取下倉儲檔案, 使用者的近端電腦就必須能夠執行 git, 可以使用操作系統安裝版, 或者使用課堂上所推薦的可攜程式套件中的 &lt;a href="https://git-scm.com/download/win"&gt;portablegit&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;至於要使用 https 或 ssh 協定進行 git, 主要牽涉到隨後改版 push 時的權限驗證, 因為只有具備倉儲管理權的用戶, 才能對 Github 上的倉儲進行改版.&lt;/p&gt;
 &lt;h2&gt;網路協定&lt;/h2&gt;
 &lt;p&gt;所有網路上的應用, 都牽涉網路協定, 以 https 而言, 所使用的網路協定就是 http, 也就是超文件傳輸協定. 而 https 就是在利用超文件傳輸的過程中, 將傳送的資料加以加密編碼後, 直到接收後再解開, 是相較於 http 嚴謹安全的傳送.&lt;/p&gt;
-&lt;p&gt;以 https 擷取 Github 倉儲的時候, 需要在 URL 中加上帳號 token, 而這串連線驗證身分用的字串, 還帶有權限範圍, 以及時效, 使用者可以在 Github 帳號設定頁中取得.&lt;/p&gt;
-&lt;p&gt;由於 Github 目前只支援 IPv4 協定, 而在電腦輔助設計室為了擴大可用頻寬, 採用 IPv6 協定, 要讓 IPv6 協定下的 git 指令, 正確與 Github 倉儲連線, 必須透過 Proxy server, 而且是能同時支援 IPv4 與 IPv6 協定的代理主機. 以 https 對 git 指令的 Proxy 設定, 位於可攜程式環境中的 home_ipv6 目錄下, 檔案名稱為 .gitconfig, 使用者執行 git config 後的設定就是存入 home_ipv6/.gitconfig 檔案中.&lt;/p&gt;
-&lt;p&gt;至於 git 所使用的 SSH 連線協定, 在 Windows 操作系統, 可以透過 Putty session 設定達成, 其中的 session 包含連線到 github.com, 所使用的 SSH 認證用 private key 位置, 還有 Proxy 設定.&lt;/p&gt;
+&lt;p&gt;以 https 擷取 Github 倉儲的時候, 需要在 URL 中加上帳號 &lt;a href="https://mde.tw/content/Token%20and%20SSH.html"&gt;token&lt;/a&gt;, 而這串連線驗證身分用的字串, 還帶有權限範圍, 以及時效, 使用者可以在 Github 帳號設定頁中取得.&lt;/p&gt;
+&lt;p&gt;由於 Github 目前只支援 IPv4 協定, 而在電腦輔助設計室為了擴大可用頻寬, 採用 IPv6 協定, 要讓 IPv6 協定下的 git 指令, 正確與 Github 倉儲連線, 必須透過 Proxy server (使用 &lt;a href="http://www.squid-cache.org/"&gt;Squid&lt;/a&gt;), 而且是能同時支援 IPv4 與 IPv6 協定的代理主機. 以 https 對 git 指令的 Proxy 設定, 位於可攜程式環境中的 home_ipv6 目錄下, 檔案名稱為 .gitconfig, 使用者執行 git config 後的設定就是存入 home_ipv6/.gitconfig 檔案中.&lt;/p&gt;
+&lt;p&gt;至於 git 所使用的 &lt;a href="https://mde.tw/content/Token%20and%20SSH.html"&gt;SSH&lt;/a&gt; 連線協定, 在 Windows 操作系統, 可以透過 &lt;a href="https://www.putty.org/"&gt;Putty&lt;/a&gt; session 設定達成, 其中的 session 包含連線到 github.com, 所使用的 &lt;a href="https://mde.tw/content/Token%20and%20SSH.html"&gt;SSH&lt;/a&gt; 認證用 private key 位置, 還有 Proxy 設定.&lt;/p&gt;
 &lt;p&gt;上述將使用 cmsimde 作為子模組的倉儲取至近端電腦的目的, 共有兩個: 進行改版以及進行協同.&lt;/p&gt;
 &lt;p&gt;在近端進行倉儲內容改版的意思是, 利用 Python 與必要模組, 可以執行 cmsimde 網站中的動態系統, 其中所需要的模組為:&lt;/p&gt;
 &lt;p&gt;flask flask_cors bs4 lxml pelican markdown leo pyopenssl&lt;/p&gt;
@@ -26,14 +28,25 @@
 &lt;p&gt;lxml 是將動態網頁內容轉為靜態網頁內容時所需要的解讀模組.&lt;/p&gt;
 &lt;p&gt;pelican 是用來建立網誌的工具, 可以將使用者所寫的 Markdown 轉為網誌格式的內容.&lt;/p&gt;
 &lt;p&gt;markdown 是用來解讀 .md 檔案的工具.&lt;/p&gt;
-&lt;p&gt;leo 是大綱管理模組, 用來作為編寫網誌或簡報的工具, 也可以當作程式開發的 IDE.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.leoeditor.com/"&gt;leo&lt;/a&gt; 是大綱管理模組, 用來作為編寫網誌或簡報的工具, 也可以當作程式開發的 IDE.&lt;/p&gt;
 &lt;p&gt;pyopenssl 則是在動態網頁中, 以程式方法伺服靜態網頁內容時, 建立 SSL 連線時所需.&lt;/p&gt;
 &lt;h2&gt;Replit 作為應用程式伺服器&lt;/h2&gt;
-&lt;p&gt;除了將 Github 上的倉儲, git clone 到近端改版外, 也可以利用 Replit, 直接在瀏覽器上以 wsgi 模式, 執行 cmsimde 的動態網站. 如此可以免除在近端執行動態網站所需要的網路協定與 git 指令. 只不過 Replit 只給免費帳號 500 MB 的儲存空間, 過大的倉儲並不適合採用 Replit 執行 cmsimde 的動態網站.&lt;/p&gt;
-&lt;p&gt;使用 Replit 執行 cmsimde 的過程, 需要在 shell 執行:&lt;/p&gt;
+&lt;p&gt;除了將 Github 上的倉儲, git clone 到近端改版外, 也可以利用 &lt;a href="https://replit.com/"&gt;Replit&lt;/a&gt;, 直接在瀏覽器上以 wsgi 模式, 執行 cmsimde 的動態網站. 如此可以免除在近端執行動態網站所需要的網路協定與 git 指令. 只不過 &lt;a href="https://replit.com/"&gt;Replit&lt;/a&gt; 只給免費帳號 500 MB 的儲存空間, 過大的倉儲並不適合採用 &lt;a href="https://replit.com/"&gt;Replit&lt;/a&gt; 執行 cmsimde 的動態網站.&lt;/p&gt;
+&lt;p&gt;使用 &lt;a href="https://replit.com/"&gt;Replit&lt;/a&gt; 執行 cmsimde 的過程, 需要在 shell 執行:&lt;/p&gt;
 &lt;p&gt;git submodule update --init --recursive&lt;/p&gt;
-&lt;p&gt;目的是取下子模組資料, 因為 Replit 與 Github 的連結, 似乎只使用 git clone, 並沒有加上 --recurse-submodules, 使用者必須手動執行.&lt;/p&gt;
-&lt;p&gt;另外則是利用 pip install flask flask_cors bs4 lxml pelican markdown 安裝 cmsimde 所需模組, 與上述近端改版的差異是: 無需安裝 leo 與 pyopenssl, 因為系統是在雲端 Replit 的主機上執行,  目前還無法在 Replit 系統上使用 leo, 也無需自行配置近端伺服器的 SSL.&lt;/p&gt;</content><category term="Fall"></category><category term="2022"></category><category term="w2"></category><category term="cad2022"></category><category term="cp2022"></category></entry><entry><title>Replit 建立網站導引</title><link href="https://mde.tw/blog/replit_cmsimde_tutorial.html" rel="alternate"></link><published>2022-09-11T12:00:00+08:00</published><updated>2022-09-12T09:00:09+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-09-11:/blog/replit_cmsimde_tutorial.html</id><summary type="html">&lt;p&gt;這裡將說明如何利用 &lt;a href="https://replit.com"&gt;Replit&lt;/a&gt; 與 &lt;a href="https://github.com/mdecycu/cmsite"&gt;cmsite&lt;/a&gt; 建立動態與靜態網頁.&lt;/p&gt;
+&lt;p&gt;目的是取下子模組資料, 因為 &lt;a href="https://replit.com/"&gt;Replit&lt;/a&gt; 與 Github 的連結, 似乎只使用 git clone, 並沒有加上 --recurse-submodules, 使用者必須手動執行.&lt;/p&gt;
+&lt;p&gt;另外則是利用 pip install flask flask_cors bs4 lxml pelican markdown 安裝 cmsimde 所需模組, 與上述近端改版的差異是: 無需安裝 &lt;a href="https://www.leoeditor.com/"&gt;leo&lt;/a&gt; 與 pyopenssl, 因為系統是在雲端 Replit 的主機上執行,  目前還無法在 &lt;a href="https://replit.com/"&gt;Replit&lt;/a&gt; 系統上使用 &lt;a href="https://www.leoeditor.com/"&gt;leo&lt;/a&gt;, 也無需自行配置近端伺服器的 SSL.&lt;/p&gt;
+&lt;p&gt;一旦將動態網站配置到 &lt;a href="https://replit.com/"&gt;Replit&lt;/a&gt; 之後, 可以將動態網頁改版內容, 同步到對應的 Github 倉儲, 主要利用倉儲的 &lt;a href="https://pages.github.com/"&gt;Github Pages&lt;/a&gt; 伺服靜態網頁.&lt;/p&gt;
+&lt;h1&gt;電腦輔助設計與實習&lt;/h1&gt;
+&lt;p&gt;相較於計算機程式所有上課的內容均為自由開源軟體, 電腦輔助設計與實習課程所採用的 NX 與 &lt;a href="https://www.coppeliarobotics.com/"&gt;Coppeliasim&lt;/a&gt; 則分別是商用套件與教育開源工具.&lt;/p&gt;
+&lt;p&gt;2022 Fall 所使用的 NX 為 2027.3401 版:&lt;/p&gt;
+&lt;p&gt;下載 &lt;a href="https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/yen_gm_nfu_edu_tw/EfvS63_7udVPhe-xlXrYPCMBVTUEEona5_QXwHdZD_8Vww?e=LNczOS"&gt;NX2027.3401_lite_cad2022.7z&lt;/a&gt; (for @gm users only, 1.97 GB, 解開後 7.49 GB)&lt;/p&gt;
+&lt;p&gt;下載 &lt;a href="https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/yen_gm_nfu_edu_tw/EfC-9gy1PN9MmJtpD9VO5KcB3kehP6VVVgmQt3ej5D_BIQ?e=deXuWs"&gt;NX2027.3401_cad2022.7z&lt;/a&gt; (for @gm users only, 8.02 GB, 解開後 28.32 GB)&lt;/p&gt;
+&lt;p&gt;下載 &lt;a href="https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/yen_gm_nfu_edu_tw/EU-fmibMpBZKg2ZiXmBlK-oBQj7wLV5YeMGI8rCI60NhmQ?e=EuxlyD"&gt;NX2007_documentation.7z&lt;/a&gt; (for @gm users only, 2.18 GB, 解開後 2.86 GB), 使用時執行 start_static.py 後, 以瀏覽器 http://localhost:7443 開啟.&lt;/p&gt;
+&lt;p&gt;線上 &lt;a href="https://docs.sw.siemens.com/en-US/release/209349590/NX%202007%20Series"&gt;NX2007 EN Documentation&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.coppeliarobotics.com/"&gt;Coppeliasim&lt;/a&gt; 所使用的版本則為 4.3.0 rev12:&lt;/p&gt;
+&lt;p&gt;下載 &lt;a href="https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/yen_gm_nfu_edu_tw/ESXbxhDmlUhBmPTUqAdTrLEBjvaqzZupKcgviAmxWGQdjQ"&gt;CoppeliaSim 4.3.0 rev12.7z&lt;/a&gt; (for @gm users only)&lt;/p&gt;
+&lt;p&gt;本學期的電腦輔助與實習課程, 零組件繪圖的部分將從 &lt;a href="https://docs.sw.siemens.com/documentation/external/PL20200605194735749/en-US/static/design_day_one/index.html#"&gt;design day one&lt;/a&gt; (或 &lt;a href="http://c1.cycu.org:88"&gt;http://c1.cycu.org:88&lt;/a&gt;) 的練習開始. 其中包括觀看各英文教學影片.&lt;/p&gt;</content><category term="Fall"></category><category term="2022"></category><category term="w2"></category><category term="cad2022"></category><category term="cp2022"></category></entry><entry><title>Replit 建立網站導引</title><link href="https://mde.tw/blog/replit_cmsimde_tutorial.html" rel="alternate"></link><published>2022-09-11T12:00:00+08:00</published><updated>2022-09-12T09:00:09+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-09-11:/blog/replit_cmsimde_tutorial.html</id><summary type="html">&lt;p&gt;這裡將說明如何利用 &lt;a href="https://replit.com"&gt;Replit&lt;/a&gt; 與 &lt;a href="https://github.com/mdecycu/cmsite"&gt;cmsite&lt;/a&gt; 建立動態與靜態網頁.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;這裡將說明如何利用 &lt;a href="https://replit.com"&gt;Replit&lt;/a&gt; 與 &lt;a href="https://github.com/mdecycu/cmsite"&gt;cmsite&lt;/a&gt; 建立動態與靜態網頁.&lt;/p&gt;
 
 

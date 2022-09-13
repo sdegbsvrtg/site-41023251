@@ -108,6 +108,9 @@
 <v t="leo.20220913100216.1"><vh>@clean 2022_fall_w2.md</vh>
 <v t="leo.20220913100247.1"><vh>2022 秋季學期第二週</vh></v>
 </v>
+<v t="leo.20220913170927.1"><vh>@clean enjoy_the_ride.md</vh>
+<v t="leo.20220913170949.1"><vh>Enjoy the ride</vh></v>
+</v>
 </v>
 </v>
 <v t="yen.20170108171733.83"><vh>產生 .key 與 .crt 指令</vh></v>
@@ -2278,6 +2281,42 @@ git submodule update --init --recursive
 本學期的電腦輔助與實習課程, 零組件繪圖的部分將從 [design day one] (或 &lt;http://c1.cycu.org:88&gt;) 的練習開始. 其中包括觀看各英文教學影片.
 
 </t>
+<t tx="leo.20220913170927.1">@language md
+---
+Title: Enjoy your ride
+Date: 2022-09-13 13:00
+Category: Video
+Tags: Inspiring
+Slug: enjoy_your_ride
+Author: mdecycu
+---
+
+Being an entrepreneur is a bug.
+
+&lt;!-- PELICAN_END_SUMMARY --&gt;
+
+@others</t>
+<t tx="leo.20220913170949.1">[George Hatsopoulos]
+
+You shouldn't lose sight of your purpose. 
+
+莫忘初衷.
+
+You learn a subject more by teaching it than anything else. 
+
+教授一門科目, 能學到的比其他任何東西都多.
+
+About teaching: I did it because it is fun. 
+
+關於教學: 這樣做是因為它很有趣.
+
+It's useful to set a certain direction you want to go. After you set the direction, don't focus in your goal. Focus in enjoying the ride.
+
+設定想要達成的方向非常受用. 一旦方向確立, 不要專注於目標, 而應專注於享受過程.
+
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/vzivLVgeJ48" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+
+[George Hatsopoulos]: https://greekreporter.com/2021/08/07/mit-remembers-brilliant-greek-professor-george-hatsopoulos/</t>
 <t tx="yen.20170108171605.1"></t>
 <t tx="yen.20170108171605.2">QTreeWidget {
     /* These apply to the selected item, but not to editing items.*/

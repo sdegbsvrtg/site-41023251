@@ -105,6 +105,9 @@
 <v t="leo.20220911074530.1"><vh>@clean replit_cms_tutorial.md</vh>
 <v t="leo.20220911074613.1"><vh>Replit 建立網站導引</vh></v>
 </v>
+<v t="leo.20220913100216.1"><vh>@clean 2022_fall_w2.md</vh>
+<v t="leo.20220913100247.1"><vh>2022 秋季學期第二週</vh></v>
+</v>
 </v>
 </v>
 <v t="yen.20170108171733.83"><vh>產生 .key 與 .crt 指令</vh></v>
@@ -2148,6 +2151,85 @@ Replit references:
 
 
 </t>
+<t tx="leo.20220913100216.1">@language md
+---
+Title: 2022 秋季學期第二週
+Date: 2022-09-13 12:00
+Category: Fall
+Tags: 2022, w2, cad2022, cp2022
+Slug: 2022_fall_semester_week2
+Author: mdecycu
+---
+
+簡要說明 2022 Fall 與計算機程式及電腦輔助設計與實習課程的相關規劃與期程安排.
+
+&lt;!-- PELICAN_END_SUMMARY --&gt;
+
+@others</t>
+<t tx="leo.20220913100247.1">課程網站
+====
+
+目前將課程網站放在同一個倉儲, 相關連結可以參考 &lt;https://mde.tw/blog/pages/about/index.html&gt;.
+
+現在 mde.tw 的倉儲容量大約 800 MB, 每次在新的環境重新 git clone --recurse-submodules 會有一些負擔, 但若使用隨身碟進行逐次改版, 應該還好.
+
+Fall 學期上的課程為大一的計算機程式, 還有大二的電腦輔助設計與實習.
+
+計算機程式是從網頁上的 Python 語法教起, 採用的解譯器為 Brython, 學員可以直接從 https://mde.tw/content/Python.html 進入, 直接在線上練習 Brython 所支援的 Python 語法. 由於是在瀏覽器上, 必須要對 HTML 與 Javascript 有些基本認識, 才能充份使用 Brython.
+
+學員在計算機程式課程所寫的程式, 被要求要設法放入自己管理的 Github 倉儲, 而倉儲是採用 Github Classroom 建立, 並且直接導入 cmsimde 子模組. 假如要將個人倉儲 git clone 到近端電腦上改版, 就必須使用:
+
+git clone --recurse-submodules 加上擷取倉儲內容的網路_URL 或 SSH 連線字串
+
+假如第一階段只用 git clone, 而沒有 --recurse-submodules 附屬指令選項, 則可以在取下主倉儲內容後, 以 git submodule update --init --recursive 取下所有子模組的內容.
+
+光是要能以 git 取下倉儲檔案, 使用者的近端電腦就必須能夠執行 git, 可以使用操作系統安裝版, 或者使用課堂上所推薦的可攜程式套件中的 portablegit.
+
+至於要使用 https 或 ssh 協定進行 git, 主要牽涉到隨後改版 push 時的權限驗證, 因為只有具備倉儲管理權的用戶, 才能對 Github 上的倉儲進行改版.
+
+網路協定
+----
+
+所有網路上的應用, 都牽涉網路協定, 以 https 而言, 所使用的網路協定就是 http, 也就是超文件傳輸協定. 而 https 就是在利用超文件傳輸的過程中, 將傳送的資料加以加密編碼後, 直到接收後再解開, 是相較於 http 嚴謹安全的傳送.
+
+以 https 擷取 Github 倉儲的時候, 需要在 URL 中加上帳號 token, 而這串連線驗證身分用的字串, 還帶有權限範圍, 以及時效, 使用者可以在 Github 帳號設定頁中取得.
+
+由於 Github 目前只支援 IPv4 協定, 而在電腦輔助設計室為了擴大可用頻寬, 採用 IPv6 協定, 要讓 IPv6 協定下的 git 指令, 正確與 Github 倉儲連線, 必須透過 Proxy server, 而且是能同時支援 IPv4 與 IPv6 協定的代理主機. 以 https 對 git 指令的 Proxy 設定, 位於可攜程式環境中的 home_ipv6 目錄下, 檔案名稱為 .gitconfig, 使用者執行 git config 後的設定就是存入 home_ipv6/.gitconfig 檔案中.
+
+至於 git 所使用的 SSH 連線協定, 在 Windows 操作系統, 可以透過 Putty session 設定達成, 其中的 session 包含連線到 github.com, 所使用的 SSH 認證用 private key 位置, 還有 Proxy 設定.
+
+上述將使用 cmsimde 作為子模組的倉儲取至近端電腦的目的, 共有兩個: 進行改版以及進行協同.
+
+在近端進行倉儲內容改版的意思是, 利用 Python 與必要模組, 可以執行 cmsimde 網站中的動態系統, 其中所需要的模組為:
+
+flask flask_cors bs4 lxml pelican markdown leo pyopenssl
+
+flask 與 flask_cors 是網際框架, 安裝 flask_cors 的目的是讓網站可以跨網域擷取資料.
+
+bs4 是用來對超文件分頁的工具, 讓 cmsimde 中的 config/content.htm 可以根據 H1, H2 與 H3 的標題進行分頁.
+
+lxml 是將動態網頁內容轉為靜態網頁內容時所需要的解讀模組.
+
+pelican 是用來建立網誌的工具, 可以將使用者所寫的 Markdown 轉為網誌格式的內容.
+
+markdown 是用來解讀 .md 檔案的工具.
+
+leo 是大綱管理模組, 用來作為編寫網誌或簡報的工具, 也可以當作程式開發的 IDE.
+
+pyopenssl 則是在動態網頁中, 以程式方法伺服靜態網頁內容時, 建立 SSL 連線時所需.
+
+Replit 作為應用程式伺服器
+----
+
+除了將 Github 上的倉儲, git clone 到近端改版外, 也可以利用 Replit, 直接在瀏覽器上以 wsgi 模式, 執行 cmsimde 的動態網站. 如此可以免除在近端執行動態網站所需要的網路協定與 git 指令. 只不過 Replit 只給免費帳號 500 MB 的儲存空間, 過大的倉儲並不適合採用 Replit 執行 cmsimde 的動態網站.
+
+使用 Replit 執行 cmsimde 的過程, 需要在 shell 執行:
+
+git submodule update --init --recursive
+
+目的是取下子模組資料, 因為 Replit 與 Github 的連結, 似乎只使用 git clone, 並沒有加上 --recurse-submodules, 使用者必須手動執行.
+
+另外則是利用 pip install flask flask_cors bs4 lxml pelican markdown 安裝 cmsimde 所需模組, 與上述近端改版的差異是: 無需安裝 leo 與 pyopenssl, 因為系統是在雲端 Replit 的主機上執行,  目前還無法在 Replit 系統上使用 leo, 也無需自行配置近端伺服器的 SSL.</t>
 <t tx="yen.20170108171605.1"></t>
 <t tx="yen.20170108171605.2">QTreeWidget {
     /* These apply to the selected item, but not to editing items.*/

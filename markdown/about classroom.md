@@ -2,7 +2,7 @@
 Title: 有關 Github Classroom
 Date: 2022-09-03 11:00
 Category: Github
-Tags: Classroom
+Tags: Classroom, cp2022, cad2022
 Slug: about-classroom
 Author: mdecycu
 ---

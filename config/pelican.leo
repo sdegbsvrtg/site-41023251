@@ -146,7 +146,7 @@ g.es("admin pelican Github 執行完畢")
 Title: 可攜 CoppeliaSim 4.3.0 rev12
 Date: 2022-08-23 11:00
 Category: cad2022
-Tags: Coppeliasim
+Tags: Coppeliasim, cad2022
 Slug: portable-CoppeliaSim-4.3.0-rev12
 Author: mdecycu
 ---
@@ -234,8 +234,8 @@ for i in elemList:
 ---
 Title: 電腦輔助設計室系統更新
 Date: 2022-08-24 11:00
-Category: chat
-Tags: 電腦輔助設計室
+Category: cadlab
+Tags: cad2022
 Slug: renew-cad-lab-software
 Author: mdecycu
 ---
@@ -329,7 +329,7 @@ EXIT
 Title: 編譯 CoppeliaSim 4.3.0 rev12
 Date: 2022-08-26 11:00
 Category: compilation
-Tags: CoppeliaSim
+Tags: CoppeliaSim, cad2022
 Slug: compile-coppeliasim-4.3.0-rev12
 Author: mdecycu
 ---
@@ -533,7 +533,7 @@ Y:\tmp\cop410\programming\simExtUI\build&gt;mingw32-make
 Title: 2022 Fall CP 課程
 Date: 2022-08-19 11:00
 Category: cp2022
-Tags: cp2022-Syllabus, 計算機程式
+Tags: cp2022, syllabus
 Slug: 2022-Fall-Intro-to-computer-programming
 Author: mdecycu
 ---
@@ -714,7 +714,7 @@ Python consistently ranks as one of the most popular programming languages.</t>
 Title: 建立可攜 Python 系統
 Date: 2022-08-23 11:00
 Category: cp2022
-Tags: portable-Python
+Tags: portable-Python, cp2022
 Slug: Create-a-portable-python-system
 Author: mdecycu
 ---
@@ -894,7 +894,7 @@ pip install flask flask_cors bs4 lxml pelican markdown leo pyopenssl
 Title: 編譯 Solvespace
 Date: 2022-08-27 11:00
 Category: compilation
-Tags: Solvespace
+Tags: Solvespace, cad2022
 Slug: compile-solvespace
 Author: mdecycu
 ---
@@ -1166,7 +1166,7 @@ Windows 10 [密碼最長使用期限] 內定為 42 天, 假如此一設定對使
 Title: 有關 TCExam
 Date: 2022-09-01 12:00
 Category: tcexam
-Tags: exam, php, pgsql, nginx
+Tags: exam, php, pgsql, nginx, cp2022, cad2022
 Slug: about-tcexam
 Author: mdecycu
 ---
@@ -1251,7 +1251,7 @@ CYCU TCExam 主機
 Title: cp2022_w1
 Date: 2022-09-01 13:00
 Category: cp2022
-Tags: w1, portable python, 計算機程式
+Tags: portable python, cp2022
 Slug: cp2022-w1
 Author: mdecycu
 ---
@@ -1341,7 +1341,7 @@ Python curriculum: &lt;https://hackpacific.gitbooks.io/pythonium/content/&gt;
 Title: 有關 NX
 Date: 2022-09-02 11:00
 Category: NX
-Tags: Siemens
+Tags: Siemens, cad2022
 Slug: about-nx
 Author: mdecycu
 ---
@@ -1609,7 +1609,7 @@ Ctrl + l - Layer Settings
 Title: 有關 Github Classroom
 Date: 2022-09-03 11:00
 Category: Github
-Tags: Classroom
+Tags: Classroom, cp2022, cad2022
 Slug: about-classroom
 Author: mdecycu
 ---
@@ -2158,8 +2158,8 @@ Replit references:
 ---
 Title: 2022 秋季學期第二週
 Date: 2022-09-13 12:00
-Category: Fall
-Tags: 2022, w2, cad2022, cp2022
+Category: cad2022
+Tags: cad2022, cp2022
 Slug: 2022_fall_semester_week2
 Author: mdecycu
 ---

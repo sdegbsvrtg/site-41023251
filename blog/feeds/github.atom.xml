@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Mde.tw - Github</title><link href="https://mde.tw/blog/" rel="alternate"></link><link href="https://mde.tw/blog/feeds/github.atom.xml" rel="self"></link><id>https://mde.tw/blog/</id><updated>2022-09-05T00:11:42+08:00</updated><entry><title>有關 Github Classroom</title><link href="https://mde.tw/blog/about-classroom.html" rel="alternate"></link><published>2022-09-03T11:00:00+08:00</published><updated>2022-09-05T00:11:42+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-09-03:/blog/about-classroom.html</id><summary type="html">&lt;p&gt;這裡將收集與 Github Classroom 有關的資料內容. &lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Mde.tw - Github</title><link href="https://mde.tw/blog/" rel="alternate"></link><link href="https://mde.tw/blog/feeds/github.atom.xml" rel="self"></link><id>https://mde.tw/blog/</id><updated>2022-09-14T20:15:39+08:00</updated><entry><title>有關 Github Classroom</title><link href="https://mde.tw/blog/about-classroom.html" rel="alternate"></link><published>2022-09-03T11:00:00+08:00</published><updated>2022-09-14T20:15:39+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-09-03:/blog/about-classroom.html</id><summary type="html">&lt;p&gt;這裡將收集與 Github Classroom 有關的資料內容. &lt;/p&gt;
 </summary><content type="html">&lt;p&gt;這裡將收集與 Github Classroom 有關的資料內容. &lt;/p&gt;
 
 
@@ -20,4 +20,4 @@
 &lt;li&gt;assignment 倉儲的 template 可由管理者指定, 且學員對 assignment 倉儲所具備的管理權限, 可由管理者事前統一設定.&lt;/li&gt;
 &lt;li&gt;管理者可以控制學員所建立的 assignment 倉儲, 令其無法 delete, 因此課堂結束後管理者仍可完整保留學員的課程倉儲.&lt;/li&gt;
 &lt;li&gt;當管理者賦予學員對 assignment 倉儲擁有 admin 權限後, 學員可自行啟用倉儲的 Github Pages 功能, 利用倉儲內容建立課程網站.&lt;/li&gt;
-&lt;/ol&gt;</content><category term="Github"></category><category term="Classroom"></category></entry></feed>
+&lt;/ol&gt;</content><category term="Github"></category><category term="Classroom"></category><category term="cp2022"></category><category term="cad2022"></category></entry></feed>

@@ -2,7 +2,7 @@
 Title: 有關 NX
 Date: 2022-09-02 11:00
 Category: NX
-Tags: Siemens
+Tags: Siemens, cad2022
 Slug: about-nx
 Author: mdecycu
 ---

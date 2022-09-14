@@ -2,7 +2,7 @@
 Title: 有關 TCExam
 Date: 2022-09-01 12:00
 Category: tcexam
-Tags: exam, php, pgsql, nginx
+Tags: exam, php, pgsql, nginx, cp2022, cad2022
 Slug: about-tcexam
 Author: mdecycu
 ---

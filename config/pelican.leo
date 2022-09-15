@@ -211,11 +211,12 @@ for i in elemList:
     leo_print(i)
 &lt;/pre&gt;
 
-[CoppeliaSimEdu_4.3.0_rev12.7z] (for @gm users only)
+下載 [CoppeliaSimEdu_4.3.0_rev12.7z] (for @gm users only) / 下載 [CoppeliaSimEdu_4.3.0_rev12.7z for @nfu]
 
 [Wix]: https://github.com/wixtoolset/wix3/releases/tag/wix3112rtm
 [UniExtract2]: https://github.com/Bioruebe/UniExtract2
 [CoppeliaSimEdu_4.3.0_rev12.7z]: https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/yen_gm_nfu_edu_tw/ESXbxhDmlUhBmPTUqAdTrLEBjvaqzZupKcgviAmxWGQdjQ
+[CoppeliaSimEdu_4.3.0_rev12.7z for @nfu]: https://nfuedu-my.sharepoint.com/:u:/g/personal/yen_nfu_edu_tw/ESXjJcIX4m9Jm-gX990RwIQBWelBgw8zf0NdKb8qAIxKtQ?e=VlYiHu
 [CoppeliaSim]: https://www.coppeliarobotics.com/
 [4.0.0 版]: https://www.coppeliarobotics.com/helpFiles/en/versionInfo.htm#coppeliaSim4.0.0
 [XML 檔案格式]: https://mde.tw/pjcopsim/content/xmlFormat.html
@@ -408,13 +409,15 @@ config.pri 設定修改完成後, 執行 C:\acc_430_12\CoppeliaSimLib&gt;qmake -
 
 下載可攜編譯系統: [compile_copsim_cd2022.7z] (for @gm users only)
 
-下載已經完成 [CoppeliaSimLib] 編譯的檔案: [acc_430_12_compile_Lib.7z] (for @gm users only)
+下載已經完成 [CoppeliaSimLib] 編譯的檔案: [acc_430_12_compile_Lib.7z] (for @gm users only) / 下載 [acc_430_12_compile_Lib.7z for @nfu]
 
-下載啟動 coppeliasim.exe 所需的 dlls 檔案: [dlls_for_coppeliasimlib_430_12.7z] (for @gm users only)
+下載啟動 coppeliasim.exe 所需的 dlls 檔案: [dlls_for_coppeliasimlib_430_12.7z] (for @gm users only) / 下載 [dlls_for_coppeliasimlib_430_12.7z for @nfu]
 
 [compile_copsim_cd2022.7z]: https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/yen_gm_nfu_edu_tw/Eb56ldJfZl9CiPU_5sb0-_4B5scF30r6z4FTQT__aWzkEA?e=zE8eVL
 [acc_430_12_compile_Lib.7z]: https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/yen_gm_nfu_edu_tw/EYC3oMxKuoRCoLXauEsjuTwBNuZA1jSFH97wFDjNoCgwVQ?e=FaHKUP
+[acc_430_12_compile_Lib.7z for @nfu]: https://nfuedu-my.sharepoint.com/:u:/g/personal/yen_nfu_edu_tw/EZMsigoeLnZLint6T5xUvPgBqAOg4qUuM87EObAJPQNL-g?e=wuj0Jf
 [dlls_for_coppeliasimlib_430_12.7z]: https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/yen_gm_nfu_edu_tw/ETE26Bc_aipLjwlsoeIwVAsB-jeMPCLVjPLRVnvO_No06w?e=BAL8SC
+[dlls_for_coppeliasimlib_430_12.7z for @nfu]: https://nfuedu-my.sharepoint.com/:u:/g/personal/yen_nfu_edu_tw/ES_mjjBJy4xBhqio4cnmyjgBaosGtRWSo7kCV-JIfY-Fwg?e=HXIdpv
 
 編譯 coppeliaSimClientApplication
 ====
@@ -885,9 +888,10 @@ pip install flask flask_cors bs4 lxml pelican markdown leo pyopenssl
 
 [安裝詳細過程紀錄]: ./../downloads/install_get-pip.py_and_cmsimde_modules.txt
 
-[portable_python_3.10.6.7z] (for @gm users only)
+下載 [portable_python_3.10.6.7z] (for @gm users only) / 下載 [portable_python_3.10.6.7z for @nfu]
 
 [portable_python_3.10.6.7z]: https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/yen_gm_nfu_edu_tw/ETQ0EKIxNeVJhfs8t2NvsCgBn0NmW_sx4OuM5_YR2CSFFQ?e=fywLSa
+[portable_python_3.10.6.7z for @nfu]: https://nfuedu-my.sharepoint.com/:u:/g/personal/yen_nfu_edu_tw/EZnrBE0Jo8tAtaiFN70ZXycBTQkPhU0dPnEiy_4Uuj9ayg?e=eJu5Tg
 </t>
 <t tx="leo.20220827212236.1">@language md
 ---
@@ -1674,6 +1678,11 @@ Author: mdecycu
 Wink 3.0 可直接從 &lt;https://www.debugmode.com/wink/&gt; 下載. ffmpeg.exe 則可從[這裡]下載.
 
 [這裡]: https://github.com/BtbN/FFmpeg-Builds/releases
+
+下載 [wink3.01_with_ffmpeg.7z] (for @gm users only) / 下載 [wink3.01_with_ffmpeg.7z for @nfu]
+
+[wink3.01_with_ffmpeg.7z]: https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/yen_gm_nfu_edu_tw/EfrN4qtR5oNMtppvvK0w9B0BakWaDCnSxbuZZoAeNwbbyQ
+[wink3.01_with_ffmpeg.7z for @nfu]: https://nfuedu-my.sharepoint.com/:u:/g/personal/yen_nfu_edu_tw/EUB7vs6eCblEhhxzKCQabHIBlkGVrxkU8VEXM5lot1MT5w
 
 每一個 wink 影片嵌入網頁時, 在同一頁面下的多個影片檔案, 都要有獨一的 data-varname 變數名稱, 在 cmsimde 架構下:
 data-dirname 動態網頁 - 使用 /static

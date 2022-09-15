@@ -18,6 +18,11 @@ Wink 3.0 可直接從 <https://www.debugmode.com/wink/> 下載. ffmpeg.exe 則�
 
 [這裡]: https://github.com/BtbN/FFmpeg-Builds/releases
 
+下載 [wink3.01_with_ffmpeg.7z] (for @gm users only) / 下載 [wink3.01_with_ffmpeg.7z for @nfu]
+
+[wink3.01_with_ffmpeg.7z]: https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/yen_gm_nfu_edu_tw/EfrN4qtR5oNMtppvvK0w9B0BakWaDCnSxbuZZoAeNwbbyQ
+[wink3.01_with_ffmpeg.7z for @nfu]: https://nfuedu-my.sharepoint.com/:u:/g/personal/yen_nfu_edu_tw/EUB7vs6eCblEhhxzKCQabHIBlkGVrxkU8VEXM5lot1MT5w
+
 每一個 wink 影片嵌入網頁時, 在同一頁面下的多個影片檔案, 都要有獨一的 data-varname 變數名稱, 在 cmsimde 架構下:
 data-dirname 動態網頁 - 使用 /static
 

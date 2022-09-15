@@ -1531,17 +1531,22 @@ total: 28.29 GB
 
 請注意: 新版 NX 所建立的零組件無法由舊版的 NX 開啟.
 
-下載 [NX12.0.2.9_lite_cad2022.7z] (for @gm users only, 1.20 GB, 解開後 6.24 GB)
+下載 [NX12.0.2.9_lite_cad2022.7z] (for @gm users only, 1.20 GB, 解開後 6.24 GB) / 下載 [NX12.0.2.9_lite_cad2022 for @nfu])
 
-下載 [NX2027.3401_lite_cad2022.7z] (for @gm users only, 1.97 GB, 解開後 7.49 GB)
+下載 [NX2027.3401_lite_cad2022.7z] (for @gm users only, 1.97 GB, 解開後 7.49 GB) / 下載 [NX2027.3401_lite_cad2022.7z for @nfu]
 
-下載 [NX2027.3401_cad2022.7z] (for @gm users only, 8.02 GB, 解開後 28.32 GB)
+下載 [NX2027.3401_cad2022.7z] (for @gm users only, 8.02 GB, 解開後 28.32 GB) / 下載 [NX2027.3401_cad2022.7z for @nfu]
+
+下載 [NX2007_documentation.7z] (for @gm users only, 2.18 GB, 解開後 2.86 GB) / [NX2007_documentation.7z for @nfu], 使用時執行 start_static.py 後, 以瀏覽器 http://localhost:7443 開啟, 或直接在 &lt;http://c1.cycu.org:88&gt; 開啟. 
 
 [NX12.0.2.9_lite_cad2022.7z]: https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/yen_gm_nfu_edu_tw/Eb7GeAUGMANEkijnWXGNH60BltYzKwkkffas3JhzgwnmxQ?e=K4HKXF
+[NX12.0.2.9_lite_cad2022 for @nfu]: https://nfuedu-my.sharepoint.com/:u:/g/personal/yen_nfu_edu_tw/EUyA1JH9PsVHjjiZ_3a_voUBZQPSNugB5q2y-iAFVHtCgg?e=qTsfXz
 [NX2027.3401_lite_cad2022.7z]: https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/yen_gm_nfu_edu_tw/EfvS63_7udVPhe-xlXrYPCMBVTUEEona5_QXwHdZD_8Vww?e=LNczOS
+[NX2027.3401_lite_cad2022.7z for @nfu]: https://nfuedu-my.sharepoint.com/:u:/g/personal/yen_nfu_edu_tw/EW0eW8fnq2lAtCNHD6r6zqQBeJ-eqkROCzE7RpBM9-PCmw?e=rq94Li
 [NX2027.3401_cad2022.7z]: https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/yen_gm_nfu_edu_tw/EfC-9gy1PN9MmJtpD9VO5KcB3kehP6VVVgmQt3ej5D_BIQ?e=deXuWs
-[NX2007 EN Documentation]: https://docs.sw.siemens.com/en-US/release/209349590/NX%202007%20Series
+[NX2027.3401_cad2022.7z for @nfu]: https://nfuedu-my.sharepoint.com/:u:/g/personal/yen_nfu_edu_tw/EfZUTNYTlMVFgkGd00cs3JkBKCfgzukXFn5U1ikAdwHBXw?e=55tjsp
 [NX2007_documentation.7z]: https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/yen_gm_nfu_edu_tw/EU-fmibMpBZKg2ZiXmBlK-oBQj7wLV5YeMGI8rCI60NhmQ?e=EuxlyD
+[NX2007_documentation.7z for @nfu]: https://nfuedu-my.sharepoint.com/:u:/g/personal/yen_nfu_edu_tw/EVx4Xf0IaSZBsD4KyEp6584BKbFINFRXAqViqnX5qhfOkg?e=TZ7AyT
 
 &lt;h1 id="nx2007doc"&gt;NX2007 Documentation&lt;/h1&gt;
 
@@ -2214,10 +2219,16 @@ git clone --recurse-submodules 加上擷取倉儲內容的網路_URL 或 SSH 連
 [Three.js]: https://threejs.org/
 [Replit]: https://replit.com/
 [Github Pages]: https://pages.github.com/
+[NX12.0.2.9_lite_cad2022.7z]: https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/yen_gm_nfu_edu_tw/Eb7GeAUGMANEkijnWXGNH60BltYzKwkkffas3JhzgwnmxQ?e=K4HKXF
+[NX12.0.2.9_lite_cad2022 for @nfu]: https://nfuedu-my.sharepoint.com/:u:/g/personal/yen_nfu_edu_tw/EUyA1JH9PsVHjjiZ_3a_voUBZQPSNugB5q2y-iAFVHtCgg?e=qTsfXz
 [NX2027.3401_lite_cad2022.7z]: https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/yen_gm_nfu_edu_tw/EfvS63_7udVPhe-xlXrYPCMBVTUEEona5_QXwHdZD_8Vww?e=LNczOS
+[NX2027.3401_lite_cad2022.7z for @nfu]: https://nfuedu-my.sharepoint.com/:u:/g/personal/yen_nfu_edu_tw/EW0eW8fnq2lAtCNHD6r6zqQBeJ-eqkROCzE7RpBM9-PCmw?e=rq94Li
 [NX2027.3401_cad2022.7z]: https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/yen_gm_nfu_edu_tw/EfC-9gy1PN9MmJtpD9VO5KcB3kehP6VVVgmQt3ej5D_BIQ?e=deXuWs
+[NX2027.3401_cad2022.7z for @nfu]: https://nfuedu-my.sharepoint.com/:u:/g/personal/yen_nfu_edu_tw/EfZUTNYTlMVFgkGd00cs3JkBKCfgzukXFn5U1ikAdwHBXw?e=55tjsp
 [NX2007_documentation.7z]: https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/yen_gm_nfu_edu_tw/EU-fmibMpBZKg2ZiXmBlK-oBQj7wLV5YeMGI8rCI60NhmQ?e=EuxlyD
+[NX2007_documentation.7z for @nfu]: https://nfuedu-my.sharepoint.com/:u:/g/personal/yen_nfu_edu_tw/EVx4Xf0IaSZBsD4KyEp6584BKbFINFRXAqViqnX5qhfOkg?e=TZ7AyT
 [NX2007 EN Documentation]: https://docs.sw.siemens.com/en-US/release/209349590/NX%202007%20Series
+[CoppeliaSim 4.3.0 rev12.7z for @nfu]: https://nfuedu-my.sharepoint.com/:u:/g/personal/yen_nfu_edu_tw/ESXjJcIX4m9Jm-gX990RwIQBWelBgw8zf0NdKb8qAIxKtQ
 [CoppeliaSim 4.3.0 rev12.7z]: https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/yen_gm_nfu_edu_tw/ESXbxhDmlUhBmPTUqAdTrLEBjvaqzZupKcgviAmxWGQdjQ
 [CoppeliaSim]: https://www.coppeliarobotics.com/
 [design day one]:https://docs.sw.siemens.com/documentation/external/PL20200605194735749/en-US/static/design_day_one/index.html#
@@ -2337,19 +2348,21 @@ From: &lt;https://formlabs.com/blog/cad-software/&gt;
 
 相較於計算機程式所有上課的內容均為自由開源軟體, 電腦輔助設計與實習課程所採用的 NX 與 [Coppeliasim] 則分別是商用套件與教育開源工具.
 
+下載 [NX12.0.2.9_lite_cad2022.7z] (for @gm users only, 1.20 GB, 解開後 6.24 GB) / 下載 [NX12.0.2.9_lite_cad2022 for @nfu])
+
 2022 Fall 所使用的 NX 為 2027.3401 版:
 
-下載 [NX2027.3401_lite_cad2022.7z] (for @gm users only, 1.97 GB, 解開後 7.49 GB)
+下載 [NX2027.3401_lite_cad2022.7z] (for @gm users only, 1.97 GB, 解開後 7.49 GB) / 下載 [NX2027.3401_lite_cad2022.7z for @nfu]
 
-下載 [NX2027.3401_cad2022.7z] (for @gm users only, 8.02 GB, 解開後 28.32 GB)
+下載 [NX2027.3401_cad2022.7z] (for @gm users only, 8.02 GB, 解開後 28.32 GB) / 下載 [NX2027.3401_cad2022.7z for @nfu]
 
-下載 [NX2007_documentation.7z] (for @gm users only, 2.18 GB, 解開後 2.86 GB), 使用時執行 start_static.py 後, 以瀏覽器 http://localhost:7443 開啟.
+下載 [NX2007_documentation.7z] (for @gm users only, 2.18 GB, 解開後 2.86 GB) / [NX2007_documentation.7z for @nfu], 使用時執行 start_static.py 後, 以瀏覽器 http://localhost:7443 開啟, 或直接在 &lt;http://c1.cycu.org:88&gt; 開啟. 
 
 線上 [NX2007 EN Documentation].
 
 [Coppeliasim] 所使用的版本則為 4.3.0 rev12:
 
-下載 [CoppeliaSim 4.3.0 rev12.7z] (for @gm users only)
+下載 [CoppeliaSim 4.3.0 rev12.7z] (for @gm users only) / 下載 [CoppeliaSim 4.3.0 rev12.7z for @nfu]
 
 本學期的電腦輔助與實習課程, 零組件繪圖的部分將從 [design day one] (或 &lt;http://c1.cycu.org:88&gt;) 的練習開始. 其中包括觀看各英文教學影片.
 

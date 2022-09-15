@@ -187,17 +187,22 @@ total: 28.29 GB
 
 請注意: 新版 NX 所建立的零組件無法由舊版的 NX 開啟.
 
-下載 [NX12.0.2.9_lite_cad2022.7z] (for @gm users only, 1.20 GB, 解開後 6.24 GB)
+下載 [NX12.0.2.9_lite_cad2022.7z] (for @gm users only, 1.20 GB, 解開後 6.24 GB) / 下載 [NX12.0.2.9_lite_cad2022 for @nfu])
 
-下載 [NX2027.3401_lite_cad2022.7z] (for @gm users only, 1.97 GB, 解開後 7.49 GB)
+下載 [NX2027.3401_lite_cad2022.7z] (for @gm users only, 1.97 GB, 解開後 7.49 GB) / 下載 [NX2027.3401_lite_cad2022.7z for @nfu]
 
-下載 [NX2027.3401_cad2022.7z] (for @gm users only, 8.02 GB, 解開後 28.32 GB)
+下載 [NX2027.3401_cad2022.7z] (for @gm users only, 8.02 GB, 解開後 28.32 GB) / 下載 [NX2027.3401_cad2022.7z for @nfu]
+
+下載 [NX2007_documentation.7z] (for @gm users only, 2.18 GB, 解開後 2.86 GB) / [NX2007_documentation.7z for @nfu], 使用時執行 start_static.py 後, 以瀏覽器 http://localhost:7443 開啟, 或直接在 <http://c1.cycu.org:88> 開啟. 
 
 [NX12.0.2.9_lite_cad2022.7z]: https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/yen_gm_nfu_edu_tw/Eb7GeAUGMANEkijnWXGNH60BltYzKwkkffas3JhzgwnmxQ?e=K4HKXF
+[NX12.0.2.9_lite_cad2022 for @nfu]: https://nfuedu-my.sharepoint.com/:u:/g/personal/yen_nfu_edu_tw/EUyA1JH9PsVHjjiZ_3a_voUBZQPSNugB5q2y-iAFVHtCgg?e=qTsfXz
 [NX2027.3401_lite_cad2022.7z]: https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/yen_gm_nfu_edu_tw/EfvS63_7udVPhe-xlXrYPCMBVTUEEona5_QXwHdZD_8Vww?e=LNczOS
+[NX2027.3401_lite_cad2022.7z for @nfu]: https://nfuedu-my.sharepoint.com/:u:/g/personal/yen_nfu_edu_tw/EW0eW8fnq2lAtCNHD6r6zqQBeJ-eqkROCzE7RpBM9-PCmw?e=rq94Li
 [NX2027.3401_cad2022.7z]: https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/yen_gm_nfu_edu_tw/EfC-9gy1PN9MmJtpD9VO5KcB3kehP6VVVgmQt3ej5D_BIQ?e=deXuWs
-[NX2007 EN Documentation]: https://docs.sw.siemens.com/en-US/release/209349590/NX%202007%20Series
+[NX2027.3401_cad2022.7z for @nfu]: https://nfuedu-my.sharepoint.com/:u:/g/personal/yen_nfu_edu_tw/EfZUTNYTlMVFgkGd00cs3JkBKCfgzukXFn5U1ikAdwHBXw?e=55tjsp
 [NX2007_documentation.7z]: https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/yen_gm_nfu_edu_tw/EU-fmibMpBZKg2ZiXmBlK-oBQj7wLV5YeMGI8rCI60NhmQ?e=EuxlyD
+[NX2007_documentation.7z for @nfu]: https://nfuedu-my.sharepoint.com/:u:/g/personal/yen_nfu_edu_tw/EVx4Xf0IaSZBsD4KyEp6584BKbFINFRXAqViqnX5qhfOkg?e=TZ7AyT
 
 <h1 id="nx2007doc">NX2007 Documentation</h1>
 

@@ -60,7 +60,7 @@
 <meta property="og:url" content="https://mde.tw/blog/2022-Fall-Intro-to-computer-programming.html"/>
 <meta property="og:type" content="article"/>
 <meta property="article:published_time" content="2022-08-19 11:00:00+08:00"/>
-<meta property="article:modified_time" content="2022-09-14 20:15:39.914862+08:00"/>
+<meta property="article:modified_time" content="2022-09-16 11:13:00+08:00"/>
 <meta property="article:author" content="https://mde.tw/blog/author/mdecycu.html">
 <meta property="article:section" content="cp2022"/>
 <meta property="article:tag" content="cp2022"/>
@@ -76,7 +76,7 @@
   "name": "2022 Fall CP 課程",
   "headline": "2022 Fall CP 課程",
   "datePublished": "2022-08-19 11:00:00+08:00",
-  "dateModified": "2022-09-14 20:15:39.914862+08:00",
+  "dateModified": "2022-09-16 11:13:00+08:00",
   "author": {
     "@type": "Person",
     "name": "mdecycu",
@@ -206,7 +206,7 @@ init_mathjax();
             | <time datetime="週五 19 八月 2022">週五 19 八月 2022</time>
         </span>
         <!-- TODO : Modified check -->
-            <span class="post-meta"> | Updated on 週三 14 九月 2022</span>
+            <span class="post-meta"> | Updated on 週五 16 九月 2022</span>
             <div class="post-cover cover" style="background-image: url('https://mde.tw/blog/theme/images/post-bg.jpg')">
       </div>
     </header>
@@ -266,9 +266,11 @@ Windows Registry Editor Version 5.00
 "ProxyOverride"="localhost;"
 </pre>
 
-<p>1_disable_ipv4.ps1 為 <a href="https://docs.microsoft.com/zh-tw/powershell/scripting/learn/ps101/00-introduction?view=powershell-7.2">Powershell 命令</a>, 主要將所有網路卡上的 <a href="https://en.wikipedia.org/wiki/IPv4">IPv4</a> 網路設定取消 (因為現階段所安裝的某套件會啟動網路攻擊, 透過 <a href="https://en.wikipedia.org/wiki/IPv4">IPv4</a> 網路協定嘗試與外部網站連結取得後門權限).</p>
+<p>1_disable_ipv4.ps1 為 <a href="https://docs.microsoft.com/zh-tw/powershell/scripting/learn/ps101/00-introduction?view=powershell-7.2">Powershell 命令</a>, 主要將所有網路卡上的 <a href="https://en.wikipedia.org/wiki/IPv4">IPv4</a> 網路設定取消 (因為現階段所安裝的某套件會啟動網路攻擊, 透過 <a href="https://en.wikipedia.org/wiki/IPv4">IPv4</a> 網路協定嘗試與外部網站連結取得後門權限). </p>
+<p>以下 <a href="https://docs.microsoft.com/zh-tw/powershell/scripting/learn/ps101/00-introduction?view=powershell-7.2">Powershell 命令</a> 會自動關閉 IPv4 網路協定, 然後開啟 IPv6 網路協定:</p>
 <pre class="brush: jscript">
 Disable-NetAdapterBinding -Name "*" -ComponentID ms_tcpip
+Enable-NetAdapterBinding -Name "*" -ComponentID ms_tcpip6
 </pre>
 
 <p>上述相關設定檔案: <a href="./../downloads/cadlab_network_setup.zip">cadlab_network_setup.zip</a></p>

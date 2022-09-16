@@ -53,4 +53,4 @@ def studlist():
 #context = ssl.SSLContext(ssl.PROTOCOL_TLSv1_2)
 #context.load_cert_chain('localhost.crt', 'localhost.key')
 
-app.run(host="0.0.0.0", port=8080, debug=True)
+app.run(host="0.0.0.0", port=88, debug=True)

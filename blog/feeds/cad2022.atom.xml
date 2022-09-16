@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Mde.tw - cad2022</title><link href="https://mde.tw/blog/" rel="alternate"></link><link href="https://mde.tw/blog/feeds/cad2022.atom.xml" rel="self"></link><id>https://mde.tw/blog/</id><updated>2022-09-16T11:08:10+08:00</updated><entry><title>2022 秋季學期第二週</title><link href="https://mde.tw/blog/2022_fall_semester_week2.html" rel="alternate"></link><published>2022-09-13T12:00:00+08:00</published><updated>2022-09-16T11:08:10+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-09-13:/blog/2022_fall_semester_week2.html</id><summary type="html">&lt;p&gt;簡要說明 2022 Fall 與計算機程式及電腦輔助設計與實習課程的相關規劃與期程安排.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Mde.tw - cad2022</title><link href="https://mde.tw/blog/" rel="alternate"></link><link href="https://mde.tw/blog/feeds/cad2022.atom.xml" rel="self"></link><id>https://mde.tw/blog/</id><updated>2022-09-16T15:43:16+08:00</updated><entry><title>2022 秋季學期第二週</title><link href="https://mde.tw/blog/2022_fall_semester_week2.html" rel="alternate"></link><published>2022-09-13T12:00:00+08:00</published><updated>2022-09-16T11:08:10+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-09-13:/blog/2022_fall_semester_week2.html</id><summary type="html">&lt;p&gt;簡要說明 2022 Fall 與計算機程式及電腦輔助設計與實習課程的相關規劃與期程安排.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;簡要說明 2022 Fall 與計算機程式及電腦輔助設計與實習課程的相關規劃與期程安排.&lt;/p&gt;
 
 
@@ -145,7 +145,7 @@ for i in elemList:
     leo_print(i)
 &lt;/pre&gt;
 
-&lt;p&gt;下載 &lt;a href="https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/yen_gm_nfu_edu_tw/ESXbxhDmlUhBmPTUqAdTrLEBjvaqzZupKcgviAmxWGQdjQ"&gt;CoppeliaSimEdu_4.3.0_rev12.7z&lt;/a&gt; (for @gm users only) / 下載 &lt;a href="https://nfuedu-my.sharepoint.com/:u:/g/personal/yen_nfu_edu_tw/ESXjJcIX4m9Jm-gX990RwIQBWelBgw8zf0NdKb8qAIxKtQ?e=VlYiHu"&gt;CoppeliaSimEdu_4.3.0_rev12.7z for @nfu&lt;/a&gt;&lt;/p&gt;</content><category term="cad2022"></category><category term="Coppeliasim"></category><category term="cad2022"></category></entry><entry><title>2022 Fall CAD 課程</title><link href="https://mde.tw/blog/2022-Fall-computer-aided-design-and-practices.html" rel="alternate"></link><published>2022-08-14T11:00:00+08:00</published><updated>2022-09-16T11:08:10+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-08-14:/blog/2022-Fall-computer-aided-design-and-practices.html</id><summary type="html">&lt;p&gt;2022 Fall 電腦輔助設計與實習的教學主要介紹 NX 與 CoppeliaSim 在機械設計流程中的應用.&lt;/p&gt;
+&lt;p&gt;下載 &lt;a href="https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/yen_gm_nfu_edu_tw/ESXbxhDmlUhBmPTUqAdTrLEBjvaqzZupKcgviAmxWGQdjQ"&gt;CoppeliaSimEdu_4.3.0_rev12.7z&lt;/a&gt; (for @gm users only) / 下載 &lt;a href="https://nfuedu-my.sharepoint.com/:u:/g/personal/yen_nfu_edu_tw/ESXjJcIX4m9Jm-gX990RwIQBWelBgw8zf0NdKb8qAIxKtQ?e=VlYiHu"&gt;CoppeliaSimEdu_4.3.0_rev12.7z for @nfu&lt;/a&gt;&lt;/p&gt;</content><category term="cad2022"></category><category term="Coppeliasim"></category><category term="cad2022"></category></entry><entry><title>2022 Fall CAD 課程</title><link href="https://mde.tw/blog/2022-Fall-computer-aided-design-and-practices.html" rel="alternate"></link><published>2022-08-14T11:00:00+08:00</published><updated>2022-09-16T15:43:16+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-08-14:/blog/2022-Fall-computer-aided-design-and-practices.html</id><summary type="html">&lt;p&gt;2022 Fall 電腦輔助設計與實習的教學主要介紹 NX 與 CoppeliaSim 在機械設計流程中的應用.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;2022 Fall 電腦輔助設計與實習的教學主要介紹 NX 與 CoppeliaSim 在機械設計流程中的應用.&lt;/p&gt;
 
 
@@ -158,6 +158,23 @@ for i in elemList:
 &lt;p&gt;cad2022 課程中各學員的課程網址將為: https://mdecad2022.github.io/site-學員_Github_帳號&lt;/p&gt;
 &lt;h1&gt;建立 Onedrive 帳號&lt;/h1&gt;
 &lt;p&gt;請尚未建立 Onedrive 帳號的學員登入 @gm 帳號後, 至 &lt;a href="https://www.microsoft.com/zh-tw/education/products/office"&gt;https://www.microsoft.com/zh-tw/education/products/office&lt;/a&gt;, 以 @gm 帳號申請 Onedrive 5TB 儲存權限. 課程中所提供的檔案, 需要登入以 @gm 註冊的 Onedrive 帳號後, 才能下載.&lt;/p&gt;
+&lt;p&gt;上述操作流程參考影片如下:&lt;/p&gt;
+&lt;script&gt;
+var winkVideoData_w2_1 = {
+  dataVersion: 1,
+  frameRate: 10,
+  buttonFrameLength: 5,
+  buttonFrameOffset: 2,
+  frameStops: {
+  },
+};
+&lt;/script&gt;
+&lt;/p&gt;
+&lt;!-- 接下來將 mp4 檔案從 downloads 目錄取出 --&gt;
+&lt;div class="winkVideoContainerClass"&gt;&lt;video autoplay="autoplay" class="winkVideoClass" controls="controls" data-dirname="./../cmsimde/static" data-varname="winkVideoData_w2_1" height="600" muted="true" width="800"&gt;
+&lt;source src="./../downloads/cad/cad_w2_1.mp4" type="video/mp4"/&gt;&lt;/video&gt;
+&lt;/div&gt;
+
 &lt;h1&gt;設計繪圖&lt;/h1&gt;
 &lt;p&gt;以 NX2027.3401 或 NX12 建立 &lt;a href="https://cad.onshape.com/documents/0c152a911938d7352961b194/w/be224609ad39a35fc1439f95/e/a88aca1714001e9f86f16e49?renderMode=0&amp;amp;uiState=630374f7bf13ba67fd28a339"&gt;Foosball Table&lt;/a&gt; 零組件. 但新版 NX 所建立的零組件無法由舊版的 NX 開啟.&lt;/p&gt;
 &lt;p&gt;下載 &lt;a href="https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/yen_gm_nfu_edu_tw/Eb7GeAUGMANEkijnWXGNH60BltYzKwkkffas3JhzgwnmxQ?e=K4HKXF"&gt;NX12.0.2.9_lite_cad2022.7z&lt;/a&gt; (for @gm users only, 1.20 GB, 解開後 6.24 GB) / 下載 &lt;a href="https://nfuedu-my.sharepoint.com/:u:/g/personal/yen_nfu_edu_tw/EUyA1JH9PsVHjjiZ_3a_voUBZQPSNugB5q2y-iAFVHtCgg?e=qTsfXz"&gt;NX12.0.2.9_lite_cad2022 for @nfu&lt;/a&gt;)&lt;/p&gt;

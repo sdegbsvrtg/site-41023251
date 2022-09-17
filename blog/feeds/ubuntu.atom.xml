@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Mde.tw - Ubuntu</title><link href="https://mde.tw/blog/" rel="alternate"></link><link href="https://mde.tw/blog/feeds/ubuntu.atom.xml" rel="self"></link><id>https://mde.tw/blog/</id><updated>2022-09-17T21:41:05+08:00</updated><entry><title>有關 Ubuntu</title><link href="https://mde.tw/blog/2022_fall_about_ubuntu.html" rel="alternate"></link><published>2022-09-17T12:00:00+08:00</published><updated>2022-09-17T21:41:05+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-09-17:/blog/2022_fall_about_ubuntu.html</id><summary type="html">&lt;p&gt;簡要說明 2022 Fall 與計算機程式及電腦輔助設計與實習課程相關的 Ubuntu 伺服器安裝與設置.&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;簡要說明 2022 Fall 與計算機程式及電腦輔助設計與實習課程相關的 Ubuntu 伺服器安裝與設置.&lt;/p&gt;
+
+
+&lt;h1&gt;Ubuntu&lt;/h1&gt;
+&lt;p&gt;目前使用 Ubuntu 20.04 與 22.04, 20.04 生命週期可以到 2025, 而 22.04 則可以到 2027, 其中主要安裝配置 Squid, Bind, Nginx, uwsgi 以及 Fossil SCM. 管理的網域有 mde.nfu 與 eng.nfu.&lt;/p&gt;
+&lt;h1&gt;基本指令&lt;/h1&gt;
+&lt;p&gt;查 Ubuntu 操作系統的版本:&lt;/p&gt;
+&lt;pre class="brush: jscript"&gt;
+lsb_release -a 
+&lt;/pre&gt;
+
+&lt;p&gt;重新啟動 squid:&lt;/p&gt;
+&lt;pre class="brush: jscript"&gt;
+sudo /etc/init.d/squid restart
+&lt;/pre&gt;
+
+&lt;p&gt;以管理者身分執行指令:&lt;/p&gt;
+&lt;pre class="brush: jscript"&gt;
+sudo -s 
+&lt;/pre&gt;
+
+&lt;p&gt;查驗 ufw 狀態:&lt;/p&gt;
+&lt;pre class="brush: jscript"&gt;
+ufw status
+&lt;/pre&gt;
+
+&lt;p&gt;允許主機連線:&lt;/p&gt;
+&lt;pre class="brush: jscript"&gt;
+ufw allow from your_ipv4_or_ipv6_address
+&lt;/pre&gt;
+
+&lt;p&gt;只允許 IPv6 群組電腦經由 port 22 連線, 拒絕其他電腦連線:&lt;/p&gt;
+&lt;pre class="brush: jscript"&gt;
+ufw allow from 2001:288:6004:xx::/32 to any port 22
+ufw deny 22
+&lt;/pre&gt;
+
+&lt;p&gt;令上述設定生效:&lt;/p&gt;
+&lt;pre class="brush: jscript"&gt;
+ufw enable
+&lt;/pre&gt;
+
+&lt;p&gt;其次, 若要刪除原先 ufw 的所有設定可以使用 ufw reset, 若要暫時關閉 ufw, 採用 ufw disable.&lt;/p&gt;
+&lt;p&gt;符號名稱的部分, 需要限制 port 22 連線外, 必須讓所有主機都能對 port 53 連線:&lt;/p&gt;
+&lt;pre class="brush: jscript"&gt;
+sudo -s 
+ufw status
+ufw allow from your_ipv4_or_ipv6_ip
+ufw allow from 2001:288::/16 to any port 22
+ufw deny 22
+ufw allow 53
+ufw enable
+&lt;/pre&gt;
+
+&lt;p&gt;WWW 伺服器若採用 port 80 與 443 配置, 則需要對所有主機開放, port 5443 若執行 Fossil SCM, 也必須開放, 其他也是對 port 22 有連線範圍的限制.&lt;/p&gt;
+&lt;pre class="brush: jscript"&gt;
+sudo -s 
+ufw status
+ufw allow from your_ipv4_or_ipv6_ip
+ufw allow from 2001:288::/16 to any port 22
+ufw deny 22
+ufw allow 80
+ufw allow 443
+ufw allow 5443
+ufw enable
+&lt;/pre&gt;
+
+&lt;p&gt;其他參考範例:&lt;/p&gt;
+&lt;pre class="brush: jscript"&gt;
+sudo -s
+ufw status
+ufw allow from 192.168.1.1
+ufw allow from 2001:xxxx:d005::/24 to any port 22
+ufw allow from 2001:288:6004:xx::/32 to any port 22
+ufw deny 22
+ufw allow from 2001:288:6004:xx::/32 to any port 3128
+ufw allow from 2001:288:6004:xx::/32 to any port 3130
+ufw deny 3128
+ufw deny 3130
+ufw allow 80
+ufw allow 443
+ufw allow 53
+ufw enable
+&lt;/pre&gt;</content><category term="Ubuntu"></category><category term="cad2022"></category><category term="cp2022"></category></entry></feed>

@@ -111,6 +111,9 @@
 <v t="leo.20220913170927.1"><vh>@clean enjoy_the_ride.md</vh>
 <v t="leo.20220913170949.1"><vh>Enjoy the ride</vh></v>
 </v>
+<v t="leo.20220917200208.1"><vh>@clean about_ubuntu.md</vh>
+<v t="leo.20220917200228.1"><vh>有關 Ubuntu</vh></v>
+</v>
 </v>
 </v>
 <v t="yen.20170108171733.83"><vh>產生 .key 與 .crt 指令</vh></v>
@@ -2410,6 +2413,118 @@ It's useful to set a certain direction you want to go. After you set the directi
 &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/vzivLVgeJ48" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
 
 [George Hatsopoulos]: https://greekreporter.com/2021/08/07/mit-remembers-brilliant-greek-professor-george-hatsopoulos/</t>
+<t tx="leo.20220917200208.1">@language md
+---
+Title: 有關 Ubuntu
+Date: 2022-09-17 12:00
+Category: Ubuntu
+Tags: cad2022, cp2022
+Slug: 2022_fall_about_ubuntu
+Author: mdecycu
+---
+
+簡要說明 2022 Fall 與計算機程式及電腦輔助設計與實習課程相關的 Ubuntu 伺服器安裝與設置.
+
+&lt;!-- PELICAN_END_SUMMARY --&gt;
+
+@others</t>
+<t tx="leo.20220917200228.1">Ubuntu
+====
+
+目前使用 Ubuntu 20.04 與 22.04, 20.04 生命週期可以到 2025, 而 22.04 則可以到 2027, 其中主要安裝配置 Squid, Bind, Nginx, uwsgi 以及 Fossil SCM. 管理的網域有 mde.nfu 與 eng.nfu.
+
+基本指令
+====
+
+查 Ubuntu 操作系統的版本:
+
+&lt;pre class="brush: jscript"&gt;
+lsb_release -a 
+&lt;/pre&gt;
+
+重新啟動 squid:
+
+&lt;pre class="brush: jscript"&gt;
+sudo /etc/init.d/squid restart
+&lt;/pre&gt;
+
+以管理者身分執行指令:
+
+&lt;pre class="brush: jscript"&gt;
+sudo -s 
+&lt;/pre&gt;
+
+查驗 ufw 狀態:
+
+&lt;pre class="brush: jscript"&gt;
+ufw status
+&lt;/pre&gt;
+
+允許主機連線:
+
+&lt;pre class="brush: jscript"&gt;
+ufw allow from your_ipv4_or_ipv6_address
+&lt;/pre&gt;
+
+只允許 IPv6 群組電腦經由 port 22 連線, 拒絕其他電腦連線:
+
+&lt;pre class="brush: jscript"&gt;
+ufw allow from 2001:288:6004:xx::/32 to any port 22
+ufw deny 22
+&lt;/pre&gt;
+
+令上述設定生效:
+
+&lt;pre class="brush: jscript"&gt;
+ufw enable
+&lt;/pre&gt;
+
+其次, 若要刪除原先 ufw 的所有設定可以使用 ufw reset, 若要暫時關閉 ufw, 採用 ufw disable.
+
+符號名稱的部分, 需要限制 port 22 連線外, 必須讓所有主機都能對 port 53 連線:
+
+&lt;pre class="brush: jscript"&gt;
+sudo -s 
+ufw status
+ufw allow from your_ipv4_or_ipv6_ip
+ufw allow from 2001:288::/16 to any port 22
+ufw deny 22
+ufw allow 53
+ufw enable
+&lt;/pre&gt;
+
+WWW 伺服器若採用 port 80 與 443 配置, 則需要對所有主機開放, port 5443 若執行 Fossil SCM, 也必須開放, 其他也是對 port 22 有連線範圍的限制.
+
+&lt;pre class="brush: jscript"&gt;
+sudo -s 
+ufw status
+ufw allow from your_ipv4_or_ipv6_ip
+ufw allow from 2001:288::/16 to any port 22
+ufw deny 22
+ufw allow 80
+ufw allow 443
+ufw allow 5443
+ufw enable
+&lt;/pre&gt;
+
+其他參考範例:
+
+&lt;pre class="brush: jscript"&gt;
+sudo -s
+ufw status
+ufw allow from 192.168.1.1
+ufw allow from 2001:xxxx:d005::/24 to any port 22
+ufw allow from 2001:288:6004:xx::/32 to any port 22
+ufw deny 22
+ufw allow from 2001:288:6004:xx::/32 to any port 3128
+ufw allow from 2001:288:6004:xx::/32 to any port 3130
+ufw deny 3128
+ufw deny 3130
+ufw allow 80
+ufw allow 443
+ufw allow 53
+ufw enable
+&lt;/pre&gt;</t>
 <t tx="yen.20170108171605.1"></t>
 <t tx="yen.20170108171605.2">QTreeWidget {
     /* These apply to the selected item, but not to editing items.*/

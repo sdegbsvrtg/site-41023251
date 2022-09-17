@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
 
-  <title>有關 TCExam</title>
+  <title>有關 Ubuntu</title>
 
 
   <meta name="HandheldFriendly" content="True" />
@@ -40,39 +40,31 @@
   <![endif]-->
 
 
-    <link href="https://mde.tw/blog/about-tcexam.html" rel="canonical" />
+    <link href="https://mde.tw/blog/2022_fall_about_ubuntu.html" rel="canonical" />
 
-        <meta name="description" content="這裡將收集與 TCExam 有關的資料內容.">
+        <meta name="description" content="簡要說明 2022 Fall 與計算機程式及電腦輔助設計與實習課程相關的 Ubuntu 伺服器安裝與設置.">
 
         <meta name="author" content="mdecycu">
 
-        <meta name="tags" content="exam">
-        <meta name="tags" content="php">
-        <meta name="tags" content="pgsql">
-        <meta name="tags" content="nginx">
-        <meta name="tags" content="cp2022">
         <meta name="tags" content="cad2022">
+        <meta name="tags" content="cp2022">
 
 
 
 
 <!-- Open Graph -->
 <meta property="og:site_name" content="Mde.tw"/>
-<meta property="og:title" content="有關 TCExam"/>
-<meta property="og:description" content="這裡將收集與 TCExam 有關的資料內容."/>
+<meta property="og:title" content="有關 Ubuntu"/>
+<meta property="og:description" content="簡要說明 2022 Fall 與計算機程式及電腦輔助設計與實習課程相關的 Ubuntu 伺服器安裝與設置."/>
 <meta property="og:locale" content="en_US"/>
-<meta property="og:url" content="https://mde.tw/blog/about-tcexam.html"/>
+<meta property="og:url" content="https://mde.tw/blog/2022_fall_about_ubuntu.html"/>
 <meta property="og:type" content="article"/>
-<meta property="article:published_time" content="2022-09-01 12:00:00+08:00"/>
-<meta property="article:modified_time" content="2022-09-14 20:15:39.928526+08:00"/>
+<meta property="article:published_time" content="2022-09-17 12:00:00+08:00"/>
+<meta property="article:modified_time" content="2022-09-17 21:41:05.183697+08:00"/>
 <meta property="article:author" content="https://mde.tw/blog/author/mdecycu.html">
-<meta property="article:section" content="tcexam"/>
-<meta property="article:tag" content="exam"/>
-<meta property="article:tag" content="php"/>
-<meta property="article:tag" content="pgsql"/>
-<meta property="article:tag" content="nginx"/>
-<meta property="article:tag" content="cp2022"/>
+<meta property="article:section" content="Ubuntu"/>
 <meta property="article:tag" content="cad2022"/>
+<meta property="article:tag" content="cp2022"/>
 <meta property="og:image" content="https://mde.tw/blog/theme/images/post-bg.jpg">
 
 <!-- Twitter Card -->
@@ -81,18 +73,18 @@
 {
   "@context": "http://schema.org",
   "@type": "Article",
-  "name": "有關 TCExam",
-  "headline": "有關 TCExam",
-  "datePublished": "2022-09-01 12:00:00+08:00",
-  "dateModified": "2022-09-14 20:15:39.928526+08:00",
+  "name": "有關 Ubuntu",
+  "headline": "有關 Ubuntu",
+  "datePublished": "2022-09-17 12:00:00+08:00",
+  "dateModified": "2022-09-17 21:41:05.183697+08:00",
   "author": {
     "@type": "Person",
     "name": "mdecycu",
     "url": "https://mde.tw/blog/author/mdecycu.html"
   },
   "image": "https://mde.tw/blog/theme/images/post-bg.jpg",
-  "url": "https://mde.tw/blog/about-tcexam.html",
-  "description": "這裡將收集與 TCExam 有關的資料內容."
+  "url": "https://mde.tw/blog/2022_fall_about_ubuntu.html",
+  "description": "簡要說明 2022 Fall 與計算機程式及電腦輔助設計與實習課程相關的 Ubuntu 伺服器安裝與設置."
 }
 </script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
@@ -207,14 +199,14 @@ init_mathjax();
             <a class="menu-button"><i class="ic ic-menu"></i> Menu</a>
           </span>
         </nav>
-        <h1 class="post-title">有關 TCExam</h1>
+        <h1 class="post-title">有關 Ubuntu</h1>
         <!-- TODO : Proper class for headline -->
         <span class="post-meta">
                 <a href="https://mde.tw/blog/author/mdecycu.html">Mdecycu</a>
-            | <time datetime="週四 01 九月 2022">週四 01 九月 2022</time>
+            | <time datetime="週六 17 九月 2022">週六 17 九月 2022</time>
         </span>
         <!-- TODO : Modified check -->
-            <span class="post-meta"> | Updated on 週三 14 九月 2022</span>
+            <span class="post-meta"> | Updated on 週六 17 九月 2022</span>
             <div class="post-cover cover" style="background-image: url('https://mde.tw/blog/theme/images/post-bg.jpg')">
       </div>
     </header>
@@ -234,81 +226,108 @@ init_mathjax();
         <article class="post">
         <div class="inner">
             <section class="post-content">
-                <p>這裡將收集與 TCExam 有關的資料內容.</p>
+                <p>簡要說明 2022 Fall 與計算機程式及電腦輔助設計與實習課程相關的 Ubuntu 伺服器安裝與設置.</p>
 
 
-<h1>虛擬主機上的 TCExam</h1>
-<p>相關程式檔案放在 c:\tcexam, 管理者帳號設為 tcexam. 啟動 exam.網域.名稱, 牽涉 nginx, php, pgsql 以及 tcexam 程式原始碼.</p>
-<p>nginx 主要負責將 http 跳轉至 https, 並且透過 fastcgi 啟動 php 解譯器的執行. 而 nginx 的 server 設定範例如下:</p>
+<h1>Ubuntu</h1>
+<p>目前使用 Ubuntu 20.04 與 22.04, 20.04 生命週期可以到 2025, 而 22.04 則可以到 2027, 其中主要安裝配置 Squid, Bind, Nginx, uwsgi 以及 Fossil SCM. 管理的網域有 mde.nfu 與 eng.nfu.</p>
+<h1>基本指令</h1>
+<p>查 Ubuntu 操作系統的版本:</p>
 <pre class="brush: jscript">
-server { 
-    listen    98 ssl;
-    listen    [::]:98 ssl;
-
-    root c:/tmp/TCExam;
-
-    server_name    exam.網域.名稱;
-    ssl_certificate    C:/pj2022/stunnel/config/fullchain.pem;
-    ssl_certificate_key    C:/pj2022/stunnel/config/privkey.pem;
-    ssl_protocols    TLSv1 TLSv1.1 TLSv1.2;
-    ssl_ciphers    HIGH:!aNULL:!MD5;
-
-    location /{ 
-        index index.html index.php;
-    }
-
-    location ~ \.php$ {
-        fastcgi_pass   127.0.0.1:9123;
-        fastcgi_index  index.php;
-        fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;
-        include        fastcgi_params;
-    }
-}
+lsb_release -a 
 </pre>
 
-<p>pgsql 以手動 start.bat 啟動, 設定檔案如下:</p>
+<p>重新啟動 squid:</p>
 <pre class="brush: jscript">
-@echo off
-set /p DATA=&lt;PGDATA.txt
-cd %~dp0
-bin\postgres -V
-bin\pg_ctl -D %DATA% -l logfile.txt start
+sudo /etc/init.d/squid restart
 </pre>
 
-<p>其中的 PGDATA.txt 內容為 .\data, 表示資料庫內容存在 .\data 目錄中.</p>
-<p>一旦考試結束後, 以 stop.bat 關閉 pgsql:</p>
+<p>以管理者身分執行指令:</p>
 <pre class="brush: jscript">
-@echo off
-set /p DATA=&lt;PGDATA.txt
-cd %~dp0
-bin\pg_ctl -D %DATA% -l logfile.txt stop
+sudo -s 
 </pre>
 
-<h1>TCExam 原始碼</h1>
-<p>由於目前所啟動的線上 TCExam 採用 2022.06.9 釋出的 PHP 8.1.7 版, 而 <a href="https://github.com/tecnickcom/tcexam">https://github.com/tecnickcom/tcexam</a> 最近修改日期為 2021.08.05, 因此直接從 TCExam github 網站 clone 下來的原始碼無法在最新版的 PHP 解譯環境中執行.</p>
-<p>因此啟動修改 TCExam, 令其可以在 PHP 8.1.7 中執行, 且 pdf 轉檔的部分, 也自行建立中文字型, 以便正確將考試內容轉為中英並存的格式.</p>
-<p>目前尚未完成的設定為 send mail 的部分.</p>
-<p>總結上述說明, 要啟動 TCExam 考試系統, 必須確認 nginx 已經啟動, 然後手動執行 pgsql 目錄下的 start.bat, 並且注意 c:\certbot 目錄下有關 https 數位簽章每 90 天必須設法手動或自動更新.</p>
-<h1>CYCU TCExam 主機</h1>
-<p>目前 exam dot cycu dot org 採用 10ff:1:0::1 設定, 使用 8GB 虛擬主機測試是否合用. 目前透過 nginx 管制, 只允許系上 IPv6 網段連線.</p>
+<p>查驗 ufw 狀態:</p>
+<pre class="brush: jscript">
+ufw status
+</pre>
+
+<p>允許主機連線:</p>
+<pre class="brush: jscript">
+ufw allow from your_ipv4_or_ipv6_address
+</pre>
+
+<p>只允許 IPv6 群組電腦經由 port 22 連線, 拒絕其他電腦連線:</p>
+<pre class="brush: jscript">
+ufw allow from 2001:288:6004:xx::/32 to any port 22
+ufw deny 22
+</pre>
+
+<p>令上述設定生效:</p>
+<pre class="brush: jscript">
+ufw enable
+</pre>
+
+<p>其次, 若要刪除原先 ufw 的所有設定可以使用 ufw reset, 若要暫時關閉 ufw, 採用 ufw disable.</p>
+<p>符號名稱的部分, 需要限制 port 22 連線外, 必須讓所有主機都能對 port 53 連線:</p>
+<pre class="brush: jscript">
+sudo -s 
+ufw status
+ufw allow from your_ipv4_or_ipv6_ip
+ufw allow from 2001:288::/16 to any port 22
+ufw deny 22
+ufw allow 53
+ufw enable
+</pre>
+
+<p>WWW 伺服器若採用 port 80 與 443 配置, 則需要對所有主機開放, port 5443 若執行 Fossil SCM, 也必須開放, 其他也是對 port 22 有連線範圍的限制.</p>
+<pre class="brush: jscript">
+sudo -s 
+ufw status
+ufw allow from your_ipv4_or_ipv6_ip
+ufw allow from 2001:288::/16 to any port 22
+ufw deny 22
+ufw allow 80
+ufw allow 443
+ufw allow 5443
+ufw enable
+</pre>
+
+<p>其他參考範例:</p>
+<pre class="brush: jscript">
+sudo -s
+ufw status
+ufw allow from 192.168.1.1
+ufw allow from 2001:xxxx:d005::/24 to any port 22
+ufw allow from 2001:288:6004:xx::/32 to any port 22
+ufw deny 22
+ufw allow from 2001:288:6004:xx::/32 to any port 3128
+ufw allow from 2001:288:6004:xx::/32 to any port 3130
+ufw deny 3128
+ufw deny 3130
+ufw allow 80
+ufw allow 443
+ufw allow 53
+ufw enable
+</pre>
             </section>
 
             <section class="post-info">
                 <div class="post-share">
-                    <a class="twitter" href="https://twitter.com/share?text=有關 TCExam&amp;url=https://mde.tw/blog/about-tcexam.html" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <a class="twitter" href="https://twitter.com/share?text=有關 Ubuntu&amp;url=https://mde.tw/blog/2022_fall_about_ubuntu.html" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
                     <i class="ic ic-twitter"></i><span class="hidden">Twitter</span>
                     </a>
-                    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://mde.tw/blog/about-tcexam.html" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://mde.tw/blog/2022_fall_about_ubuntu.html" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
                     <i class="ic ic-facebook"></i><span class="hidden">Facebook</span>
                     </a>
-                    <a class="googleplus" href="https://plus.google.com/share?url=https://mde.tw/blog/about-tcexam.html" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <a class="googleplus" href="https://plus.google.com/share?url=https://mde.tw/blog/2022_fall_about_ubuntu.html" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
                     <i class="ic ic-googleplus"></i><span class="hidden">Google+</span>
                     </a>
                     <div class="clear"></div>
                 </div>
 
                 <aside class="post-tags">
-<a href="https://mde.tw/blog/tag/exam.html">exam</a><a href="https://mde.tw/blog/tag/php.html">php</a><a href="https://mde.tw/blog/tag/pgsql.html">pgsql</a><a href="https://mde.tw/blog/tag/nginx.html">nginx</a><a href="https://mde.tw/blog/tag/cp2022.html">cp2022</a><a href="https://mde.tw/blog/tag/cad2022.html">cad2022</a>                </aside>
+<a href="https://mde.tw/blog/tag/cad2022.html">cad2022</a><a href="https://mde.tw/blog/tag/cp2022.html">cp2022</a>                </aside>
 
                 <div class="clear"></div>
 
@@ -318,28 +337,21 @@ bin\pg_ctl -D %DATA% -l logfile.txt stop
                 <script type="text/javascript">
                     var disqus = 'mdetw';
                     var disqus_shortname = 'mdetw';
-                    var disqus_identifier = '/about-tcexam.html';
-                    var disqus_url = 'https://mde.tw/blog/about-tcexam.html';
+                    var disqus_identifier = '/2022_fall_about_ubuntu.html';
+                    var disqus_url = 'https://mde.tw/blog/2022_fall_about_ubuntu.html';
                 </script>
                 <noscript>Please enable JavaScript to view the comments.</noscript>
                 <section class="post-comments">
-                        <a id="show-disqus" class="post-comments-activate" data-disqus-identifier="/about-tcexam.html" >Show Comments</a>
+                        <a id="show-disqus" class="post-comments-activate" data-disqus-identifier="/2022_fall_about_ubuntu.html" >Show Comments</a>
                     <div id="disqus_thread"></div>
                 </section>
 
                 <aside class="post-nav">
-                    <a class="post-nav-next" href="https://mde.tw/blog/cp2022-w1.html">
-                        <section class="post-nav-teaser">
-                            <i class="ic ic-arrow-left"></i>
-                                <h2 class="post-nav-title">cp2022_w1</h2>
-                            <p class="post-nav-excerpt">計算機程式課程第一週, 只有 1b 有課, 1a 因為中秋節放假.</p>
-                        </section>
-                    </a>
-                    <a class="post-nav-prev" href="https://mde.tw/blog/useful-windows-commands.html">
+                    <a class="post-nav-prev" href="https://mde.tw/blog/enjoy_your_ride.html">
                         <section class="post-nav-teaser">
                             <i class="ic ic-arrow-right"></i>
-                                <h2 class="post-nav-title">Windows 常用指令</h2>
-                            <p class="post-nav-excerpt">根據使用情境將常用的 Windows 指令加以整理.</p>
+                                <h2 class="post-nav-title">Enjoy your ride</h2>
+                            <p class="post-nav-excerpt">Being an entrepreneur is a bug.</p>
                         </section>
                     </a>
                     <div class="clear"></div>

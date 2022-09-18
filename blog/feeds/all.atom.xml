@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Mde.tw</title><link href="https://mde.tw/blog/" rel="alternate"></link><link href="https://mde.tw/blog/feeds/all.atom.xml" rel="self"></link><id>https://mde.tw/blog/</id><updated>2022-09-17T21:41:05+08:00</updated><entry><title>有關 Ubuntu</title><link href="https://mde.tw/blog/2022_fall_about_ubuntu.html" rel="alternate"></link><published>2022-09-17T12:00:00+08:00</published><updated>2022-09-17T21:41:05+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-09-17:/blog/2022_fall_about_ubuntu.html</id><summary type="html">&lt;p&gt;簡要說明 2022 Fall 與計算機程式及電腦輔助設計與實習課程相關的 Ubuntu 伺服器安裝與設置.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Mde.tw</title><link href="https://mde.tw/blog/" rel="alternate"></link><link href="https://mde.tw/blog/feeds/all.atom.xml" rel="self"></link><id>https://mde.tw/blog/</id><updated>2022-09-18T11:44:13+08:00</updated><entry><title>有關 Ubuntu</title><link href="https://mde.tw/blog/2022_fall_about_ubuntu.html" rel="alternate"></link><published>2022-09-17T12:00:00+08:00</published><updated>2022-09-18T11:44:13+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-09-17:/blog/2022_fall_about_ubuntu.html</id><summary type="html">&lt;p&gt;簡要說明 2022 Fall 與計算機程式及電腦輔助設計與實習課程相關的 Ubuntu 伺服器安裝與設置.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;簡要說明 2022 Fall 與計算機程式及電腦輔助設計與實習課程相關的 Ubuntu 伺服器安裝與設置.&lt;/p&gt;
 
 
@@ -7,28 +7,24 @@
 &lt;p&gt;目前使用 Ubuntu 20.04 與 22.04, 20.04 生命週期可以到 2025, 而 22.04 則可以到 2027, 其中主要安裝配置 Squid, Bind, Nginx, uwsgi 以及 Fossil SCM. 管理的網域有 mde.nfu 與 eng.nfu.&lt;/p&gt;
 &lt;h1&gt;基本指令&lt;/h1&gt;
 &lt;p&gt;查 Ubuntu 操作系統的版本:&lt;/p&gt;
-&lt;pre class="brush: jscript"&gt;
-lsb_release -a 
-&lt;/pre&gt;
-
+&lt;p&gt;lsb_release -a &lt;/p&gt;
+&lt;h1&gt;Squid&lt;/h1&gt;
+&lt;p&gt;安裝 squid:&lt;/p&gt;
+&lt;p&gt;sudo apt install squid&lt;/p&gt;
+&lt;p&gt;設定檔案位置: /etc/squid/squid.conf&lt;/p&gt;
 &lt;p&gt;重新啟動 squid:&lt;/p&gt;
-&lt;pre class="brush: jscript"&gt;
-sudo /etc/init.d/squid restart
-&lt;/pre&gt;
-
+&lt;p&gt;sudo /etc/init.d/squid restart&lt;/p&gt;
+&lt;h1&gt;ufw&lt;/h1&gt;
 &lt;p&gt;以管理者身分執行指令:&lt;/p&gt;
-&lt;pre class="brush: jscript"&gt;
-sudo -s 
-&lt;/pre&gt;
-
-&lt;p&gt;查驗 ufw 狀態:&lt;/p&gt;
-&lt;pre class="brush: jscript"&gt;
-ufw status
-&lt;/pre&gt;
-
+&lt;p&gt;sudo -s &lt;/p&gt;
+&lt;p&gt;查驗 ufw 狀態 (以下各指令必須採管理者模式才能執行):&lt;/p&gt;
+&lt;p&gt;ufw status&lt;/p&gt;
 &lt;p&gt;允許主機連線:&lt;/p&gt;
+&lt;p&gt;若允許單一主機連線所有 ports, 則直接列出完整的 IP addresses. 若涵蓋特定範圍, 則需加以標示, 以 IPv6 為例: 
+2001:xxxx:xxxx:: 表示前三區段為固定標示, 隨後的五個區段 以 :: 表示, 則涵蓋所有組合的 IPv6 addresses.&lt;/p&gt;
 &lt;pre class="brush: jscript"&gt;
-ufw allow from your_ipv4_or_ipv6_address
+ufw allow from 192.168.1.1
+ufw allow from 2001:xxxx:xxxx::/24
 &lt;/pre&gt;
 
 &lt;p&gt;只允許 IPv6 群組電腦經由 port 22 連線, 拒絕其他電腦連線:&lt;/p&gt;
@@ -38,10 +34,7 @@ ufw deny 22
 &lt;/pre&gt;
 
 &lt;p&gt;令上述設定生效:&lt;/p&gt;
-&lt;pre class="brush: jscript"&gt;
-ufw enable
-&lt;/pre&gt;
-
+&lt;p&gt;ufw enable&lt;/p&gt;
 &lt;p&gt;其次, 若要刪除原先 ufw 的所有設定可以使用 ufw reset, 若要暫時關閉 ufw, 採用 ufw disable.&lt;/p&gt;
 &lt;p&gt;符號名稱的部分, 需要限制 port 22 連線外, 必須讓所有主機都能對 port 53 連線:&lt;/p&gt;
 &lt;pre class="brush: jscript"&gt;
@@ -83,7 +76,31 @@ ufw allow 80
 ufw allow 443
 ufw allow 53
 ufw enable
-&lt;/pre&gt;</content><category term="Ubuntu"></category><category term="cad2022"></category><category term="cp2022"></category></entry><entry><title>Enjoy your ride</title><link href="https://mde.tw/blog/enjoy_your_ride.html" rel="alternate"></link><published>2022-09-13T13:00:00+08:00</published><updated>2022-09-13T20:09:54+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-09-13:/blog/enjoy_your_ride.html</id><summary type="html">&lt;p&gt;Being an entrepreneur is a bug.&lt;/p&gt;
+&lt;/pre&gt;
+
+&lt;h1&gt;ufw 刪除特定 rule&lt;/h1&gt;
+&lt;p&gt;在 ufw enable 之後, 可以使用 ufw status numbered 列出 rules 順序編號, 然後再以:&lt;/p&gt;
+&lt;p&gt;ufw delete 編號&lt;/p&gt;
+&lt;p&gt;刪除特定編號的 rule 後, 例如: &lt;/p&gt;
+&lt;p&gt;ufw delete 21&lt;/p&gt;
+&lt;p&gt;而編號 21 的 rule 為 ufw deny 3389, 即除了前面所允許的主機網址可以對伺服器 3389 port 連線外, 其餘一律禁止連線, 此地則將 ufw deny 3389 刪除, 接著以:&lt;/p&gt;
+&lt;p&gt;ufw allow from 2001:xxxx:d005::/24 to any port 3389 &lt;/p&gt;
+&lt;p&gt;納入允許 3389 port 連線的主機網址範圍後, 再加上:&lt;/p&gt;
+&lt;pre class="brush: jscript"&gt;
+ufw deny 3389
+ufw enable
+&lt;/pre&gt;
+
+&lt;p&gt;就等同額外在 port 3389 可連線的主機納入特定的電腦群之後, 再重新啟動防火牆.&lt;/p&gt;
+&lt;h1&gt;Ubuntu update 與 upgrade&lt;/h1&gt;
+&lt;p&gt;Ubuntu 各版次釋出後, 經常會有各種套件的更新與升級, 因此若要採手動 update 與 upgrade, 可以執行:&lt;/p&gt;
+&lt;p&gt;sudo apt update&lt;/p&gt;
+&lt;p&gt;sudo 是希望以 super user 的權限執行隨後的指令, 等同在 Windows 操作系統中以管理者模式執行指令的意思. 通常在牽涉操作系統內部套件安裝與設定修改時, 只能由管理員身分進行處理. 至於 apt 則為 Ubuntu 的套件管理工具, 可以用來安裝或移除套件. 而最後的 update 則是 apt 命令的一個 option, 表示要更新目前針對此一操作系統, 可以安裝的套件列表, 以及如何取得這些套件安裝的相關資訊.&lt;/p&gt;
+&lt;p&gt;完成 sudo apt update 之後, 就可以利用 sudo apt upgrade, 將所有已經安裝在操作系統中, 可升級的套件進行更新. 各套件更新升級後, 通常會留下一些目前版本沒有使用的舊檔案, 可以利用 sudo apt autoremove 加以移除.&lt;/p&gt;
+&lt;h1&gt;Ubuntu 的遠端桌面&lt;/h1&gt;
+&lt;p&gt;Ubuntu 安裝 Desktop 版本之後, 可以加裝 xrdp, 並且允許遠端主機對 port 3389 連線, 就可以從其他操作系統電腦上, 以 Remote Desktop client 進行遠端連線:&lt;/p&gt;
+&lt;p&gt;sudo apt install xrdp&lt;/p&gt;
+&lt;p&gt;在 Mac 操作系統上, 可以安裝 Microsoft Remote Desktop 套件對遠端的 Ubuntu 進行連線操控. 在 Ubuntu 則可以使用 Remmina 作為 Remote Desktop client.&lt;/p&gt;</content><category term="Ubuntu"></category><category term="cad2022"></category><category term="cp2022"></category></entry><entry><title>Enjoy your ride</title><link href="https://mde.tw/blog/enjoy_your_ride.html" rel="alternate"></link><published>2022-09-13T13:00:00+08:00</published><updated>2022-09-13T20:09:54+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-09-13:/blog/enjoy_your_ride.html</id><summary type="html">&lt;p&gt;Being an entrepreneur is a bug.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;Being an entrepreneur is a bug.&lt;/p&gt;
 
 

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Mde.tw - Network</title><link href="./" rel="alternate"></link><link href="./feeds/network.atom.xml" rel="self"></link><id>./</id><updated>2022-09-18T12:26:16+08:00</updated><entry><title>有關網路</title><link href="./2022_fall_about_network.html" rel="alternate"></link><published>2022-09-18T11:00:00+08:00</published><updated>2022-09-18T12:26:16+08:00</updated><author><name>mdecycu</name></author><id>tag:None,2022-09-18:./2022_fall_about_network.html</id><summary type="html">&lt;p&gt;簡要說明 2022 Fall 在綜一館八樓的電腦網路使用與觀察.&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;簡要說明 2022 Fall 在綜一館八樓的電腦網路使用與觀察.&lt;/p&gt;
+
+
+&lt;h1&gt;實際觀察&lt;/h1&gt;
+&lt;p&gt;註: 以下的相關下載連結, 必須登入學校下載中心主機, 或者使用校內網路才能下載. 而各種教育版套件則必須透過校內 VPN 登入後, 才可進行認證.&lt;/p&gt;
+&lt;p&gt;為了方便, 接下來將要從學校下載目前可以取得的 1909 64 位元 &lt;a href="https://software.nfu.edu.tw/Windows/tw/Win10_1909_64BIT_CH.ISO"&gt;Windows 10操作系統&lt;/a&gt;, 並且利用 Virtualbox 安裝為虛擬機. 因為這個教育版的 Windows 需要每半年進行認證更新, 因此還要同時下載 &lt;a href="https://software.nfu.edu.tw/KMS/windows_kms.bat"&gt;windows_kms.bat&lt;/a&gt;. 另外若要配合仍廣為流行的 MS Office, 可以再下載 &lt;a href="https://software.nfu.edu.tw/Office/tw/Office_Pro_Plus_2016_64Ch.iso"&gt;Office 2016&lt;/a&gt; 版, 以及認證用的 &lt;a href="https://software.nfu.edu.tw/KMS/Office_2016_KMS.bat"&gt;Office_2016_KMS.bat&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;下載 Windows 10 與 Office iso 畫面:&lt;/p&gt;
+&lt;p&gt;&lt;img class="add_border" src="./../images/download_windows_iso.png" width="400"&gt;&lt;/img&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class="add_border" src="./../images/download_office_iso.png" width="400"&gt;&lt;/img&gt;&lt;/p&gt;
+&lt;h2&gt;Virtualbox 安裝&lt;/h2&gt;
+&lt;p&gt;接下來利用 Virtualbox 先安裝 Windows 10, 再安裝 Office, 最終可以得到 [Windows 10 1909 vdi] 檔案.&lt;/p&gt;</content><category term="Network"></category><category term="cad2022"></category><category term="cp2022"></category></entry></feed>

@@ -60,7 +60,7 @@
 <meta property="og:url" content="https://mde.tw/blog/2022_fall_about_network.html"/>
 <meta property="og:type" content="article"/>
 <meta property="article:published_time" content="2022-09-18 11:00:00+08:00"/>
-<meta property="article:modified_time" content="2022-09-20 09:50:47.227936+08:00"/>
+<meta property="article:modified_time" content="2022-09-20 10:07:16.522692+08:00"/>
 <meta property="article:author" content="https://mde.tw/blog/author/mdecycu.html">
 <meta property="article:section" content="Network"/>
 <meta property="article:tag" content="cad2022"/>
@@ -76,7 +76,7 @@
   "name": "有關網路",
   "headline": "有關網路",
   "datePublished": "2022-09-18 11:00:00+08:00",
-  "dateModified": "2022-09-20 09:50:47.227936+08:00",
+  "dateModified": "2022-09-20 10:07:16.522692+08:00",
   "author": {
     "@type": "Person",
     "name": "mdecycu",
@@ -231,12 +231,12 @@ init_mathjax();
 
 <h1>實際觀察</h1>
 <p>註: 以下的相關下載連結, 必須登入學校下載中心主機, 或者使用校內網路才能下載. 而各種教育版套件則必須透過校內 VPN 登入後, 才可進行認證.</p>
-<p>為了方便, 接下來將要從學校下載目前可以取得的 1909 64 位元 <a href="https://software.nfu.edu.tw/Windows/tw/Win10_1909_64BIT_CH.ISO">Windows 10操作系統</a>, 並且利用 Virtualbox 安裝為虛擬機. 因為這個教育版的 Windows 需要每半年進行認證更新, 因此還要同時下載 <a href="https://software.nfu.edu.tw/KMS/windows_kms.bat">windows_kms.bat</a>. 另外若要配合仍廣為流行的 MS Office, 可以再下載 <a href="https://software.nfu.edu.tw/Office/tw/Office_Pro_Plus_2016_64Ch.iso">Office 2016</a> 版, 以及認證用的 <a href="https://software.nfu.edu.tw/KMS/Office_2016_KMS.bat">Office_2016_KMS.bat</a>. </p>
+<p>為了方便, 接下來將要從學校下載目前可以取得的 1909 64 位元 <a href="https://software.nfu.edu.tw/Windows/tw/Win10_1909_64BIT_CH.ISO">Windows 10操作系統</a> (for nfu intranet only), 並且利用 Virtualbox 安裝為虛擬機. 因為這個教育版的 Windows 需要每半年進行認證更新, 因此還要同時下載 <a href="https://software.nfu.edu.tw/KMS/windows_kms.bat">認證批次檔</a> (for nfu intranet only). 另外若要配合仍廣為流行的 MS Office, 可以再下載 <a href="https://software.nfu.edu.tw/Office/tw/Office_Pro_Plus_2016_64Ch.iso">Office 2016</a> (for nfu intranet only) 版, 以及認證用的 <a href="https://software.nfu.edu.tw/KMS/Office_2016_KMS.bat">Office_2016_KMS.bat</a> (for nfu intranet only). </p>
 <p>下載 Windows 10 與 Office iso 畫面:</p>
 <p><img src="./../images/download_windows_iso.png" width="300"></img></p>
 <p><img src="./../images/download_office_iso.png" width="300"></img></p>
 <h2>Virtualbox 安裝</h2>
-<p>接下來利用 Virtualbox 先安裝 Windows 10, 再安裝 Office, 最終可以得到 <a href="https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/yen_gm_nfu_edu_tw/ETLU-Pa-1R9AhLfmQy3MShkBs6MIZoJEiroz3XdT9Q2W7Q?e=IdqClG">Win10_2022_20H2.7z</a> (for @gm users) (<a href="https://nfuedu-my.sharepoint.com/:u:/g/personal/yen_nfu_edu_tw/EWqlT9jgaBhMtSotCbtuU3IBr_65gj1L0pE5NzVTwUeT5w?e=pEjopq">Win10_2022_20H2.7z @nfu</a>) 檔案.</p>
+<p>接下來利用 Virtualbox 安裝 Windows 10, 可以得到 <a href="https://gmnfuedutw-my.sharepoint.com/:u:/g/personal/yen_gm_nfu_edu_tw/ETLU-Pa-1R9AhLfmQy3MShkBs6MIZoJEiroz3XdT9Q2W7Q?e=IdqClG">Win10_2022_20H2.7z</a> (for @gm users) (<a href="https://nfuedu-my.sharepoint.com/:u:/g/personal/yen_nfu_edu_tw/EWqlT9jgaBhMtSotCbtuU3IBr_65gj1L0pE5NzVTwUeT5w?e=pEjopq">Win10_2022_20H2.7z @nfu</a>) 檔案.</p>
 <p><img src="./../images/virtualbox_install_win10.png" width="300"></img></p>
 <p>同一個 Virtualbox 應用程式下的虛擬硬碟檔案, 其 uuid 不可相同, 因此若直接從某一虛擬檔案複製在同一台 Virtualbox 進行設定之前, 必須更改其中一個檔案的 uuid.</p>
 <p>更改硬碟檔案的 uuid:</p>
@@ -254,10 +254,10 @@ init_mathjax();
 <p>NAT 這時可以視為虛擬主機的防火牆, 外部電腦在無 NAT port mapping 的情況下, 無法直接連線到虛擬主機.</p>
 <p>更改硬碟檔案的 uuid:</p>
 <p>vboxmanage internalcommands sethduuid win10_21H2.vmdk</p>
-<p>在使用 Windows 10 代理主機設定過程, 發現無法手動儲存 Proxy 設定時, 可以將 Proxy 設定寫入:</p>
+<p>在使用 Windows 10 代理主機設定過程, 若發現無法手動儲存 Proxy 設定時, 可以將 Proxy 設定寫入:</p>
 <p>電腦\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\ProxyServer 字串值中.</p>
 <p>也可以透過 Windows 10 登錄檔案 (Registry) 進行設定, 以滑鼠左鍵雙點擊下列 manual_proxy_setting.reg 即可完成設定:</p>
-<pre class="brush: jscript'>
+<pre class="brush: jscript">
 Windows Registry Editor Version 5.00
 
  [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings]
@@ -271,16 +271,11 @@ Windows Registry Editor Version 5.00
 "ProxyOverride"="localhost;"
 </pre>
 
-NAT 內定使用 IPv4
-----
-
-當我們使用 Virtualbox Windows 10 虛擬主機, 利用 NAT 作為聯外網路設定時, default 只能使用 IPv4 網路協定.
-
-假如要讓虛擬主機使用更有彈性的 NAT 網路機制, 可以從 Network 設定中轉用  NAT Network 設定, 首先在 Virtualbox Manager - File - Preferences - Network - NAT Networks 項目中新增一個 NATNetwork, 開啟 edit 編輯模式, 內部網段使用 10.0.2.0/24, 打勾 Support DHCP. 當虛擬主機關機後, 重新設定 Network 後重開後選用 NAT Network, 就可以使用此項設定.
-
-因此, 假如同一台實體主機中有多台採 NAT 上網的虛擬主機, 就可以利用 NAT Networks 選擇各種內部網路協定與連線架構.
-
-採用 NAT Network 設定的虛擬主機雖然也能透過 Port Forwarding 擔任伺服器, 但是只能與實體主機共用聯外的網路線, 假如要將虛擬主機當作 server, 且採實體網路線聯外, 可以將 Network 設為 Bridged Adapter.
+<h2>NAT 內定使用 IPv4</h2>
+<p>當我們使用 Virtualbox Windows 10 虛擬主機, 利用 NAT 作為聯外網路設定時, default 只能使用 IPv4 網路協定.</p>
+<p>假如要讓虛擬主機使用更有彈性的 NAT 網路機制, 可以從 Network 設定中轉用  NAT Network 設定, 首先在 Virtualbox Manager - File - Preferences - Network - NAT Networks 項目中新增一個 NATNetwork, 開啟 edit 編輯模式, 內部網段使用 10.0.2.0/24, 打勾 Support DHCP. 當虛擬主機關機後, 重新設定 Network 後重開後選用 NAT Network, 就可以使用此項設定.</p>
+<p>因此, 假如同一台實體主機中有多台採 NAT 上網的虛擬主機, 就可以利用 NAT Networks 選擇各種內部網路協定與連線架構.</p>
+<p>採用 NAT Network 設定的虛擬主機雖然也能透過 Port Forwarding 擔任伺服器, 但是只能與實體主機共用聯外的網路線, 假如要將虛擬主機當作 server, 且採實體網路線聯外, 可以將 Network 設為 Bridged Adapter.</p>
             </section>
 
             <section class="post-info">

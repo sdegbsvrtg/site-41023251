@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://mde.tw/blog/</loc>
-<lastmod>2022-09-20T16:21:31-00:00</lastmod>
+<lastmod>2022-09-20T16:56:01-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://mde.tw/blog/archives.html</loc>
-<lastmod>2022-09-20T16:21:31-00:00</lastmod>
+<lastmod>2022-09-20T16:56:01-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://mde.tw/blog/tags.html</loc>
-<lastmod>2022-09-20T16:21:31-00:00</lastmod>
+<lastmod>2022-09-20T16:56:01-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://mde.tw/blog/categories.html</loc>
-<lastmod>2022-09-20T16:21:31-00:00</lastmod>
+<lastmod>2022-09-20T16:56:01-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -34,6 +34,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://mde.tw/blog/pages/about/</loc>
 <lastmod>2022-08-27T20:22:54+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://mde.tw/blog/2022_fall_about_postgresql.html</loc>
+<lastmod>2022-09-20T16:29:40+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -54,7 +61,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://mde.tw/blog/enjoy_your_ride.html</loc>
-<lastmod>2022-09-13T20:09:54+08:00</lastmod>
+<lastmod>2022-09-20T16:55:52+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -270,6 +277,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>https://mde.tw/blog/category/postgresql.html</loc>
+<lastmod>2022-09-20T16:29:40+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>https://mde.tw/blog/category/replit.html</loc>
 <lastmod>2022-09-12T09:00:09+08:06</lastmod>
 <changefreq>daily</changefreq>
@@ -292,7 +306,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://mde.tw/blog/category/video.html</loc>
-<lastmod>2022-09-13T20:09:54+08:06</lastmod>
+<lastmod>2022-09-20T16:55:52+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -313,21 +327,21 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://mde.tw/blog/tag/cad2022.html</loc>
-<lastmod>2022-09-20T16:19:23+08:06</lastmod>
+<lastmod>2022-09-20T16:29:40+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://mde.tw/blog/tag/cp2022.html</loc>
-<lastmod>2022-09-20T16:19:23+08:06</lastmod>
+<lastmod>2022-09-20T16:29:40+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://mde.tw/blog/tag/inspiring.html</loc>
-<lastmod>2022-09-13T20:09:54+08:06</lastmod>
+<lastmod>2022-09-20T16:55:52+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -502,7 +516,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://mde.tw/blog/author/mdecycu.html</loc>
-<lastmod>2022-09-20T16:19:23+08:06</lastmod>
+<lastmod>2022-09-20T16:55:52+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

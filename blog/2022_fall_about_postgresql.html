@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
 
-  <title>Mde.tw</title>
+  <title>有關 PostgreSQL</title>
 
 
   <meta name="HandheldFriendly" content="True" />
@@ -18,6 +18,7 @@
 
   <!-- Feed -->
         <link href="https://mde.tw/blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Mde.tw Full Atom Feed" />
+          <link href="https://mde.tw/blog/feeds/{slug}.atom.xml" type="application/atom+xml" rel="alternate" title="Mde.tw Categories Atom Feed" />
 
   <link href="https://mde.tw/blog/theme/css/style.css" type="text/css" rel="stylesheet" />
 
@@ -39,27 +40,51 @@
   <![endif]-->
 
 
+    <link href="https://mde.tw/blog/2022_fall_about_postgresql.html" rel="canonical" />
+
+        <meta name="description" content="簡要說明 2022 Fall 與 PostgreSQL 有關的設定與應用議題.">
+
+        <meta name="author" content="mdecycu">
+
+        <meta name="tags" content="cad2022">
+        <meta name="tags" content="cp2022">
+
+
 
 
 <!-- Open Graph -->
 <meta property="og:site_name" content="Mde.tw"/>
-<meta property="og:type" content="blog"/>
-<meta property="og:title" content="Mde.tw"/>
-<meta property="og:description" content="View the blog."/>
+<meta property="og:title" content="有關 PostgreSQL"/>
+<meta property="og:description" content="簡要說明 2022 Fall 與 PostgreSQL 有關的設定與應用議題."/>
 <meta property="og:locale" content="en_US"/>
-<meta property="og:url" content="https://mde.tw/blog/"/>
-<meta property="og:image" content="https://mde.tw/blog/theme/images/home-bg.jpg">
+<meta property="og:url" content="https://mde.tw/blog/2022_fall_about_postgresql.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2022-09-20 11:00:00+08:00"/>
+<meta property="article:modified_time" content="2022-09-20 16:29:40.051341+08:00"/>
+<meta property="article:author" content="https://mde.tw/blog/author/mdecycu.html">
+<meta property="article:section" content="PostgreSQL"/>
+<meta property="article:tag" content="cad2022"/>
+<meta property="article:tag" content="cp2022"/>
+<meta property="og:image" content="https://mde.tw/blog/theme/images/post-bg.jpg">
 
 <!-- Twitter Card -->
 
 <script type="application/ld+json">
 {
-  "@context" : "http://schema.org",
-  "@type" : "Website",
-  "name": " Mde.tw ",
-  "url" : "https://mde.tw/blog/",
-  "image": "https://mde.tw/blog/theme/images/home-bg.jpg",
-  "description": "View the blog."
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "name": "有關 PostgreSQL",
+  "headline": "有關 PostgreSQL",
+  "datePublished": "2022-09-20 11:00:00+08:00",
+  "dateModified": "2022-09-20 16:29:40.051341+08:00",
+  "author": {
+    "@type": "Person",
+    "name": "mdecycu",
+    "url": "https://mde.tw/blog/author/mdecycu.html"
+  },
+  "image": "https://mde.tw/blog/theme/images/post-bg.jpg",
+  "url": "https://mde.tw/blog/2022_fall_about_postgresql.html",
+  "description": "簡要說明 2022 Fall 與 PostgreSQL 有關的設定與應用議題."
 }
 </script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
@@ -157,21 +182,34 @@ init_mathjax();
     </ul>
   </div>
 </nav>
+    <!-- Progressbar -->
+    <div class="progress-container">
+        <span class="progress-bar"></span>
+    </div>
+
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
-    <header id="blog-header" class="has-cover">
+    <header id="post-header" class="has-cover">
       <div class="inner">
         <nav id="navigation">
+            <span id="home-button" class="nav-button">
+                <a class="home-button" href="https://mde.tw/blog/index.html" title="Home"><i class="ic ic-arrow-left"></i> Home</a>
+            </span>
           <span id="menu-button" class="nav-button">
             <a class="menu-button"><i class="ic ic-menu"></i> Menu</a>
           </span>
         </nav>
-        <h1 class="blog-name"><a href="https://mde.tw/blog/">Mde.tw</a></h1>
-            <div class="blog-cover cover" style="background-image: url('https://mde.tw/blog/theme/images/home-bg.jpg')">
-        
+        <h1 class="post-title">有關 PostgreSQL</h1>
+        <!-- TODO : Proper class for headline -->
+        <span class="post-meta">
+                <a href="https://mde.tw/blog/author/mdecycu.html">Mdecycu</a>
+            | <time datetime="週二 20 九月 2022">週二 20 九月 2022</time>
+        </span>
+        <!-- TODO : Modified check -->
+            <span class="post-meta"> | Updated on 週二 20 九月 2022</span>
+            <div class="post-cover cover" style="background-image: url('https://mde.tw/blog/theme/images/post-bg.jpg')">
       </div>
     </header>
-
 
   <section id="wrapper">
     <a class="hidden-close"></a>
@@ -183,94 +221,67 @@ init_mathjax();
 </section>
 
 
-<div id="index" class="container">
-  <main class="content" role="main">
-    <div class="extra-pagination">
-<nav class="pagination" role="pagination">
-  <div class="inner">
-    <a class="pagination-next" href="https://mde.tw/blog/index2.html"><i class="ic ic-arrow-left"></i> <span class="pagination-label">Newer Posts</span></a>
-    <span class="pagination-info">Page 3 / 3</span>
-    <div class="clear"></div>
-  </div>
-</nav>
-    </div>
-
+    <!-- Post content -->
+    <main class="content" role="main">
         <article class="post">
         <div class="inner">
-            <header class="post-header">         
-                <h2 class="post-title"><a href="https://mde.tw/blog/portable-CoppeliaSim-4.3.0-rev12.html" rel="bookmark" title="Permalink to 可攜 CoppeliaSim 4.3.0 rev12">可攜 CoppeliaSim 4.3.0 rev12</a>
-                </h2>
-                <span class="post-meta">
-                        <a href="https://mde.tw/blog/author/mdecycu.html">Mdecycu</a>
-                     | <time datetime="週二 23 八月 2022">週二 23 八月 2022</time>
-                </span>
-                <div class="clear"></div>
-            </header>
-                <section class="post-excerpt">
-                    <p>
-                        <p>CoppeliaSim 的安裝套件採用 <a href="https://www.pantaray.com/qsetup.html">QSetup</a> 製作, 即便在安裝過程可從 %temp% 中的暫存目錄 (例如: AppData\Local\Temp\SETUP_2639) 取得其 setup.exe 所解開的檔案, 但仍無法直接 extract 出完整的可攜 CoppeliaSim 目錄.</p>
+            <section class="post-content">
+                <p>簡要說明 2022 Fall 與 PostgreSQL 有關的設定與應用議題.</p>
 
-                    </p>
+
+<h1>教學影片</h1>
+<p>這一部 <a href="https://youtu.be/qw--VYLpxG4">PostgreSQL 教學影片</a> 應該非常適合初學者觀看學習, 配合內容逐步了解如何安裝 PostgreSQL, 設定與應用.</p>
+<h2>下載安裝</h2>
+            </section>
+
+            <section class="post-info">
+                <div class="post-share">
+                    <a class="twitter" href="https://twitter.com/share?text=有關 PostgreSQL&amp;url=https://mde.tw/blog/2022_fall_about_postgresql.html" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <i class="ic ic-twitter"></i><span class="hidden">Twitter</span>
+                    </a>
+                    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://mde.tw/blog/2022_fall_about_postgresql.html" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <i class="ic ic-facebook"></i><span class="hidden">Facebook</span>
+                    </a>
+                    <a class="googleplus" href="https://plus.google.com/share?url=https://mde.tw/blog/2022_fall_about_postgresql.html" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <i class="ic ic-googleplus"></i><span class="hidden">Google+</span>
+                    </a>
+                    <div class="clear"></div>
+                </div>
+
+                <aside class="post-tags">
+<a href="https://mde.tw/blog/tag/cad2022.html">cad2022</a><a href="https://mde.tw/blog/tag/cp2022.html">cp2022</a>                </aside>
+
+                <div class="clear"></div>
+
+
                 </section>
-<p>
-  <a data-disqus-identifier="/portable-CoppeliaSim-4.3.0-rev12.html" href="https://mde.tw/blog/portable-CoppeliaSim-4.3.0-rev12.html#disqus_thread">comments</a>
-</p>
+
+                <script type="text/javascript">
+                    var disqus = 'mdetw';
+                    var disqus_shortname = 'mdetw';
+                    var disqus_identifier = '/2022_fall_about_postgresql.html';
+                    var disqus_url = 'https://mde.tw/blog/2022_fall_about_postgresql.html';
+                </script>
+                <noscript>Please enable JavaScript to view the comments.</noscript>
+                <section class="post-comments">
+                        <a id="show-disqus" class="post-comments-activate" data-disqus-identifier="/2022_fall_about_postgresql.html" >Show Comments</a>
+                    <div id="disqus_thread"></div>
+                </section>
+
+                <aside class="post-nav">
+                    <a class="post-nav-prev" href="https://mde.tw/blog/2022_fall_about_network.html">
+                        <section class="post-nav-teaser">
+                            <i class="ic ic-arrow-right"></i>
+                                <h2 class="post-nav-title">有關網路</h2>
+                            <p class="post-nav-excerpt">簡要說明 2022 Fall 在綜一館八樓的電腦網路使用與觀察.</p>
+                        </section>
+                    </a>
+                    <div class="clear"></div>
+                </aside>
+
             </div>
         </article>
-        <article class="post">
-        <div class="inner">
-            <header class="post-header">         
-                <h2 class="post-title"><a href="https://mde.tw/blog/2022-Fall-Intro-to-computer-programming.html" rel="bookmark" title="Permalink to 2022 Fall CP 課程">2022 Fall CP 課程</a>
-                </h2>
-                <span class="post-meta">
-                        <a href="https://mde.tw/blog/author/mdecycu.html">Mdecycu</a>
-                     | <time datetime="週五 19 八月 2022">週五 19 八月 2022</time>
-                </span>
-                <div class="clear"></div>
-            </header>
-                <section class="post-excerpt">
-                    <p>
-                        <p>2022 Fall 計算機程式的課程進度將放在 Weblog, 並且使用 mdecycu At cycu 登記 disqus. 所有與課程相關的問題, 都希望在各週 Weblog 下方的 disqus 詢答.</p>
-
-                    </p>
-                </section>
-<p>
-  <a data-disqus-identifier="/2022-Fall-Intro-to-computer-programming.html" href="https://mde.tw/blog/2022-Fall-Intro-to-computer-programming.html#disqus_thread">comments</a>
-</p>
-            </div>
-        </article>
-        <article class="post">
-        <div class="inner">
-            <header class="post-header">         
-                <h2 class="post-title"><a href="https://mde.tw/blog/2022-Fall-computer-aided-design-and-practices.html" rel="bookmark" title="Permalink to 2022 Fall CAD 課程">2022 Fall CAD 課程</a>
-                </h2>
-                <span class="post-meta">
-                        <a href="https://mde.tw/blog/author/mdecycu.html">Mdecycu</a>
-                     | <time datetime="週日 14 八月 2022">週日 14 八月 2022</time>
-                </span>
-                <div class="clear"></div>
-            </header>
-                <section class="post-excerpt">
-                    <p>
-                        <p>2022 Fall 電腦輔助設計與實習的教學主要介紹 NX 與 CoppeliaSim 在機械設計流程中的應用.</p>
-
-                    </p>
-                </section>
-<p>
-  <a data-disqus-identifier="/2022-Fall-computer-aided-design-and-practices.html" href="https://mde.tw/blog/2022-Fall-computer-aided-design-and-practices.html#disqus_thread">comments</a>
-</p>
-            </div>
-        </article>
-
-<nav class="pagination" role="pagination">
-  <div class="inner">
-    <a class="pagination-next" href="https://mde.tw/blog/index2.html"><i class="ic ic-arrow-left"></i> <span class="pagination-label">Newer Posts</span></a>
-    <span class="pagination-info">Page 3 / 3</span>
-    <div class="clear"></div>
-  </div>
-</nav>
-  </main>
-</div>
+    </main>
       <!-- TODO : Body class -->
     <div id="body-class" style="display: none;" class=""></div>
 

@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Mde.tw</title><link href="https://mde.tw/blog/" rel="alternate"></link><link href="https://mde.tw/blog/feeds/all.atom.xml" rel="self"></link><id>https://mde.tw/blog/</id><updated>2022-09-20T16:19:23+08:00</updated><entry><title>有關網路</title><link href="https://mde.tw/blog/2022_fall_about_network.html" rel="alternate"></link><published>2022-09-18T11:00:00+08:00</published><updated>2022-09-20T16:19:23+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-09-18:/blog/2022_fall_about_network.html</id><summary type="html">&lt;p&gt;簡要說明 2022 Fall 在綜一館八樓的電腦網路使用與觀察.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Mde.tw</title><link href="https://mde.tw/blog/" rel="alternate"></link><link href="https://mde.tw/blog/feeds/all.atom.xml" rel="self"></link><id>https://mde.tw/blog/</id><updated>2022-09-20T16:55:52+08:00</updated><entry><title>有關 PostgreSQL</title><link href="https://mde.tw/blog/2022_fall_about_postgresql.html" rel="alternate"></link><published>2022-09-20T11:00:00+08:00</published><updated>2022-09-20T16:29:40+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-09-20:/blog/2022_fall_about_postgresql.html</id><summary type="html">&lt;p&gt;簡要說明 2022 Fall 與 PostgreSQL 有關的設定與應用議題.&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;簡要說明 2022 Fall 與 PostgreSQL 有關的設定與應用議題.&lt;/p&gt;
+
+
+&lt;h1&gt;教學影片&lt;/h1&gt;
+&lt;p&gt;這一部 &lt;a href="https://youtu.be/qw--VYLpxG4"&gt;PostgreSQL 教學影片&lt;/a&gt; 應該非常適合初學者觀看學習, 配合內容逐步了解如何安裝 PostgreSQL, 設定與應用.&lt;/p&gt;
+&lt;h2&gt;下載安裝&lt;/h2&gt;</content><category term="PostgreSQL"></category><category term="cad2022"></category><category term="cp2022"></category></entry><entry><title>有關網路</title><link href="https://mde.tw/blog/2022_fall_about_network.html" rel="alternate"></link><published>2022-09-18T11:00:00+08:00</published><updated>2022-09-20T16:19:23+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-09-18:/blog/2022_fall_about_network.html</id><summary type="html">&lt;p&gt;簡要說明 2022 Fall 在綜一館八樓的電腦網路使用與觀察.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;簡要說明 2022 Fall 在綜一館八樓的電腦網路使用與觀察.&lt;/p&gt;
 
 
@@ -183,7 +189,7 @@ ufw enable
 &lt;h1&gt;Ubuntu 的遠端桌面&lt;/h1&gt;
 &lt;p&gt;Ubuntu 安裝 Desktop 版本之後, 可以加裝 xrdp, 並且允許遠端主機對 port 3389 連線, 就可以從其他操作系統電腦上, 以 Remote Desktop client 進行遠端連線:&lt;/p&gt;
 &lt;p&gt;sudo apt install xrdp&lt;/p&gt;
-&lt;p&gt;在 Mac 操作系統上, 可以安裝 Microsoft Remote Desktop 套件對遠端的 Ubuntu 進行連線操控. 在 Ubuntu 則可以使用 Remmina 作為 Remote Desktop client.&lt;/p&gt;</content><category term="Ubuntu"></category><category term="cad2022"></category><category term="cp2022"></category></entry><entry><title>Enjoy your ride</title><link href="https://mde.tw/blog/enjoy_your_ride.html" rel="alternate"></link><published>2022-09-13T13:00:00+08:00</published><updated>2022-09-13T20:09:54+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-09-13:/blog/enjoy_your_ride.html</id><summary type="html">&lt;p&gt;Being an entrepreneur is a bug.&lt;/p&gt;
+&lt;p&gt;在 Mac 操作系統上, 可以安裝 Microsoft Remote Desktop 套件對遠端的 Ubuntu 進行連線操控. 在 Ubuntu 則可以使用 Remmina 作為 Remote Desktop client.&lt;/p&gt;</content><category term="Ubuntu"></category><category term="cad2022"></category><category term="cp2022"></category></entry><entry><title>Enjoy your ride</title><link href="https://mde.tw/blog/enjoy_your_ride.html" rel="alternate"></link><published>2022-09-13T13:00:00+08:00</published><updated>2022-09-20T16:55:52+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-09-13:/blog/enjoy_your_ride.html</id><summary type="html">&lt;p&gt;Being an entrepreneur is a bug.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;Being an entrepreneur is a bug.&lt;/p&gt;
 
 
@@ -196,7 +202,10 @@ ufw enable
 &lt;p&gt;關於教學: 這樣做是因為它很有趣.&lt;/p&gt;
 &lt;p&gt;It's useful to set a certain direction you want to go. After you set the direction, don't focus in your goal. Focus in enjoying the ride.&lt;/p&gt;
 &lt;p&gt;設定想要達成的方向非常受用. 一旦方向確立, 不要專注於目標, 而應專注於享受過程.&lt;/p&gt;
-&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/vzivLVgeJ48" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;</content><category term="Video"></category><category term="Inspiring"></category></entry><entry><title>2022 秋季學期第二週</title><link href="https://mde.tw/blog/2022_fall_semester_week2.html" rel="alternate"></link><published>2022-09-13T12:00:00+08:00</published><updated>2022-09-15T22:45:35+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-09-13:/blog/2022_fall_semester_week2.html</id><summary type="html">&lt;p&gt;簡要說明 2022 Fall 與計算機程式及電腦輔助設計與實習課程的相關規劃與期程安排.&lt;/p&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/vzivLVgeJ48" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;h1&gt;有夠好先生&lt;/h1&gt;
+&lt;p&gt;&lt;a href="https://www.ece.utexas.edu/people/faculty/john-goodenough"&gt;John Goodenough&lt;/a&gt; 先生今年正好滿一百歲, 在 1986 年轉到 UT Austin 機械系任教, 他不僅是至今獲頒諾貝爾獎最高齡紀錄保持人, 也是目前德州大學唯二之一的諾貝爾獎者鎮校之寶. 他的教研生涯堪稱有夠好!!&lt;/p&gt;</content><category term="Video"></category><category term="Inspiring"></category></entry><entry><title>2022 秋季學期第二週</title><link href="https://mde.tw/blog/2022_fall_semester_week2.html" rel="alternate"></link><published>2022-09-13T12:00:00+08:00</published><updated>2022-09-15T22:45:35+08:00</updated><author><name>mdecycu</name></author><id>tag:mde.tw,2022-09-13:/blog/2022_fall_semester_week2.html</id><summary type="html">&lt;p&gt;簡要說明 2022 Fall 與計算機程式及電腦輔助設計與實習課程的相關規劃與期程安排.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;簡要說明 2022 Fall 與計算機程式及電腦輔助設計與實習課程的相關規劃與期程安排.&lt;/p&gt;
 
 

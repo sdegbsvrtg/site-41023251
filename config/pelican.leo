@@ -117,6 +117,9 @@
 <v t="leo.20220918115308.1"><vh>@clean network_123.md</vh>
 <v t="leo.20220918115334.1"><vh>有關網路</vh></v>
 </v>
+<v t="leo.20220920162424.1"><vh>@clean about_postgresql.md</vh>
+<v t="leo.20220920162442.1"><vh>有關 PostgreSQL</vh></v>
+</v>
 </v>
 </v>
 <v t="yen.20170108171733.83"><vh>產生 .key 與 .crt 指令</vh></v>
@@ -2415,7 +2418,18 @@ It's useful to set a certain direction you want to go. After you set the directi
 
 &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/vzivLVgeJ48" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
 
-[George Hatsopoulos]: https://greekreporter.com/2021/08/07/mit-remembers-brilliant-greek-professor-george-hatsopoulos/</t>
+[George Hatsopoulos]: https://greekreporter.com/2021/08/07/mit-remembers-brilliant-greek-professor-george-hatsopoulos/
+[John Goodenough]: https://www.ece.utexas.edu/people/faculty/john-goodenough
+
+有夠好先生
+====
+
+[John Goodenough] 先生今年正好滿一百歲, 在 1986 年轉到 UT Austin 機械系任教, 他不僅是至今獲頒諾貝爾獎最高齡紀錄保持人, 也是目前德州大學唯二之一的諾貝爾獎者鎮校之寶. 他的教研生涯堪稱有夠好!!
+
+
+
+
+</t>
 <t tx="leo.20220917200208.1">@language md
 ---
 Title: 有關 Ubuntu
@@ -2750,6 +2764,30 @@ Estimated Total Devices From Mfg    48,768,750
 
  
 </t>
+<t tx="leo.20220920162424.1">@language md
+---
+Title: 有關 PostgreSQL
+Date: 2022-09-20 11:00
+Category: PostgreSQL
+Tags: cad2022, cp2022
+Slug: 2022_fall_about_postgresql
+Author: mdecycu
+---
+
+簡要說明 2022 Fall 與 PostgreSQL 有關的設定與應用議題.
+
+&lt;!-- PELICAN_END_SUMMARY --&gt;
+
+@others</t>
+<t tx="leo.20220920162442.1">教學影片
+====
+
+這一部 [PostgreSQL 教學影片] 應該非常適合初學者觀看學習, 配合內容逐步了解如何安裝 PostgreSQL, 設定與應用.
+
+[PostgreSQL 教學影片]: https://youtu.be/qw--VYLpxG4
+
+下載安裝
+----</t>
 <t tx="yen.20170108171605.1"></t>
 <t tx="yen.20170108171605.2">QTreeWidget {
     /* These apply to the selected item, but not to editing items.*/

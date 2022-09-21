@@ -120,6 +120,9 @@
 <v t="leo.20220920162424.1"><vh>@clean about_postgresql.md</vh>
 <v t="leo.20220920162442.1"><vh>有關 PostgreSQL</vh></v>
 </v>
+<v t="leo.20220921041309.1"><vh>@clean about_cad.md</vh>
+<v t="leo.20220921041321.1"><vh>有關 CAD</vh></v>
+</v>
 </v>
 </v>
 <v t="yen.20170108171733.83"><vh>產生 .key 與 .crt 指令</vh></v>
@@ -1265,6 +1268,38 @@ CYCU TCExam 主機
 ====
 
 目前 exam dot cycu dot org 採用 10ff:1:0::1 設定, 使用 8GB 虛擬主機測試是否合用. 目前透過 nginx 管制, 只允許系上 IPv6 網段連線.
+
+Python and PostgreSQL
+====
+
+pip install psycopg2 peewee
+
+[Python call PostgreSQL]: https://www.tutorialspoint.com/peewee/peewee_using_postgresql.htm
+
+&lt;pre class="brush: python"&gt;
+import psycopg2
+
+conn = psycopg2.connect(host='localhost', user='postgres', password='postgres')
+conn.cursor().execute('CREATE DATABASE mydatabase')
+conn.close()
+&lt;/pre&gt;
+
+&lt;pre class="brush: python"&gt;
+from peewee import *
+
+db = PostgresqlDatabase('mydatabase', host='localhost', port=5432, user='postgres', password='postgres')
+class MyUser (Model):
+   name=TextField()
+   city=TextField(constraints=[SQL("DEFAULT 'Mumbai'")])
+   age=IntegerField()
+   class Meta:
+      database=db
+      db_table='MyUser'
+
+db.connect()
+db.create_tables([MyUser])
+&lt;/pre&gt;
+
 </t>
 <t tx="leo.20220901223644.1">@language md
 ---
@@ -2785,9 +2820,78 @@ Author: mdecycu
 這一部 [PostgreSQL 教學影片] 應該非常適合初學者觀看學習, 配合內容逐步了解如何安裝 PostgreSQL, 設定與應用.
 
 [PostgreSQL 教學影片]: https://youtu.be/qw--VYLpxG4
+[這裡]: https://www.enterprisedb.com/downloads/postgres-postgresql-downloads
 
 下載安裝
-----</t>
+----
+
+PostgreSQL 安裝檔案可以從[這裡]下載,  安裝包括:
+
+PostgreSQL Server
+
+pgAdmin 4
+
+Stack Builder
+
+Command Line Tools
+
+data 目錄
+
+database superuser: postgres
+
+postgres password
+
+database port: 5432
+
+database service: postgresql-x64-14
+
+disable Stack Builder download function
+
+安裝結束後, postgresql-x64-14 服務將會自動執行.
+
+[pg_ctl] - initialize, start, stop, or control a PostgreSQL server
+
+[pg_ctl]: https://docs.postgresql.tw/reference/server-applications/pg_ctl</t>
+<t tx="leo.20220921041309.1">@language md
+---
+Title: 有關 CAD
+Date: 2022-09-21 11:00
+Category: CAD
+Tags: cad2022
+Slug: 2022_fall_about_cad
+Author: mdecycu
+---
+
+簡要說明 2022 Fall 與 CAD 有關的應用議題.
+
+&lt;!-- PELICAN_END_SUMMARY --&gt;
+
+@others</t>
+<t tx="leo.20220921041321.1">常見的 CAD 套件
+====
+
+Solidworks
+
+AutoDesk Inventor
+
+Solid Edge
+
+Siemens NX
+
+PTC Creo
+
+Dassalut Catia
+
+Onshape
+
+AutoDesk Fusion 360
+
+[1]: https://www.apollotechnical.com/cad-software-companies-use/
+[2]: https://www.3dnatives.com/en/top10-cad-software-180320194/
+[3]: https://www.trustradius.com/computer-aided-design-cad
+[Creo 9]: https://www.ptc.com/en/products/creo/whats-new
+[YunTuCAD]: https://www.yuntucad.com/store_space/home
+[CrownCAD]: https://cad.crowncad.com/cad/workspace/p/625bfd6e722f385f9f154095/d/631b3f5753d7143eb2092257?projectId=625bfd6e722f385f9f154095&amp;code=631b178753d7143eb208af10</t>
 <t tx="yen.20170108171605.1"></t>
 <t tx="yen.20170108171605.2">QTreeWidget {
     /* These apply to the selected item, but not to editing items.*/

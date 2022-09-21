@@ -80,3 +80,35 @@ CYCU TCExam 主機
 ====
 
 目前 exam dot cycu dot org 採用 10ff:1:0::1 設定, 使用 8GB 虛擬主機測試是否合用. 目前透過 nginx 管制, 只允許系上 IPv6 網段連線.
+
+Python and PostgreSQL
+====
+
+pip install psycopg2 peewee
+
+[Python call PostgreSQL]: https://www.tutorialspoint.com/peewee/peewee_using_postgresql.htm
+
+<pre class="brush: python">
+import psycopg2
+
+conn = psycopg2.connect(host='localhost', user='postgres', password='postgres')
+conn.cursor().execute('CREATE DATABASE mydatabase')
+conn.close()
+</pre>
+
+<pre class="brush: python">
+from peewee import *
+
+db = PostgresqlDatabase('mydatabase', host='localhost', port=5432, user='postgres', password='postgres')
+class MyUser (Model):
+   name=TextField()
+   city=TextField(constraints=[SQL("DEFAULT 'Mumbai'")])
+   age=IntegerField()
+   class Meta:
+      database=db
+      db_table='MyUser'
+
+db.connect()
+db.create_tables([MyUser])
+</pre>
+

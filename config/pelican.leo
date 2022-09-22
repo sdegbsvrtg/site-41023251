@@ -123,6 +123,9 @@
 <v t="leo.20220921041309.1"><vh>@clean about_cad.md</vh>
 <v t="leo.20220921041321.1"><vh>有關 CAD</vh></v>
 </v>
+<v t="leo.20220922100533.1"><vh>@clean cp2022_w3.md</vh>
+<v t="leo.20220922100555.1"><vh>cp2022 第三週課程</vh></v>
+</v>
 </v>
 </v>
 <v t="yen.20170108171733.83"><vh>產生 .key 與 .crt 指令</vh></v>
@@ -2892,6 +2895,27 @@ AutoDesk Fusion 360
 [Creo 9]: https://www.ptc.com/en/products/creo/whats-new
 [YunTuCAD]: https://www.yuntucad.com/store_space/home
 [CrownCAD]: https://cad.crowncad.com/cad/workspace/p/625bfd6e722f385f9f154095/d/631b3f5753d7143eb2092257?projectId=625bfd6e722f385f9f154095&amp;code=631b178753d7143eb208af10</t>
+<t tx="leo.20220922100533.1">@language md
+---
+Title: cp2022 第三週課程
+Date: 2022-09-22 11:00
+Category: cp2022
+Tags: w3
+Slug: 2022_fall_cp2022_w3
+Author: mdecycu
+---
+
+計算機程式第三週課程內容.
+
+&lt;!-- PELICAN_END_SUMMARY --&gt;
+
+@others</t>
+<t tx="leo.20220922100555.1">針對 Proxy 設定無法存檔
+====
+
+有關電腦輔助設計室中, 代理主機設定無法存檔的問題, 可以參考[cp2022 w3 cadlab 網路設定影片] (必須登入 @nfu Teams 帳號) 中的說明, 主要設定流程為直接進入 Windows Registry 進行設定後, 將設定內容匯出為 .reg 檔案後, 放入隨身碟, 下一次重新開機後, 可以利用滑鼠左鍵雙點擊 .reg 檔案, 就可以完成自動設定.
+
+[cp2022 w3 cadlab 網路設定影片]: https://nfuedu.sharepoint.com/sites/cp20222/_layouts/15/stream.aspx?id=%2Fsites%2Fcp20222%2FShared%20Documents%2Fw3%2FRecordings%2F%E3%80%8Cw3%E3%80%8D%E4%B8%AD%E7%9A%84%E6%9C%83%E8%AD%B0%2D20220922%5F094632%2D%E6%9C%83%E8%AD%B0%E9%8C%84%E8%A3%BD%2Emp4</t>
 <t tx="yen.20170108171605.1"></t>
 <t tx="yen.20170108171605.2">QTreeWidget {
     /* These apply to the selected item, but not to editing items.*/
